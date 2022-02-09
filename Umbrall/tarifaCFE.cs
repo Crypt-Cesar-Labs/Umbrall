@@ -16,5 +16,34 @@ namespace Umbrall
         {
             InitializeComponent();
         }
+
+        private void cmbYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int indiceYear = cmbYear.SelectedIndex;
+
+            string dbSearchYear = cmbYear.Items[indiceYear].ToString();
+        }
+
+        private void cmbMonth_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int indiceMonth = cmbMonth.SelectedIndex;
+
+            string dbSearchMonth = cmbMonth.Items[indiceMonth].ToString();
+        }
+
+
+        private void cmbDiv_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int indiceDiv = cmbDiv.SelectedIndex;
+
+            string dbSearchDiv = cmbDiv.Items[indiceDiv].ToString();
+        }
+
+        private void cmbCat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int indiceCat = cmbCat.SelectedIndex;
+
+            string dbSearchCat = cmbCat.Items[indiceCat].ToString();
+        }
     }
 }
