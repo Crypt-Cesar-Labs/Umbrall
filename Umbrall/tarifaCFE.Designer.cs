@@ -80,7 +80,8 @@
             // 
             this.cmbYear.FormattingEnabled = true;
             this.cmbYear.Items.AddRange(new object[] {
-            "2021"});
+            "2021",
+            "2022"});
             this.cmbYear.Location = new System.Drawing.Point(22, 111);
             this.cmbYear.Name = "cmbYear";
             this.cmbYear.Size = new System.Drawing.Size(121, 24);
@@ -91,18 +92,7 @@
             // 
             this.cmbMonth.FormattingEnabled = true;
             this.cmbMonth.Items.AddRange(new object[] {
-            "enero",
-            "febrero",
-            "marzo",
-            "abril",
-            "mayo",
-            "junio",
-            "julio",
-            "agosto",
-            "septiembre",
-            "octubre",
-            "noviembre",
-            "diciembre"});
+            "enero"});
             this.cmbMonth.Location = new System.Drawing.Point(192, 111);
             this.cmbMonth.Name = "cmbMonth";
             this.cmbMonth.Size = new System.Drawing.Size(121, 24);
@@ -137,6 +127,7 @@
             this.btnBuscarTarifa.TabIndex = 8;
             this.btnBuscarTarifa.Text = "Buscar Tarifa";
             this.btnBuscarTarifa.UseVisualStyleBackColor = true;
+            this.btnBuscarTarifa.Click += new System.EventHandler(this.btnBuscarTarifa_Click);
             // 
             // cmbDiv
             // 

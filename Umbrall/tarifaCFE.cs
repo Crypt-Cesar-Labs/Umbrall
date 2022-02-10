@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,13 @@ namespace Umbrall
 {
     public partial class tarifaCFE : Form
     {
+
+        //Se crean las variables para la consulta a la base datos
+        public int year;
+        public string month;
+        public string div;
+        public string cat;
+
         public tarifaCFE()
         {
             InitializeComponent();
@@ -22,6 +30,9 @@ namespace Umbrall
             int indiceYear = cmbYear.SelectedIndex;
 
             string dbSearchYear = cmbYear.Items[indiceYear].ToString();
+
+            //Se altera la variable global con los valores locales 
+            year = int.Parse(dbSearchYear); 
         }
 
         private void cmbMonth_SelectedIndexChanged(object sender, EventArgs e)
@@ -29,6 +40,9 @@ namespace Umbrall
             int indiceMonth = cmbMonth.SelectedIndex;
 
             string dbSearchMonth = cmbMonth.Items[indiceMonth].ToString();
+
+            //Se altera la variable global con los valores locales 
+            month = dbSearchMonth;
         }
 
 
@@ -37,6 +51,9 @@ namespace Umbrall
             int indiceDiv = cmbDiv.SelectedIndex;
 
             string dbSearchDiv = cmbDiv.Items[indiceDiv].ToString();
+
+            //Se altera la variable global con los valores locales 
+            div = dbSearchDiv;
         }
 
         private void cmbCat_SelectedIndexChanged(object sender, EventArgs e)
@@ -44,6 +61,58 @@ namespace Umbrall
             int indiceCat = cmbCat.SelectedIndex;
 
             string dbSearchCat = cmbCat.Items[indiceCat].ToString();
+
+            //Se altera la variable global con los valores locales 
+            cat = dbSearchCat;
         }
+
+        private void btnBuscarTarifa_Click(object sender, EventArgs e)
+        {
+            string servidor = "localhost";
+            string puerto = "3306";
+            string usuario = "root";
+            string password = "root-database";
+            string bd = "umbral_database";
+
+            string cadenaConexion = "Database=" + bd + "; Data Source=" + servidor + "; Port=" + puerto + "; User Id=" + usuario + "; Password=" + password;
+
+            MySqlConnection conexionBD = new MySqlConnection(cadenaConexion);
+            MySqlDataReader objectReader = null;
+            string dataTarifa = null;
+
+            try
+            {
+                //Se genera el Query
+                //string consulta = "SELECT valor FROM tarifas where año = " + year + " and division = " + div + ";";
+                //string consString = String.Format("SELECT valor FROM tarifas WHERE año = {0} and mes = {1} and division = {2} and categoria = {3}", year, month, div, cat);
+
+                string query = "SELECT valor FROM tarifas WHERE año = ?year AND mes = ?month AND division = ?div AND categoria = ?cat";
+                MySqlCommand comandoObject = new MySqlCommand(query);
+                comandoObject.Parameters.AddWithValue("?year", year);
+                comandoObject.Parameters.AddWithValue("?month", month);
+                comandoObject.Parameters.AddWithValue("?div", div);
+                comandoObject.Parameters.AddWithValue("?cat", cat);
+                comandoObject.Connection = conexionBD;
+                conexionBD.Open();
+                objectReader = comandoObject.ExecuteReader();
+
+                //Para leer el dato
+                while(objectReader.Read())
+                {
+                    dataTarifa += objectReader.GetString(0);
+                }
+                MessageBox.Show(dataTarifa);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);        //Mensaje de error
+            }
+            //MessageBox.Show("Año = " + year + "\nMes = " + month + "\nDivision = " + div + "\nCategoria = " + cat);
+            finally
+            {
+                conexionBD.Close();         //Se cierra la conexion
+            }
+        }
+
     }
 }
