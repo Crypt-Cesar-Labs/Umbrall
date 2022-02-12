@@ -56,6 +56,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="mbRtuTcpTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mbRtuTcpTest.Designer.cs">
+      <DependentUpon>mbRtuTcpTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mbRtuTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mbRtuTest.Designer.cs">
+      <DependentUpon>mbRtuTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tarifaCFE.cs">
@@ -64,8 +76,20 @@
     <Compile Include="tarifaCFE.Designer.cs">
       <DependentUpon>tarifaCFE.cs</DependentUpon>
     </Compile>
+    <Compile Include="tcpTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tcpTest.Designer.cs">
+      <DependentUpon>tcpTest.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mbRtuTcpTest.resx">
+      <DependentUpon>mbRtuTcpTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mbRtuTest.resx">
+      <DependentUpon>mbRtuTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -79,6 +103,9 @@
     </Compile>
     <EmbeddedResource Include="tarifaCFE.resx">
       <DependentUpon>tarifaCFE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tcpTest.resx">
+      <DependentUpon>tcpTest.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

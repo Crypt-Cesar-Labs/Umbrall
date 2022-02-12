@@ -31,17 +31,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menúToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iniciarMonitoreoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.detenerMonitoreoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.conectarDispositivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tarifasCFEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alertasCorreoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.iniciarMonitoreoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.detenerMonitoreoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tCPIPTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modbusRTUTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modbusRTUOverTCPTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +56,8 @@
             this.menúToolStripMenuItem,
             this.reportesToolStripMenuItem,
             this.acercaDeToolStripMenuItem,
-            this.ayudaToolStripMenuItem});
+            this.ayudaToolStripMenuItem,
+            this.testToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1924, 28);
@@ -71,24 +76,21 @@
             this.menúToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
             this.menúToolStripMenuItem.Text = "Menú";
             // 
-            // reportesToolStripMenuItem
+            // iniciarMonitoreoToolStripMenuItem
             // 
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
-            this.reportesToolStripMenuItem.Text = "Reportes";
+            this.iniciarMonitoreoToolStripMenuItem.Image = global::Umbrall.Properties.Resources.play;
+            this.iniciarMonitoreoToolStripMenuItem.Name = "iniciarMonitoreoToolStripMenuItem";
+            this.iniciarMonitoreoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
+            this.iniciarMonitoreoToolStripMenuItem.Size = new System.Drawing.Size(272, 26);
+            this.iniciarMonitoreoToolStripMenuItem.Text = "Iniciar Monitoreo";
             // 
-            // acercaDeToolStripMenuItem
+            // detenerMonitoreoToolStripMenuItem
             // 
-            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
-            this.acercaDeToolStripMenuItem.Text = "Acerca de";
-            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
-            // 
-            // ayudaToolStripMenuItem
-            // 
-            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
-            this.ayudaToolStripMenuItem.Text = "Ayuda";
+            this.detenerMonitoreoToolStripMenuItem.Image = global::Umbrall.Properties.Resources.stop;
+            this.detenerMonitoreoToolStripMenuItem.Name = "detenerMonitoreoToolStripMenuItem";
+            this.detenerMonitoreoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
+            this.detenerMonitoreoToolStripMenuItem.Size = new System.Drawing.Size(272, 26);
+            this.detenerMonitoreoToolStripMenuItem.Text = "Detener Monitoreo";
             // 
             // toolStripSeparator1
             // 
@@ -104,14 +106,6 @@
             this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
             this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(272, 26);
             this.configuraciónToolStripMenuItem.Text = "Configuración";
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(272, 26);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // conectarDispositivoToolStripMenuItem
             // 
@@ -132,21 +126,63 @@
             this.alertasCorreoToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
             this.alertasCorreoToolStripMenuItem.Text = "Alertas Correo";
             // 
-            // iniciarMonitoreoToolStripMenuItem
+            // salirToolStripMenuItem
             // 
-            this.iniciarMonitoreoToolStripMenuItem.Image = global::Umbrall.Properties.Resources.play;
-            this.iniciarMonitoreoToolStripMenuItem.Name = "iniciarMonitoreoToolStripMenuItem";
-            this.iniciarMonitoreoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.iniciarMonitoreoToolStripMenuItem.Size = new System.Drawing.Size(272, 26);
-            this.iniciarMonitoreoToolStripMenuItem.Text = "Iniciar Monitoreo";
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(272, 26);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // detenerMonitoreoToolStripMenuItem
+            // reportesToolStripMenuItem
             // 
-            this.detenerMonitoreoToolStripMenuItem.Image = global::Umbrall.Properties.Resources.stop;
-            this.detenerMonitoreoToolStripMenuItem.Name = "detenerMonitoreoToolStripMenuItem";
-            this.detenerMonitoreoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.detenerMonitoreoToolStripMenuItem.Size = new System.Drawing.Size(272, 26);
-            this.detenerMonitoreoToolStripMenuItem.Text = "Detener Monitoreo";
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // acercaDeToolStripMenuItem
+            // 
+            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
+            this.acercaDeToolStripMenuItem.Text = "Acerca de";
+            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
+            // 
+            // ayudaToolStripMenuItem
+            // 
+            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
+            this.ayudaToolStripMenuItem.Text = "Ayuda";
+            // 
+            // testToolStripMenuItem
+            // 
+            this.testToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tCPIPTestToolStripMenuItem,
+            this.modbusRTUTestToolStripMenuItem,
+            this.modbusRTUOverTCPTestToolStripMenuItem});
+            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
+            this.testToolStripMenuItem.Text = "Test";
+            // 
+            // tCPIPTestToolStripMenuItem
+            // 
+            this.tCPIPTestToolStripMenuItem.Name = "tCPIPTestToolStripMenuItem";
+            this.tCPIPTestToolStripMenuItem.Size = new System.Drawing.Size(267, 26);
+            this.tCPIPTestToolStripMenuItem.Text = "TCP/IP Test";
+            this.tCPIPTestToolStripMenuItem.Click += new System.EventHandler(this.tCPIPTestToolStripMenuItem_Click);
+            // 
+            // modbusRTUTestToolStripMenuItem
+            // 
+            this.modbusRTUTestToolStripMenuItem.Name = "modbusRTUTestToolStripMenuItem";
+            this.modbusRTUTestToolStripMenuItem.Size = new System.Drawing.Size(267, 26);
+            this.modbusRTUTestToolStripMenuItem.Text = "Modbus RTU Test";
+            this.modbusRTUTestToolStripMenuItem.Click += new System.EventHandler(this.modbusRTUTestToolStripMenuItem_Click);
+            // 
+            // modbusRTUOverTCPTestToolStripMenuItem
+            // 
+            this.modbusRTUOverTCPTestToolStripMenuItem.Name = "modbusRTUOverTCPTestToolStripMenuItem";
+            this.modbusRTUOverTCPTestToolStripMenuItem.Size = new System.Drawing.Size(267, 26);
+            this.modbusRTUOverTCPTestToolStripMenuItem.Text = "Modbus RTU over TCP Test";
+            this.modbusRTUOverTCPTestToolStripMenuItem.Click += new System.EventHandler(this.modbusRTUOverTCPTestToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -181,6 +217,10 @@
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tCPIPTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modbusRTUTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modbusRTUOverTCPTestToolStripMenuItem;
     }
 }
 

@@ -37,5 +37,41 @@ namespace Umbrall
         {
             this.Close();
         }
+
+        //For testing a TCP communication
+        private void tCPIPTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tcpTest tcpTestWindow = new tcpTest();
+
+            //Parent object
+            tcpTestWindow.MdiParent = this;
+
+            //calling
+            tcpTestWindow.Show();
+        }
+
+        //For testing a Modbus RTU comunication
+        private void modbusRTUTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mbRtuTest mbRtuWindow = new mbRtuTest();
+
+            //Parent object
+            mbRtuWindow.MdiParent = this;
+
+            //calling
+            mbRtuWindow.Show();
+        }
+
+        //For testing a Modbus RTU over TCP communication
+        private void modbusRTUOverTCPTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mbRtuTcpTest mbRtuTcpWindow = new mbRtuTcpTest();
+
+            //Parent object
+            mbRtuTcpWindow.MdiParent = this;
+
+            //calling
+            mbRtuTcpWindow.Show();
+        }
     }
 }
