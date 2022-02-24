@@ -73,5 +73,27 @@ namespace Umbrall
             //calling
             mbRtuTcpWindow.Show();
         }
+
+        private void clientTCPTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clientTcpTest tcpTestWindow = new clientTcpTest();
+
+            //Parent object
+            tcpTestWindow.MdiParent = this;
+
+            //calling
+            tcpTestWindow.Show();
+        }
+
+        private void modbusTCPTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mbTcpTest mbTcpTestWindow = new mbTcpTest();
+
+            //Parent object
+            mbTcpTestWindow.MdiParent = this;
+
+            //calling
+            mbTcpTestWindow.Show();
+        }
     }
 }

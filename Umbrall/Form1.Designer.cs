@@ -46,6 +46,8 @@
             this.tCPIPTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modbusRTUTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modbusRTUOverTCPTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modbusTCPTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientTCPTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +62,7 @@
             this.testToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1924, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1924, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -73,7 +75,7 @@
             this.configuraciónToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.menúToolStripMenuItem.Name = "menúToolStripMenuItem";
-            this.menúToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
+            this.menúToolStripMenuItem.Size = new System.Drawing.Size(60, 26);
             this.menúToolStripMenuItem.Text = "Menú";
             // 
             // iniciarMonitoreoToolStripMenuItem
@@ -137,20 +139,20 @@
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 26);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
             // acercaDeToolStripMenuItem
             // 
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(89, 26);
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(65, 26);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
             // testToolStripMenuItem
@@ -158,9 +160,11 @@
             this.testToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tCPIPTestToolStripMenuItem,
             this.modbusRTUTestToolStripMenuItem,
-            this.modbusRTUOverTCPTestToolStripMenuItem});
+            this.modbusRTUOverTCPTestToolStripMenuItem,
+            this.modbusTCPTestToolStripMenuItem,
+            this.clientTCPTestToolStripMenuItem});
             this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(49, 26);
             this.testToolStripMenuItem.Text = "Test";
             // 
             // tCPIPTestToolStripMenuItem
@@ -183,6 +187,20 @@
             this.modbusRTUOverTCPTestToolStripMenuItem.Size = new System.Drawing.Size(267, 26);
             this.modbusRTUOverTCPTestToolStripMenuItem.Text = "Modbus RTU over TCP Test";
             this.modbusRTUOverTCPTestToolStripMenuItem.Click += new System.EventHandler(this.modbusRTUOverTCPTestToolStripMenuItem_Click);
+            // 
+            // modbusTCPTestToolStripMenuItem
+            // 
+            this.modbusTCPTestToolStripMenuItem.Name = "modbusTCPTestToolStripMenuItem";
+            this.modbusTCPTestToolStripMenuItem.Size = new System.Drawing.Size(267, 26);
+            this.modbusTCPTestToolStripMenuItem.Text = "Modbus TCP Test";
+            this.modbusTCPTestToolStripMenuItem.Click += new System.EventHandler(this.modbusTCPTestToolStripMenuItem_Click);
+            // 
+            // clientTCPTestToolStripMenuItem
+            // 
+            this.clientTCPTestToolStripMenuItem.Name = "clientTCPTestToolStripMenuItem";
+            this.clientTCPTestToolStripMenuItem.Size = new System.Drawing.Size(267, 26);
+            this.clientTCPTestToolStripMenuItem.Text = "Client TCP Test";
+            this.clientTCPTestToolStripMenuItem.Click += new System.EventHandler(this.clientTCPTestToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -221,6 +239,8 @@
         private System.Windows.Forms.ToolStripMenuItem tCPIPTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modbusRTUTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modbusRTUOverTCPTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modbusTCPTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clientTCPTestToolStripMenuItem;
     }
 }
 
