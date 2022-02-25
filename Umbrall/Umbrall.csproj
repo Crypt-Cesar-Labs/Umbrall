@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EasyModbus">
-      <HintPath>..\..\..\..\Downloads\EasyModbusTCP .NET Package V5.6\EasyModbus.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\EasyModbusTCP .NET Package V5.6\EasyModbusLibrary for .NET (DLL)\EasyModbus.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
