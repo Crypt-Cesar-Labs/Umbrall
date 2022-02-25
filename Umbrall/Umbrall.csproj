@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientTcpSocketTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientTcpSocketTest.Designer.cs">
+      <DependentUpon>ClientTcpSocketTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="clientTcpTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     <Compile Include="tcpTest.Designer.cs">
       <DependentUpon>tcpTest.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ClientTcpSocketTest.resx">
+      <DependentUpon>ClientTcpSocketTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="clientTcpTest.resx">
       <DependentUpon>clientTcpTest.cs</DependentUpon>
     </EmbeddedResource>

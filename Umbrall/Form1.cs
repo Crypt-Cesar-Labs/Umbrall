@@ -95,5 +95,14 @@ namespace Umbrall
             //calling
             mbTcpTestWindow.Show();
         }
+
+        private void clientSocketTCPTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ClientTcpSocketTest clientSocketTcpTestWindow = new ClientTcpSocketTest();
+
+            clientSocketTcpTestWindow.MdiParent = this;
+
+            clientSocketTcpTestWindow.Show();
+        }
     }
 }

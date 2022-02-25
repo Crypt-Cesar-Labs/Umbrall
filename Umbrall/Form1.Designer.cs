@@ -210,6 +210,7 @@
             this.clientSocketTCPTestToolStripMenuItem.Name = "clientSocketTCPTestToolStripMenuItem";
             this.clientSocketTCPTestToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.clientSocketTCPTestToolStripMenuItem.Text = "Client Socket TCP Test";
+            this.clientSocketTCPTestToolStripMenuItem.Click += new System.EventHandler(this.clientSocketTCPTestToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -220,7 +221,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Umbrall - Monitor de Energía";
             this.menuStrip1.ResumeLayout(false);
