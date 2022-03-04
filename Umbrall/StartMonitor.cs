@@ -15,18 +15,18 @@ namespace Umbrall
     {
         ModbusClient modbusClient;
         public string ipAddress;
+        public int port;
         public StartMonitor()
         {
             InitializeComponent();
         }
 
         private void StartMonitor_Load(object sender, EventArgs e)
-        {
-            ConfigDevice configDevice = new ConfigDevice();
+        {   
 
-            //ipAddress = configDevice.ipAddressGlobal;
-
-            modbusClient = new ModbusClient("127.0.0.1", 502);                 //Ip-Address and Port of Modbus-TCP-Server
+            ipAddress = GlobalParameters.ipAddressGlobal;                   //Global parameter from ConfigDevice trough GlobalParameters class
+            port = GlobalParameters.portGlobal;
+            modbusClient = new ModbusClient(ipAddress, port);                 //Ip-Address and Port of Modbus-TCP-Server
             
             try
             {
