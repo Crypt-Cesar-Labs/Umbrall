@@ -27,6 +27,10 @@ namespace Umbrall
             ipAddress = GlobalParameters.ipAddressGlobal;                   //Global parameter from ConfigDevice trough GlobalParameters class
             port = GlobalParameters.portGlobal;
             modbusClient = new ModbusClient(ipAddress, port);                 //Ip-Address and Port of Modbus-TCP-Server
+
+            // Parameters in txtBox
+            txtIpAddress.Text = ipAddress;
+            txtPort.Text = port.ToString();
             
             try
             {
