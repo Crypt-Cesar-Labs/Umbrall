@@ -124,6 +124,9 @@
     <EmbeddedResource Include="clientTcpTest.resx">
       <DependentUpon>clientTcpTest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConfigDevice.resx">
+      <DependentUpon>ConfigDevice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

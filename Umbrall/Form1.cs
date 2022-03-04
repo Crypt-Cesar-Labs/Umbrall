@@ -113,5 +113,14 @@ namespace Umbrall
 
             startMonitorWindow.Show();
         }
+
+        private void conectarDispositivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConfigDevice configDevice = new ConfigDevice();
+
+            configDevice.MdiParent = this;
+
+            configDevice.Show();
+        }
     }
 }
