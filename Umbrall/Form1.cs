@@ -11,7 +11,8 @@ using System.Windows.Forms;
 namespace Umbrall
 {
     public partial class Form1 : Form
-    {
+    {   
+        
         public Form1()
         {
             InitializeComponent();
@@ -106,13 +107,15 @@ namespace Umbrall
         }
 
         private void iniciarMonitoreoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        {   
             StartMonitor startMonitorWindow = new StartMonitor();
 
             startMonitorWindow.MdiParent = this;
 
             startMonitorWindow.Show();
         }
+
+        
 
         private void conectarDispositivoToolStripMenuItem_Click(object sender, EventArgs e)
         {

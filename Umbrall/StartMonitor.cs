@@ -14,6 +14,7 @@ namespace Umbrall
     public partial class StartMonitor : Form
     {
         ModbusClient modbusClient;
+        public string ipAddress;
         public StartMonitor()
         {
             InitializeComponent();
@@ -21,6 +22,10 @@ namespace Umbrall
 
         private void StartMonitor_Load(object sender, EventArgs e)
         {
+            ConfigDevice configDevice = new ConfigDevice();
+
+            //ipAddress = configDevice.ipAddressGlobal;
+
             modbusClient = new ModbusClient("127.0.0.1", 502);                 //Ip-Address and Port of Modbus-TCP-Server
             
             try
