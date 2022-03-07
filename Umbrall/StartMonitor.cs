@@ -65,28 +65,14 @@ namespace Umbrall
             int[] readHoldingRegisters = modbusClient.ReadHoldingRegisters(0, 16);      //Read 10 Holding Registers from Server, starting with Address 1
             for (int i = 0; i < readHoldingRegisters.Length; i++)
                 Console.WriteLine("Value of HoldingRegister " + (i + 1) + " " + readHoldingRegisters[i].ToString());
-            txtReg1.Text = readHoldingRegisters[0].ToString();
-            txtReg2.Text = readHoldingRegisters[1].ToString();
-            txtReg3.Text = readHoldingRegisters[2].ToString();
-            txtReg4.Text = readHoldingRegisters[3].ToString();
-            txtReg5.Text = readHoldingRegisters[4].ToString();
-            txtReg6.Text = readHoldingRegisters[5].ToString();
-            txtReg7.Text = readHoldingRegisters[6].ToString();
-            txtReg8.Text = readHoldingRegisters[7].ToString();
-            txtReg9.Text = readHoldingRegisters[8].ToString();
-            txtReg10.Text = readHoldingRegisters[9].ToString();
-            txtReg11.Text = readHoldingRegisters[10].ToString();
-            txtReg12.Text = readHoldingRegisters[11].ToString();
-            txtReg13.Text = readHoldingRegisters[12].ToString();
-            txtReg14.Text = readHoldingRegisters[13].ToString();
-            txtReg15.Text = readHoldingRegisters[14].ToString();
-            txtReg16.Text = readHoldingRegisters[15].ToString();
+            
         }
 
         private void ReadModbusTimer_Tick(object sender, EventArgs e)
         {
             ReadRegisters();
         }
+
         #region oldReadRegister
         /*
                 txtReg1.Text = readHoldingRegisters[0].ToString();
@@ -137,5 +123,7 @@ namespace Umbrall
                 txtReg46.Text = readHoldingRegisters[9].ToString();
                 txtReg47.Text = readHoldingRegisters[10].ToString();*/
         #endregion
+
+        
     }
 }
