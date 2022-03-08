@@ -38,6 +38,42 @@
             this.lbVrmsC = new System.Windows.Forms.Label();
             this.txtVrmsA = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbVrmsABC = new System.Windows.Forms.Label();
+            this.txtVrmsABC = new System.Windows.Forms.TextBox();
+            this.txtMaxReactPw = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtTriMaxPw = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtTriPosReact = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtCnegReact = new System.Windows.Forms.TextBox();
+            this.txtCposReact = new System.Windows.Forms.TextBox();
+            this.lbCnegReact = new System.Windows.Forms.Label();
+            this.lbCposReact = new System.Windows.Forms.Label();
+            this.txtBnegReact = new System.Windows.Forms.TextBox();
+            this.lbBnegReact = new System.Windows.Forms.Label();
+            this.txtBposReact = new System.Windows.Forms.TextBox();
+            this.lbBposReact = new System.Windows.Forms.Label();
+            this.txtAnegReact = new System.Windows.Forms.TextBox();
+            this.lbAnegReact = new System.Windows.Forms.Label();
+            this.txtAposReact = new System.Windows.Forms.TextBox();
+            this.lbAposReact = new System.Windows.Forms.Label();
+            this.txtIrmsABC = new System.Windows.Forms.TextBox();
+            this.lbIrmsABC = new System.Windows.Forms.Label();
+            this.txtIrmsC = new System.Windows.Forms.TextBox();
+            this.txtIrmsB = new System.Windows.Forms.TextBox();
+            this.txtIrmsA = new System.Windows.Forms.TextBox();
+            this.lbIrmsC = new System.Windows.Forms.Label();
+            this.lbIrmsB = new System.Windows.Forms.Label();
+            this.lbIrmsA = new System.Windows.Forms.Label();
+            this.txtTriNeg = new System.Windows.Forms.TextBox();
+            this.lbTriPhNegEnergy = new System.Windows.Forms.Label();
+            this.txtTriPos = new System.Windows.Forms.TextBox();
+            this.lbPhTriPosEnergy = new System.Windows.Forms.Label();
+            this.txtCneg = new System.Windows.Forms.TextBox();
+            this.txtCpos = new System.Windows.Forms.TextBox();
+            this.lbPhCnegEnergy = new System.Windows.Forms.Label();
+            this.lbPhCposEnergy = new System.Windows.Forms.Label();
             this.txtBneg = new System.Windows.Forms.TextBox();
             this.lbPhBnegEnergy = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -73,14 +109,14 @@
             this.lbCosFiA = new System.Windows.Forms.Label();
             this.txtCosFiB = new System.Windows.Forms.TextBox();
             this.lbSABC = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSAbc = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSC = new System.Windows.Forms.TextBox();
             this.txtSB = new System.Windows.Forms.TextBox();
             this.lbSB = new System.Windows.Forms.Label();
             this.lbSA = new System.Windows.Forms.Label();
             this.txtSA = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtQAbc = new System.Windows.Forms.TextBox();
             this.lbQABC = new System.Windows.Forms.Label();
             this.lbQC = new System.Windows.Forms.Label();
             this.lbQB = new System.Windows.Forms.Label();
@@ -98,40 +134,6 @@
             this.lbPActiveA = new System.Windows.Forms.Label();
             this.txtVrmsC = new System.Windows.Forms.TextBox();
             this.txtVrmsB = new System.Windows.Forms.TextBox();
-            this.lbPhCposEnergy = new System.Windows.Forms.Label();
-            this.lbPhCnegEnergy = new System.Windows.Forms.Label();
-            this.txtCpos = new System.Windows.Forms.TextBox();
-            this.txtCneg = new System.Windows.Forms.TextBox();
-            this.lbPhTriPosEnergy = new System.Windows.Forms.Label();
-            this.txtTriPos = new System.Windows.Forms.TextBox();
-            this.lbTriPhNegEnergy = new System.Windows.Forms.Label();
-            this.txtTriNeg = new System.Windows.Forms.TextBox();
-            this.lbIrmsA = new System.Windows.Forms.Label();
-            this.lbIrmsB = new System.Windows.Forms.Label();
-            this.lbIrmsC = new System.Windows.Forms.Label();
-            this.txtIrmsA = new System.Windows.Forms.TextBox();
-            this.txtIrmsB = new System.Windows.Forms.TextBox();
-            this.txtIrmsC = new System.Windows.Forms.TextBox();
-            this.lbIrmsABC = new System.Windows.Forms.Label();
-            this.txtIrmsABC = new System.Windows.Forms.TextBox();
-            this.lbAposReact = new System.Windows.Forms.Label();
-            this.txtAposReact = new System.Windows.Forms.TextBox();
-            this.lbAnegReact = new System.Windows.Forms.Label();
-            this.txtAnegReact = new System.Windows.Forms.TextBox();
-            this.lbBposReact = new System.Windows.Forms.Label();
-            this.txtBposReact = new System.Windows.Forms.TextBox();
-            this.lbBnegReact = new System.Windows.Forms.Label();
-            this.txtBnegReact = new System.Windows.Forms.TextBox();
-            this.lbCposReact = new System.Windows.Forms.Label();
-            this.lbCnegReact = new System.Windows.Forms.Label();
-            this.txtCposReact = new System.Windows.Forms.TextBox();
-            this.txtCnegReact = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtTriPosReact = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtTriMaxPw = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtMaxReactPw = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -207,6 +209,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lbVrmsABC);
+            this.panel1.Controls.Add(this.txtVrmsABC);
             this.panel1.Controls.Add(this.txtMaxReactPw);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txtTriMaxPw);
@@ -276,14 +280,14 @@
             this.panel1.Controls.Add(this.lbCosFiA);
             this.panel1.Controls.Add(this.txtCosFiB);
             this.panel1.Controls.Add(this.lbSABC);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtSAbc);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtSC);
             this.panel1.Controls.Add(this.txtSB);
             this.panel1.Controls.Add(this.lbSB);
             this.panel1.Controls.Add(this.lbSA);
             this.panel1.Controls.Add(this.txtSA);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtQAbc);
             this.panel1.Controls.Add(this.lbQABC);
             this.panel1.Controls.Add(this.lbQC);
             this.panel1.Controls.Add(this.lbQB);
@@ -307,8 +311,296 @@
             this.panel1.Controls.Add(this.lbVrmsA);
             this.panel1.Location = new System.Drawing.Point(12, 81);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(928, 402);
+            this.panel1.Size = new System.Drawing.Size(928, 421);
             this.panel1.TabIndex = 88;
+            // 
+            // lbVrmsABC
+            // 
+            this.lbVrmsABC.AutoSize = true;
+            this.lbVrmsABC.Location = new System.Drawing.Point(4, 78);
+            this.lbVrmsABC.Name = "lbVrmsABC";
+            this.lbVrmsABC.Size = new System.Drawing.Size(41, 26);
+            this.lbVrmsABC.TabIndex = 184;
+            this.lbVrmsABC.Text = "VRMS \r\nABC";
+            // 
+            // txtVrmsABC
+            // 
+            this.txtVrmsABC.Location = new System.Drawing.Point(51, 78);
+            this.txtVrmsABC.Name = "txtVrmsABC";
+            this.txtVrmsABC.Size = new System.Drawing.Size(100, 20);
+            this.txtVrmsABC.TabIndex = 183;
+            // 
+            // txtMaxReactPw
+            // 
+            this.txtMaxReactPw.Location = new System.Drawing.Point(816, 95);
+            this.txtMaxReactPw.Name = "txtMaxReactPw";
+            this.txtMaxReactPw.Size = new System.Drawing.Size(100, 20);
+            this.txtMaxReactPw.TabIndex = 182;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(732, 98);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 39);
+            this.label4.TabIndex = 181;
+            this.label4.Text = "Tri-Phase MAX\r\nREACTIVE\r\nPOWER";
+            // 
+            // txtTriMaxPw
+            // 
+            this.txtTriMaxPw.Location = new System.Drawing.Point(816, 55);
+            this.txtTriMaxPw.Name = "txtTriMaxPw";
+            this.txtTriMaxPw.Size = new System.Drawing.Size(100, 20);
+            this.txtTriMaxPw.TabIndex = 180;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(732, 56);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 26);
+            this.label3.TabIndex = 179;
+            this.label3.Text = "Tri-Phase MAX\r\nPOWER";
+            // 
+            // txtTriPosReact
+            // 
+            this.txtTriPosReact.Location = new System.Drawing.Point(809, 0);
+            this.txtTriPosReact.Name = "txtTriPosReact";
+            this.txtTriPosReact.Size = new System.Drawing.Size(100, 20);
+            this.txtTriPosReact.TabIndex = 178;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(732, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 39);
+            this.label2.TabIndex = 177;
+            this.label2.Text = "Tri-Phase pos\r\nReactive\r\nenergy";
+            // 
+            // txtCnegReact
+            // 
+            this.txtCnegReact.Location = new System.Drawing.Point(624, 316);
+            this.txtCnegReact.Name = "txtCnegReact";
+            this.txtCnegReact.Size = new System.Drawing.Size(100, 20);
+            this.txtCnegReact.TabIndex = 176;
+            // 
+            // txtCposReact
+            // 
+            this.txtCposReact.Location = new System.Drawing.Point(623, 263);
+            this.txtCposReact.Name = "txtCposReact";
+            this.txtCposReact.Size = new System.Drawing.Size(100, 20);
+            this.txtCposReact.TabIndex = 175;
+            // 
+            // lbCnegReact
+            // 
+            this.lbCnegReact.AutoSize = true;
+            this.lbCnegReact.Location = new System.Drawing.Point(547, 316);
+            this.lbCnegReact.Name = "lbCnegReact";
+            this.lbCnegReact.Size = new System.Drawing.Size(71, 39);
+            this.lbCnegReact.TabIndex = 174;
+            this.lbCnegReact.Text = "Phase C neg \r\nReactive\r\nenergy";
+            // 
+            // lbCposReact
+            // 
+            this.lbCposReact.AutoSize = true;
+            this.lbCposReact.Location = new System.Drawing.Point(547, 263);
+            this.lbCposReact.Name = "lbCposReact";
+            this.lbCposReact.Size = new System.Drawing.Size(70, 39);
+            this.lbCposReact.TabIndex = 173;
+            this.lbCposReact.Text = "Phase C pos \r\nReactive\r\nenergy";
+            // 
+            // txtBnegReact
+            // 
+            this.txtBnegReact.Location = new System.Drawing.Point(624, 211);
+            this.txtBnegReact.Name = "txtBnegReact";
+            this.txtBnegReact.Size = new System.Drawing.Size(100, 20);
+            this.txtBnegReact.TabIndex = 172;
+            // 
+            // lbBnegReact
+            // 
+            this.lbBnegReact.AutoSize = true;
+            this.lbBnegReact.Location = new System.Drawing.Point(547, 211);
+            this.lbBnegReact.Name = "lbBnegReact";
+            this.lbBnegReact.Size = new System.Drawing.Size(71, 39);
+            this.lbBnegReact.TabIndex = 171;
+            this.lbBnegReact.Text = "Phase B neg \r\nReactive\r\nenergy";
+            // 
+            // txtBposReact
+            // 
+            this.txtBposReact.Location = new System.Drawing.Point(620, 156);
+            this.txtBposReact.Name = "txtBposReact";
+            this.txtBposReact.Size = new System.Drawing.Size(100, 20);
+            this.txtBposReact.TabIndex = 170;
+            // 
+            // lbBposReact
+            // 
+            this.lbBposReact.AutoSize = true;
+            this.lbBposReact.Location = new System.Drawing.Point(547, 156);
+            this.lbBposReact.Name = "lbBposReact";
+            this.lbBposReact.Size = new System.Drawing.Size(67, 39);
+            this.lbBposReact.TabIndex = 169;
+            this.lbBposReact.Text = "Phase B pos\r\nReactive\r\nenergy";
+            // 
+            // txtAnegReact
+            // 
+            this.txtAnegReact.Location = new System.Drawing.Point(620, 101);
+            this.txtAnegReact.Name = "txtAnegReact";
+            this.txtAnegReact.Size = new System.Drawing.Size(100, 20);
+            this.txtAnegReact.TabIndex = 168;
+            // 
+            // lbAnegReact
+            // 
+            this.lbAnegReact.AutoSize = true;
+            this.lbAnegReact.Location = new System.Drawing.Point(547, 101);
+            this.lbAnegReact.Name = "lbAnegReact";
+            this.lbAnegReact.Size = new System.Drawing.Size(68, 39);
+            this.lbAnegReact.TabIndex = 167;
+            this.lbAnegReact.Text = "Phase A neg\r\nReactive\r\nenergy";
+            // 
+            // txtAposReact
+            // 
+            this.txtAposReact.Location = new System.Drawing.Point(620, 42);
+            this.txtAposReact.Name = "txtAposReact";
+            this.txtAposReact.Size = new System.Drawing.Size(100, 20);
+            this.txtAposReact.TabIndex = 166;
+            // 
+            // lbAposReact
+            // 
+            this.lbAposReact.AutoSize = true;
+            this.lbAposReact.Location = new System.Drawing.Point(547, 42);
+            this.lbAposReact.Name = "lbAposReact";
+            this.lbAposReact.Size = new System.Drawing.Size(67, 39);
+            this.lbAposReact.TabIndex = 165;
+            this.lbAposReact.Text = "Phase A pos\r\nReactive\r\nenergy";
+            // 
+            // txtIrmsABC
+            // 
+            this.txtIrmsABC.Location = new System.Drawing.Point(626, 0);
+            this.txtIrmsABC.Name = "txtIrmsABC";
+            this.txtIrmsABC.Size = new System.Drawing.Size(100, 20);
+            this.txtIrmsABC.TabIndex = 164;
+            // 
+            // lbIrmsABC
+            // 
+            this.lbIrmsABC.AutoSize = true;
+            this.lbIrmsABC.Location = new System.Drawing.Point(547, 3);
+            this.lbIrmsABC.Name = "lbIrmsABC";
+            this.lbIrmsABC.Size = new System.Drawing.Size(73, 26);
+            this.lbIrmsABC.TabIndex = 163;
+            this.lbIrmsABC.Text = "IRMS Ampere\r\nABC";
+            // 
+            // txtIrmsC
+            // 
+            this.txtIrmsC.Location = new System.Drawing.Point(441, 374);
+            this.txtIrmsC.Name = "txtIrmsC";
+            this.txtIrmsC.Size = new System.Drawing.Size(100, 20);
+            this.txtIrmsC.TabIndex = 162;
+            // 
+            // txtIrmsB
+            // 
+            this.txtIrmsB.Location = new System.Drawing.Point(440, 335);
+            this.txtIrmsB.Name = "txtIrmsB";
+            this.txtIrmsB.Size = new System.Drawing.Size(100, 20);
+            this.txtIrmsB.TabIndex = 161;
+            // 
+            // txtIrmsA
+            // 
+            this.txtIrmsA.Location = new System.Drawing.Point(441, 299);
+            this.txtIrmsA.Name = "txtIrmsA";
+            this.txtIrmsA.Size = new System.Drawing.Size(100, 20);
+            this.txtIrmsA.TabIndex = 160;
+            // 
+            // lbIrmsC
+            // 
+            this.lbIrmsC.AutoSize = true;
+            this.lbIrmsC.Location = new System.Drawing.Point(362, 371);
+            this.lbIrmsC.Name = "lbIrmsC";
+            this.lbIrmsC.Size = new System.Drawing.Size(73, 26);
+            this.lbIrmsC.TabIndex = 159;
+            this.lbIrmsC.Text = "IRMS Ampere\r\nC";
+            // 
+            // lbIrmsB
+            // 
+            this.lbIrmsB.AutoSize = true;
+            this.lbIrmsB.Location = new System.Drawing.Point(361, 335);
+            this.lbIrmsB.Name = "lbIrmsB";
+            this.lbIrmsB.Size = new System.Drawing.Size(73, 26);
+            this.lbIrmsB.TabIndex = 158;
+            this.lbIrmsB.Text = "IRMS Ampere\r\nB";
+            // 
+            // lbIrmsA
+            // 
+            this.lbIrmsA.AutoSize = true;
+            this.lbIrmsA.Location = new System.Drawing.Point(362, 299);
+            this.lbIrmsA.Name = "lbIrmsA";
+            this.lbIrmsA.Size = new System.Drawing.Size(73, 26);
+            this.lbIrmsA.TabIndex = 157;
+            this.lbIrmsA.Text = "IRMS Ampere\r\nA";
+            // 
+            // txtTriNeg
+            // 
+            this.txtTriNeg.Location = new System.Drawing.Point(441, 263);
+            this.txtTriNeg.Name = "txtTriNeg";
+            this.txtTriNeg.Size = new System.Drawing.Size(100, 20);
+            this.txtTriNeg.TabIndex = 156;
+            // 
+            // lbTriPhNegEnergy
+            // 
+            this.lbTriPhNegEnergy.AutoSize = true;
+            this.lbTriPhNegEnergy.Location = new System.Drawing.Point(362, 264);
+            this.lbTriPhNegEnergy.Name = "lbTriPhNegEnergy";
+            this.lbTriPhNegEnergy.Size = new System.Drawing.Size(73, 26);
+            this.lbTriPhNegEnergy.TabIndex = 155;
+            this.lbTriPhNegEnergy.Text = "Tri-Phase neg\r\nenergy";
+            // 
+            // txtTriPos
+            // 
+            this.txtTriPos.Location = new System.Drawing.Point(440, 228);
+            this.txtTriPos.Name = "txtTriPos";
+            this.txtTriPos.Size = new System.Drawing.Size(100, 20);
+            this.txtTriPos.TabIndex = 154;
+            // 
+            // lbPhTriPosEnergy
+            // 
+            this.lbPhTriPosEnergy.AutoSize = true;
+            this.lbPhTriPosEnergy.Location = new System.Drawing.Point(362, 228);
+            this.lbPhTriPosEnergy.Name = "lbPhTriPosEnergy";
+            this.lbPhTriPosEnergy.Size = new System.Drawing.Size(72, 26);
+            this.lbPhTriPosEnergy.TabIndex = 153;
+            this.lbPhTriPosEnergy.Text = "Tri-Phase pos\r\nenergy";
+            // 
+            // txtCneg
+            // 
+            this.txtCneg.Location = new System.Drawing.Point(435, 192);
+            this.txtCneg.Name = "txtCneg";
+            this.txtCneg.Size = new System.Drawing.Size(100, 20);
+            this.txtCneg.TabIndex = 152;
+            // 
+            // txtCpos
+            // 
+            this.txtCpos.Location = new System.Drawing.Point(435, 159);
+            this.txtCpos.Name = "txtCpos";
+            this.txtCpos.Size = new System.Drawing.Size(100, 20);
+            this.txtCpos.TabIndex = 151;
+            // 
+            // lbPhCnegEnergy
+            // 
+            this.lbPhCnegEnergy.AutoSize = true;
+            this.lbPhCnegEnergy.Location = new System.Drawing.Point(361, 192);
+            this.lbPhCnegEnergy.Name = "lbPhCnegEnergy";
+            this.lbPhCnegEnergy.Size = new System.Drawing.Size(68, 26);
+            this.lbPhCnegEnergy.TabIndex = 150;
+            this.lbPhCnegEnergy.Text = "Phase C neg\r\nenergy";
+            // 
+            // lbPhCposEnergy
+            // 
+            this.lbPhCposEnergy.AutoSize = true;
+            this.lbPhCposEnergy.Location = new System.Drawing.Point(362, 156);
+            this.lbPhCposEnergy.Name = "lbPhCposEnergy";
+            this.lbPhCposEnergy.Size = new System.Drawing.Size(67, 26);
+            this.lbPhCposEnergy.TabIndex = 149;
+            this.lbPhCposEnergy.Text = "Phase C pos\r\nenergy";
             // 
             // txtBneg
             // 
@@ -376,7 +668,7 @@
             // 
             // txtReactEnergyABC
             // 
-            this.txtReactEnergyABC.Location = new System.Drawing.Point(255, 341);
+            this.txtReactEnergyABC.Location = new System.Drawing.Point(251, 341);
             this.txtReactEnergyABC.Name = "txtReactEnergyABC";
             this.txtReactEnergyABC.Size = new System.Drawing.Size(100, 20);
             this.txtReactEnergyABC.TabIndex = 140;
@@ -384,7 +676,7 @@
             // lbReactiveABC
             // 
             this.lbReactiveABC.AutoSize = true;
-            this.lbReactiveABC.Location = new System.Drawing.Point(185, 341);
+            this.lbReactiveABC.Location = new System.Drawing.Point(181, 341);
             this.lbReactiveABC.Name = "lbReactiveABC";
             this.lbReactiveABC.Size = new System.Drawing.Size(64, 26);
             this.lbReactiveABC.TabIndex = 139;
@@ -392,7 +684,7 @@
             // 
             // txtReactEnergyC
             // 
-            this.txtReactEnergyC.Location = new System.Drawing.Point(241, 305);
+            this.txtReactEnergyC.Location = new System.Drawing.Point(237, 305);
             this.txtReactEnergyC.Name = "txtReactEnergyC";
             this.txtReactEnergyC.Size = new System.Drawing.Size(100, 20);
             this.txtReactEnergyC.TabIndex = 138;
@@ -400,7 +692,7 @@
             // lbReactEnergyC
             // 
             this.lbReactEnergyC.AutoSize = true;
-            this.lbReactEnergyC.Location = new System.Drawing.Point(185, 305);
+            this.lbReactEnergyC.Location = new System.Drawing.Point(181, 305);
             this.lbReactEnergyC.Name = "lbReactEnergyC";
             this.lbReactEnergyC.Size = new System.Drawing.Size(50, 26);
             this.lbReactEnergyC.TabIndex = 137;
@@ -408,7 +700,7 @@
             // 
             // txtReactEnergyB
             // 
-            this.txtReactEnergyB.Location = new System.Drawing.Point(241, 270);
+            this.txtReactEnergyB.Location = new System.Drawing.Point(237, 270);
             this.txtReactEnergyB.Name = "txtReactEnergyB";
             this.txtReactEnergyB.Size = new System.Drawing.Size(100, 20);
             this.txtReactEnergyB.TabIndex = 136;
@@ -416,7 +708,7 @@
             // lbReactEnergyB
             // 
             this.lbReactEnergyB.AutoSize = true;
-            this.lbReactEnergyB.Location = new System.Drawing.Point(185, 267);
+            this.lbReactEnergyB.Location = new System.Drawing.Point(181, 267);
             this.lbReactEnergyB.Name = "lbReactEnergyB";
             this.lbReactEnergyB.Size = new System.Drawing.Size(50, 26);
             this.lbReactEnergyB.TabIndex = 135;
@@ -425,7 +717,7 @@
             // lbReactEnergyA
             // 
             this.lbReactEnergyA.AutoSize = true;
-            this.lbReactEnergyA.Location = new System.Drawing.Point(185, 234);
+            this.lbReactEnergyA.Location = new System.Drawing.Point(181, 234);
             this.lbReactEnergyA.Name = "lbReactEnergyA";
             this.lbReactEnergyA.Size = new System.Drawing.Size(50, 26);
             this.lbReactEnergyA.TabIndex = 134;
@@ -433,14 +725,14 @@
             // 
             // txtReactEnergyA
             // 
-            this.txtReactEnergyA.Location = new System.Drawing.Point(241, 234);
+            this.txtReactEnergyA.Location = new System.Drawing.Point(237, 234);
             this.txtReactEnergyA.Name = "txtReactEnergyA";
             this.txtReactEnergyA.Size = new System.Drawing.Size(100, 20);
             this.txtReactEnergyA.TabIndex = 133;
             // 
             // txtEnergyABC
             // 
-            this.txtEnergyABC.Location = new System.Drawing.Point(255, 208);
+            this.txtEnergyABC.Location = new System.Drawing.Point(251, 208);
             this.txtEnergyABC.Name = "txtEnergyABC";
             this.txtEnergyABC.Size = new System.Drawing.Size(100, 20);
             this.txtEnergyABC.TabIndex = 132;
@@ -448,7 +740,7 @@
             // lbEnergyABC
             // 
             this.lbEnergyABC.AutoSize = true;
-            this.lbEnergyABC.Location = new System.Drawing.Point(185, 211);
+            this.lbEnergyABC.Location = new System.Drawing.Point(181, 211);
             this.lbEnergyABC.Name = "lbEnergyABC";
             this.lbEnergyABC.Size = new System.Drawing.Size(64, 13);
             this.lbEnergyABC.TabIndex = 131;
@@ -456,7 +748,7 @@
             // 
             // txtEnergyC
             // 
-            this.txtEnergyC.Location = new System.Drawing.Point(241, 182);
+            this.txtEnergyC.Location = new System.Drawing.Point(237, 182);
             this.txtEnergyC.Name = "txtEnergyC";
             this.txtEnergyC.Size = new System.Drawing.Size(100, 20);
             this.txtEnergyC.TabIndex = 130;
@@ -464,7 +756,7 @@
             // lbEnergyC
             // 
             this.lbEnergyC.AutoSize = true;
-            this.lbEnergyC.Location = new System.Drawing.Point(185, 185);
+            this.lbEnergyC.Location = new System.Drawing.Point(181, 185);
             this.lbEnergyC.Name = "lbEnergyC";
             this.lbEnergyC.Size = new System.Drawing.Size(50, 13);
             this.lbEnergyC.TabIndex = 129;
@@ -473,7 +765,7 @@
             // lbEnergyB
             // 
             this.lbEnergyB.AutoSize = true;
-            this.lbEnergyB.Location = new System.Drawing.Point(185, 159);
+            this.lbEnergyB.Location = new System.Drawing.Point(181, 159);
             this.lbEnergyB.Name = "lbEnergyB";
             this.lbEnergyB.Size = new System.Drawing.Size(50, 13);
             this.lbEnergyB.TabIndex = 128;
@@ -481,14 +773,14 @@
             // 
             // txtEnergyB
             // 
-            this.txtEnergyB.Location = new System.Drawing.Point(241, 156);
+            this.txtEnergyB.Location = new System.Drawing.Point(237, 156);
             this.txtEnergyB.Name = "txtEnergyB";
             this.txtEnergyB.Size = new System.Drawing.Size(100, 20);
             this.txtEnergyB.TabIndex = 127;
             // 
             // txtEnergyA
             // 
-            this.txtEnergyA.Location = new System.Drawing.Point(241, 130);
+            this.txtEnergyA.Location = new System.Drawing.Point(237, 130);
             this.txtEnergyA.Name = "txtEnergyA";
             this.txtEnergyA.Size = new System.Drawing.Size(100, 20);
             this.txtEnergyA.TabIndex = 126;
@@ -496,7 +788,7 @@
             // lbEnergyA
             // 
             this.lbEnergyA.AutoSize = true;
-            this.lbEnergyA.Location = new System.Drawing.Point(185, 133);
+            this.lbEnergyA.Location = new System.Drawing.Point(181, 133);
             this.lbEnergyA.Name = "lbEnergyA";
             this.lbEnergyA.Size = new System.Drawing.Size(50, 13);
             this.lbEnergyA.TabIndex = 125;
@@ -505,7 +797,7 @@
             // lbFreq
             // 
             this.lbFreq.AutoSize = true;
-            this.lbFreq.Location = new System.Drawing.Point(185, 107);
+            this.lbFreq.Location = new System.Drawing.Point(181, 107);
             this.lbFreq.Name = "lbFreq";
             this.lbFreq.Size = new System.Drawing.Size(57, 13);
             this.lbFreq.TabIndex = 124;
@@ -513,7 +805,7 @@
             // 
             // txtFreq
             // 
-            this.txtFreq.Location = new System.Drawing.Point(248, 104);
+            this.txtFreq.Location = new System.Drawing.Point(244, 104);
             this.txtFreq.Name = "txtFreq";
             this.txtFreq.Size = new System.Drawing.Size(100, 20);
             this.txtFreq.TabIndex = 123;
@@ -521,7 +813,7 @@
             // lbCosFiABC
             // 
             this.lbCosFiABC.AutoSize = true;
-            this.lbCosFiABC.Location = new System.Drawing.Point(185, 81);
+            this.lbCosFiABC.Location = new System.Drawing.Point(181, 81);
             this.lbCosFiABC.Name = "lbCosFiABC";
             this.lbCosFiABC.Size = new System.Drawing.Size(57, 13);
             this.lbCosFiABC.TabIndex = 122;
@@ -529,7 +821,7 @@
             // 
             // txtCosFiABC
             // 
-            this.txtCosFiABC.Location = new System.Drawing.Point(248, 78);
+            this.txtCosFiABC.Location = new System.Drawing.Point(244, 78);
             this.txtCosFiABC.Name = "txtCosFiABC";
             this.txtCosFiABC.Size = new System.Drawing.Size(100, 20);
             this.txtCosFiABC.TabIndex = 121;
@@ -537,7 +829,7 @@
             // lbCosFiC
             // 
             this.lbCosFiC.AutoSize = true;
-            this.lbCosFiC.Location = new System.Drawing.Point(185, 55);
+            this.lbCosFiC.Location = new System.Drawing.Point(181, 55);
             this.lbCosFiC.Name = "lbCosFiC";
             this.lbCosFiC.Size = new System.Drawing.Size(43, 13);
             this.lbCosFiC.TabIndex = 120;
@@ -545,7 +837,7 @@
             // 
             // txtCosFiC
             // 
-            this.txtCosFiC.Location = new System.Drawing.Point(234, 52);
+            this.txtCosFiC.Location = new System.Drawing.Point(230, 52);
             this.txtCosFiC.Name = "txtCosFiC";
             this.txtCosFiC.Size = new System.Drawing.Size(100, 20);
             this.txtCosFiC.TabIndex = 119;
@@ -553,7 +845,7 @@
             // lbCosFiB
             // 
             this.lbCosFiB.AutoSize = true;
-            this.lbCosFiB.Location = new System.Drawing.Point(185, 29);
+            this.lbCosFiB.Location = new System.Drawing.Point(181, 29);
             this.lbCosFiB.Name = "lbCosFiB";
             this.lbCosFiB.Size = new System.Drawing.Size(43, 13);
             this.lbCosFiB.TabIndex = 118;
@@ -561,7 +853,7 @@
             // 
             // txtCosFiA
             // 
-            this.txtCosFiA.Location = new System.Drawing.Point(234, 0);
+            this.txtCosFiA.Location = new System.Drawing.Point(230, 0);
             this.txtCosFiA.Name = "txtCosFiA";
             this.txtCosFiA.Size = new System.Drawing.Size(100, 20);
             this.txtCosFiA.TabIndex = 117;
@@ -569,7 +861,7 @@
             // lbCosFiA
             // 
             this.lbCosFiA.AutoSize = true;
-            this.lbCosFiA.Location = new System.Drawing.Point(185, 3);
+            this.lbCosFiA.Location = new System.Drawing.Point(181, 3);
             this.lbCosFiA.Name = "lbCosFiA";
             this.lbCosFiA.Size = new System.Drawing.Size(43, 13);
             this.lbCosFiA.TabIndex = 116;
@@ -577,7 +869,7 @@
             // 
             // txtCosFiB
             // 
-            this.txtCosFiB.Location = new System.Drawing.Point(234, 26);
+            this.txtCosFiB.Location = new System.Drawing.Point(230, 26);
             this.txtCosFiB.Name = "txtCosFiB";
             this.txtCosFiB.Size = new System.Drawing.Size(100, 20);
             this.txtCosFiB.TabIndex = 115;
@@ -585,23 +877,23 @@
             // lbSABC
             // 
             this.lbSABC.AutoSize = true;
-            this.lbSABC.Location = new System.Drawing.Point(3, 374);
+            this.lbSABC.Location = new System.Drawing.Point(3, 403);
             this.lbSABC.Name = "lbSABC";
             this.lbSABC.Size = new System.Drawing.Size(38, 13);
             this.lbSABC.TabIndex = 114;
             this.lbSABC.Text = "S ABC";
             // 
-            // textBox2
+            // txtSAbc
             // 
-            this.textBox2.Location = new System.Drawing.Point(47, 371);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 113;
+            this.txtSAbc.Location = new System.Drawing.Point(47, 400);
+            this.txtSAbc.Name = "txtSAbc";
+            this.txtSAbc.Size = new System.Drawing.Size(100, 20);
+            this.txtSAbc.TabIndex = 113;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 348);
+            this.label1.Location = new System.Drawing.Point(3, 377);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 13);
             this.label1.TabIndex = 112;
@@ -609,14 +901,14 @@
             // 
             // txtSC
             // 
-            this.txtSC.Location = new System.Drawing.Point(33, 345);
+            this.txtSC.Location = new System.Drawing.Point(33, 374);
             this.txtSC.Name = "txtSC";
             this.txtSC.Size = new System.Drawing.Size(100, 20);
             this.txtSC.TabIndex = 111;
             // 
             // txtSB
             // 
-            this.txtSB.Location = new System.Drawing.Point(33, 319);
+            this.txtSB.Location = new System.Drawing.Point(34, 348);
             this.txtSB.Name = "txtSB";
             this.txtSB.Size = new System.Drawing.Size(100, 20);
             this.txtSB.TabIndex = 110;
@@ -624,7 +916,7 @@
             // lbSB
             // 
             this.lbSB.AutoSize = true;
-            this.lbSB.Location = new System.Drawing.Point(3, 322);
+            this.lbSB.Location = new System.Drawing.Point(4, 351);
             this.lbSB.Name = "lbSB";
             this.lbSB.Size = new System.Drawing.Size(24, 13);
             this.lbSB.TabIndex = 109;
@@ -633,7 +925,7 @@
             // lbSA
             // 
             this.lbSA.AutoSize = true;
-            this.lbSA.Location = new System.Drawing.Point(3, 296);
+            this.lbSA.Location = new System.Drawing.Point(4, 326);
             this.lbSA.Name = "lbSA";
             this.lbSA.Size = new System.Drawing.Size(24, 13);
             this.lbSA.TabIndex = 108;
@@ -641,22 +933,22 @@
             // 
             // txtSA
             // 
-            this.txtSA.Location = new System.Drawing.Point(33, 293);
+            this.txtSA.Location = new System.Drawing.Point(33, 322);
             this.txtSA.Name = "txtSA";
             this.txtSA.Size = new System.Drawing.Size(100, 20);
             this.txtSA.TabIndex = 107;
             // 
-            // textBox1
+            // txtQAbc
             // 
-            this.textBox1.Location = new System.Drawing.Point(48, 267);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 106;
+            this.txtQAbc.Location = new System.Drawing.Point(47, 296);
+            this.txtQAbc.Name = "txtQAbc";
+            this.txtQAbc.Size = new System.Drawing.Size(100, 20);
+            this.txtQAbc.TabIndex = 106;
             // 
             // lbQABC
             // 
             this.lbQABC.AutoSize = true;
-            this.lbQABC.Location = new System.Drawing.Point(3, 270);
+            this.lbQABC.Location = new System.Drawing.Point(3, 299);
             this.lbQABC.Name = "lbQABC";
             this.lbQABC.Size = new System.Drawing.Size(39, 13);
             this.lbQABC.TabIndex = 105;
@@ -665,7 +957,7 @@
             // lbQC
             // 
             this.lbQC.AutoSize = true;
-            this.lbQC.Location = new System.Drawing.Point(3, 244);
+            this.lbQC.Location = new System.Drawing.Point(3, 273);
             this.lbQC.Name = "lbQC";
             this.lbQC.Size = new System.Drawing.Size(25, 13);
             this.lbQC.TabIndex = 104;
@@ -674,7 +966,7 @@
             // lbQB
             // 
             this.lbQB.AutoSize = true;
-            this.lbQB.Location = new System.Drawing.Point(3, 218);
+            this.lbQB.Location = new System.Drawing.Point(4, 247);
             this.lbQB.Name = "lbQB";
             this.lbQB.Size = new System.Drawing.Size(25, 13);
             this.lbQB.TabIndex = 103;
@@ -682,21 +974,21 @@
             // 
             // txtQC
             // 
-            this.txtQC.Location = new System.Drawing.Point(34, 241);
+            this.txtQC.Location = new System.Drawing.Point(33, 270);
             this.txtQC.Name = "txtQC";
             this.txtQC.Size = new System.Drawing.Size(100, 20);
             this.txtQC.TabIndex = 102;
             // 
             // txtQB
             // 
-            this.txtQB.Location = new System.Drawing.Point(34, 215);
+            this.txtQB.Location = new System.Drawing.Point(33, 244);
             this.txtQB.Name = "txtQB";
             this.txtQB.Size = new System.Drawing.Size(100, 20);
             this.txtQB.TabIndex = 101;
             // 
             // txtQA
             // 
-            this.txtQA.Location = new System.Drawing.Point(34, 189);
+            this.txtQA.Location = new System.Drawing.Point(33, 218);
             this.txtQA.Name = "txtQA";
             this.txtQA.Size = new System.Drawing.Size(100, 20);
             this.txtQA.TabIndex = 100;
@@ -704,7 +996,7 @@
             // lbQA
             // 
             this.lbQA.AutoSize = true;
-            this.lbQA.Location = new System.Drawing.Point(3, 192);
+            this.lbQA.Location = new System.Drawing.Point(4, 221);
             this.lbQA.Name = "lbQA";
             this.lbQA.Size = new System.Drawing.Size(25, 13);
             this.lbQA.TabIndex = 99;
@@ -712,7 +1004,7 @@
             // 
             // txtPActiveAbc
             // 
-            this.txtPActiveAbc.Location = new System.Drawing.Point(74, 156);
+            this.txtPActiveAbc.Location = new System.Drawing.Point(74, 192);
             this.txtPActiveAbc.Name = "txtPActiveAbc";
             this.txtPActiveAbc.Size = new System.Drawing.Size(100, 20);
             this.txtPActiveAbc.TabIndex = 98;
@@ -720,7 +1012,7 @@
             // lbPActiveAbc
             // 
             this.lbPActiveAbc.AutoSize = true;
-            this.lbPActiveAbc.Location = new System.Drawing.Point(3, 156);
+            this.lbPActiveAbc.Location = new System.Drawing.Point(4, 186);
             this.lbPActiveAbc.Name = "lbPActiveAbc";
             this.lbPActiveAbc.Size = new System.Drawing.Size(55, 26);
             this.lbPActiveAbc.TabIndex = 97;
@@ -728,14 +1020,14 @@
             // 
             // txtPActiveC
             // 
-            this.txtPActiveC.Location = new System.Drawing.Point(74, 130);
+            this.txtPActiveC.Location = new System.Drawing.Point(74, 166);
             this.txtPActiveC.Name = "txtPActiveC";
             this.txtPActiveC.Size = new System.Drawing.Size(100, 20);
             this.txtPActiveC.TabIndex = 96;
             // 
             // txtPActiveB
             // 
-            this.txtPActiveB.Location = new System.Drawing.Point(74, 104);
+            this.txtPActiveB.Location = new System.Drawing.Point(74, 138);
             this.txtPActiveB.Name = "txtPActiveB";
             this.txtPActiveB.Size = new System.Drawing.Size(100, 20);
             this.txtPActiveB.TabIndex = 95;
@@ -743,7 +1035,7 @@
             // lbPActiveC
             // 
             this.lbPActiveC.AutoSize = true;
-            this.lbPActiveC.Location = new System.Drawing.Point(3, 133);
+            this.lbPActiveC.Location = new System.Drawing.Point(3, 166);
             this.lbPActiveC.Name = "lbPActiveC";
             this.lbPActiveC.Size = new System.Drawing.Size(65, 13);
             this.lbPActiveC.TabIndex = 93;
@@ -752,7 +1044,7 @@
             // lbPActiveB
             // 
             this.lbPActiveB.AutoSize = true;
-            this.lbPActiveB.Location = new System.Drawing.Point(3, 107);
+            this.lbPActiveB.Location = new System.Drawing.Point(4, 141);
             this.lbPActiveB.Name = "lbPActiveB";
             this.lbPActiveB.Size = new System.Drawing.Size(65, 13);
             this.lbPActiveB.TabIndex = 92;
@@ -760,7 +1052,7 @@
             // 
             // txtPActiveA
             // 
-            this.txtPActiveA.Location = new System.Drawing.Point(74, 78);
+            this.txtPActiveA.Location = new System.Drawing.Point(74, 112);
             this.txtPActiveA.Name = "txtPActiveA";
             this.txtPActiveA.Size = new System.Drawing.Size(100, 20);
             this.txtPActiveA.TabIndex = 94;
@@ -768,7 +1060,7 @@
             // lbPActiveA
             // 
             this.lbPActiveA.AutoSize = true;
-            this.lbPActiveA.Location = new System.Drawing.Point(3, 81);
+            this.lbPActiveA.Location = new System.Drawing.Point(3, 115);
             this.lbPActiveA.Name = "lbPActiveA";
             this.lbPActiveA.Size = new System.Drawing.Size(65, 13);
             this.lbPActiveA.TabIndex = 91;
@@ -788,283 +1080,11 @@
             this.txtVrmsB.Size = new System.Drawing.Size(100, 20);
             this.txtVrmsB.TabIndex = 89;
             // 
-            // lbPhCposEnergy
-            // 
-            this.lbPhCposEnergy.AutoSize = true;
-            this.lbPhCposEnergy.Location = new System.Drawing.Point(362, 156);
-            this.lbPhCposEnergy.Name = "lbPhCposEnergy";
-            this.lbPhCposEnergy.Size = new System.Drawing.Size(67, 26);
-            this.lbPhCposEnergy.TabIndex = 149;
-            this.lbPhCposEnergy.Text = "Phase C pos\r\nenergy";
-            // 
-            // lbPhCnegEnergy
-            // 
-            this.lbPhCnegEnergy.AutoSize = true;
-            this.lbPhCnegEnergy.Location = new System.Drawing.Point(361, 192);
-            this.lbPhCnegEnergy.Name = "lbPhCnegEnergy";
-            this.lbPhCnegEnergy.Size = new System.Drawing.Size(68, 26);
-            this.lbPhCnegEnergy.TabIndex = 150;
-            this.lbPhCnegEnergy.Text = "Phase C neg\r\nenergy";
-            // 
-            // txtCpos
-            // 
-            this.txtCpos.Location = new System.Drawing.Point(435, 159);
-            this.txtCpos.Name = "txtCpos";
-            this.txtCpos.Size = new System.Drawing.Size(100, 20);
-            this.txtCpos.TabIndex = 151;
-            // 
-            // txtCneg
-            // 
-            this.txtCneg.Location = new System.Drawing.Point(435, 192);
-            this.txtCneg.Name = "txtCneg";
-            this.txtCneg.Size = new System.Drawing.Size(100, 20);
-            this.txtCneg.TabIndex = 152;
-            // 
-            // lbPhTriPosEnergy
-            // 
-            this.lbPhTriPosEnergy.AutoSize = true;
-            this.lbPhTriPosEnergy.Location = new System.Drawing.Point(362, 228);
-            this.lbPhTriPosEnergy.Name = "lbPhTriPosEnergy";
-            this.lbPhTriPosEnergy.Size = new System.Drawing.Size(72, 26);
-            this.lbPhTriPosEnergy.TabIndex = 153;
-            this.lbPhTriPosEnergy.Text = "Tri-Phase pos\r\nenergy";
-            // 
-            // txtTriPos
-            // 
-            this.txtTriPos.Location = new System.Drawing.Point(440, 228);
-            this.txtTriPos.Name = "txtTriPos";
-            this.txtTriPos.Size = new System.Drawing.Size(100, 20);
-            this.txtTriPos.TabIndex = 154;
-            // 
-            // lbTriPhNegEnergy
-            // 
-            this.lbTriPhNegEnergy.AutoSize = true;
-            this.lbTriPhNegEnergy.Location = new System.Drawing.Point(362, 264);
-            this.lbTriPhNegEnergy.Name = "lbTriPhNegEnergy";
-            this.lbTriPhNegEnergy.Size = new System.Drawing.Size(73, 26);
-            this.lbTriPhNegEnergy.TabIndex = 155;
-            this.lbTriPhNegEnergy.Text = "Tri-Phase neg\r\nenergy";
-            // 
-            // txtTriNeg
-            // 
-            this.txtTriNeg.Location = new System.Drawing.Point(441, 263);
-            this.txtTriNeg.Name = "txtTriNeg";
-            this.txtTriNeg.Size = new System.Drawing.Size(100, 20);
-            this.txtTriNeg.TabIndex = 156;
-            // 
-            // lbIrmsA
-            // 
-            this.lbIrmsA.AutoSize = true;
-            this.lbIrmsA.Location = new System.Drawing.Point(362, 299);
-            this.lbIrmsA.Name = "lbIrmsA";
-            this.lbIrmsA.Size = new System.Drawing.Size(73, 26);
-            this.lbIrmsA.TabIndex = 157;
-            this.lbIrmsA.Text = "IRMS Ampere\r\nA";
-            // 
-            // lbIrmsB
-            // 
-            this.lbIrmsB.AutoSize = true;
-            this.lbIrmsB.Location = new System.Drawing.Point(361, 335);
-            this.lbIrmsB.Name = "lbIrmsB";
-            this.lbIrmsB.Size = new System.Drawing.Size(73, 26);
-            this.lbIrmsB.TabIndex = 158;
-            this.lbIrmsB.Text = "IRMS Ampere\r\nB";
-            // 
-            // lbIrmsC
-            // 
-            this.lbIrmsC.AutoSize = true;
-            this.lbIrmsC.Location = new System.Drawing.Point(362, 371);
-            this.lbIrmsC.Name = "lbIrmsC";
-            this.lbIrmsC.Size = new System.Drawing.Size(73, 26);
-            this.lbIrmsC.TabIndex = 159;
-            this.lbIrmsC.Text = "IRMS Ampere\r\nC";
-            // 
-            // txtIrmsA
-            // 
-            this.txtIrmsA.Location = new System.Drawing.Point(441, 299);
-            this.txtIrmsA.Name = "txtIrmsA";
-            this.txtIrmsA.Size = new System.Drawing.Size(100, 20);
-            this.txtIrmsA.TabIndex = 160;
-            // 
-            // txtIrmsB
-            // 
-            this.txtIrmsB.Location = new System.Drawing.Point(440, 335);
-            this.txtIrmsB.Name = "txtIrmsB";
-            this.txtIrmsB.Size = new System.Drawing.Size(100, 20);
-            this.txtIrmsB.TabIndex = 161;
-            // 
-            // txtIrmsC
-            // 
-            this.txtIrmsC.Location = new System.Drawing.Point(441, 374);
-            this.txtIrmsC.Name = "txtIrmsC";
-            this.txtIrmsC.Size = new System.Drawing.Size(100, 20);
-            this.txtIrmsC.TabIndex = 162;
-            // 
-            // lbIrmsABC
-            // 
-            this.lbIrmsABC.AutoSize = true;
-            this.lbIrmsABC.Location = new System.Drawing.Point(547, 3);
-            this.lbIrmsABC.Name = "lbIrmsABC";
-            this.lbIrmsABC.Size = new System.Drawing.Size(73, 26);
-            this.lbIrmsABC.TabIndex = 163;
-            this.lbIrmsABC.Text = "IRMS Ampere\r\nABC";
-            // 
-            // txtIrmsABC
-            // 
-            this.txtIrmsABC.Location = new System.Drawing.Point(626, 0);
-            this.txtIrmsABC.Name = "txtIrmsABC";
-            this.txtIrmsABC.Size = new System.Drawing.Size(100, 20);
-            this.txtIrmsABC.TabIndex = 164;
-            // 
-            // lbAposReact
-            // 
-            this.lbAposReact.AutoSize = true;
-            this.lbAposReact.Location = new System.Drawing.Point(547, 42);
-            this.lbAposReact.Name = "lbAposReact";
-            this.lbAposReact.Size = new System.Drawing.Size(67, 39);
-            this.lbAposReact.TabIndex = 165;
-            this.lbAposReact.Text = "Phase A pos\r\nReactive\r\nenergy";
-            // 
-            // txtAposReact
-            // 
-            this.txtAposReact.Location = new System.Drawing.Point(620, 42);
-            this.txtAposReact.Name = "txtAposReact";
-            this.txtAposReact.Size = new System.Drawing.Size(100, 20);
-            this.txtAposReact.TabIndex = 166;
-            // 
-            // lbAnegReact
-            // 
-            this.lbAnegReact.AutoSize = true;
-            this.lbAnegReact.Location = new System.Drawing.Point(547, 101);
-            this.lbAnegReact.Name = "lbAnegReact";
-            this.lbAnegReact.Size = new System.Drawing.Size(68, 39);
-            this.lbAnegReact.TabIndex = 167;
-            this.lbAnegReact.Text = "Phase A neg\r\nReactive\r\nenergy";
-            // 
-            // txtAnegReact
-            // 
-            this.txtAnegReact.Location = new System.Drawing.Point(620, 101);
-            this.txtAnegReact.Name = "txtAnegReact";
-            this.txtAnegReact.Size = new System.Drawing.Size(100, 20);
-            this.txtAnegReact.TabIndex = 168;
-            // 
-            // lbBposReact
-            // 
-            this.lbBposReact.AutoSize = true;
-            this.lbBposReact.Location = new System.Drawing.Point(547, 156);
-            this.lbBposReact.Name = "lbBposReact";
-            this.lbBposReact.Size = new System.Drawing.Size(67, 39);
-            this.lbBposReact.TabIndex = 169;
-            this.lbBposReact.Text = "Phase B pos\r\nReactive\r\nenergy";
-            // 
-            // txtBposReact
-            // 
-            this.txtBposReact.Location = new System.Drawing.Point(620, 156);
-            this.txtBposReact.Name = "txtBposReact";
-            this.txtBposReact.Size = new System.Drawing.Size(100, 20);
-            this.txtBposReact.TabIndex = 170;
-            // 
-            // lbBnegReact
-            // 
-            this.lbBnegReact.AutoSize = true;
-            this.lbBnegReact.Location = new System.Drawing.Point(547, 211);
-            this.lbBnegReact.Name = "lbBnegReact";
-            this.lbBnegReact.Size = new System.Drawing.Size(71, 39);
-            this.lbBnegReact.TabIndex = 171;
-            this.lbBnegReact.Text = "Phase B neg \r\nReactive\r\nenergy";
-            // 
-            // txtBnegReact
-            // 
-            this.txtBnegReact.Location = new System.Drawing.Point(624, 211);
-            this.txtBnegReact.Name = "txtBnegReact";
-            this.txtBnegReact.Size = new System.Drawing.Size(100, 20);
-            this.txtBnegReact.TabIndex = 172;
-            // 
-            // lbCposReact
-            // 
-            this.lbCposReact.AutoSize = true;
-            this.lbCposReact.Location = new System.Drawing.Point(547, 263);
-            this.lbCposReact.Name = "lbCposReact";
-            this.lbCposReact.Size = new System.Drawing.Size(70, 39);
-            this.lbCposReact.TabIndex = 173;
-            this.lbCposReact.Text = "Phase C pos \r\nReactive\r\nenergy";
-            // 
-            // lbCnegReact
-            // 
-            this.lbCnegReact.AutoSize = true;
-            this.lbCnegReact.Location = new System.Drawing.Point(547, 316);
-            this.lbCnegReact.Name = "lbCnegReact";
-            this.lbCnegReact.Size = new System.Drawing.Size(71, 39);
-            this.lbCnegReact.TabIndex = 174;
-            this.lbCnegReact.Text = "Phase C neg \r\nReactive\r\nenergy";
-            // 
-            // txtCposReact
-            // 
-            this.txtCposReact.Location = new System.Drawing.Point(623, 263);
-            this.txtCposReact.Name = "txtCposReact";
-            this.txtCposReact.Size = new System.Drawing.Size(100, 20);
-            this.txtCposReact.TabIndex = 175;
-            // 
-            // txtCnegReact
-            // 
-            this.txtCnegReact.Location = new System.Drawing.Point(624, 316);
-            this.txtCnegReact.Name = "txtCnegReact";
-            this.txtCnegReact.Size = new System.Drawing.Size(100, 20);
-            this.txtCnegReact.TabIndex = 176;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(732, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 39);
-            this.label2.TabIndex = 177;
-            this.label2.Text = "Tri-Phase pos\r\nReactive\r\nenergy";
-            // 
-            // txtTriPosReact
-            // 
-            this.txtTriPosReact.Location = new System.Drawing.Point(809, 0);
-            this.txtTriPosReact.Name = "txtTriPosReact";
-            this.txtTriPosReact.Size = new System.Drawing.Size(100, 20);
-            this.txtTriPosReact.TabIndex = 178;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(732, 56);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 26);
-            this.label3.TabIndex = 179;
-            this.label3.Text = "Tri-Phase MAX\r\nPOWER";
-            // 
-            // txtTriMaxPw
-            // 
-            this.txtTriMaxPw.Location = new System.Drawing.Point(816, 55);
-            this.txtTriMaxPw.Name = "txtTriMaxPw";
-            this.txtTriMaxPw.Size = new System.Drawing.Size(100, 20);
-            this.txtTriMaxPw.TabIndex = 180;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(732, 98);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 39);
-            this.label4.TabIndex = 181;
-            this.label4.Text = "Tri-Phase MAX\r\nREACTIVE\r\nPOWER";
-            // 
-            // txtMaxReactPw
-            // 
-            this.txtMaxReactPw.Location = new System.Drawing.Point(816, 95);
-            this.txtMaxReactPw.Name = "txtMaxReactPw";
-            this.txtMaxReactPw.Size = new System.Drawing.Size(100, 20);
-            this.txtMaxReactPw.TabIndex = 182;
-            // 
             // StartMonitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 495);
+            this.ClientSize = new System.Drawing.Size(952, 514);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtPort);
             this.Controls.Add(this.label9);
@@ -1113,14 +1133,14 @@
         private System.Windows.Forms.Label lbCosFiA;
         private System.Windows.Forms.TextBox txtCosFiB;
         private System.Windows.Forms.Label lbSABC;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSAbc;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSC;
         private System.Windows.Forms.TextBox txtSB;
         private System.Windows.Forms.Label lbSB;
         private System.Windows.Forms.Label lbSA;
         private System.Windows.Forms.TextBox txtSA;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtQAbc;
         private System.Windows.Forms.Label lbQABC;
         private System.Windows.Forms.Label lbQC;
         private System.Windows.Forms.Label lbQB;
@@ -1186,5 +1206,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTriPosReact;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbVrmsABC;
+        private System.Windows.Forms.TextBox txtVrmsABC;
     }
 }

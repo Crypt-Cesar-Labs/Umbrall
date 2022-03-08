@@ -62,10 +62,30 @@ namespace Umbrall
 
         private void ReadRegisters()
         {
-            int[] readHoldingRegisters = modbusClient.ReadHoldingRegisters(0, 16);      //Read 10 Holding Registers from Server, starting with Address 1
-            for (int i = 0; i < readHoldingRegisters.Length; i++)
-                Console.WriteLine("Value of HoldingRegister " + (i + 1) + " " + readHoldingRegisters[i].ToString());
-            
+            int[] readHoldingRegisters = modbusClient.ReadHoldingRegisters(134, 100);
+            //int[] readHoldingRegisters1 = modbusClient.ReadHoldingRegisters(100, 200);
+            //int[] readHoldingRegisters2 = modbusClient.ReadHoldingRegisters(0, 100);
+            /* for (int i = 0; i < readHoldingRegisters.Length; i++)
+                 Console.WriteLine("Value of HoldingRegister " + (i + 1) + " " + readHoldingRegisters[i].ToString());*/
+
+            //___________
+            txtVrmsA.Text = readHoldingRegisters[0].ToString();             // Address 40135
+            txtVrmsB.Text = readHoldingRegisters[2].ToString();             // Address 40137
+            txtVrmsC.Text = readHoldingRegisters[4].ToString();             // Address 40139
+            txtVrmsABC.Text = readHoldingRegisters[6].ToString();           // Address 40141
+            txtPActiveA.Text = readHoldingRegisters[16].ToString();         // Address 40151
+            txtPActiveB.Text = readHoldingRegisters[18].ToString();         // Address 40153         
+            txtPActiveC.Text = readHoldingRegisters[20].ToString();         // Address 40155
+            txtPActiveAbc.Text = readHoldingRegisters[22].ToString();       // Address 40157
+            txtQA.Text = readHoldingRegisters[24].ToString();               // Address 40159
+            txtQB.Text = readHoldingRegisters[26].ToString();               // Address 40161
+            txtQC.Text = readHoldingRegisters[28].ToString();               // Address 40163
+            txtQAbc.Text = readHoldingRegisters[30].ToString();             // Address 40163
+            txtSA.Text = readHoldingRegisters[32].ToString();               // Address 40167
+            txtSB.Text = readHoldingRegisters[34].ToString();               // Address 40169
+            txtSC.Text = readHoldingRegisters[36].ToString();               // Address 40171
+            txtSAbc.Text = readHoldingRegisters[38].ToString();             // Address 40173
+
         }
 
         private void ReadModbusTimer_Tick(object sender, EventArgs e)
