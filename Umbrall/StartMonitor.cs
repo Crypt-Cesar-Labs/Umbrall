@@ -62,7 +62,7 @@ namespace Umbrall
 
         private void ReadRegisters()
         {
-            int[] readHoldingRegisters = modbusClient.ReadHoldingRegisters(134, 100);
+            int[] readHoldingRegisters = modbusClient.ReadHoldingRegisters(134, 4);
             //int[] readHoldingRegisters1 = modbusClient.ReadHoldingRegisters(100, 200);
             //int[] readHoldingRegisters2 = modbusClient.ReadHoldingRegisters(0, 100);
             /* for (int i = 0; i < readHoldingRegisters.Length; i++)
@@ -71,7 +71,7 @@ namespace Umbrall
             //___________
             txtVrmsA.Text = readHoldingRegisters[0].ToString();             // Address 40135
             txtVrmsB.Text = readHoldingRegisters[2].ToString();             // Address 40137
-            txtVrmsC.Text = readHoldingRegisters[4].ToString();             // Address 40139
+            /*txtVrmsC.Text = readHoldingRegisters[4].ToString();             // Address 40139
             txtVrmsABC.Text = readHoldingRegisters[6].ToString();           // Address 40141
             txtPActiveA.Text = readHoldingRegisters[16].ToString();         // Address 40151
             txtPActiveB.Text = readHoldingRegisters[18].ToString();         // Address 40153         
@@ -84,7 +84,7 @@ namespace Umbrall
             txtSA.Text = readHoldingRegisters[32].ToString();               // Address 40167
             txtSB.Text = readHoldingRegisters[34].ToString();               // Address 40169
             txtSC.Text = readHoldingRegisters[36].ToString();               // Address 40171
-            txtSAbc.Text = readHoldingRegisters[38].ToString();             // Address 40173
+            txtSAbc.Text = readHoldingRegisters[38].ToString();             // Address 40173*/
 
         }
 
