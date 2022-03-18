@@ -72,7 +72,7 @@ namespace Umbrall
             string puerto = "3306";
             string usuario = "root";
             string password = "root-database";
-            string bd = "umbral_database";
+            string bd = "umbrall_database";
 
             string cadenaConexion = "Database=" + bd + "; Data Source=" + servidor + "; Port=" + puerto + "; User Id=" + usuario + "; Password=" + password;
 
