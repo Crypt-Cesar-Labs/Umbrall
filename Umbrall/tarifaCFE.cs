@@ -32,7 +32,8 @@ namespace Umbrall
             string dbSearchYear = cmbYear.Items[indiceYear].ToString();
 
             //Se altera la variable global con los valores locales 
-            year = int.Parse(dbSearchYear); 
+            year = int.Parse(dbSearchYear);
+            GlobalParameters.globalYear = year.ToString();
         }
 
         private void cmbMonth_SelectedIndexChanged(object sender, EventArgs e)
@@ -43,6 +44,7 @@ namespace Umbrall
 
             //Se altera la variable global con los valores locales 
             month = dbSearchMonth;
+            GlobalParameters.globalMonth = month;
         }
 
 
@@ -54,6 +56,7 @@ namespace Umbrall
 
             //Se altera la variable global con los valores locales 
             div = dbSearchDiv;
+            GlobalParameters.globalDiv = div;
         }
 
         private void cmbCat_SelectedIndexChanged(object sender, EventArgs e)
@@ -64,15 +67,16 @@ namespace Umbrall
 
             //Se altera la variable global con los valores locales 
             cat = dbSearchCat;
+            GlobalParameters.globalTarifa = cat;
         }
 
         private void btnBuscarTarifa_Click(object sender, EventArgs e)
         {
-            string servidor = "localhost";
+            string servidor = "bhrpbyquwphyhrkbbpv1-mysql.services.clever-cloud.com";
             string puerto = "3306";
-            string usuario = "root";
-            string password = "root-database";
-            string bd = "umbrall_database";
+            string usuario = "ubzmsd8brxkjye7t";
+            string password = "L9NNoTse1abuYH3NMsFe";
+            string bd = "bhrpbyquwphyhrkbbpv1";
 
             string cadenaConexion = "Database=" + bd + "; Data Source=" + servidor + "; Port=" + puerto + "; User Id=" + usuario + "; Password=" + password;
 
@@ -102,6 +106,7 @@ namespace Umbrall
                     dataTarifa += objectReader.GetString(0);
                 }
                 MessageBox.Show(dataTarifa);
+                GlobalParameters.globalValue = float.Parse(dataTarifa);
             }
             catch (MySqlException ex)
             {

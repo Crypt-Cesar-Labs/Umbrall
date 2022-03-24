@@ -100,6 +100,16 @@
             this.lbPActiveA = new System.Windows.Forms.Label();
             this.txtVrmsC = new System.Windows.Forms.TextBox();
             this.txtVrmsB = new System.Windows.Forms.TextBox();
+            this.txtYearGlobal = new System.Windows.Forms.TextBox();
+            this.lbYearGlobal = new System.Windows.Forms.Label();
+            this.txtMonthGlobal = new System.Windows.Forms.TextBox();
+            this.lbMonthGlobal = new System.Windows.Forms.Label();
+            this.txtDivGlobal = new System.Windows.Forms.TextBox();
+            this.lbDivGlobal = new System.Windows.Forms.Label();
+            this.txtTarifaGlobal = new System.Windows.Forms.TextBox();
+            this.lbTarifaGlobal = new System.Windows.Forms.Label();
+            this.txtValorGlobal = new System.Windows.Forms.TextBox();
+            this.lbValorGlobal = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -740,11 +750,111 @@
             this.txtVrmsB.Size = new System.Drawing.Size(100, 20);
             this.txtVrmsB.TabIndex = 89;
             // 
+            // txtYearGlobal
+            // 
+            this.txtYearGlobal.Location = new System.Drawing.Point(52, 38);
+            this.txtYearGlobal.Name = "txtYearGlobal";
+            this.txtYearGlobal.ReadOnly = true;
+            this.txtYearGlobal.Size = new System.Drawing.Size(51, 20);
+            this.txtYearGlobal.TabIndex = 90;
+            // 
+            // lbYearGlobal
+            // 
+            this.lbYearGlobal.AutoSize = true;
+            this.lbYearGlobal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbYearGlobal.Location = new System.Drawing.Point(13, 38);
+            this.lbYearGlobal.Name = "lbYearGlobal";
+            this.lbYearGlobal.Size = new System.Drawing.Size(33, 17);
+            this.lbYearGlobal.TabIndex = 89;
+            this.lbYearGlobal.Text = "Año";
+            // 
+            // txtMonthGlobal
+            // 
+            this.txtMonthGlobal.Location = new System.Drawing.Point(149, 38);
+            this.txtMonthGlobal.Name = "txtMonthGlobal";
+            this.txtMonthGlobal.ReadOnly = true;
+            this.txtMonthGlobal.Size = new System.Drawing.Size(65, 20);
+            this.txtMonthGlobal.TabIndex = 92;
+            // 
+            // lbMonthGlobal
+            // 
+            this.lbMonthGlobal.AutoSize = true;
+            this.lbMonthGlobal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMonthGlobal.Location = new System.Drawing.Point(109, 38);
+            this.lbMonthGlobal.Name = "lbMonthGlobal";
+            this.lbMonthGlobal.Size = new System.Drawing.Size(34, 17);
+            this.lbMonthGlobal.TabIndex = 91;
+            this.lbMonthGlobal.Text = "Mes";
+            // 
+            // txtDivGlobal
+            // 
+            this.txtDivGlobal.Location = new System.Drawing.Point(286, 37);
+            this.txtDivGlobal.Name = "txtDivGlobal";
+            this.txtDivGlobal.ReadOnly = true;
+            this.txtDivGlobal.Size = new System.Drawing.Size(100, 20);
+            this.txtDivGlobal.TabIndex = 94;
+            // 
+            // lbDivGlobal
+            // 
+            this.lbDivGlobal.AutoSize = true;
+            this.lbDivGlobal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDivGlobal.Location = new System.Drawing.Point(223, 38);
+            this.lbDivGlobal.Name = "lbDivGlobal";
+            this.lbDivGlobal.Size = new System.Drawing.Size(57, 17);
+            this.lbDivGlobal.TabIndex = 93;
+            this.lbDivGlobal.Text = "División";
+            // 
+            // txtTarifaGlobal
+            // 
+            this.txtTarifaGlobal.Location = new System.Drawing.Point(445, 36);
+            this.txtTarifaGlobal.Name = "txtTarifaGlobal";
+            this.txtTarifaGlobal.ReadOnly = true;
+            this.txtTarifaGlobal.Size = new System.Drawing.Size(55, 20);
+            this.txtTarifaGlobal.TabIndex = 96;
+            // 
+            // lbTarifaGlobal
+            // 
+            this.lbTarifaGlobal.AutoSize = true;
+            this.lbTarifaGlobal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTarifaGlobal.Location = new System.Drawing.Point(394, 37);
+            this.lbTarifaGlobal.Name = "lbTarifaGlobal";
+            this.lbTarifaGlobal.Size = new System.Drawing.Size(45, 17);
+            this.lbTarifaGlobal.TabIndex = 95;
+            this.lbTarifaGlobal.Text = "Tarifa";
+            // 
+            // txtValorGlobal
+            // 
+            this.txtValorGlobal.Location = new System.Drawing.Point(553, 36);
+            this.txtValorGlobal.Name = "txtValorGlobal";
+            this.txtValorGlobal.ReadOnly = true;
+            this.txtValorGlobal.Size = new System.Drawing.Size(57, 20);
+            this.txtValorGlobal.TabIndex = 98;
+            // 
+            // lbValorGlobal
+            // 
+            this.lbValorGlobal.AutoSize = true;
+            this.lbValorGlobal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValorGlobal.Location = new System.Drawing.Point(506, 36);
+            this.lbValorGlobal.Name = "lbValorGlobal";
+            this.lbValorGlobal.Size = new System.Drawing.Size(41, 17);
+            this.lbValorGlobal.TabIndex = 97;
+            this.lbValorGlobal.Text = "Valor";
+            // 
             // StartMonitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(622, 514);
+            this.Controls.Add(this.txtValorGlobal);
+            this.Controls.Add(this.txtTarifaGlobal);
+            this.Controls.Add(this.lbValorGlobal);
+            this.Controls.Add(this.lbTarifaGlobal);
+            this.Controls.Add(this.txtDivGlobal);
+            this.Controls.Add(this.lbDivGlobal);
+            this.Controls.Add(this.txtMonthGlobal);
+            this.Controls.Add(this.lbMonthGlobal);
+            this.Controls.Add(this.txtYearGlobal);
+            this.Controls.Add(this.lbYearGlobal);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtPort);
             this.Controls.Add(this.label9);
@@ -834,5 +944,15 @@
         private System.Windows.Forms.Label lbIrmsA;
         private System.Windows.Forms.Label lbVrmsABC;
         private System.Windows.Forms.TextBox txtVrmsABC;
+        private System.Windows.Forms.TextBox txtYearGlobal;
+        private System.Windows.Forms.Label lbYearGlobal;
+        private System.Windows.Forms.TextBox txtMonthGlobal;
+        private System.Windows.Forms.Label lbMonthGlobal;
+        private System.Windows.Forms.TextBox txtDivGlobal;
+        private System.Windows.Forms.Label lbDivGlobal;
+        private System.Windows.Forms.TextBox txtTarifaGlobal;
+        private System.Windows.Forms.Label lbTarifaGlobal;
+        private System.Windows.Forms.TextBox txtValorGlobal;
+        private System.Windows.Forms.Label lbValorGlobal;
     }
 }

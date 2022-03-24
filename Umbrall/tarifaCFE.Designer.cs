@@ -43,38 +43,42 @@
             // lbYear
             // 
             this.lbYear.AutoSize = true;
-            this.lbYear.Location = new System.Drawing.Point(69, 74);
+            this.lbYear.Location = new System.Drawing.Point(52, 60);
+            this.lbYear.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbYear.Name = "lbYear";
-            this.lbYear.Size = new System.Drawing.Size(31, 16);
+            this.lbYear.Size = new System.Drawing.Size(26, 13);
             this.lbYear.TabIndex = 0;
             this.lbYear.Text = "Año";
             // 
             // lbMonth
             // 
             this.lbMonth.AutoSize = true;
-            this.lbMonth.Location = new System.Drawing.Point(240, 74);
+            this.lbMonth.Location = new System.Drawing.Point(180, 60);
+            this.lbMonth.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbMonth.Name = "lbMonth";
-            this.lbMonth.Size = new System.Drawing.Size(33, 16);
+            this.lbMonth.Size = new System.Drawing.Size(27, 13);
             this.lbMonth.TabIndex = 1;
             this.lbMonth.Text = "Mes";
             // 
             // lbDiv
             // 
             this.lbDiv.AutoSize = true;
-            this.lbDiv.Location = new System.Drawing.Point(395, 74);
+            this.lbDiv.Location = new System.Drawing.Point(296, 60);
+            this.lbDiv.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbDiv.Name = "lbDiv";
-            this.lbDiv.Size = new System.Drawing.Size(55, 16);
+            this.lbDiv.Size = new System.Drawing.Size(44, 13);
             this.lbDiv.TabIndex = 2;
             this.lbDiv.Text = "División";
             // 
             // lbCat
             // 
             this.lbCat.AutoSize = true;
-            this.lbCat.Location = new System.Drawing.Point(560, 74);
+            this.lbCat.Location = new System.Drawing.Point(420, 60);
+            this.lbCat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCat.Name = "lbCat";
-            this.lbCat.Size = new System.Drawing.Size(66, 16);
+            this.lbCat.Size = new System.Drawing.Size(34, 13);
             this.lbCat.TabIndex = 3;
-            this.lbCat.Text = "Categoría";
+            this.lbCat.Text = "Tarifa";
             // 
             // cmbYear
             // 
@@ -82,9 +86,10 @@
             this.cmbYear.Items.AddRange(new object[] {
             "2021",
             "2022"});
-            this.cmbYear.Location = new System.Drawing.Point(22, 111);
+            this.cmbYear.Location = new System.Drawing.Point(16, 90);
+            this.cmbYear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbYear.Name = "cmbYear";
-            this.cmbYear.Size = new System.Drawing.Size(121, 24);
+            this.cmbYear.Size = new System.Drawing.Size(92, 21);
             this.cmbYear.TabIndex = 4;
             this.cmbYear.SelectedIndexChanged += new System.EventHandler(this.cmbYear_SelectedIndexChanged);
             // 
@@ -93,9 +98,10 @@
             this.cmbMonth.FormattingEnabled = true;
             this.cmbMonth.Items.AddRange(new object[] {
             "enero"});
-            this.cmbMonth.Location = new System.Drawing.Point(192, 111);
+            this.cmbMonth.Location = new System.Drawing.Point(144, 90);
+            this.cmbMonth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbMonth.Name = "cmbMonth";
-            this.cmbMonth.Size = new System.Drawing.Size(121, 24);
+            this.cmbMonth.Size = new System.Drawing.Size(92, 21);
             this.cmbMonth.TabIndex = 5;
             this.cmbMonth.SelectedIndexChanged += new System.EventHandler(this.cmbMonth_SelectedIndexChanged);
             // 
@@ -113,17 +119,19 @@
             "apbt",
             "apmt",
             "ramt"});
-            this.cmbCat.Location = new System.Drawing.Point(532, 111);
+            this.cmbCat.Location = new System.Drawing.Point(399, 90);
+            this.cmbCat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbCat.Name = "cmbCat";
-            this.cmbCat.Size = new System.Drawing.Size(121, 24);
+            this.cmbCat.Size = new System.Drawing.Size(92, 21);
             this.cmbCat.TabIndex = 7;
             this.cmbCat.SelectedIndexChanged += new System.EventHandler(this.cmbCat_SelectedIndexChanged);
             // 
             // btnBuscarTarifa
             // 
-            this.btnBuscarTarifa.Location = new System.Drawing.Point(729, 112);
+            this.btnBuscarTarifa.Location = new System.Drawing.Point(547, 91);
+            this.btnBuscarTarifa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscarTarifa.Name = "btnBuscarTarifa";
-            this.btnBuscarTarifa.Size = new System.Drawing.Size(133, 23);
+            this.btnBuscarTarifa.Size = new System.Drawing.Size(100, 19);
             this.btnBuscarTarifa.TabIndex = 8;
             this.btnBuscarTarifa.Text = "Buscar Tarifa";
             this.btnBuscarTarifa.UseVisualStyleBackColor = true;
@@ -150,17 +158,18 @@
             "Valle de México Centro",
             "Valle de México Norte",
             "Valle de México Sur"});
-            this.cmbDiv.Location = new System.Drawing.Point(365, 112);
+            this.cmbDiv.Location = new System.Drawing.Point(274, 91);
+            this.cmbDiv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbDiv.Name = "cmbDiv";
-            this.cmbDiv.Size = new System.Drawing.Size(121, 24);
+            this.cmbDiv.Size = new System.Drawing.Size(92, 21);
             this.cmbDiv.TabIndex = 9;
             this.cmbDiv.SelectedIndexChanged += new System.EventHandler(this.cmbDiv_SelectedIndexChanged);
             // 
             // tarifaCFE
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(960, 547);
+            this.ClientSize = new System.Drawing.Size(720, 444);
             this.Controls.Add(this.cmbDiv);
             this.Controls.Add(this.btnBuscarTarifa);
             this.Controls.Add(this.cmbCat);
@@ -171,6 +180,7 @@
             this.Controls.Add(this.lbMonth);
             this.Controls.Add(this.lbYear);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "tarifaCFE";
             this.Text = "tarifaCFE";
             this.ResumeLayout(false);

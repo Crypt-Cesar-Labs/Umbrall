@@ -28,10 +28,18 @@ namespace Umbrall
             port = GlobalParameters.portGlobal;
             modbusClient = new ModbusClient(ipAddress, port);                 //Ip-Address and Port of Modbus-TCP-Server
 
-            // Parameters in txtBox
+            // Connect Parameters in txtBox
             txtIpAddress.Text = ipAddress;
             txtPort.Text = port.ToString();
+
+            // Tarifas Parameters in txtBox
+            txtYearGlobal.Text = GlobalParameters.globalYear.ToString();
+            txtMonthGlobal.Text = GlobalParameters.globalMonth.ToString();
+            txtDivGlobal.Text = GlobalParameters.globalDiv.ToString();
+            txtTarifaGlobal.Text = GlobalParameters.globalTarifa.ToString();
+            txtValorGlobal.Text = GlobalParameters.globalValue.ToString();
             
+
             try
             {
                 modbusClient.Connect();                                         //Connect to Server
