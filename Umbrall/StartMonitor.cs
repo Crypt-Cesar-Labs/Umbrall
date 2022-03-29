@@ -33,11 +33,11 @@ namespace Umbrall
             txtPort.Text = port.ToString();
 
             // Tarifas Parameters in txtBox
-            txtYearGlobal.Text = GlobalParameters.globalYear.ToString();
+            /*txtYearGlobal.Text = GlobalParameters.globalYear.ToString();
             txtMonthGlobal.Text = GlobalParameters.globalMonth.ToString();
             txtDivGlobal.Text = GlobalParameters.globalDiv.ToString();
             txtTarifaGlobal.Text = GlobalParameters.globalTarifa.ToString();
-            txtValorGlobal.Text = GlobalParameters.globalValue.ToString();
+            txtValorGlobal.Text = GlobalParameters.globalValue.ToString();*/
             
 
             try

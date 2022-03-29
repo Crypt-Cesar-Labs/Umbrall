@@ -25,13 +25,21 @@ namespace Umbrall
 
         private void tarifasCFEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tarifaCFE tarifasWindow = new tarifaCFE();
+            /*tarifaCFE tarifasWindow = new tarifaCFE();
 
             //Se establece la instancia padre
             tarifasWindow.MdiParent = this;
 
             //Se manda a llamar
-            tarifasWindow.Show();
+            tarifasWindow.Show();*/
+
+            // Showing the window for select the type of instalation 
+
+            ConsultaTarifaForm1 consultaTarifaForm1 = new ConsultaTarifaForm1();
+
+            consultaTarifaForm1.MdiParent = this;
+
+            consultaTarifaForm1.Show();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)

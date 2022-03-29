@@ -74,6 +74,18 @@
     <Compile Include="ConfigDevice.Designer.cs">
       <DependentUpon>ConfigDevice.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultaTarifaDomestica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaTarifaDomestica.Designer.cs">
+      <DependentUpon>ConsultaTarifaDomestica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaTarifaEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaTarifaEmpresa.Designer.cs">
+      <DependentUpon>ConsultaTarifaEmpresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultaTarifaForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +146,12 @@
     <EmbeddedResource Include="ConfigDevice.resx">
       <DependentUpon>ConfigDevice.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaTarifaDomestica.resx">
+      <DependentUpon>ConsultaTarifaDomestica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaTarifaEmpresa.resx">
+      <DependentUpon>ConsultaTarifaEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultaTarifaForm1.resx">
       <DependentUpon>ConsultaTarifaForm1.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +205,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factory1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factory2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factory11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factory21.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

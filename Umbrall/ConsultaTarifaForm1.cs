@@ -16,5 +16,23 @@ namespace Umbrall
         {
             InitializeComponent();
         }
+
+        private void btnDomestic_Click(object sender, EventArgs e)
+        {
+            ConsultaTarifaDomestica consultaTarifaDomestica = new ConsultaTarifaDomestica();
+
+            consultaTarifaDomestica.Show();
+
+            this.Close();
+        }
+
+        private void btnEnterprise_Click(object sender, EventArgs e)
+        {
+            ConsultaTarifaEmpresa consultaTarifaEmpresa = new ConsultaTarifaEmpresa();
+
+            consultaTarifaEmpresa.Show();
+
+            this.Close();
+        }
     }
 }
