@@ -11,10 +11,10 @@ namespace Umbrall
         public static string ipAddressGlobal;
         public static int portGlobal;
 
-        public static string globalYear;
-        public static string globalMonth;
-        public static string globalDiv;
-        public static string globalTarifa;
+        public static string globalYear = null;
+        public static string globalMonth = null;
+        public static string globalDiv = null;
+        public static string globalTarifa = null;
         
 
         public static double globalGenB;

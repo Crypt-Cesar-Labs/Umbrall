@@ -100,46 +100,46 @@
             this.lbPActiveA = new System.Windows.Forms.Label();
             this.txtVrmsC = new System.Windows.Forms.TextBox();
             this.txtVrmsB = new System.Windows.Forms.TextBox();
-            this.txtYearGlobal = new System.Windows.Forms.TextBox();
+            this.txtYear = new System.Windows.Forms.TextBox();
             this.lbYearGlobal = new System.Windows.Forms.Label();
-            this.txtMonthGlobal = new System.Windows.Forms.TextBox();
+            this.txtMonth = new System.Windows.Forms.TextBox();
             this.lbMonthGlobal = new System.Windows.Forms.Label();
-            this.txtDivGlobal = new System.Windows.Forms.TextBox();
+            this.txtDiv = new System.Windows.Forms.TextBox();
             this.lbDivGlobal = new System.Windows.Forms.Label();
-            this.txtTarifaGlobal = new System.Windows.Forms.TextBox();
+            this.txtTarifa = new System.Windows.Forms.TextBox();
             this.lbTarifaGlobal = new System.Windows.Forms.Label();
             this.lbCapEne = new System.Windows.Forms.Label();
             this.txtCapEne = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCapPot = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtDistribPot = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtScnmem = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtTransm = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtCenace = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtGenB = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtGenI = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtGenP = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtGen = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtSuminis = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -305,7 +305,7 @@
             // 
             // txtIrmsABC
             // 
-            this.txtIrmsABC.Location = new System.Drawing.Point(495, 240);
+            this.txtIrmsABC.Location = new System.Drawing.Point(495, 236);
             this.txtIrmsABC.Name = "txtIrmsABC";
             this.txtIrmsABC.Size = new System.Drawing.Size(100, 20);
             this.txtIrmsABC.TabIndex = 164;
@@ -313,7 +313,7 @@
             // lbIrmsABC
             // 
             this.lbIrmsABC.AutoSize = true;
-            this.lbIrmsABC.Location = new System.Drawing.Point(406, 234);
+            this.lbIrmsABC.Location = new System.Drawing.Point(406, 230);
             this.lbIrmsABC.Name = "lbIrmsABC";
             this.lbIrmsABC.Size = new System.Drawing.Size(73, 26);
             this.lbIrmsABC.TabIndex = 163;
@@ -321,21 +321,21 @@
             // 
             // txtIrmsC
             // 
-            this.txtIrmsC.Location = new System.Drawing.Point(495, 205);
+            this.txtIrmsC.Location = new System.Drawing.Point(495, 201);
             this.txtIrmsC.Name = "txtIrmsC";
             this.txtIrmsC.Size = new System.Drawing.Size(100, 20);
             this.txtIrmsC.TabIndex = 162;
             // 
             // txtIrmsB
             // 
-            this.txtIrmsB.Location = new System.Drawing.Point(495, 179);
+            this.txtIrmsB.Location = new System.Drawing.Point(495, 175);
             this.txtIrmsB.Name = "txtIrmsB";
             this.txtIrmsB.Size = new System.Drawing.Size(100, 20);
             this.txtIrmsB.TabIndex = 161;
             // 
             // txtIrmsA
             // 
-            this.txtIrmsA.Location = new System.Drawing.Point(495, 153);
+            this.txtIrmsA.Location = new System.Drawing.Point(495, 149);
             this.txtIrmsA.Name = "txtIrmsA";
             this.txtIrmsA.Size = new System.Drawing.Size(100, 20);
             this.txtIrmsA.TabIndex = 160;
@@ -343,7 +343,7 @@
             // lbIrmsC
             // 
             this.lbIrmsC.AutoSize = true;
-            this.lbIrmsC.Location = new System.Drawing.Point(406, 208);
+            this.lbIrmsC.Location = new System.Drawing.Point(406, 204);
             this.lbIrmsC.Name = "lbIrmsC";
             this.lbIrmsC.Size = new System.Drawing.Size(83, 13);
             this.lbIrmsC.TabIndex = 159;
@@ -352,7 +352,7 @@
             // lbIrmsB
             // 
             this.lbIrmsB.AutoSize = true;
-            this.lbIrmsB.Location = new System.Drawing.Point(406, 182);
+            this.lbIrmsB.Location = new System.Drawing.Point(406, 178);
             this.lbIrmsB.Name = "lbIrmsB";
             this.lbIrmsB.Size = new System.Drawing.Size(83, 13);
             this.lbIrmsB.TabIndex = 158;
@@ -361,7 +361,7 @@
             // lbIrmsA
             // 
             this.lbIrmsA.AutoSize = true;
-            this.lbIrmsA.Location = new System.Drawing.Point(406, 156);
+            this.lbIrmsA.Location = new System.Drawing.Point(406, 152);
             this.lbIrmsA.Name = "lbIrmsA";
             this.lbIrmsA.Size = new System.Drawing.Size(83, 13);
             this.lbIrmsA.TabIndex = 157;
@@ -369,7 +369,7 @@
             // 
             // txtReactEnergyABC
             // 
-            this.txtReactEnergyABC.Location = new System.Drawing.Point(495, 121);
+            this.txtReactEnergyABC.Location = new System.Drawing.Point(495, 117);
             this.txtReactEnergyABC.Name = "txtReactEnergyABC";
             this.txtReactEnergyABC.Size = new System.Drawing.Size(100, 20);
             this.txtReactEnergyABC.TabIndex = 140;
@@ -377,7 +377,7 @@
             // lbReactiveABC
             // 
             this.lbReactiveABC.AutoSize = true;
-            this.lbReactiveABC.Location = new System.Drawing.Point(425, 117);
+            this.lbReactiveABC.Location = new System.Drawing.Point(425, 113);
             this.lbReactiveABC.Name = "lbReactiveABC";
             this.lbReactiveABC.Size = new System.Drawing.Size(64, 26);
             this.lbReactiveABC.TabIndex = 139;
@@ -385,7 +385,7 @@
             // 
             // txtReactEnergyC
             // 
-            this.txtReactEnergyC.Location = new System.Drawing.Point(495, 87);
+            this.txtReactEnergyC.Location = new System.Drawing.Point(495, 83);
             this.txtReactEnergyC.Name = "txtReactEnergyC";
             this.txtReactEnergyC.Size = new System.Drawing.Size(100, 20);
             this.txtReactEnergyC.TabIndex = 138;
@@ -393,7 +393,7 @@
             // lbReactEnergyC
             // 
             this.lbReactEnergyC.AutoSize = true;
-            this.lbReactEnergyC.Location = new System.Drawing.Point(425, 81);
+            this.lbReactEnergyC.Location = new System.Drawing.Point(425, 77);
             this.lbReactEnergyC.Name = "lbReactEnergyC";
             this.lbReactEnergyC.Size = new System.Drawing.Size(50, 26);
             this.lbReactEnergyC.TabIndex = 137;
@@ -401,7 +401,7 @@
             // 
             // txtReactEnergyB
             // 
-            this.txtReactEnergyB.Location = new System.Drawing.Point(495, 49);
+            this.txtReactEnergyB.Location = new System.Drawing.Point(495, 45);
             this.txtReactEnergyB.Name = "txtReactEnergyB";
             this.txtReactEnergyB.Size = new System.Drawing.Size(100, 20);
             this.txtReactEnergyB.TabIndex = 136;
@@ -409,7 +409,7 @@
             // lbReactEnergyB
             // 
             this.lbReactEnergyB.AutoSize = true;
-            this.lbReactEnergyB.Location = new System.Drawing.Point(425, 43);
+            this.lbReactEnergyB.Location = new System.Drawing.Point(425, 39);
             this.lbReactEnergyB.Name = "lbReactEnergyB";
             this.lbReactEnergyB.Size = new System.Drawing.Size(50, 26);
             this.lbReactEnergyB.TabIndex = 135;
@@ -418,7 +418,7 @@
             // lbReactEnergyA
             // 
             this.lbReactEnergyA.AutoSize = true;
-            this.lbReactEnergyA.Location = new System.Drawing.Point(425, 7);
+            this.lbReactEnergyA.Location = new System.Drawing.Point(425, 3);
             this.lbReactEnergyA.Name = "lbReactEnergyA";
             this.lbReactEnergyA.Size = new System.Drawing.Size(50, 26);
             this.lbReactEnergyA.TabIndex = 134;
@@ -426,7 +426,7 @@
             // 
             // txtReactEnergyA
             // 
-            this.txtReactEnergyA.Location = new System.Drawing.Point(495, 17);
+            this.txtReactEnergyA.Location = new System.Drawing.Point(495, 13);
             this.txtReactEnergyA.Name = "txtReactEnergyA";
             this.txtReactEnergyA.Size = new System.Drawing.Size(100, 20);
             this.txtReactEnergyA.TabIndex = 133;
@@ -781,13 +781,13 @@
             this.txtVrmsB.Size = new System.Drawing.Size(100, 20);
             this.txtVrmsB.TabIndex = 89;
             // 
-            // txtYearGlobal
+            // txtYear
             // 
-            this.txtYearGlobal.Location = new System.Drawing.Point(52, 38);
-            this.txtYearGlobal.Name = "txtYearGlobal";
-            this.txtYearGlobal.ReadOnly = true;
-            this.txtYearGlobal.Size = new System.Drawing.Size(51, 20);
-            this.txtYearGlobal.TabIndex = 90;
+            this.txtYear.Location = new System.Drawing.Point(52, 38);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.ReadOnly = true;
+            this.txtYear.Size = new System.Drawing.Size(51, 20);
+            this.txtYear.TabIndex = 90;
             // 
             // lbYearGlobal
             // 
@@ -799,13 +799,13 @@
             this.lbYearGlobal.TabIndex = 89;
             this.lbYearGlobal.Text = "Año";
             // 
-            // txtMonthGlobal
+            // txtMonth
             // 
-            this.txtMonthGlobal.Location = new System.Drawing.Point(149, 38);
-            this.txtMonthGlobal.Name = "txtMonthGlobal";
-            this.txtMonthGlobal.ReadOnly = true;
-            this.txtMonthGlobal.Size = new System.Drawing.Size(65, 20);
-            this.txtMonthGlobal.TabIndex = 92;
+            this.txtMonth.Location = new System.Drawing.Point(149, 38);
+            this.txtMonth.Name = "txtMonth";
+            this.txtMonth.ReadOnly = true;
+            this.txtMonth.Size = new System.Drawing.Size(65, 20);
+            this.txtMonth.TabIndex = 92;
             // 
             // lbMonthGlobal
             // 
@@ -817,13 +817,13 @@
             this.lbMonthGlobal.TabIndex = 91;
             this.lbMonthGlobal.Text = "Mes";
             // 
-            // txtDivGlobal
+            // txtDiv
             // 
-            this.txtDivGlobal.Location = new System.Drawing.Point(286, 37);
-            this.txtDivGlobal.Name = "txtDivGlobal";
-            this.txtDivGlobal.ReadOnly = true;
-            this.txtDivGlobal.Size = new System.Drawing.Size(100, 20);
-            this.txtDivGlobal.TabIndex = 94;
+            this.txtDiv.Location = new System.Drawing.Point(286, 37);
+            this.txtDiv.Name = "txtDiv";
+            this.txtDiv.ReadOnly = true;
+            this.txtDiv.Size = new System.Drawing.Size(100, 20);
+            this.txtDiv.TabIndex = 94;
             // 
             // lbDivGlobal
             // 
@@ -835,13 +835,13 @@
             this.lbDivGlobal.TabIndex = 93;
             this.lbDivGlobal.Text = "División";
             // 
-            // txtTarifaGlobal
+            // txtTarifa
             // 
-            this.txtTarifaGlobal.Location = new System.Drawing.Point(445, 36);
-            this.txtTarifaGlobal.Name = "txtTarifaGlobal";
-            this.txtTarifaGlobal.ReadOnly = true;
-            this.txtTarifaGlobal.Size = new System.Drawing.Size(55, 20);
-            this.txtTarifaGlobal.TabIndex = 96;
+            this.txtTarifa.Location = new System.Drawing.Point(445, 36);
+            this.txtTarifa.Name = "txtTarifa";
+            this.txtTarifa.ReadOnly = true;
+            this.txtTarifa.Size = new System.Drawing.Size(55, 20);
+            this.txtTarifa.TabIndex = 96;
             // 
             // lbTarifaGlobal
             // 
@@ -888,13 +888,13 @@
             this.label4.TabIndex = 102;
             this.label4.Text = "$/kW";
             // 
-            // textBox2
+            // txtCapPot
             // 
-            this.textBox2.Location = new System.Drawing.Point(165, 84);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(96, 20);
-            this.textBox2.TabIndex = 101;
+            this.txtCapPot.Location = new System.Drawing.Point(165, 84);
+            this.txtCapPot.Name = "txtCapPot";
+            this.txtCapPot.ReadOnly = true;
+            this.txtCapPot.Size = new System.Drawing.Size(96, 20);
+            this.txtCapPot.TabIndex = 101;
             // 
             // label5
             // 
@@ -914,13 +914,13 @@
             this.label6.TabIndex = 105;
             this.label6.Text = "$/kWh";
             // 
-            // textBox3
+            // txtDistribPot
             // 
-            this.textBox3.Location = new System.Drawing.Point(314, 84);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(96, 20);
-            this.textBox3.TabIndex = 104;
+            this.txtDistribPot.Location = new System.Drawing.Point(314, 84);
+            this.txtDistribPot.Name = "txtDistribPot";
+            this.txtDistribPot.ReadOnly = true;
+            this.txtDistribPot.Size = new System.Drawing.Size(96, 20);
+            this.txtDistribPot.TabIndex = 104;
             // 
             // label7
             // 
@@ -940,13 +940,13 @@
             this.label10.TabIndex = 108;
             this.label10.Text = "$/kWh";
             // 
-            // textBox4
+            // txtScnmem
             // 
-            this.textBox4.Location = new System.Drawing.Point(463, 84);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(96, 20);
-            this.textBox4.TabIndex = 107;
+            this.txtScnmem.Location = new System.Drawing.Point(463, 84);
+            this.txtScnmem.Name = "txtScnmem";
+            this.txtScnmem.ReadOnly = true;
+            this.txtScnmem.Size = new System.Drawing.Size(96, 20);
+            this.txtScnmem.TabIndex = 107;
             // 
             // label11
             // 
@@ -966,13 +966,13 @@
             this.label12.TabIndex = 111;
             this.label12.Text = "$/kWh";
             // 
-            // textBox5
+            // txtTransm
             // 
-            this.textBox5.Location = new System.Drawing.Point(16, 126);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(96, 20);
-            this.textBox5.TabIndex = 110;
+            this.txtTransm.Location = new System.Drawing.Point(16, 126);
+            this.txtTransm.Name = "txtTransm";
+            this.txtTransm.ReadOnly = true;
+            this.txtTransm.Size = new System.Drawing.Size(96, 20);
+            this.txtTransm.TabIndex = 110;
             // 
             // label13
             // 
@@ -992,13 +992,13 @@
             this.label14.TabIndex = 114;
             this.label14.Text = "$/kWh";
             // 
-            // textBox6
+            // txtCenace
             // 
-            this.textBox6.Location = new System.Drawing.Point(165, 126);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(96, 20);
-            this.textBox6.TabIndex = 113;
+            this.txtCenace.Location = new System.Drawing.Point(165, 126);
+            this.txtCenace.Name = "txtCenace";
+            this.txtCenace.ReadOnly = true;
+            this.txtCenace.Size = new System.Drawing.Size(96, 20);
+            this.txtCenace.TabIndex = 113;
             // 
             // label15
             // 
@@ -1018,13 +1018,13 @@
             this.label16.TabIndex = 117;
             this.label16.Text = "$/kWh";
             // 
-            // textBox7
+            // txtGenB
             // 
-            this.textBox7.Location = new System.Drawing.Point(314, 126);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(96, 20);
-            this.textBox7.TabIndex = 116;
+            this.txtGenB.Location = new System.Drawing.Point(314, 126);
+            this.txtGenB.Name = "txtGenB";
+            this.txtGenB.ReadOnly = true;
+            this.txtGenB.Size = new System.Drawing.Size(96, 20);
+            this.txtGenB.TabIndex = 116;
             // 
             // label17
             // 
@@ -1044,13 +1044,13 @@
             this.label18.TabIndex = 120;
             this.label18.Text = "$/kWh";
             // 
-            // textBox8
+            // txtGenI
             // 
-            this.textBox8.Location = new System.Drawing.Point(463, 126);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(96, 20);
-            this.textBox8.TabIndex = 119;
+            this.txtGenI.Location = new System.Drawing.Point(463, 126);
+            this.txtGenI.Name = "txtGenI";
+            this.txtGenI.ReadOnly = true;
+            this.txtGenI.Size = new System.Drawing.Size(96, 20);
+            this.txtGenI.TabIndex = 119;
             // 
             // label19
             // 
@@ -1070,13 +1070,13 @@
             this.label20.TabIndex = 123;
             this.label20.Text = "$/kW";
             // 
-            // textBox9
+            // txtGenP
             // 
-            this.textBox9.Location = new System.Drawing.Point(16, 172);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(96, 20);
-            this.textBox9.TabIndex = 122;
+            this.txtGenP.Location = new System.Drawing.Point(16, 172);
+            this.txtGenP.Name = "txtGenP";
+            this.txtGenP.ReadOnly = true;
+            this.txtGenP.Size = new System.Drawing.Size(96, 20);
+            this.txtGenP.TabIndex = 122;
             // 
             // label21
             // 
@@ -1096,13 +1096,13 @@
             this.label22.TabIndex = 126;
             this.label22.Text = "$/kWh";
             // 
-            // textBox10
+            // txtGen
             // 
-            this.textBox10.Location = new System.Drawing.Point(165, 172);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(96, 20);
-            this.textBox10.TabIndex = 125;
+            this.txtGen.Location = new System.Drawing.Point(165, 172);
+            this.txtGen.Name = "txtGen";
+            this.txtGen.ReadOnly = true;
+            this.txtGen.Size = new System.Drawing.Size(96, 20);
+            this.txtGen.TabIndex = 125;
             // 
             // label23
             // 
@@ -1122,13 +1122,13 @@
             this.label24.TabIndex = 129;
             this.label24.Text = "$/Cliente";
             // 
-            // textBox11
+            // txtSuminis
             // 
-            this.textBox11.Location = new System.Drawing.Point(314, 172);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(96, 20);
-            this.textBox11.TabIndex = 128;
+            this.txtSuminis.Location = new System.Drawing.Point(314, 172);
+            this.txtSuminis.Name = "txtSuminis";
+            this.txtSuminis.ReadOnly = true;
+            this.txtSuminis.Size = new System.Drawing.Size(96, 20);
+            this.txtSuminis.TabIndex = 128;
             // 
             // label25
             // 
@@ -1145,45 +1145,45 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(622, 545);
             this.Controls.Add(this.label24);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.txtSuminis);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.txtGen);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.txtGenP);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.txtGenI);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtGenB);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtCenace);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtTransm);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtScnmem);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtDistribPot);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtCapPot);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCapEne);
             this.Controls.Add(this.lbCapEne);
-            this.Controls.Add(this.txtTarifaGlobal);
+            this.Controls.Add(this.txtTarifa);
             this.Controls.Add(this.lbTarifaGlobal);
-            this.Controls.Add(this.txtDivGlobal);
+            this.Controls.Add(this.txtDiv);
             this.Controls.Add(this.lbDivGlobal);
-            this.Controls.Add(this.txtMonthGlobal);
+            this.Controls.Add(this.txtMonth);
             this.Controls.Add(this.lbMonthGlobal);
-            this.Controls.Add(this.txtYearGlobal);
+            this.Controls.Add(this.txtYear);
             this.Controls.Add(this.lbYearGlobal);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtPort);
@@ -1274,46 +1274,46 @@
         private System.Windows.Forms.Label lbIrmsA;
         private System.Windows.Forms.Label lbVrmsABC;
         private System.Windows.Forms.TextBox txtVrmsABC;
-        private System.Windows.Forms.TextBox txtYearGlobal;
+        private System.Windows.Forms.TextBox txtYear;
         private System.Windows.Forms.Label lbYearGlobal;
-        private System.Windows.Forms.TextBox txtMonthGlobal;
+        private System.Windows.Forms.TextBox txtMonth;
         private System.Windows.Forms.Label lbMonthGlobal;
-        private System.Windows.Forms.TextBox txtDivGlobal;
+        private System.Windows.Forms.TextBox txtDiv;
         private System.Windows.Forms.Label lbDivGlobal;
-        private System.Windows.Forms.TextBox txtTarifaGlobal;
+        private System.Windows.Forms.TextBox txtTarifa;
         private System.Windows.Forms.Label lbTarifaGlobal;
         private System.Windows.Forms.Label lbCapEne;
         private System.Windows.Forms.TextBox txtCapEne;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCapPot;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtDistribPot;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtScnmem;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtTransm;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtCenace;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtGenB;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtGenI;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtGenP;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtGen;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtSuminis;
         private System.Windows.Forms.Label label25;
     }
 }

@@ -284,6 +284,7 @@ namespace Umbrall
             GlobalParameters.globalCapPot = localCapPot;
             GlobalParameters.globalDistribPot = localDistribPot;
             GlobalParameters.globalScnmem = localScnmem;
+            GlobalParameters.globalTransm = localTransm;
             GlobalParameters.globalCenace = localCenance;
             GlobalParameters.globalGen = localGen;
             GlobalParameters.globalSuminis = localSuminis;

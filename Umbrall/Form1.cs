@@ -121,6 +121,7 @@ namespace Umbrall
             startMonitorWindow.MdiParent = this;
 
             startMonitorWindow.Show();
+
         }
 
         
@@ -132,6 +133,12 @@ namespace Umbrall
             configDevice.MdiParent = this;
 
             configDevice.Show();
+        }
+
+        private void detenerMonitoreoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Monitor.StopMonitor();
+
         }
     }
 }

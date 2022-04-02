@@ -22,7 +22,8 @@ namespace Umbrall
         }
 
         private void StartMonitor_Load(object sender, EventArgs e)
-        {   
+        {
+
             try
             {
                 ipAddress = GlobalParameters.ipAddressGlobal;                   //Global parameter from ConfigDevice trough GlobalParameters class
@@ -33,16 +34,43 @@ namespace Umbrall
                 txtIpAddress.Text = ipAddress;
                 txtPort.Text = port.ToString();
 
+                string year = GlobalParameters.globalYear;
+                string month = GlobalParameters.globalMonth;
+                string div = GlobalParameters.globalDiv;
+                string tarifa = GlobalParameters.globalTarifa;
+               
                 // Tarifas Parameters in txtBox
-                txtYearGlobal.Text = GlobalParameters.globalYear.ToString();
-                txtMonthGlobal.Text = GlobalParameters.globalMonth.ToString();
-                txtDivGlobal.Text = GlobalParameters.globalDiv.ToString();
-                txtTarifaGlobal.Text = GlobalParameters.globalTarifa.ToString();
+                txtYear.Text = year;
+                txtMonth.Text = month;
+                txtDiv.Text = div;
+                txtTarifa.Text = tarifa;
+                
+              
+                
 
                 // Tarifas Cargos in text box
                 txtCapEne.Text = GlobalParameters.globalCapEne.ToString();
+                txtCapPot.Text = GlobalParameters.globalCapPot.ToString();
+                txtDistribPot.Text = GlobalParameters.globalDistribPot.ToString();
+                txtScnmem.Text = GlobalParameters.globalScnmem.ToString();
+                txtTransm.Text = GlobalParameters.globalTransm.ToString();
+                txtCenace.Text = GlobalParameters.globalCenace.ToString();
+                txtGenB.Text = GlobalParameters.globalGenB.ToString();
+                txtGenI.Text = GlobalParameters.globalGenI.ToString();
+                txtGenP.Text = GlobalParameters.globalGenP.ToString();
+                txtGen.Text = GlobalParameters.globalGen.ToString();
+                txtSuminis.Text = GlobalParameters.globalSuminis.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Advertencia: Dispositivo no encontrado\no cargos no disponibles.");
+            }
 
+            Monitor.StartMonitor();
+            
 
+            // MONITOREO DE LOS PARAMETROS PROXIMO A HACERSE EN EL LA CLASE GLOBAL
+            /*
                 modbusClient.Connect();                                         //Connect to Server
 
                 #region ReadingNoTimer
@@ -64,9 +92,8 @@ namespace Umbrall
             }
             catch
             {
-                MessageBox.Show("Error en la configuración del dispositivo o en la consulta de los cargos");
-            }
-
+                MessageBox.Show("Advertencia: Dispositivo no encontrado\no cargos no disponibles.");
+            }*/
         }
 
         private void ReadRegisters()
@@ -242,6 +269,11 @@ namespace Umbrall
      
         }
 
+        private void ReadModbusTimer_Tick(object sender, EventArgs e)
+        {
+            ReadRegisters();
+        }
+
         //Function to convert the Hex value trough Float32
         private float ConvertToFloat(string value)
         {
@@ -250,11 +282,6 @@ namespace Umbrall
             float valueFloat = BitConverter.ToSingle(floatValues, 0);                               //Return a float32 value                
             return valueFloat;
         }
-        private void ReadModbusTimer_Tick(object sender, EventArgs e)
-        {
-            ReadRegisters();
-        }
 
-                
     }
 }

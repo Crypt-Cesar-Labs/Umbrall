@@ -85,7 +85,7 @@
             this.iniciarMonitoreoToolStripMenuItem.Image = global::Umbrall.Properties.Resources.play;
             this.iniciarMonitoreoToolStripMenuItem.Name = "iniciarMonitoreoToolStripMenuItem";
             this.iniciarMonitoreoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.iniciarMonitoreoToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.iniciarMonitoreoToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.iniciarMonitoreoToolStripMenuItem.Text = "Iniciar Monitoreo";
             this.iniciarMonitoreoToolStripMenuItem.Click += new System.EventHandler(this.iniciarMonitoreoToolStripMenuItem_Click);
             // 
@@ -94,13 +94,14 @@
             this.detenerMonitoreoToolStripMenuItem.Image = global::Umbrall.Properties.Resources.stop;
             this.detenerMonitoreoToolStripMenuItem.Name = "detenerMonitoreoToolStripMenuItem";
             this.detenerMonitoreoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.detenerMonitoreoToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.detenerMonitoreoToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.detenerMonitoreoToolStripMenuItem.Text = "Detener Monitoreo";
+            this.detenerMonitoreoToolStripMenuItem.Click += new System.EventHandler(this.detenerMonitoreoToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(213, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(217, 6);
             // 
             // configuraciónToolStripMenuItem
             // 
@@ -109,7 +110,7 @@
             this.tarifasCFEToolStripMenuItem,
             this.alertasCorreoToolStripMenuItem});
             this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
-            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.configuraciónToolStripMenuItem.Text = "Configuración";
             // 
             // conectarDispositivoToolStripMenuItem
@@ -136,7 +137,7 @@
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
