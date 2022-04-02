@@ -23,25 +23,26 @@ namespace Umbrall
 
         private void StartMonitor_Load(object sender, EventArgs e)
         {   
-
-            ipAddress = GlobalParameters.ipAddressGlobal;                   //Global parameter from ConfigDevice trough GlobalParameters class
-            port = GlobalParameters.portGlobal;
-            modbusClient = new ModbusClient(ipAddress, port);                 //Ip-Address and Port of Modbus-TCP-Server
-
-            // Connect Parameters in txtBox
-            txtIpAddress.Text = ipAddress;
-            txtPort.Text = port.ToString();
-
-            // Tarifas Parameters in txtBox
-            /*txtYearGlobal.Text = GlobalParameters.globalYear.ToString();
-            txtMonthGlobal.Text = GlobalParameters.globalMonth.ToString();
-            txtDivGlobal.Text = GlobalParameters.globalDiv.ToString();
-            txtTarifaGlobal.Text = GlobalParameters.globalTarifa.ToString();
-            txtValorGlobal.Text = GlobalParameters.globalValue.ToString();*/
-            
-
             try
             {
+                ipAddress = GlobalParameters.ipAddressGlobal;                   //Global parameter from ConfigDevice trough GlobalParameters class
+                port = GlobalParameters.portGlobal;
+                modbusClient = new ModbusClient(ipAddress, port);                 //Ip-Address and Port of Modbus-TCP-Server
+
+                // Connect Parameters in txtBox
+                txtIpAddress.Text = ipAddress;
+                txtPort.Text = port.ToString();
+
+                // Tarifas Parameters in txtBox
+                txtYearGlobal.Text = GlobalParameters.globalYear.ToString();
+                txtMonthGlobal.Text = GlobalParameters.globalMonth.ToString();
+                txtDivGlobal.Text = GlobalParameters.globalDiv.ToString();
+                txtTarifaGlobal.Text = GlobalParameters.globalTarifa.ToString();
+
+                // Tarifas Cargos in text box
+                txtCapEne.Text = GlobalParameters.globalCapEne.ToString();
+
+
                 modbusClient.Connect();                                         //Connect to Server
 
                 #region ReadingNoTimer
@@ -63,7 +64,7 @@ namespace Umbrall
             }
             catch
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("Error en la configuración del dispositivo o en la consulta de los cargos");
             }
 
         }
@@ -254,57 +255,6 @@ namespace Umbrall
             ReadRegisters();
         }
 
-        #region oldReadRegister
-        /*
-                txtReg1.Text = readHoldingRegisters[0].ToString();
-                txtReg2.Text = readHoldingRegisters[1].ToString();
-                txtReg3.Text = readHoldingRegisters[2].ToString();
-                txtReg4.Text = readHoldingRegisters[3].ToString();
-                txtReg5.Text = readHoldingRegisters[4].ToString();
-                txtReg6.Text = readHoldingRegisters[5].ToString();
-                txtReg7.Text = readHoldingRegisters[6].ToString();
-                txtReg8.Text = readHoldingRegisters[7].ToString();
-                txtReg9.Text = readHoldingRegisters[8].ToString();
-                txtReg10.Text = readHoldingRegisters[9].ToString();
-                txtReg11.Text = readHoldingRegisters[10].ToString();
-                txtReg12.Text = readHoldingRegisters[11].ToString();
-                txtReg13.Text = readHoldingRegisters[0].ToString();
-                txtReg14.Text = readHoldingRegisters[1].ToString();
-                txtReg15.Text = readHoldingRegisters[2].ToString();
-                txtReg16.Text = readHoldingRegisters[3].ToString();
-                txtReg17.Text = readHoldingRegisters[4].ToString();
-                txtReg18.Text = readHoldingRegisters[5].ToString();
-                txtReg19.Text = readHoldingRegisters[6].ToString();
-                txtReg20.Text = readHoldingRegisters[7].ToString();
-                txtReg21.Text = readHoldingRegisters[8].ToString();
-                txtReg22.Text = readHoldingRegisters[9].ToString();
-                txtReg23.Text = readHoldingRegisters[10].ToString();
-                txtReg24.Text = readHoldingRegisters[11].ToString();
-                txtReg25.Text = readHoldingRegisters[0].ToString();
-                txtReg26.Text = readHoldingRegisters[1].ToString();
-                txtReg27.Text = readHoldingRegisters[2].ToString();
-                txtReg28.Text = readHoldingRegisters[3].ToString();
-                txtReg29.Text = readHoldingRegisters[4].ToString();
-                txtReg30.Text = readHoldingRegisters[5].ToString();
-                txtReg31.Text = readHoldingRegisters[6].ToString();
-                txtReg32.Text = readHoldingRegisters[7].ToString();
-                txtReg33.Text = readHoldingRegisters[8].ToString();
-                txtReg34.Text = readHoldingRegisters[9].ToString();
-                txtReg35.Text = readHoldingRegisters[10].ToString();
-                txtReg36.Text = readHoldingRegisters[11].ToString();
-                txtReg37.Text = readHoldingRegisters[0].ToString();
-                txtReg38.Text = readHoldingRegisters[1].ToString();
-                txtReg39.Text = readHoldingRegisters[2].ToString();
-                txtReg40.Text = readHoldingRegisters[3].ToString();
-                txtReg41.Text = readHoldingRegisters[4].ToString();
-                txtReg42.Text = readHoldingRegisters[5].ToString();
-                txtReg43.Text = readHoldingRegisters[6].ToString();
-                txtReg44.Text = readHoldingRegisters[7].ToString();
-                txtReg45.Text = readHoldingRegisters[8].ToString();
-                txtReg46.Text = readHoldingRegisters[9].ToString();
-                txtReg47.Text = readHoldingRegisters[10].ToString();*/
-        #endregion
-
-        
+                
     }
 }

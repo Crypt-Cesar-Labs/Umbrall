@@ -14,11 +14,23 @@ namespace Umbrall
     public partial class ConsultaTarifaEmpresa : Form
     {
         // Variables for the database query
-        string yearLocal;
-        string monthLocal;
-        string tarifaLocal;
-        string divLocal;
+        string localYear;
+        string localMonth;
+        string localTarifa;
+        string localDiv;
 
+        // Variables for the query response
+        double localGenB;
+        double localGenI;
+        double localGenP;
+        double localCapEne;
+        double localCapPot;
+        double localDistribPot;
+        double localScnmem;
+        double localTransm;
+        double localCenance;
+        double localGen;
+        double localSuminis;
 
         public ConsultaTarifaEmpresa()
         {
@@ -163,6 +175,20 @@ namespace Umbrall
                 txtCenace.Text = cenace;
                 txtGen.Text = generacion;
                 txtSuminis.Text = suminis;
+
+                // Passing the values for global variables in this context 
+                localGenB = Convert.ToDouble(generacionB);
+                localGenI = Convert.ToDouble(generacionI);
+                localGenP = Convert.ToDouble(generacionP);
+                localCapEne = Convert.ToDouble(capacidadEne);
+                localCapPot = Convert.ToDouble(capacidadPot);
+                localDistribPot = Convert.ToDouble(distribPot);
+                localScnmem = Convert.ToDouble(scnmem);
+                localTransm = Convert.ToDouble(transm);
+                localCenance = Convert.ToDouble(cenace);
+                localGen = Convert.ToDouble(generacion);
+                localSuminis = Convert.ToDouble(suminis);
+
             }
             catch
             {
@@ -185,12 +211,12 @@ namespace Umbrall
                 // Query for the <tarifa horaria basica>
                 string queryGDMTH = "SELECT cargo FROM tabla_cargos WHERE año = ?yearLocal AND mes = ?monthLocal AND tarifa = ?tarifaLocal AND segmento = ?segmento AND concepto = ?concepto AND division = ?divLocal AND horario = ?horario";
                 MySqlCommand comandoObject = new MySqlCommand(queryGDMTH);
-                comandoObject.Parameters.AddWithValue("?yearLocal", yearLocal);
-                comandoObject.Parameters.AddWithValue("?monthLocal", monthLocal);
-                comandoObject.Parameters.AddWithValue("?tarifaLocal", tarifaLocal);
+                comandoObject.Parameters.AddWithValue("?yearLocal", localYear);
+                comandoObject.Parameters.AddWithValue("?monthLocal", localMonth);
+                comandoObject.Parameters.AddWithValue("?tarifaLocal", localTarifa);
                 comandoObject.Parameters.AddWithValue("?segmento", segmento);
                 comandoObject.Parameters.AddWithValue("?concepto", concepto);
-                comandoObject.Parameters.AddWithValue("?divLocal", divLocal);
+                comandoObject.Parameters.AddWithValue("?divLocal", localDiv);
                 comandoObject.Parameters.AddWithValue("?horario", horario);
 
                 
@@ -221,25 +247,49 @@ namespace Umbrall
         private void cmbYearInc_SelectedIndexChanged(object sender, EventArgs e)
         {
             int indexYear = cmbYearInc.SelectedIndex;               // Access to the corresponding index from the comboBox
-            yearLocal = cmbYearInc.Items[indexYear].ToString();     //Asigned to local variable
+            localYear = cmbYearInc.Items[indexYear].ToString();     //Asigned to local variable
         }
 
         private void cmbMonthInc_SelectedIndexChanged(object sender, EventArgs e)
         {
             int indexMonth = cmbMonthInc.SelectedIndex;
-            monthLocal = cmbMonthInc.Items[indexMonth].ToString();
+            localMonth = cmbMonthInc.Items[indexMonth].ToString();
         }
 
         private void cmbTarifaInc_SelectedIndexChanged(object sender, EventArgs e)
         {
             int indexTarifa = cmbTarifaInc.SelectedIndex;
-            tarifaLocal = cmbTarifaInc.Items[indexTarifa].ToString();
+            localTarifa = cmbTarifaInc.Items[indexTarifa].ToString();
         }
 
         private void cmbDivInc_SelectedIndexChanged(object sender, EventArgs e)
         {
             int indexDiv = cmbDivInc.SelectedIndex;
-            divLocal = cmbDivInc.Items[indexDiv].ToString();
+            localDiv = cmbDivInc.Items[indexDiv].ToString();
+        }
+
+        private void btnAceptCargos_Click(object sender, EventArgs e)
+        {
+            // Passing the data to global context
+            GlobalParameters.globalYear = localYear;
+            GlobalParameters.globalMonth = localMonth;
+            GlobalParameters.globalTarifa = localTarifa;
+            GlobalParameters.globalDiv = localDiv;
+            
+
+            GlobalParameters.globalGenB = localGenB;
+            GlobalParameters.globalGenI = localGenI;
+            GlobalParameters.globalGenP = localGenP;
+            GlobalParameters.globalCapEne = localCapEne;
+            GlobalParameters.globalCapPot = localCapPot;
+            GlobalParameters.globalDistribPot = localDistribPot;
+            GlobalParameters.globalScnmem = localScnmem;
+            GlobalParameters.globalCenace = localCenance;
+            GlobalParameters.globalGen = localGen;
+            GlobalParameters.globalSuminis = localSuminis;
+
+
+            this.Close();
         }
     }
 }

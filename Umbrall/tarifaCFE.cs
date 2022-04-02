@@ -106,7 +106,7 @@ namespace Umbrall
                     dataTarifa += objectReader.GetString(0);
                 }
                 MessageBox.Show(dataTarifa);
-                GlobalParameters.globalValue = float.Parse(dataTarifa);
+                
             }
             catch (MySqlException ex)
             {

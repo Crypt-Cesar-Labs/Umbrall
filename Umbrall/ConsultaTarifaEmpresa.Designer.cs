@@ -54,7 +54,7 @@
             this.lbScnmem = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAceptCargos = new System.Windows.Forms.Button();
             this.txtCapPot = new System.Windows.Forms.TextBox();
             this.lbCapPot = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -337,14 +337,15 @@
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnAceptCargos
             // 
-            this.button2.Location = new System.Drawing.Point(542, 415);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 23);
-            this.button2.TabIndex = 41;
-            this.button2.Text = "Aceptar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAceptCargos.Location = new System.Drawing.Point(542, 415);
+            this.btnAceptCargos.Name = "btnAceptCargos";
+            this.btnAceptCargos.Size = new System.Drawing.Size(109, 23);
+            this.btnAceptCargos.TabIndex = 41;
+            this.btnAceptCargos.Text = "Aceptar";
+            this.btnAceptCargos.UseVisualStyleBackColor = true;
+            this.btnAceptCargos.Click += new System.EventHandler(this.btnAceptCargos_Click);
             // 
             // txtCapPot
             // 
@@ -544,7 +545,7 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtCapPot);
             this.Controls.Add(this.lbCapPot);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnAceptCargos);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtGen);
@@ -607,7 +608,7 @@
         private System.Windows.Forms.Label lbScnmem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAceptCargos;
         private System.Windows.Forms.TextBox txtDistribPot;
         private System.Windows.Forms.TextBox txtCapPot;
         private System.Windows.Forms.Label lbCapPot;

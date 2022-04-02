@@ -15,7 +15,19 @@ namespace Umbrall
         public static string globalMonth;
         public static string globalDiv;
         public static string globalTarifa;
-        public static float globalValue;
+        
+
+        public static double globalGenB;
+        public static double globalGenI;
+        public static double globalGenP;
+        public static double globalCapEne;
+        public static double globalCapPot;
+        public static double globalDistribPot;
+        public static double globalScnmem;
+        public static double globalTransm;
+        public static double globalCenace;
+        public static double globalGen;
+        public static double globalSuminis;
 
     }
 }
