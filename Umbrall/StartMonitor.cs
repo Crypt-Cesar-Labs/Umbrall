@@ -103,6 +103,38 @@ namespace Umbrall
         private void ShowingParameters(object sender, EventArgs e)
         {
             txtVrmsA.Text = Monitor.vrmsA;
+            txtVrmsB.Text = Monitor.vrmsB;
+            txtVrmsC.Text = Monitor.vrmsC;
+            txtVrmsABC.Text = Monitor.vrmsABC;
+            txtPActiveA.Text = Monitor.pActiveA;
+            txtPActiveB.Text = Monitor.pActiveB;
+            txtPActiveC.Text = Monitor.pActiveC;
+            txtPActiveAbc.Text = Monitor.pActiveABC;
+            txtQA.Text = Monitor.qA;
+            txtQB.Text = Monitor.qB;
+            txtQC.Text = Monitor.qC;
+            txtQAbc.Text = Monitor.qABC;
+            txtSA.Text = Monitor.sA;
+            txtSB.Text = Monitor.sB;
+            txtSC.Text = Monitor.sC;
+            txtSAbc.Text = Monitor.sABC;
+            txtCosFiA.Text = Monitor.cosfiA;
+            txtCosFiB.Text = Monitor.cosfiB;
+            txtCosFiC.Text = Monitor.cosfiC;
+            txtCosFiABC.Text = Monitor.cosfiABC;
+            txtFreq.Text = Monitor.frequency;
+            txtEnergyA.Text = Monitor.energyA;
+            txtEnergyB.Text = Monitor.energyB;
+            txtEnergyC.Text = Monitor.energyC;
+            txtEnergyABC.Text = Monitor.energyABC;
+            txtReactEnergyA.Text = Monitor.reactEnergyA;
+            txtReactEnergyB.Text = Monitor.reactEnergyB;
+            txtReactEnergyC.Text = Monitor.reactEnergyC;
+            txtReactEnergyABC.Text = Monitor.reactEnergyABC;
+            txtIrmsA.Text = Monitor.irmsA;
+            txtIrmsB.Text = Monitor.irmsB;
+            txtIrmsC.Text = Monitor.irmsC;
+            txtIrmsABC.Text = Monitor.irmsABC;
         }
 
 
