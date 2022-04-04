@@ -54,68 +54,6 @@ namespace Umbrall
             MySqlDataReader objectReader = null;
             string dataTarifa = null;
 
-            #region horaria
-            /*
-            if (tarifaLocal == "GDMTH")
-            {
-                string horarioB = "B";
-                string horarioI = "I";
-                string horarioP = "P";
-
-
-                string generacionB = ConsultaCargoTarifa("Generación", "Energía", horarioB, cadenaConexion); // Query Special Function
-                string generacionI = ConsultaCargoTarifa("Generación", "Energía", horarioI, cadenaConexion); // Query Special Function
-                string generacionP = ConsultaCargoTarifa("Generación", "Energía", horarioP, cadenaConexion); // Query Special Function
-
-                /****************************************************************/
-            /*                   The rest of the querys                     */
-            /*                                                              */
-            /* Here we make the rest of the querys changing only the table  */
-            /*
-            // Capacidad
-            string capacidadEne = ConsultaCargoTarifa("Capacidad", "Energía", "NA", cadenaConexion);    // Energia
-            string capacidadPot = ConsultaCargoTarifa("Capacidad", "Potencia", "NA", cadenaConexion);    // Potencia
-
-            // Distribucion
-            string distribPot = ConsultaCargoTarifa("Distribución", "Potencia", "NA", cadenaConexion);
-
-            // SCnMEM
-            string scnmem = ConsultaCargoTarifa("SCnMEM", "Energía", "NA", cadenaConexion);
-
-            // Transmisión
-            string transm = ConsultaCargoTarifa("Transmisión", "Energía", "NA", cadenaConexion);
-
-            // CENACE
-            string cenace = ConsultaCargoTarifa("CENACE", "Energía", "NA", cadenaConexion);
-
-            // Generación
-            string generacion = ConsultaCargoTarifa("Generación", "Energía", "NA", cadenaConexion);
-
-            // Suministtro
-
-            string suminis = ConsultaCargoTarifa("Suministro", "Usuarios", "NA", cadenaConexion);
-
-            // Show cargos
-            txtGenB.Text = generacionB;                                           // Show cargo B
-            txtGenI.Text = generacionI;                                           // Show cargo I   
-            txtGenP.Text = generacionP;                                           // Show cargo P   
-            txtCapEne.Text = capacidadEne;
-            txtCapPot.Text = capacidadPot;
-            txtDistribPot.Text = distribPot;
-            txtScnmem.Text = scnmem;
-            txtTransm.Text = transm;
-            txtCenace.Text = cenace;
-            txtGen.Text = generacion;
-            txtSuminis.Text = suminis;
-
-        }
-        else
-        {
-            txtGenB.Text = "Null";
-            txtGenI.Text = "Null";
-            txtGenP.Text = "Null";
-        }*/
-            #endregion
             try
             {
                 string horarioB = "B";
@@ -129,9 +67,9 @@ namespace Umbrall
                 progBarQuery.Value = 10;
 
                 /****************************************************************/
-                /*                   The rest of the querys                     */
-                /*                                                              */
-                /* Here we make the rest of the querys changing only the table  */
+                /*                   The rest of the querys                           */
+                /*                                                                    */
+                /* Here we make the rest of the querys changing the other parameterd  */
 
                 // Capacidad
                 string capacidadEne = ConsultaCargoTarifa("Capacidad", "Energía", "NA", cadenaConexion);    // Energia

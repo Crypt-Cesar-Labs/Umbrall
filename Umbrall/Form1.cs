@@ -138,7 +138,6 @@ namespace Umbrall
         private void detenerMonitoreoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Monitor.StopMonitor();
-
         }
     }
 }

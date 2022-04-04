@@ -102,15 +102,15 @@
             // 
             // cmbDevice
             // 
+            this.cmbDevice.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cmbDevice.FormattingEnabled = true;
             this.cmbDevice.Items.AddRange(new object[] {
-            "Pro (Router)",
-            "Premium (Moxa)",
-            "Gold (Siemens)"});
+            "SENECA"});
             this.cmbDevice.Location = new System.Drawing.Point(266, 110);
             this.cmbDevice.Name = "cmbDevice";
             this.cmbDevice.Size = new System.Drawing.Size(128, 21);
             this.cmbDevice.TabIndex = 7;
+            this.cmbDevice.Text = "SENECA";
             // 
             // lbDevice
             // 

@@ -45,9 +45,6 @@ namespace Umbrall
                 txtDiv.Text = div;
                 txtTarifa.Text = tarifa;
                 
-              
-                
-
                 // Tarifas Cargos in text box
                 txtCapEne.Text = GlobalParameters.globalCapEne.ToString();
                 txtCapPot.Text = GlobalParameters.globalCapPot.ToString();
@@ -67,7 +64,13 @@ namespace Umbrall
             }
 
             Monitor.StartMonitor();
-            
+
+            Timer showParameters = new Timer();
+            showParameters.Interval = 1000;
+            showParameters.Enabled = true;
+            showParameters.Tick += ShowingParameters;
+
+            #region OldTimer
 
             // MONITOREO DE LOS PARAMETROS PROXIMO A HACERSE EN EL LA CLASE GLOBAL
             /*
@@ -94,8 +97,17 @@ namespace Umbrall
             {
                 MessageBox.Show("Advertencia: Dispositivo no encontrado\no cargos no disponibles.");
             }*/
+            #endregion
+        }
+        
+        private void ShowingParameters(object sender, EventArgs e)
+        {
+            txtVrmsA.Text = Monitor.vrmsA;
         }
 
+
+        #region OldReadFunctions
+        /*
         private void ReadRegisters()
         {
             //------------------------ VARIABLES FOR READING -------------------------------//
@@ -266,13 +278,14 @@ namespace Umbrall
             //txtIrmsB.Text = readIrmsB[0].ToString();
             //txtIrmsC.Text = readIrmsC[0].ToString();
             //txtIrmsABC.Text = readIrmsABC[0].ToString();*/
-     
-        }
+        /*
+    }
 
         private void ReadModbusTimer_Tick(object sender, EventArgs e)
         {
             ReadRegisters();
         }
+
 
         //Function to convert the Hex value trough Float32
         private float ConvertToFloat(string value)
@@ -282,6 +295,7 @@ namespace Umbrall
             float valueFloat = BitConverter.ToSingle(floatValues, 0);                               //Return a float32 value                
             return valueFloat;
         }
-
+                */
+        #endregion
     }
 }
