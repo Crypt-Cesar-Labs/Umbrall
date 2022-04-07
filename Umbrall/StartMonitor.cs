@@ -13,9 +13,12 @@ namespace Umbrall
 {
     public partial class StartMonitor : Form
     {
-        ModbusClient modbusClient;
+        //ModbusClient modbusClient;
         public string ipAddress;
         public int port;
+
+        // Controls
+        public int start = 0;
         public StartMonitor()
         {
             InitializeComponent();
@@ -28,7 +31,7 @@ namespace Umbrall
             {
                 ipAddress = GlobalParameters.ipAddressGlobal;                   //Global parameter from ConfigDevice trough GlobalParameters class
                 port = GlobalParameters.portGlobal;
-                modbusClient = new ModbusClient(ipAddress, port);                 //Ip-Address and Port of Modbus-TCP-Server
+                //modbusClient = new ModbusClient(ipAddress, port);                 //Ip-Address and Port of Modbus-TCP-Server
 
                 // Connect Parameters in txtBox
                 txtIpAddress.Text = ipAddress;

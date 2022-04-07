@@ -61,10 +61,12 @@ namespace Umbrall
             try
             {
                 modbusClient.Connect();
+                Console.WriteLine("Concexion con ip: " + ipAddress.ToString() + " y puerto: " + port.ToString() + " exitosa.");
+                //int[] readVrmsA = modbusClient.ReadHoldingRegisters(134, 2);
 
                 Timer readModbusTimer = new Timer();
 
-                readModbusTimer.Interval = 1000;
+                readModbusTimer.Interval = 5000;
                 readModbusTimer.Enabled = true;
                 readModbusTimer.Tick += ReadModbusTimer_Tick;
 
@@ -149,109 +151,110 @@ namespace Umbrall
                 //txtPActiveAbc.Text = ConvertToFloat(pActiveABCString).ToString();
                 pActiveABC = ConvertToFloat(pActiveABCString).ToString();
 
-                string qAString = (readQA[1] + (readQA[0] + 65536)).ToString("X");
+                string qAString = (readQA[1] + (readQA[0] * 65536)).ToString("X");
                 //txtQA.Text = ConvertToFloat(qAString).ToString();
                 qA = ConvertToFloat(qAString).ToString();
 
-                string qBString = (readQB[1] + (readQB[0] + 65536)).ToString("X");
+                string qBString = (readQB[1] + (readQB[0] * 65536)).ToString("X");
                 //txtQB.Text = ConvertToFloat(qBString).ToString();
                 qB = ConvertToFloat(qBString).ToString();
 
-                string qCString = (readQC[1] + (readQC[0] + 65536)).ToString("X");
+                string qCString = (readQC[1] + (readQC[0] * 65536)).ToString("X");
                 //txtQC.Text = ConvertToFloat(qCString).ToString();
                 qC = ConvertToFloat(qCString).ToString();
 
-                string qABCString = (readQABC[1] + (readQABC[0] + 65536)).ToString("X");
+                string qABCString = (readQABC[1] + (readQABC[0] * 65536)).ToString("X");
                 //txtQAbc.Text = ConvertToFloat(qABCString).ToString();
                 qABC = ConvertToFloat(qABCString).ToString();
 
-                string sAString = (readSA[1] + (readSA[0] + 65536)).ToString("X");
+                string sAString = (readSA[1] + (readSA[0] * 65536)).ToString("X");
                 //txtSA.Text = ConvertToFloat(sAString).ToString();
                 sA = ConvertToFloat(sAString).ToString();
 
-                string sBString = (readSB[1] + (readSB[0] + 65536)).ToString("X");
+                string sBString = (readSB[1] + (readSB[0] * 65536)).ToString("X");
                 //txtSB.Text = ConvertToFloat(sBString).ToString();
                 sB = ConvertToFloat(sBString).ToString();
 
-                string sCString = (readSC[1] + (readSC[0] + 65536)).ToString("X");
+                string sCString = (readSC[1] + (readSC[0] * 65536)).ToString("X");
                 //txtSC.Text = ConvertToFloat(sCString).ToString();
                 sC = ConvertToFloat(sCString).ToString();
 
-                string sABCString = (readSABC[1] + (readSABC[0] + 65536)).ToString("X");
+                string sABCString = (readSABC[1] + (readSABC[0] * 65536)).ToString("X");
                 //txtSAbc.Text = ConvertToFloat(sABCString).ToString();
                 sABC = ConvertToFloat(sABCString).ToString();
 
-                string cosfiAString = (readCosfiA[1] + (readCosfiA[0] + 65536)).ToString("X");
+                string cosfiAString = (readCosfiA[1] + (readCosfiA[0] * 65536)).ToString("X");
                 //txtCosFiA.Text = ConvertToFloat(cosfiA).ToString();
                 cosfiA = ConvertToFloat(cosfiAString).ToString();
 
-                string cosfiBString = (readCosfiB[1] + (readCosfiB[0] + 65536)).ToString("X");
+                string cosfiBString = (readCosfiB[1] + (readCosfiB[0] * 65536)).ToString("X");
                 //txtCosFiB.Text = ConvertToFloat(cosfiB).ToString();
                 cosfiB = ConvertToFloat(cosfiBString).ToString();
 
-                string cosfiCString = (readCosfiC[1] + (readCosfiC[0] + 65536)).ToString("X");
+                string cosfiCString = (readCosfiC[1] + (readCosfiC[0] * 65536)).ToString("X");
                 //txtCosFiC.Text = ConvertToFloat(cosfiC).ToString();
                 cosfiC = ConvertToFloat(cosfiCString).ToString();
 
-                string cosfiABCString = (readCosfiABC[1] + (readCosfiABC[0] + 65536)).ToString("X");
+                string cosfiABCString = (readCosfiABC[1] + (readCosfiABC[0] * 65536)).ToString("X");
                 //txtCosFiABC.Text = ConvertToFloat(cosfiABC).ToString();
                 cosfiABC = ConvertToFloat(cosfiABCString).ToString();
 
-                string frequencyString = (readFrequency[1] + (readFrequency[0] + 65536)).ToString("X");
+                string frequencyString = (readFrequency[1] + (readFrequency[0] * 65536)).ToString("X");
                 //txtFreq.Text = ConvertToFloat(frequency).ToString();
                 frequency = ConvertToFloat(frequencyString).ToString();
 
-                string energyAString = (readEnergyA[1] + (readEnergyA[0] + 65536)).ToString("X");
+                string energyAString = (readEnergyA[1] + (readEnergyA[0] * 65536)).ToString("X");
                 //txtEnergyA.Text = ConvertToFloat(energyA).ToString();
                 energyA = ConvertToFloat(energyAString).ToString();
 
-                string energyBString = (readEnergyB[1] + (readEnergyB[0] + 65536)).ToString("X");
+                string energyBString = (readEnergyB[1] + (readEnergyB[0] * 65536)).ToString("X");
                 //txtEnergyB.Text = ConvertToFloat(energyB).ToString();
                 energyB = ConvertToFloat(energyBString).ToString();
 
-                string energyCString = (readEnergyC[1] + (readEnergyC[0] + 65536)).ToString("X");
+                string energyCString = (readEnergyC[1] + (readEnergyC[0] * 65536)).ToString("X");
                 //txtEnergyC.Text = ConvertToFloat(energyC).ToString();
                 energyC = ConvertToFloat(energyCString).ToString();
 
-                string energyABCString = (readEnergyABC[1] + (readEnergyABC[0] + 65536)).ToString("X");
+                string energyABCString = (readEnergyABC[1] + (readEnergyABC[0] * 65536)).ToString("X");
                 //txtEnergyABC.Text = ConvertToFloat(energyABC).ToString();
                 energyABC = ConvertToFloat(energyABCString).ToString();
 
-                string energyRAString = (readREnergyA[1] + (readREnergyA[0] + 65536)).ToString("X");
+                string energyRAString = (readREnergyA[1] + (readREnergyA[0] * 65536)).ToString("X");
                 //txtReactEnergyA.Text = ConvertToFloat(energyRA).ToString();
                 reactEnergyA = ConvertToFloat(energyRAString).ToString();
 
-                string energyRBString = (readREnergyB[1] + (readREnergyB[0] + 65536)).ToString("X");
+                string energyRBString = (readREnergyB[1] + (readREnergyB[0] * 65536)).ToString("X");
                 //txtReactEnergyB.Text = ConvertToFloat(energyRB).ToString();
                 reactEnergyB = ConvertToFloat(energyRBString).ToString();
 
-                string energyRCString = (readREnergyC[1] + (readREnergyC[0] + 655536)).ToString("X");
+                string energyRCString = (readREnergyC[1] + (readREnergyC[0] * 655536)).ToString("X");
                 //txtReactEnergyC.Text = ConvertToFloat(energyRC).ToString();
                 reactEnergyC = ConvertToFloat(energyRCString).ToString();
 
-                string energyRABCString = (readREnergyABC[1] + (readREnergyABC[0] + 65536)).ToString("X");
+                string energyRABCString = (readREnergyABC[1] + (readREnergyABC[0] * 65536)).ToString("X");
                 //txtReactEnergyABC.Text = ConvertToFloat(energyRABC).ToString();
                 reactEnergyABC = ConvertToFloat(energyRABCString).ToString();
 
-                string irmsAString = (readIrmsA[1] + (readIrmsA[0] + 65536)).ToString("X");
+                string irmsAString = (readIrmsA[1] + (readIrmsA[0] * 65536)).ToString("X");
                 //txtIrmsA.Text = ConvertToFloat(irmsA).ToString();
-                irmsA = ConvertToFloat(irmsAString).ToString();
+                irmsA = (ConvertToFloat(irmsAString)/1000).ToString();
 
-                string irmsBString = (readIrmsB[1] + (readIrmsB[0] + 65536)).ToString("X");
+                string irmsBString = (readIrmsB[1] + (readIrmsB[0] * 65536)).ToString("X");
                 //txtIrmsB.Text = ConvertToFloat(irmsB).ToString();
-                irmsB = ConvertToFloat(irmsBString).ToString();
+                irmsB = (ConvertToFloat(irmsBString)/1000).ToString();
 
-                string irmsCString = (readIrmsC[1] + (readIrmsC[0] + 65536)).ToString("X");
+                string irmsCString = (readIrmsC[1] + (readIrmsC[0] * 65536)).ToString("X");
                 //txtIrmsC.Text = ConvertToFloat(irmsC).ToString();
-                irmsC = ConvertToFloat(irmsCString).ToString();
+                irmsC = (ConvertToFloat(irmsCString)/1000).ToString();
 
-                string irmsABCString = (readIrmsABC[1] + (readIrmsABC[0] + 65536)).ToString("X");
+                string irmsABCString = (readIrmsABC[1] + (readIrmsABC[0] * 65536)).ToString("X");
                 //txtIrmsABC.Text = ConvertToFloat(irmsABC).ToString();
-                irmsABC = ConvertToFloat(irmsABCString).ToString();
+                irmsABC = (ConvertToFloat(irmsABCString)/1000).ToString();
             }
             catch
             {
-                MessageBox.Show("Error en la conexión.");
+                //MessageBox.Show("Error en la conexión.");
+                Console.WriteLine("Error:");
             }
             
         }

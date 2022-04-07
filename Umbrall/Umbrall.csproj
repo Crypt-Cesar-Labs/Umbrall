@@ -99,6 +99,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalParameters.cs" />
+    <Compile Include="HistoryRegisters.cs" />
     <Compile Include="mbRtuTcpTest.cs">
       <SubType>Form</SubType>
     </Compile>
