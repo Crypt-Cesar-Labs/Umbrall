@@ -8,11 +8,11 @@ namespace Umbrall
 {
     internal class HistoryRegisters
     {
-        List<Tuple<double, DateTime>> listRegisters;
+        List<Tuple<double, DateTime>> listEnergyRegisters;
 
-        public HistoryRegisters(List<Tuple<double, DateTime>> listRegisters)
+        public HistoryRegisters(List<Tuple<double, DateTime>> listEnergyRegisters)
         {
-            this.listRegisters = listRegisters;
+            this.listEnergyRegisters = listEnergyRegisters;
         }
 
     }

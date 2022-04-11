@@ -29,9 +29,6 @@ namespace Umbrall
 
             try
             {
-                ipAddress = GlobalParameters.ipAddressGlobal;                   //Global parameter from ConfigDevice trough GlobalParameters class
-                port = GlobalParameters.portGlobal;
-                //modbusClient = new ModbusClient(ipAddress, port);                 //Ip-Address and Port of Modbus-TCP-Server
 
                 // Connect Parameters in txtBox
                 txtIpAddress.Text = ipAddress;
@@ -105,39 +102,39 @@ namespace Umbrall
         
         private void ShowingParameters(object sender, EventArgs e)
         {
-            txtVrmsA.Text = Monitor.vrmsA;
-            txtVrmsB.Text = Monitor.vrmsB;
-            txtVrmsC.Text = Monitor.vrmsC;
-            txtVrmsABC.Text = Monitor.vrmsABC;
-            txtPActiveA.Text = Monitor.pActiveA;
-            txtPActiveB.Text = Monitor.pActiveB;
-            txtPActiveC.Text = Monitor.pActiveC;
-            txtPActiveAbc.Text = Monitor.pActiveABC;
-            txtQA.Text = Monitor.qA;
-            txtQB.Text = Monitor.qB;
-            txtQC.Text = Monitor.qC;
-            txtQAbc.Text = Monitor.qABC;
-            txtSA.Text = Monitor.sA;
-            txtSB.Text = Monitor.sB;
-            txtSC.Text = Monitor.sC;
-            txtSAbc.Text = Monitor.sABC;
-            txtCosFiA.Text = Monitor.cosfiA;
-            txtCosFiB.Text = Monitor.cosfiB;
-            txtCosFiC.Text = Monitor.cosfiC;
-            txtCosFiABC.Text = Monitor.cosfiABC;
-            txtFreq.Text = Monitor.frequency;
-            txtEnergyA.Text = Monitor.energyA;
-            txtEnergyB.Text = Monitor.energyB;
-            txtEnergyC.Text = Monitor.energyC;
-            txtEnergyABC.Text = Monitor.energyABC;
-            txtReactEnergyA.Text = Monitor.reactEnergyA;
-            txtReactEnergyB.Text = Monitor.reactEnergyB;
-            txtReactEnergyC.Text = Monitor.reactEnergyC;
-            txtReactEnergyABC.Text = Monitor.reactEnergyABC;
-            txtIrmsA.Text = Monitor.irmsA;
-            txtIrmsB.Text = Monitor.irmsB;
-            txtIrmsC.Text = Monitor.irmsC;
-            txtIrmsABC.Text = Monitor.irmsABC;
+            txtVrmsA.Text = Monitor.vrmsA.ToString();
+            txtVrmsB.Text = Monitor.vrmsB.ToString();
+            txtVrmsC.Text = Monitor.vrmsC.ToString();
+            txtVrmsABC.Text = Monitor.vrmsABC.ToString();
+            txtPActiveA.Text = Monitor.pActiveA.ToString();
+            txtPActiveB.Text = Monitor.pActiveB.ToString();
+            txtPActiveC.Text = Monitor.pActiveC.ToString();
+            txtPActiveAbc.Text = Monitor.pActiveABC.ToString();
+            txtQA.Text = Monitor.qA.ToString();
+            txtQB.Text = Monitor.qB.ToString();
+            txtQC.Text = Monitor.qC.ToString();
+            txtQAbc.Text = Monitor.qABC.ToString();
+            txtSA.Text = Monitor.sA.ToString();
+            txtSB.Text = Monitor.sB.ToString();
+            txtSC.Text = Monitor.sC.ToString();
+            txtSAbc.Text = Monitor.sABC.ToString();
+            txtCosFiA.Text = Monitor.cosfiA.ToString();
+            txtCosFiB.Text = Monitor.cosfiB.ToString();
+            txtCosFiC.Text = Monitor.cosfiC.ToString();
+            txtCosFiABC.Text = Monitor.cosfiABC.ToString();
+            txtFreq.Text = Monitor.frequency.ToString();
+            txtEnergyA.Text = Monitor.energyA.ToString();
+            txtEnergyB.Text = Monitor.energyB.ToString();
+            txtEnergyC.Text = Monitor.energyC.ToString();
+            txtEnergyABC.Text = Monitor.energyABC.ToString();
+            txtReactEnergyA.Text = Monitor.reactEnergyA.ToString();
+            txtReactEnergyB.Text = Monitor.reactEnergyB.ToString();
+            txtReactEnergyC.Text = Monitor.reactEnergyC.ToString();
+            txtReactEnergyABC.Text = Monitor.reactEnergyABC.ToString();
+            txtIrmsA.Text = Monitor.irmsA.ToString();
+            txtIrmsB.Text = Monitor.irmsB.ToString();
+            txtIrmsC.Text = Monitor.irmsC.ToString();
+            txtIrmsABC.Text = Monitor.irmsABC.ToString();
         }
 
 
@@ -332,5 +329,10 @@ namespace Umbrall
         }
                 */
         #endregion
+
+        private void btnSaveEnergy_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

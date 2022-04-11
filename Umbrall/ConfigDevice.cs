@@ -35,5 +35,10 @@ namespace Umbrall
             this.Close();
 
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
