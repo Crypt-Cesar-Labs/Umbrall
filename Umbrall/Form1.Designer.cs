@@ -49,6 +49,8 @@
             this.modbusTCPTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientTCPTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientSocketTCPTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gráficasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -143,6 +145,9 @@
             // 
             // reportesToolStripMenuItem
             // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.facturaciónToolStripMenuItem,
+            this.gráficasToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.reportesToolStripMenuItem.Text = "Reportes";
@@ -216,6 +221,18 @@
             this.clientSocketTCPTestToolStripMenuItem.Text = "Client Socket TCP Test";
             this.clientSocketTCPTestToolStripMenuItem.Click += new System.EventHandler(this.clientSocketTCPTestToolStripMenuItem_Click);
             // 
+            // facturaciónToolStripMenuItem
+            // 
+            this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
+            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.facturaciónToolStripMenuItem.Text = "Facturación";
+            // 
+            // gráficasToolStripMenuItem
+            // 
+            this.gráficasToolStripMenuItem.Name = "gráficasToolStripMenuItem";
+            this.gráficasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gráficasToolStripMenuItem.Text = "Gráficas";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,6 +275,8 @@
         private System.Windows.Forms.ToolStripMenuItem modbusTCPTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientTCPTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientSocketTCPTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem facturaciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gráficasToolStripMenuItem;
     }
 }
 

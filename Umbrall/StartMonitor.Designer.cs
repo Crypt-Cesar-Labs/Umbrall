@@ -38,6 +38,7 @@
             this.lbVrmsC = new System.Windows.Forms.Label();
             this.txtVrmsA = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSaveEnergy = new System.Windows.Forms.Button();
             this.lbVrmsABC = new System.Windows.Forms.Label();
             this.txtVrmsABC = new System.Windows.Forms.TextBox();
             this.txtIrmsABC = new System.Windows.Forms.TextBox();
@@ -141,7 +142,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.txtSuminis = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.btnSaveEnergy = new System.Windows.Forms.Button();
+            this.txtListEnergy = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -217,6 +218,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtListEnergy);
             this.panel1.Controls.Add(this.btnSaveEnergy);
             this.panel1.Controls.Add(this.lbVrmsABC);
             this.panel1.Controls.Add(this.txtVrmsABC);
@@ -288,6 +290,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(598, 335);
             this.panel1.TabIndex = 88;
+            // 
+            // btnSaveEnergy
+            // 
+            this.btnSaveEnergy.Location = new System.Drawing.Point(488, 309);
+            this.btnSaveEnergy.Name = "btnSaveEnergy";
+            this.btnSaveEnergy.Size = new System.Drawing.Size(107, 23);
+            this.btnSaveEnergy.TabIndex = 185;
+            this.btnSaveEnergy.Text = "Guardar Energía";
+            this.btnSaveEnergy.UseVisualStyleBackColor = true;
+            this.btnSaveEnergy.Click += new System.EventHandler(this.btnSaveEnergy_Click);
             // 
             // lbVrmsABC
             // 
@@ -1141,15 +1153,12 @@
             this.label25.TabIndex = 127;
             this.label25.Text = "Suministro";
             // 
-            // btnSaveEnergy
+            // txtListEnergy
             // 
-            this.btnSaveEnergy.Location = new System.Drawing.Point(407, 275);
-            this.btnSaveEnergy.Name = "btnSaveEnergy";
-            this.btnSaveEnergy.Size = new System.Drawing.Size(107, 23);
-            this.btnSaveEnergy.TabIndex = 185;
-            this.btnSaveEnergy.Text = "Guardar Energía";
-            this.btnSaveEnergy.UseVisualStyleBackColor = true;
-            this.btnSaveEnergy.Click += new System.EventHandler(this.btnSaveEnergy_Click);
+            this.txtListEnergy.Location = new System.Drawing.Point(385, 283);
+            this.txtListEnergy.Name = "txtListEnergy";
+            this.txtListEnergy.Size = new System.Drawing.Size(209, 20);
+            this.txtListEnergy.TabIndex = 186;
             // 
             // StartMonitor
             // 
@@ -1328,5 +1337,6 @@
         private System.Windows.Forms.TextBox txtSuminis;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button btnSaveEnergy;
+        private System.Windows.Forms.TextBox txtListEnergy;
     }
 }

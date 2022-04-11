@@ -115,7 +115,9 @@ namespace Umbrall
         }
 
         private void iniciarMonitoreoToolStripMenuItem_Click(object sender, EventArgs e)
-        {   
+        {
+            Monitor.StartMonitor();
+
             StartMonitor startMonitorWindow = new StartMonitor();
 
             startMonitorWindow.MdiParent = this;

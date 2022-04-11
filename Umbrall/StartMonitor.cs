@@ -63,7 +63,7 @@ namespace Umbrall
                 MessageBox.Show("Advertencia: Dispositivo no encontrado\no cargos no disponibles.");
             }
 
-            Monitor.StartMonitor();
+            //Monitor.StartMonitor();
 
             Timer showParameters = new Timer();
             showParameters.Interval = 1000;
@@ -330,9 +330,38 @@ namespace Umbrall
                 */
         #endregion
 
+        // HistoryRegisters historyRegisters = new HistoryRegisters();
         private void btnSaveEnergy_Click(object sender, EventArgs e)
         {
+            float energy;
+            DateTime fecha;
 
+            var energyRegisters = new List<Tuple<float, DateTime>>();
+
+            energy = Monitor.energyABC;
+            fecha = DateTime.Now; 
+
+            energyRegisters.Add(Tuple.Create(energy, fecha));       // Guardando en lista local
+
+
+            HistoryRegisters historyRegisters = new HistoryRegisters(energyRegisters);
+
+            // Recorrido de la lista 
+            int numTupla = 0;
+            string tuplas = " "; 
+            foreach(var tuplaActual in energyRegisters)
+            {
+                numTupla = numTupla + 1;
+                tuplas = tuplas + "Tupla : " + numTupla.ToString() + " -> " + tuplaActual.Item1 + " | " + tuplaActual.Item2 + Environment.NewLine;
+            }
+            txtListEnergy.Text = tuplas;
+
+            historyRegisters.insertListValue(energy, fecha);
+
+            /*
+            // Guardar en fichero de texto
+            bool resultado = historyRegisters.SaveRegistersFile(txtListEnergy.Text);
+            */
         }
     }
 }
