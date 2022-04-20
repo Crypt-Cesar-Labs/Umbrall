@@ -144,11 +144,11 @@ namespace Umbrall
 
         private void calculadoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CalculadoraManual calculadora = new CalculadoraManual();
+            CalculadoraSelector selector = new CalculadoraSelector();
 
-            calculadora.MdiParent = this;
+            selector.MdiParent = this;
 
-            calculadora.Show();
+            selector.Show();
         }
     }
 }

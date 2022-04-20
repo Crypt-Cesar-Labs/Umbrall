@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Umbrall
 {
-    public partial class CalculadoraManual : Form
+    public partial class CalculadoraManualHoraria : Form
     {
-        public CalculadoraManual()
+        public CalculadoraManualHoraria()
         {
             InitializeComponent();
         }

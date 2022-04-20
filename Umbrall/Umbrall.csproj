@@ -85,11 +85,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalculadoraManual.cs">
+    <Compile Include="CalculadoraManualHoraria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CalculadoraManual.Designer.cs">
-      <DependentUpon>CalculadoraManual.cs</DependentUpon>
+    <Compile Include="CalculadoraManualHoraria.Designer.cs">
+      <DependentUpon>CalculadoraManualHoraria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalculadoraManualOrdinara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalculadoraManualOrdinara.Designer.cs">
+      <DependentUpon>CalculadoraManualOrdinara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalculadoraSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalculadoraSelector.Designer.cs">
+      <DependentUpon>CalculadoraSelector.cs</DependentUpon>
     </Compile>
     <Compile Include="ClientTcpSocketTest.cs">
       <SubType>Form</SubType>
@@ -174,8 +186,14 @@
     <Compile Include="tcpTest.Designer.cs">
       <DependentUpon>tcpTest.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CalculadoraManual.resx">
-      <DependentUpon>CalculadoraManual.cs</DependentUpon>
+    <EmbeddedResource Include="CalculadoraManualHoraria.resx">
+      <DependentUpon>CalculadoraManualHoraria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalculadoraManualOrdinara.resx">
+      <DependentUpon>CalculadoraManualOrdinara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalculadoraSelector.resx">
+      <DependentUpon>CalculadoraSelector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientTcpSocketTest.resx">
       <DependentUpon>ClientTcpSocketTest.cs</DependentUpon>

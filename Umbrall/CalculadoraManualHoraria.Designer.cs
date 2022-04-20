@@ -1,6 +1,6 @@
 ﻿namespace Umbrall
 {
-    partial class CalculadoraManual
+    partial class CalculadoraManualHoraria
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalculadoraManual));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalculadoraManualHoraria));
             this.btnCalc = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.cmbDivInc = new System.Windows.Forms.ComboBox();
@@ -171,13 +171,7 @@
             // 
             this.cmbTarifaInc.FormattingEnabled = true;
             this.cmbTarifaInc.Items.AddRange(new object[] {
-            "GDBT",
-            "GDMTH",
-            "GDMTO",
-            "RABT",
-            "APBT",
-            "APMT",
-            "RAMT"});
+            "GDMTH"});
             this.cmbTarifaInc.Location = new System.Drawing.Point(24, 141);
             this.cmbTarifaInc.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTarifaInc.Name = "cmbTarifaInc";
@@ -936,7 +930,7 @@
             this.textBox18.Size = new System.Drawing.Size(100, 20);
             this.textBox18.TabIndex = 146;
             // 
-            // CalculadoraManual
+            // CalculadoraManualHoraria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1033,8 +1027,8 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnCalc);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "CalculadoraManual";
-            this.Text = "Umbrall - Calculadora Manual";
+            this.Name = "CalculadoraManualHoraria";
+            this.Text = "Umbrall - Calculadora Manual Horaria";
             this.ResumeLayout(false);
             this.PerformLayout();
 
