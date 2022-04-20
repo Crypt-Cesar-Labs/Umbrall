@@ -40,6 +40,8 @@
             this.alertasCorreoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gráficasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,8 +51,7 @@
             this.modbusTCPTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientTCPTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientSocketTCPTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.facturaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gráficasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calculadoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,7 +88,7 @@
             this.iniciarMonitoreoToolStripMenuItem.Image = global::Umbrall.Properties.Resources.play;
             this.iniciarMonitoreoToolStripMenuItem.Name = "iniciarMonitoreoToolStripMenuItem";
             this.iniciarMonitoreoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.iniciarMonitoreoToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
+            this.iniciarMonitoreoToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.iniciarMonitoreoToolStripMenuItem.Text = "Iniciar Monitoreo";
             this.iniciarMonitoreoToolStripMenuItem.Click += new System.EventHandler(this.iniciarMonitoreoToolStripMenuItem_Click);
             // 
@@ -96,14 +97,14 @@
             this.detenerMonitoreoToolStripMenuItem.Image = global::Umbrall.Properties.Resources.stop;
             this.detenerMonitoreoToolStripMenuItem.Name = "detenerMonitoreoToolStripMenuItem";
             this.detenerMonitoreoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.detenerMonitoreoToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
+            this.detenerMonitoreoToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.detenerMonitoreoToolStripMenuItem.Text = "Detener Monitoreo";
             this.detenerMonitoreoToolStripMenuItem.Click += new System.EventHandler(this.detenerMonitoreoToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(217, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(213, 6);
             // 
             // configuraciónToolStripMenuItem
             // 
@@ -112,7 +113,7 @@
             this.tarifasCFEToolStripMenuItem,
             this.alertasCorreoToolStripMenuItem});
             this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
-            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
+            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.configuraciónToolStripMenuItem.Text = "Configuración";
             // 
             // conectarDispositivoToolStripMenuItem
@@ -139,7 +140,7 @@
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -147,10 +148,23 @@
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.facturaciónToolStripMenuItem,
-            this.gráficasToolStripMenuItem});
+            this.gráficasToolStripMenuItem,
+            this.calculadoraToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // facturaciónToolStripMenuItem
+            // 
+            this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
+            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.facturaciónToolStripMenuItem.Text = "Facturación";
+            // 
+            // gráficasToolStripMenuItem
+            // 
+            this.gráficasToolStripMenuItem.Name = "gráficasToolStripMenuItem";
+            this.gráficasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gráficasToolStripMenuItem.Text = "Gráficas";
             // 
             // acercaDeToolStripMenuItem
             // 
@@ -221,17 +235,12 @@
             this.clientSocketTCPTestToolStripMenuItem.Text = "Client Socket TCP Test";
             this.clientSocketTCPTestToolStripMenuItem.Click += new System.EventHandler(this.clientSocketTCPTestToolStripMenuItem_Click);
             // 
-            // facturaciónToolStripMenuItem
+            // calculadoraToolStripMenuItem
             // 
-            this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
-            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.facturaciónToolStripMenuItem.Text = "Facturación";
-            // 
-            // gráficasToolStripMenuItem
-            // 
-            this.gráficasToolStripMenuItem.Name = "gráficasToolStripMenuItem";
-            this.gráficasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.gráficasToolStripMenuItem.Text = "Gráficas";
+            this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
+            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.calculadoraToolStripMenuItem.Text = "Calculadora";
+            this.calculadoraToolStripMenuItem.Click += new System.EventHandler(this.calculadoraToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -277,6 +286,7 @@
         private System.Windows.Forms.ToolStripMenuItem clientSocketTCPTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gráficasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem calculadoraToolStripMenuItem;
     }
 }
 

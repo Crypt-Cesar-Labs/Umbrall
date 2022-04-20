@@ -141,5 +141,14 @@ namespace Umbrall
         {
             Monitor.StopMonitor();
         }
+
+        private void calculadoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CalculadoraManual calculadora = new CalculadoraManual();
+
+            calculadora.MdiParent = this;
+
+            calculadora.Show();
+        }
     }
 }
