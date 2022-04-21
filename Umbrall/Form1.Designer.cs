@@ -42,6 +42,7 @@
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gráficasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calculadoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +52,6 @@
             this.modbusTCPTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientTCPTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientSocketTCPTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calculadoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -166,6 +166,13 @@
             this.gráficasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gráficasToolStripMenuItem.Text = "Gráficas";
             // 
+            // calculadoraToolStripMenuItem
+            // 
+            this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
+            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.calculadoraToolStripMenuItem.Text = "Calculadora";
+            this.calculadoraToolStripMenuItem.Click += new System.EventHandler(this.calculadoraToolStripMenuItem_Click);
+            // 
             // acercaDeToolStripMenuItem
             // 
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
@@ -234,13 +241,6 @@
             this.clientSocketTCPTestToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.clientSocketTCPTestToolStripMenuItem.Text = "Client Socket TCP Test";
             this.clientSocketTCPTestToolStripMenuItem.Click += new System.EventHandler(this.clientSocketTCPTestToolStripMenuItem_Click);
-            // 
-            // calculadoraToolStripMenuItem
-            // 
-            this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
-            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.calculadoraToolStripMenuItem.Text = "Calculadora";
-            this.calculadoraToolStripMenuItem.Click += new System.EventHandler(this.calculadoraToolStripMenuItem_Click);
             // 
             // Form1
             // 
