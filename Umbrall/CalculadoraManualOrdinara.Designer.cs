@@ -773,6 +773,7 @@
             this.cmbMonthInc.Name = "cmbMonthInc";
             this.cmbMonthInc.Size = new System.Drawing.Size(92, 21);
             this.cmbMonthInc.TabIndex = 154;
+            this.cmbMonthInc.SelectedIndexChanged += new System.EventHandler(this.cmbMonthInc_SelectedIndexChanged);
             // 
             // cmbYearInc
             // 
@@ -784,6 +785,7 @@
             this.cmbYearInc.Name = "cmbYearInc";
             this.cmbYearInc.Size = new System.Drawing.Size(92, 21);
             this.cmbYearInc.TabIndex = 153;
+            this.cmbYearInc.SelectedIndexChanged += new System.EventHandler(this.cmbYearInc_SelectedIndexChanged);
             // 
             // lbDiv
             // 
@@ -833,6 +835,7 @@
             this.btnSearch.TabIndex = 148;
             this.btnSearch.Text = "Buscar Tarifa";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnCalc
             // 

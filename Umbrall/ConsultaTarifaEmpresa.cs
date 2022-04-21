@@ -50,10 +50,6 @@ namespace Umbrall
 
             string cadenaConexion = "Database=" + bd + "; Data Source=" + servidor + "; Port=" + puerto + "; User Id=" + usuario + "; Password=" + password;
 
-            MySqlConnection conexionBD = new MySqlConnection(cadenaConexion);
-            MySqlDataReader objectReader = null;
-            string dataTarifa = null;
-
             try
             {
                 string horarioB = "B";
