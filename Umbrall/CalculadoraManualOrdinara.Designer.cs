@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalculadoraManualOrdinara));
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.txtSncnResult = new System.Windows.Forms.TextBox();
@@ -121,13 +121,13 @@
             this.lbEnergiaKVAR = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox18
+            // txtTotal
             // 
-            this.textBox18.Location = new System.Drawing.Point(743, 524);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.ReadOnly = true;
-            this.textBox18.Size = new System.Drawing.Size(100, 20);
-            this.textBox18.TabIndex = 237;
+            this.txtTotal.Location = new System.Drawing.Point(743, 524);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtTotal.TabIndex = 237;
             // 
             // label34
             // 
@@ -965,7 +965,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbDias);
             this.Controls.Add(this.txtDias);
-            this.Controls.Add(this.textBox18);
+            this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label34);
             this.Controls.Add(this.label33);
             this.Controls.Add(this.txtSncnResult);
@@ -1052,7 +1052,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.TextBox txtSncnResult;

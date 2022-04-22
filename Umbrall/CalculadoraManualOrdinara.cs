@@ -122,7 +122,7 @@ namespace Umbrall
 
         private void btnCalc_Click(object sender, EventArgs e)
         {
-            int cantidad = 1;
+            double cantidad = 1;
 
             // Getting the variables
             double energiaBeg = Convert.ToDouble(txtEnergyBeg.Text);
@@ -172,8 +172,18 @@ namespace Umbrall
             double cenaceResult = energiaDiff * cenace;
 
             // Energía 
-            double energiaResult;
+            double energiaResult = energiaDiff * generación;
 
+            // Capacidad
+            double capacidadResult = cantidad * capPotencia;
+
+            // SnCnMEM
+            double sncnmemResult = energiaDiff * scnmem;
+
+            // Total
+            double total = suministroResult + distribResult + transResult + cenaceResult + energiaResult + capacidadResult + sncnmemResult; 
+
+            /************************************************/
             /************************************************/
             // Showing results
             txtEnergiaDiff.Text = energiaDiff.ToString();       // Energy diff
@@ -187,7 +197,11 @@ namespace Umbrall
             txtSumResult.Text = suministroResult.ToString();    // Suministro
             txtDistribResult.Text = distribResult.ToString();   // Distribución
             txtTransResult.Text = transResult.ToString();       // Transmisión
-            txtCenaceResult.Text = cenaceResult.ToString();     // Cenace                                                                
+            txtCenaceResult.Text = cenaceResult.ToString();     // Cenace
+            txtEnergiaResult.Text = energiaResult.ToString();   // Energía                          
+            txtCapResult.Text = capacidadResult.ToString();     // Capacidad
+            txtSncnResult.Text = sncnmemResult.ToString();      // SnCnMEM
+            txtTotal.Text = total.ToString();                   // total
         }
 
     }
