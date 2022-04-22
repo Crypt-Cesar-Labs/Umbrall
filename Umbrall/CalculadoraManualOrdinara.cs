@@ -122,12 +122,16 @@ namespace Umbrall
 
         private void btnCalc_Click(object sender, EventArgs e)
         {
+            int cantidad = 1;
 
             // Getting the variables
             double energiaBeg = Convert.ToDouble(txtEnergyBeg.Text);
             double energiaEnd = Convert.ToDouble(txtEnergyEnd.Text);
+            double energiaReactBeg = Convert.ToDouble(txtKvarBeg.Text);
+            double energiaReactEnd = Convert.ToDouble(txtKvarEnd.Text);
             DateTime fechaInicio = dateInicio.Value.Date;
             DateTime fechaFinal = dateFinal.Value.Date;
+            double demanda = Convert.ToDouble(txtDemandaKW.Text);
 
             /************************************************/  
             // Operating
@@ -137,14 +141,54 @@ namespace Umbrall
             int dias = tSpan.Days; 
 
             // Energy difference
-            double energiaResult = energiaEnd - energiaBeg;
+            double energiaDiff = energiaEnd - energiaBeg;
+            double energiaReactDiff = energiaReactEnd - energiaReactBeg;
+
+            // F.P
+            double factorPot = energiaDiff / Math.Sqrt(Math.Pow(energiaDiff, 2) + Math.Pow(energiaReactDiff,2)) * 100;
+
+            // F.P. Bono
+            double bonificacion = ((1 - 90 / factorPot) / 4) * 100;
+
+            // F.P. Penalización
+            double penalizacion = (3 * ((90 / factorPot) - 1) / 5);
+
+            // Determinar Potencia Eléctrica tomando en cuenta F.C. 2017
+            double potenciaMax = energiaDiff / (24 * dias * distPotencia) + 0.5;
+
+            // Determinación de potencia eléctrica para distribución
+            //double kwDistrib = Math.Min(demanda, potenciaMax);
+
+            // Suministro
+            double suministroResult = cantidad * suministro;
+
+            // Distribución
+            double distribResult = cantidad * distPotencia;
+
+            // Transmición
+            double transResult = energiaDiff * trans;
+
+            // Cenace
+            double cenaceResult = energiaDiff * cenace;
+
+            // Energía 
+            double energiaResult;
 
             /************************************************/
             // Showing results
-            txtEnergiaDiff.Text = energiaResult.ToString();     // Energy diff
+            txtEnergiaDiff.Text = energiaDiff.ToString();       // Energy diff
+            txtEnergyReactDiff.Text = energiaReactDiff.ToString(); // Energy React Diff
             txtDias.Text = dias.ToString();                     // Date diff
+            txtQMensual.Text = energiaDiff.ToString();          // QMensual
+            txtFP.Text = factorPot.ToString();                  // F.P.
+            txtBono.Text = bonificacion.ToString();             // Bono
+            txtFoult.Text = penalizacion.ToString();            // Penalizacion
+            txtPotMax.Text = potenciaMax.ToString();            // Potencia Max
+            txtSumResult.Text = suministroResult.ToString();    // Suministro
+            txtDistribResult.Text = distribResult.ToString();   // Distribución
+            txtTransResult.Text = transResult.ToString();       // Transmisión
+            txtCenaceResult.Text = cenaceResult.ToString();     // Cenace                                                                
         }
 
-       
     }
 }
