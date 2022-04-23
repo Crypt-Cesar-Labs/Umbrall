@@ -92,6 +92,7 @@ namespace Umbrall
             distPotencia = Convert.ToDouble(distPotQ);
             scnmem = Convert.ToDouble(scnMemQ);
             trans = Convert.ToDouble(transQ);
+            cenace = Convert.ToDouble(cenaceQ);
             generación = Convert.ToDouble(generacionQ);
             suministro = Convert.ToDouble(suminisQ);
         }
@@ -122,6 +123,7 @@ namespace Umbrall
 
         private void btnCalc_Click(object sender, EventArgs e)
         {
+            double fcGdmto = 0.55;
             double cantidad = 1;
 
             // Getting the variables
@@ -154,16 +156,19 @@ namespace Umbrall
             double penalizacion = (3 * ((90 / factorPot) - 1) / 5);
 
             // Determinar Potencia Eléctrica tomando en cuenta F.C. 2017
-            double potenciaMax = energiaDiff / (24 * dias * distPotencia) + 0.5;
+            double potenciaMax = energiaDiff / (24 * dias * fcGdmto);
 
             // Determinación de potencia eléctrica para distribución
-            //double kwDistrib = Math.Min(demanda, potenciaMax);
+            double kwDistrib = Math.Min(demanda, potenciaMax);
+
+            // Determinación de potencia eléctrica para capacidad
+            double kwCap = Math.Min(demanda, potenciaMax);
 
             // Suministro
             double suministroResult = cantidad * suministro;
 
             // Distribución
-            double distribResult = cantidad * distPotencia;
+            double distribResult = potenciaMax * distPotencia;
 
             // Transmición
             double transResult = energiaDiff * trans;
@@ -175,7 +180,7 @@ namespace Umbrall
             double energiaResult = energiaDiff * generación;
 
             // Capacidad
-            double capacidadResult = cantidad * capPotencia;
+            double capacidadResult = potenciaMax * capPotencia;
 
             // SnCnMEM
             double sncnmemResult = energiaDiff * scnmem;
@@ -183,25 +188,25 @@ namespace Umbrall
             // Total
             double total = suministroResult + distribResult + transResult + cenaceResult + energiaResult + capacidadResult + sncnmemResult; 
 
-            /************************************************/
-            /************************************************/
+            /***********************************************************************************/
+            /***********************************************************************************/
             // Showing results
-            txtEnergiaDiff.Text = energiaDiff.ToString();       // Energy diff
-            txtEnergyReactDiff.Text = energiaReactDiff.ToString(); // Energy React Diff
-            txtDias.Text = dias.ToString();                     // Date diff
-            txtQMensual.Text = energiaDiff.ToString();          // QMensual
-            txtFP.Text = factorPot.ToString();                  // F.P.
-            txtBono.Text = bonificacion.ToString();             // Bono
-            txtFoult.Text = penalizacion.ToString();            // Penalizacion
-            txtPotMax.Text = potenciaMax.ToString();            // Potencia Max
-            txtSumResult.Text = suministroResult.ToString();    // Suministro
-            txtDistribResult.Text = distribResult.ToString();   // Distribución
-            txtTransResult.Text = transResult.ToString();       // Transmisión
-            txtCenaceResult.Text = cenaceResult.ToString();     // Cenace
-            txtEnergiaResult.Text = energiaResult.ToString();   // Energía                          
-            txtCapResult.Text = capacidadResult.ToString();     // Capacidad
-            txtSncnResult.Text = sncnmemResult.ToString();      // SnCnMEM
-            txtTotal.Text = total.ToString();                   // total
+            txtEnergiaDiff.Text = energiaDiff.ToString();                   // Energy diff
+            txtEnergyReactDiff.Text = energiaReactDiff.ToString();          // Energy React Diff
+            txtDias.Text = dias.ToString();                                 // Date diff
+            txtQMensual.Text = energiaDiff.ToString();                      // QMensual
+            txtFP.Text = factorPot.ToString();                              // F.P.
+            txtBono.Text = bonificacion.ToString();                         // Bono
+            txtFoult.Text = penalizacion.ToString();                        // Penalizacion
+            txtPotMax.Text = (Math.Ceiling(potenciaMax)).ToString();        // Potencia Max
+            txtSumResult.Text = suministroResult.ToString();                // Suministro
+            txtDistribResult.Text = distribResult.ToString();               // Distribución
+            txtTransResult.Text = transResult.ToString();                   // Transmisión
+            txtCenaceResult.Text = cenaceResult.ToString();                 // Cenace
+            txtEnergiaResult.Text = energiaResult.ToString();               // Energía                          
+            txtCapResult.Text = capacidadResult.ToString();                 // Capacidad
+            txtSncnResult.Text = sncnmemResult.ToString();                  // SnCnMEM
+            txtTotal.Text = total.ToString();                               // total
         }
 
     }
