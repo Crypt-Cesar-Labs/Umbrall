@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalculadoraManualOrdinara));
-            this.txtTotal = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
+            this.txtSubTotal = new System.Windows.Forms.TextBox();
+            this.lbSubTotal = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.txtSncnResult = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
@@ -46,11 +46,11 @@
             this.label27 = new System.Windows.Forms.Label();
             this.txtSumResult = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.lbKWCapacidad = new System.Windows.Forms.Label();
+            this.txtKWCapacidad = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.lbKWDistrib = new System.Windows.Forms.Label();
+            this.txtKWDistrib = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtPotMax = new System.Windows.Forms.TextBox();
@@ -119,25 +119,43 @@
             this.txtKvarBeg = new System.Windows.Forms.TextBox();
             this.lbKvarBeg = new System.Windows.Forms.Label();
             this.lbEnergiaKVAR = new System.Windows.Forms.Label();
+            this.lbBajaTension = new System.Windows.Forms.Label();
+            this.txtBajaTension = new System.Windows.Forms.TextBox();
+            this.lbEnergiaDesgTotal = new System.Windows.Forms.Label();
+            this.txtEnergiaDesgTotal = new System.Windows.Forms.TextBox();
+            this.lbCargoFijo = new System.Windows.Forms.Label();
+            this.txtCargoFijo = new System.Windows.Forms.TextBox();
+            this.lbDesgTotal = new System.Windows.Forms.Label();
+            this.lbDerechoAlumbrado = new System.Windows.Forms.Label();
+            this.txtDerechoAlumbrado = new System.Windows.Forms.TextBox();
+            this.lbFPDesgTotal = new System.Windows.Forms.Label();
+            this.txtFPDesgTotal = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.lbTotal = new System.Windows.Forms.Label();
+            this.lbPrecioMedio = new System.Windows.Forms.Label();
+            this.txtPrecioMedio = new System.Windows.Forms.TextBox();
+            this.lbRelacionCostos = new System.Windows.Forms.Label();
+            this.txtRelacionCostos = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // txtTotal
+            // txtSubTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(743, 524);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(100, 20);
-            this.txtTotal.TabIndex = 237;
+            this.txtSubTotal.Location = new System.Drawing.Point(743, 524);
+            this.txtSubTotal.Name = "txtSubTotal";
+            this.txtSubTotal.ReadOnly = true;
+            this.txtSubTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtSubTotal.TabIndex = 237;
             // 
-            // label34
+            // lbSubTotal
             // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(800, 505);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(43, 16);
-            this.label34.TabIndex = 236;
-            this.label34.Text = "Total";
+            this.lbSubTotal.AutoSize = true;
+            this.lbSubTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSubTotal.Location = new System.Drawing.Point(773, 505);
+            this.lbSubTotal.Name = "lbSubTotal";
+            this.lbSubTotal.Size = new System.Drawing.Size(70, 16);
+            this.lbSubTotal.TabIndex = 236;
+            this.lbSubTotal.Text = "SubTotal";
             // 
             // label33
             // 
@@ -268,22 +286,22 @@
             this.label24.TabIndex = 221;
             this.label24.Text = "Costos Generales";
             // 
-            // label19
+            // lbKWCapacidad
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(396, 546);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(63, 13);
-            this.label19.TabIndex = 220;
-            this.label19.Text = "kWCapacid";
+            this.lbKWCapacidad.AutoSize = true;
+            this.lbKWCapacidad.Location = new System.Drawing.Point(396, 546);
+            this.lbKWCapacidad.Name = "lbKWCapacidad";
+            this.lbKWCapacidad.Size = new System.Drawing.Size(63, 13);
+            this.lbKWCapacidad.TabIndex = 220;
+            this.lbKWCapacidad.Text = "kWCapacid";
             // 
-            // textBox10
+            // txtKWCapacidad
             // 
-            this.textBox10.Location = new System.Drawing.Point(490, 543);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 219;
+            this.txtKWCapacidad.Location = new System.Drawing.Point(490, 543);
+            this.txtKWCapacidad.Name = "txtKWCapacidad";
+            this.txtKWCapacidad.ReadOnly = true;
+            this.txtKWCapacidad.Size = new System.Drawing.Size(100, 20);
+            this.txtKWCapacidad.TabIndex = 219;
             // 
             // label20
             // 
@@ -295,22 +313,22 @@
             this.label20.TabIndex = 218;
             this.label20.Text = "Potencia Eléctrica para capacidad";
             // 
-            // label13
+            // lbKWDistrib
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(396, 500);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(53, 13);
-            this.label13.TabIndex = 217;
-            this.label13.Text = "kWDistrib";
+            this.lbKWDistrib.AutoSize = true;
+            this.lbKWDistrib.Location = new System.Drawing.Point(396, 500);
+            this.lbKWDistrib.Name = "lbKWDistrib";
+            this.lbKWDistrib.Size = new System.Drawing.Size(53, 13);
+            this.lbKWDistrib.TabIndex = 217;
+            this.lbKWDistrib.Text = "kWDistrib";
             // 
-            // textBox9
+            // txtKWDistrib
             // 
-            this.textBox9.Location = new System.Drawing.Point(490, 497);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 216;
+            this.txtKWDistrib.Location = new System.Drawing.Point(490, 497);
+            this.txtKWDistrib.Name = "txtKWDistrib";
+            this.txtKWDistrib.ReadOnly = true;
+            this.txtKWDistrib.Size = new System.Drawing.Size(100, 20);
+            this.txtKWDistrib.TabIndex = 216;
             // 
             // label18
             // 
@@ -753,7 +771,10 @@
             // 
             this.cmbMonthInc.FormattingEnabled = true;
             this.cmbMonthInc.Items.AddRange(new object[] {
-            "ENERO"});
+            "ENERO",
+            "FEBRERO",
+            "MARZO",
+            "ABRIL"});
             this.cmbMonthInc.Location = new System.Drawing.Point(154, 59);
             this.cmbMonthInc.Margin = new System.Windows.Forms.Padding(2);
             this.cmbMonthInc.Name = "cmbMonthInc";
@@ -947,11 +968,185 @@
             this.lbEnergiaKVAR.TabIndex = 244;
             this.lbEnergiaKVAR.Text = "Energía KVAR";
             // 
+            // lbBajaTension
+            // 
+            this.lbBajaTension.AutoSize = true;
+            this.lbBajaTension.Location = new System.Drawing.Point(864, 371);
+            this.lbBajaTension.Name = "lbBajaTension";
+            this.lbBajaTension.Size = new System.Drawing.Size(64, 26);
+            this.lbBajaTension.TabIndex = 257;
+            this.lbBajaTension.Text = "2% de \r\nbaja tensión";
+            // 
+            // txtBajaTension
+            // 
+            this.txtBajaTension.Location = new System.Drawing.Point(935, 368);
+            this.txtBajaTension.Name = "txtBajaTension";
+            this.txtBajaTension.ReadOnly = true;
+            this.txtBajaTension.Size = new System.Drawing.Size(100, 20);
+            this.txtBajaTension.TabIndex = 256;
+            // 
+            // lbEnergiaDesgTotal
+            // 
+            this.lbEnergiaDesgTotal.AutoSize = true;
+            this.lbEnergiaDesgTotal.Location = new System.Drawing.Point(864, 345);
+            this.lbEnergiaDesgTotal.Name = "lbEnergiaDesgTotal";
+            this.lbEnergiaDesgTotal.Size = new System.Drawing.Size(45, 13);
+            this.lbEnergiaDesgTotal.TabIndex = 255;
+            this.lbEnergiaDesgTotal.Text = "Energía";
+            // 
+            // txtEnergiaDesgTotal
+            // 
+            this.txtEnergiaDesgTotal.Location = new System.Drawing.Point(935, 342);
+            this.txtEnergiaDesgTotal.Name = "txtEnergiaDesgTotal";
+            this.txtEnergiaDesgTotal.ReadOnly = true;
+            this.txtEnergiaDesgTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtEnergiaDesgTotal.TabIndex = 254;
+            // 
+            // lbCargoFijo
+            // 
+            this.lbCargoFijo.AutoSize = true;
+            this.lbCargoFijo.Location = new System.Drawing.Point(864, 319);
+            this.lbCargoFijo.Name = "lbCargoFijo";
+            this.lbCargoFijo.Size = new System.Drawing.Size(51, 13);
+            this.lbCargoFijo.TabIndex = 253;
+            this.lbCargoFijo.Text = "Cargo fijo";
+            // 
+            // txtCargoFijo
+            // 
+            this.txtCargoFijo.Location = new System.Drawing.Point(935, 316);
+            this.txtCargoFijo.Name = "txtCargoFijo";
+            this.txtCargoFijo.ReadOnly = true;
+            this.txtCargoFijo.Size = new System.Drawing.Size(100, 20);
+            this.txtCargoFijo.TabIndex = 252;
+            // 
+            // lbDesgTotal
+            // 
+            this.lbDesgTotal.AutoSize = true;
+            this.lbDesgTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDesgTotal.Location = new System.Drawing.Point(863, 292);
+            this.lbDesgTotal.Name = "lbDesgTotal";
+            this.lbDesgTotal.Size = new System.Drawing.Size(108, 16);
+            this.lbDesgTotal.TabIndex = 251;
+            this.lbDesgTotal.Text = "Desgloce total";
+            // 
+            // lbDerechoAlumbrado
+            // 
+            this.lbDerechoAlumbrado.AutoSize = true;
+            this.lbDerechoAlumbrado.Location = new System.Drawing.Point(864, 408);
+            this.lbDerechoAlumbrado.Name = "lbDerechoAlumbrado";
+            this.lbDerechoAlumbrado.Size = new System.Drawing.Size(66, 26);
+            this.lbDerechoAlumbrado.TabIndex = 259;
+            this.lbDerechoAlumbrado.Text = "Derecho de \r\nalumbrado";
+            // 
+            // txtDerechoAlumbrado
+            // 
+            this.txtDerechoAlumbrado.Location = new System.Drawing.Point(935, 405);
+            this.txtDerechoAlumbrado.Name = "txtDerechoAlumbrado";
+            this.txtDerechoAlumbrado.ReadOnly = true;
+            this.txtDerechoAlumbrado.Size = new System.Drawing.Size(100, 20);
+            this.txtDerechoAlumbrado.TabIndex = 258;
+            // 
+            // lbFPDesgTotal
+            // 
+            this.lbFPDesgTotal.AutoSize = true;
+            this.lbFPDesgTotal.Location = new System.Drawing.Point(864, 443);
+            this.lbFPDesgTotal.Name = "lbFPDesgTotal";
+            this.lbFPDesgTotal.Size = new System.Drawing.Size(26, 13);
+            this.lbFPDesgTotal.TabIndex = 261;
+            this.lbFPDesgTotal.Text = "F.P.";
+            // 
+            // txtFPDesgTotal
+            // 
+            this.txtFPDesgTotal.Location = new System.Drawing.Point(935, 440);
+            this.txtFPDesgTotal.Name = "txtFPDesgTotal";
+            this.txtFPDesgTotal.ReadOnly = true;
+            this.txtFPDesgTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtFPDesgTotal.TabIndex = 260;
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Location = new System.Drawing.Point(935, 491);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtTotal.TabIndex = 263;
+            // 
+            // lbTotal
+            // 
+            this.lbTotal.AutoSize = true;
+            this.lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotal.Location = new System.Drawing.Point(992, 472);
+            this.lbTotal.Name = "lbTotal";
+            this.lbTotal.Size = new System.Drawing.Size(43, 16);
+            this.lbTotal.TabIndex = 262;
+            this.lbTotal.Text = "Total";
+            // 
+            // lbPrecioMedio
+            // 
+            this.lbPrecioMedio.AutoSize = true;
+            this.lbPrecioMedio.Location = new System.Drawing.Point(921, 240);
+            this.lbPrecioMedio.Name = "lbPrecioMedio";
+            this.lbPrecioMedio.Size = new System.Drawing.Size(69, 13);
+            this.lbPrecioMedio.TabIndex = 265;
+            this.lbPrecioMedio.Text = "Precio Medio";
+            // 
+            // txtPrecioMedio
+            // 
+            this.txtPrecioMedio.Location = new System.Drawing.Point(867, 237);
+            this.txtPrecioMedio.Name = "txtPrecioMedio";
+            this.txtPrecioMedio.ReadOnly = true;
+            this.txtPrecioMedio.Size = new System.Drawing.Size(48, 20);
+            this.txtPrecioMedio.TabIndex = 264;
+            // 
+            // lbRelacionCostos
+            // 
+            this.lbRelacionCostos.AutoSize = true;
+            this.lbRelacionCostos.Location = new System.Drawing.Point(921, 266);
+            this.lbRelacionCostos.Name = "lbRelacionCostos";
+            this.lbRelacionCostos.Size = new System.Drawing.Size(109, 13);
+            this.lbRelacionCostos.TabIndex = 267;
+            this.lbRelacionCostos.Text = "% Relación de costos";
+            // 
+            // txtRelacionCostos
+            // 
+            this.txtRelacionCostos.Location = new System.Drawing.Point(866, 263);
+            this.txtRelacionCostos.Name = "txtRelacionCostos";
+            this.txtRelacionCostos.ReadOnly = true;
+            this.txtRelacionCostos.Size = new System.Drawing.Size(49, 20);
+            this.txtRelacionCostos.TabIndex = 266;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(848, 240);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(13, 13);
+            this.label2.TabIndex = 268;
+            this.label2.Text = "$";
+            // 
             // CalculadoraManualOrdinara
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(862, 575);
+            this.ClientSize = new System.Drawing.Size(1049, 575);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbRelacionCostos);
+            this.Controls.Add(this.txtRelacionCostos);
+            this.Controls.Add(this.lbPrecioMedio);
+            this.Controls.Add(this.txtPrecioMedio);
+            this.Controls.Add(this.txtTotal);
+            this.Controls.Add(this.lbTotal);
+            this.Controls.Add(this.lbFPDesgTotal);
+            this.Controls.Add(this.txtFPDesgTotal);
+            this.Controls.Add(this.lbDerechoAlumbrado);
+            this.Controls.Add(this.txtDerechoAlumbrado);
+            this.Controls.Add(this.lbBajaTension);
+            this.Controls.Add(this.txtBajaTension);
+            this.Controls.Add(this.lbEnergiaDesgTotal);
+            this.Controls.Add(this.txtEnergiaDesgTotal);
+            this.Controls.Add(this.lbCargoFijo);
+            this.Controls.Add(this.txtCargoFijo);
+            this.Controls.Add(this.lbDesgTotal);
             this.Controls.Add(this.txtEnergyReactDiff);
             this.Controls.Add(this.lbEnergyReact);
             this.Controls.Add(this.txtKvarEnd);
@@ -965,8 +1160,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbDias);
             this.Controls.Add(this.txtDias);
-            this.Controls.Add(this.txtTotal);
-            this.Controls.Add(this.label34);
+            this.Controls.Add(this.txtSubTotal);
+            this.Controls.Add(this.lbSubTotal);
             this.Controls.Add(this.label33);
             this.Controls.Add(this.txtSncnResult);
             this.Controls.Add(this.label32);
@@ -982,11 +1177,11 @@
             this.Controls.Add(this.label27);
             this.Controls.Add(this.txtSumResult);
             this.Controls.Add(this.label24);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.lbKWCapacidad);
+            this.Controls.Add(this.txtKWCapacidad);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.lbKWDistrib);
+            this.Controls.Add(this.txtKWDistrib);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtPotMax);
@@ -1052,8 +1247,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtTotal;
-        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox txtSubTotal;
+        private System.Windows.Forms.Label lbSubTotal;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.TextBox txtSncnResult;
         private System.Windows.Forms.Label label32;
@@ -1069,11 +1264,11 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox txtSumResult;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label lbKWCapacidad;
+        private System.Windows.Forms.TextBox txtKWCapacidad;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label lbKWDistrib;
+        private System.Windows.Forms.TextBox txtKWDistrib;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtPotMax;
@@ -1142,5 +1337,23 @@
         private System.Windows.Forms.TextBox txtKvarBeg;
         private System.Windows.Forms.Label lbKvarBeg;
         private System.Windows.Forms.Label lbEnergiaKVAR;
+        private System.Windows.Forms.Label lbBajaTension;
+        private System.Windows.Forms.TextBox txtBajaTension;
+        private System.Windows.Forms.Label lbEnergiaDesgTotal;
+        private System.Windows.Forms.TextBox txtEnergiaDesgTotal;
+        private System.Windows.Forms.Label lbCargoFijo;
+        private System.Windows.Forms.TextBox txtCargoFijo;
+        private System.Windows.Forms.Label lbDesgTotal;
+        private System.Windows.Forms.Label lbDerechoAlumbrado;
+        private System.Windows.Forms.TextBox txtDerechoAlumbrado;
+        private System.Windows.Forms.Label lbFPDesgTotal;
+        private System.Windows.Forms.TextBox txtFPDesgTotal;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.Label lbTotal;
+        private System.Windows.Forms.Label lbPrecioMedio;
+        private System.Windows.Forms.TextBox txtPrecioMedio;
+        private System.Windows.Forms.Label lbRelacionCostos;
+        private System.Windows.Forms.TextBox txtRelacionCostos;
+        private System.Windows.Forms.Label label2;
     }
 }

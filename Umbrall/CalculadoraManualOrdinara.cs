@@ -27,13 +27,13 @@ namespace Umbrall
 
         // Variables locales para cargos
 
-        double capPotencia;          // Capacidad Potencia
-        double distPotencia;         // Distribución Potencia
-        double scnmem;          // SCnMEM
-        double trans;           // Transmición
-        double cenace;          // CENACE
-        double generación;      // Generación
-        double suministro;      // Suministro
+        double capPotencia;             // Capacidad Potencia
+        double distPotencia;            // Distribución Potencia
+        double scnmem;                  // SCnMEM
+        double trans;                   // Transmición
+        double cenace;                  // CENACE
+        double generación;              // Generación
+        double suministro;              // Suministro
 
         private async void btnSearch_Click(object sender, EventArgs e)
         {
@@ -135,7 +135,7 @@ namespace Umbrall
             DateTime fechaFinal = dateFinal.Value.Date;
             double demanda = Convert.ToDouble(txtDemandaKW.Text);
 
-            /************************************************/  
+            /***************************************************************************************/  
             // Operating
             
             // Date difference
@@ -150,10 +150,21 @@ namespace Umbrall
             double factorPot = energiaDiff / Math.Sqrt(Math.Pow(energiaDiff, 2) + Math.Pow(energiaReactDiff,2)) * 100;
 
             // F.P. Bono
-            double bonificacion = ((1 - 90 / factorPot) / 4) * 100;
+            double bonificacion = -((1 - 90 / factorPot) / 4);
 
             // F.P. Penalización
-            double penalizacion = (3 * ((90 / factorPot) - 1) / 5);
+            double penalizacion = -(3 * ((90 / factorPot) - 1) / 5);
+
+            double factorPotCargo;                  // Para evaluación del factor de potencia
+            if (factorPot >= 90)
+            {
+                factorPotCargo = bonificacion;
+
+            }
+            else
+            {
+                factorPotCargo = penalizacion;
+            }
 
             // Determinar Potencia Eléctrica tomando en cuenta F.C. 2017
             double potenciaMax = energiaDiff / (24 * dias * fcGdmto);
@@ -185,8 +196,31 @@ namespace Umbrall
             // SnCnMEM
             double sncnmemResult = energiaDiff * scnmem;
 
+            // SubTotal
+            double subTotal = suministroResult + distribResult + transResult + cenaceResult + energiaResult + capacidadResult + sncnmemResult; 
+
+            /************** Desgloce Total ********************/
+            // Energia
+            double energia = distribResult + transResult + cenaceResult + energiaResult + capacidadResult + sncnmemResult;
+
+            // 2% de baja tensión
+            double dosPorcentBT = .02 * subTotal;
+
+            // Derecho de alumbrado 
+            double derecho = 266;
+
+            // Factor de potencia calculo 
+            double factorPotenciaCalc = bonificacion * subTotal;
+
             // Total
-            double total = suministroResult + distribResult + transResult + cenaceResult + energiaResult + capacidadResult + sncnmemResult; 
+            double total = suministro + energia + dosPorcentBT + derecho + factorPotenciaCalc;
+
+            /**************** Relación de costos **************/
+            // Precio medio
+            double precioMedio = total / energiaDiff;
+
+            // Relación de costos
+            double relCostos = ((capacidadResult + distribResult) / (transResult + cenaceResult + energiaResult + sncnmemResult)) * 100;
 
             /***********************************************************************************/
             /***********************************************************************************/
@@ -199,6 +233,8 @@ namespace Umbrall
             txtBono.Text = bonificacion.ToString();                         // Bono
             txtFoult.Text = penalizacion.ToString();                        // Penalizacion
             txtPotMax.Text = (Math.Ceiling(potenciaMax)).ToString();        // Potencia Max
+            txtKWDistrib.Text = (Math.Ceiling(kwDistrib)).ToString();       // Potencia eléctrica para distribución
+            txtKWCapacidad.Text = (Math.Ceiling(kwCap)).ToString();         // Potencia eléctrica para capacidad
             txtSumResult.Text = suministroResult.ToString();                // Suministro
             txtDistribResult.Text = distribResult.ToString();               // Distribución
             txtTransResult.Text = transResult.ToString();                   // Transmisión
@@ -206,7 +242,15 @@ namespace Umbrall
             txtEnergiaResult.Text = energiaResult.ToString();               // Energía                          
             txtCapResult.Text = capacidadResult.ToString();                 // Capacidad
             txtSncnResult.Text = sncnmemResult.ToString();                  // SnCnMEM
-            txtTotal.Text = total.ToString();                               // total
+            txtSubTotal.Text = subTotal.ToString();                         // total
+            txtCargoFijo.Text = suministro.ToString();                      // Cargo fijo
+            txtEnergiaDesgTotal.Text = energia.ToString();                  // Energía
+            txtBajaTension.Text = dosPorcentBT.ToString();                  // 2% de baja tensión
+            txtDerechoAlumbrado.Text = derecho.ToString();                  // Derecho alumbrado
+            txtFPDesgTotal.Text = factorPotenciaCalc.ToString();            // Cálculo factor de potencia
+            txtTotal.Text = total.ToString();                               // Total
+            txtPrecioMedio.Text = precioMedio.ToString();                   // Precio Medio
+            txtRelacionCostos.Text = relCostos.ToString();                  // Relación de costos
         }
 
     }
