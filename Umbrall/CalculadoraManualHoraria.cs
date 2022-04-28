@@ -26,16 +26,14 @@ namespace Umbrall
 
         // Local Variables for Cargos
 
-        double capEnergy;       // Capacidad Energía
         double capPot;          // Capacidad Potencia
         double distPot;         // Distribución Potencia
         double scnmem;          // SCnMEM
         double trans;           // Transmición
         double cenace;          // CENACE
         double generacionB;     // Generación B
-        double generaciónI;     // Generación I
-        double generaciónP;     // Generación P    
-        double generación;      // Generación
+        double generacionI;     // Generación I
+        double generacionP;     // Generación P    
         double suministro;      // Suministro
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -94,17 +92,93 @@ namespace Umbrall
             txtScnmem.Text = scnMemQ;
             txtTransm.Text = transQ;
             txtCenace.Text = cenaceQ;
-            txtGen.Text = generacionQ;
-            txtSum.Text = suminisQ;
+            txtGenB.Text = generacionBQ;
+            txtGenI.Text = generacionIQ;
+            txtGenP.Text = generacionPQ;
+            txtSuminis.Text = suminisQ;
 
             // To double variables
-            capPotencia = Convert.ToDouble(capPotQ);
-            distPotencia = Convert.ToDouble(distPotQ);
+            capPot = Convert.ToDouble(capPotQ);
+            distPot = Convert.ToDouble(distPotQ);
             scnmem = Convert.ToDouble(scnMemQ);
             trans = Convert.ToDouble(transQ);
             cenace = Convert.ToDouble(cenaceQ);
-            generación = Convert.ToDouble(generacionQ);
+            generacionB = Convert.ToDouble(generacionBQ);
+            generacionI = Convert.ToDouble(generacionIQ);
+            generacionP = Convert.ToDouble(generacionPQ);
             suministro = Convert.ToDouble(suminisQ);
+        }
+
+        private void cmbYearInc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int indexYear = cmbYearInc.SelectedIndex;       // Access to the corresponding index from the comboBox
+            año = cmbYearInc.Items[indexYear].ToString();
+        }
+
+        private void cmbMonthInc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int indexMes = cmbMonthInc.SelectedIndex;
+            mes = cmbMonthInc.Items[indexMes].ToString();
+        }
+
+        private void cmbTarifaInc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int indexTarifa = cmbTarifaInc.SelectedIndex;
+            tarifa = cmbTarifaInc.Items[indexTarifa].ToString();
+        }
+
+        private void cmbDivInc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int indexDiv = cmbDivInc.SelectedIndex;
+            div = cmbDivInc.Items[indexDiv].ToString();
+        }
+
+        private void btnCalc_Click(object sender, EventArgs e)
+        {
+            // Getting the variables
+            double energiaBase = Convert.ToDouble(txtEnergyBase.Text);
+            double energiaInter = Convert.ToDouble(txtEnergyInter.Text);
+            double energiaPunta = Convert.ToDouble(txtEnergyPunta.Text);
+            double demandaBase = Convert.ToDouble(txtDemandaBase.Text);
+            double demandaInter = Convert.ToDouble(txtDemandaInter.Text);
+            double demandaPunta = Convert.ToDouble(txtDemandaPunta.Text);
+            DateTime dateInicio = fechaInicio.Value.Date;
+            DateTime dateFinal = fechaFinal.Value.Date; 
+            double energiaReactiva = Convert.ToDouble(txtEnergyReact.Text);
+
+            /******************** CALCULUS **************************/
+
+            // Date difference
+            TimeSpan tSpan = dateFinal - dateInicio;
+            int dias = tSpan.Days;
+
+            // QMensual
+            double qMensual = energiaBase + energiaInter + energiaPunta;
+
+            // Factor de potencia
+            double factorPot = qMensual / Math.Sqrt(Math.Pow(qMensual, 2) + Math.Pow(energiaReactiva, 2)) * 100;
+
+            // F.P. Bono
+            double bonificacion = -((1 - 90 / factorPot) / 4);
+
+            // F.P. Penalización
+            double penalizacion = -(3 * ((90 / factorPot) - 1) / 5);
+
+            double factorPotCargo;                  // Para evaluación del factor de potencia
+            if (factorPot >= 90)
+            {
+                factorPotCargo = bonificacion;
+
+            }
+            else
+            {
+                factorPotCargo = penalizacion;
+            }
+
+            /******************** SHOW RESULTS **********************/
+            txtDays.Text = dias.ToString();
+            txtQMensual.Text = qMensual.ToString();
+            txtFP.Text = factorPot.ToString();
         }
     }
 }
