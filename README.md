@@ -24,6 +24,7 @@ _Para entrar a la configuración del dispositivo seguimos la siguiente ruta._
 ![configuracio_dispositivo_path](https://user-images.githubusercontent.com/63091636/165980677-397d6a36-7fb9-4ee4-b5d9-ec3c87034410.png)
 
 _Una vez dentro de la ventana de configuración del dispositivo queda escribir la dirección ip y el puerto que corresponde a el dispositivo medidor, dentro de una misma red local LAN; además de especificar si el medidor de parámetros eléctricos es SENECA o SIEMENS._ 
+
 ![configuracion_dispositivo](https://user-images.githubusercontent.com/63091636/165981837-20339c23-5e22-47ed-a0bf-2f20fbe6d729.png)
 
 ### Configuración para el tipo de cargos tarifarios a aplicar en mi instalación.
