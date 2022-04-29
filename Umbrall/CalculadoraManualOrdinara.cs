@@ -210,7 +210,7 @@ namespace Umbrall
             double derecho = 266;
 
             // Factor de potencia calculo 
-            double factorPotenciaCalc = bonificacion * subTotal;
+            double factorPotenciaCalc = factorPotCargo * subTotal;
 
             // Total
             double total = suministro + energia + dosPorcentBT + derecho + factorPotenciaCalc;
