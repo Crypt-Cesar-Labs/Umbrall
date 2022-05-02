@@ -27,9 +27,9 @@ namespace Umbrall
 
         // Variables locales para cargos
 
-        double capPotencia;             // Capacidad Potencia
-        double distPotencia;            // Distribución Potencia
-        double scnmem;                  // SCnMEM
+        double capacidad;               // Capacidad Potencia
+        double distribucion;            // Distribución Potencia
+        double sncnmem;                  // SCnMEM
         double trans;                   // Transmición
         double cenace;                  // CENACE
         double generación;              // Generación
@@ -88,9 +88,9 @@ namespace Umbrall
             txtSum.Text = suminisQ;
 
             // To double variables
-            capPotencia = Convert.ToDouble(capPotQ);
-            distPotencia = Convert.ToDouble(distPotQ);
-            scnmem = Convert.ToDouble(scnMemQ);
+            capacidad = Convert.ToDouble(capPotQ);
+            distribucion = Convert.ToDouble(distPotQ);
+            sncnmem = Convert.ToDouble(scnMemQ);
             trans = Convert.ToDouble(transQ);
             cenace = Convert.ToDouble(cenaceQ);
             generación = Convert.ToDouble(generacionQ);
@@ -135,66 +135,64 @@ namespace Umbrall
             DateTime fechaFinal = dateFinal.Value.Date;
             double demanda = Convert.ToDouble(txtDemandaKW.Text);
 
-            /***************************************************************************************/  
+            /***************************************************************************************/
             // Operating
-            
+
             // Date difference
-            TimeSpan tSpan = fechaFinal - fechaInicio;
-            int dias = tSpan.Days; 
+            int dias = Calculadora.dateDiff(fechaInicio, fechaFinal);
 
             // Energy difference
-            double energiaDiff = energiaEnd - energiaBeg;
-            double energiaReactDiff = energiaReactEnd - energiaReactBeg;
+            double energiaDiff = Calculadora.energyDiff(energiaBeg, energiaEnd);
+
+            // Energy Reactive Difference
+            double energiaReactDiff = Calculadora.energyReactDiff(energiaReactBeg, energiaReactEnd);
 
             // F.P
-            double factorPot = energiaDiff / Math.Sqrt(Math.Pow(energiaDiff, 2) + Math.Pow(energiaReactDiff,2)) * 100;
+            double factorPot = Calculadora.factorPotencia(energiaDiff, energiaReactDiff);
 
             // F.P. Bono
-            double bonificacion = -((1 - 90 / factorPot) / 4);
+            double bonificacion = Calculadora.bonificacion(factorPot);
 
             // F.P. Penalización
-            double penalizacion = -(3 * ((90 / factorPot) - 1) / 5);
+            double penalizacion = Calculadora.penalizacion(factorPot);
 
-            double factorPotCargo;                  // Para evaluación del factor de potencia
-            if (factorPot >= 90)
-            {
-                factorPotCargo = bonificacion;
-
-            }
-            else
-            {
-                factorPotCargo = penalizacion;
-            }
+            // Para evaluación del factor de potencia
+            double factorPotCargo = Calculadora.factorPotCargo(factorPot);
 
             // Determinar Potencia Eléctrica tomando en cuenta F.C. 2017
-            double potenciaMax = energiaDiff / (24 * dias * fcGdmto);
+            double potenciaMovil = Calculadora.potenciaElectricaMovil(energiaDiff, dias, 0.55);
 
             // Determinación de potencia eléctrica para distribución
-            double kwDistrib = Math.Min(demanda, potenciaMax);
+            double kwDistrib = Calculadora.potenciaDistribucion(demanda, potenciaMovil);
 
             // Determinación de potencia eléctrica para capacidad
-            double kwCap = Math.Min(demanda, potenciaMax);
+            double kwCap = kwDistrib;
 
             // Suministro
-            double suministroResult = cantidad * suministro;
+            //double suministroResult = cantidad * suministro;
+            double suministroResult = Calculadora.suministro(1, suministro);
 
             // Distribución
-            double distribResult = potenciaMax * distPotencia;
+            double distribResult = Calculadora.distribucion(potenciaMovil,distribucion);
 
             // Transmición
-            double transResult = energiaDiff * trans;
+            double transResult = Calculadora.transmision(energiaDiff, trans);
 
             // Cenace
-            double cenaceResult = energiaDiff * cenace;
+            //double cenaceResult = energiaDiff * cenace;
+            double cenaceResult = Calculadora.cenace(energiaDiff, cenace);
 
             // Energía 
-            double energiaResult = energiaDiff * generación;
+            // double energiaResult = energiaDiff * generación;
+            double energiaResult = Calculadora.energia(energiaDiff, generación);
 
             // Capacidad
-            double capacidadResult = potenciaMax * capPotencia;
+            //double capacidadResult = potenciaMovil * capacidad;
+            double capacidadResult = Calculadora.capacidad(potenciaMovil, capacidad);
 
             // SnCnMEM
-            double sncnmemResult = energiaDiff * scnmem;
+            //double sncnmemResult = energiaDiff * scnmem;
+            double sncnmemResult = Calculadora.sncnmem(energiaDiff, sncnmem);
 
             // SubTotal
             double subTotal = suministroResult + distribResult + transResult + cenaceResult + energiaResult + capacidadResult + sncnmemResult; 
@@ -232,7 +230,7 @@ namespace Umbrall
             txtFP.Text = factorPot.ToString();                              // F.P.
             txtBono.Text = bonificacion.ToString();                         // Bono
             txtFoult.Text = penalizacion.ToString();                        // Penalizacion
-            txtPotMax.Text = (Math.Ceiling(potenciaMax)).ToString();        // Potencia Max
+            txtPotMax.Text = (Math.Ceiling(potenciaMovil)).ToString();        // Potencia Max
             txtKWDistrib.Text = (Math.Ceiling(kwDistrib)).ToString();       // Potencia eléctrica para distribución
             txtKWCapacidad.Text = (Math.Ceiling(kwCap)).ToString();         // Potencia eléctrica para capacidad
             txtSumResult.Text = suministroResult.ToString();                // Suministro

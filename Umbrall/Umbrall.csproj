@@ -85,6 +85,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calculadora.cs" />
     <Compile Include="CalculadoraManualHoraria.cs">
       <SubType>Form</SubType>
     </Compile>
