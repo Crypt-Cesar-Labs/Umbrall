@@ -9,6 +9,11 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.tool.xml;
+using System.IO;
+
 namespace Umbrall
 {
     public partial class CalculadoraManualOrdinara : Form
@@ -251,5 +256,36 @@ namespace Umbrall
             txtRelacionCostos.Text = relCostos.ToString();                  // Relación de costos
         }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFile = new SaveFileDialog();
+            saveFile.FileName = DateTime.Now.ToString("ddMMyyyyHHmmss") + ".pdf";
+            
+
+            string paginahtml_texto = Properties.Resources.plantilla.ToString();
+
+            if(saveFile.ShowDialog() == DialogResult.OK)
+            {
+                using (FileStream stream = new FileStream(saveFile.FileName, FileMode.Create)){
+                    // El stream nos ayuda a crear el archivo
+                    Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);        // Se define el tamaño y el margen del documento 
+
+                    PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+
+                    pdfDoc.Open();
+
+                    pdfDoc.Add(new Phrase(""));
+
+                    using (StringReader sr = new StringReader(paginahtml_texto))
+                    {
+                        XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+                    }
+
+                    pdfDoc.Close();
+
+                    stream.Close();
+                }
+            }
+        }
     }
 }
