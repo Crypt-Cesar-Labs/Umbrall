@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -245,26 +238,52 @@ namespace Umbrall
             txtEnergiaResult.Text = energiaResult.ToString();               // Energía                          
             txtCapResult.Text = capacidadResult.ToString();                 // Capacidad
             txtSncnResult.Text = sncnmemResult.ToString();                  // SnCnMEM
-            txtSubTotal.Text = subTotal.ToString();                         // total
+            txtSubTotal.Text = subTotal.ToString();                         // subtotal
             txtCargoFijo.Text = suministro.ToString();                      // Cargo fijo
             txtEnergiaDesgTotal.Text = energia.ToString();                  // Energía
             txtBajaTension.Text = dosPorcentBT.ToString();                  // 2% de baja tensión
             txtDerechoAlumbrado.Text = derecho.ToString();                  // Derecho alumbrado
             txtFPDesgTotal.Text = factorPotenciaCalc.ToString();            // Cálculo factor de potencia
             txtTotal.Text = total.ToString();                               // Total
-            txtPrecioMedio.Text = precioMedio.ToString();                   // Precio Medio
-            txtRelacionCostos.Text = relCostos.ToString();                  // Relación de costos
+            txtPrecioMedioResult.Text = precioMedio.ToString();                   // Precio Medio
+            txtRelCostResult.Text = relCostos.ToString();                  // Relación de costos
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFile = new SaveFileDialog();
-            saveFile.FileName = DateTime.Now.ToString("ddMMyyyyHHmmss") + ".pdf";
+            saveFile.FileName = DateTime.Now.ToString("ddMMyyyyHHmmss") + "O" + ".pdf";
             
 
-            string paginahtml_texto = Properties.Resources.plantilla.ToString();
+            string paginahtml_texto = Properties.Resources.plantillaOrdinaria.ToString();    // Conviertiendo a String la plantilla html proveniente de Resources
 
-            if(saveFile.ShowDialog() == DialogResult.OK)
+            int MaxLength = 5;
+            // paginahtml_texto = paginahtml_texto.Replace("@YEAR", año);
+            // paginahtml_texto = paginahtml_texto.Replace("@SUMINISTRO", txtSumResult.Text.Substring(0,MaxLength));
+            paginahtml_texto = setValue2Doc(paginahtml_texto, "@YEAR", año);
+            paginahtml_texto = setValue2Doc(paginahtml_texto, "@MES", mes);            
+            paginahtml_texto = setValue2Doc(paginahtml_texto, "@TARIFA", tarifa);            
+            paginahtml_texto = setValue2Doc(paginahtml_texto, "@DIVISION", div);           
+            paginahtml_texto = setValue2Doc(paginahtml_texto, "@SUMINISTRO", txtSumResult.Text);            
+            paginahtml_texto = setValue2Doc(paginahtml_texto, "@DISTRIB", txtDistribResult.Text);           
+            paginahtml_texto = setValue2Doc(paginahtml_texto, "@TRANS", txtTransResult.Text);
+            paginahtml_texto = setValue2Doc(paginahtml_texto, "@CENACE", txtCenaceResult.Text);
+            paginahtml_texto = setValue2Doc(paginahtml_texto, "@ENERGIA", txtEnergiaResult.Text);
+            paginahtml_texto = setValue2Doc(paginahtml_texto, "@CAPACIDAD", txtCenaceResult.Text);
+            paginahtml_texto = setValue2Doc(paginahtml_texto, "@SNCNMEM", txtSncnResult.Text);
+            paginahtml_texto = setValue2Doc(paginahtml_texto, "@SUBTOTAL", txtSubTotal.Text);
+            paginahtml_texto = setValue2Doc(paginahtml_texto, "@CARGOFIJO", txtCargoFijo.Text);
+            paginahtml_texto = setValue2Doc(paginahtml_texto, "@SUMENER", txtEnergiaDesgTotal.Text);
+            paginahtml_texto = setValue2Doc(paginahtml_texto, "@BAJATENS", txtBajaTension.Text);
+            paginahtml_texto = setValue2Doc(paginahtml_texto, "@DERECHO", txtDerechoAlumbrado.Text);
+            paginahtml_texto = setValue2Doc(paginahtml_texto, "@TOTAL", txtTotal.Text);
+            paginahtml_texto = paginahtml_texto.Replace("@FECHA", DateTime.Now.ToString("dd/MM/yyyy"));             // Stay same
+            paginahtml_texto = setValue2Doc(paginahtml_texto, "@PREMED", txtPrecioMedioResult.Text);
+            paginahtml_texto = setValue2Doc(paginahtml_texto, "@RELCOST", txtRelCostResult.Text);
+            
+
+
+            if (saveFile.ShowDialog() == DialogResult.OK)
             {
                 using (FileStream stream = new FileStream(saveFile.FileName, FileMode.Create)){
                     // El stream nos ayuda a crear el archivo
@@ -276,9 +295,26 @@ namespace Umbrall
 
                     pdfDoc.Add(new Phrase(""));
 
+                    iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.pimelogosize, System.Drawing.Imaging.ImageFormat.Png);
+
+                    img.ScaleToFit(80, 60);
+                    img.Alignment = Image.UNDERLYING;
+                    img.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Top - 60);
+                    pdfDoc.Add(img);
+
                     using (StringReader sr = new StringReader(paginahtml_texto))
                     {
                         XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+                        PdfContentByte content = writer.DirectContent;
+                        Rectangle pageBorderRect = new Rectangle(pdfDoc.PageSize);
+                        pageBorderRect.Left += pdfDoc.LeftMargin;
+                        pageBorderRect.Right -= pdfDoc.RightMargin;
+                        pageBorderRect.Top -= pdfDoc.TopMargin;
+                        pageBorderRect.Bottom += pdfDoc.BottomMargin;
+
+                        content.SetColorStroke(BaseColor.BLACK);
+                        content.Rectangle(pageBorderRect.Left, pageBorderRect.Bottom, pageBorderRect.Width, pageBorderRect.Height);
+                        content.Stroke();
                     }
 
                     pdfDoc.Close();
@@ -287,5 +323,19 @@ namespace Umbrall
                 }
             }
         }
+        string setValue2Doc(string doc, string textPrint, string textValue)
+        {
+            /* Function for solve the bug about the lenght of the TextBox's texts
+             * and the maximun lenght for the text in the pdf's tickets           */
+
+            int maxLengthText = 5;
+            if (textValue.Length < maxLengthText)
+            {
+                maxLengthText = textValue.Length;
+            }
+            string replacedDoc = doc.Replace(textPrint, textValue.Substring(0, maxLengthText));
+            return replacedDoc;
+        }
+
     }
 }

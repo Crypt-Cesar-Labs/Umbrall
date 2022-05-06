@@ -143,6 +143,7 @@
             this.txtRelCostResult = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
             this.txtPrecioMedioResult = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCalc
@@ -1175,12 +1176,24 @@
             this.txtPrecioMedioResult.Size = new System.Drawing.Size(100, 20);
             this.txtPrecioMedioResult.TabIndex = 184;
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(1147, 545);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(61, 30);
+            this.btnSave.TabIndex = 270;
+            this.btnSave.Text = "Guardar";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // CalculadoraManualHoraria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1219, 552);
+            this.ClientSize = new System.Drawing.Size(1219, 586);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label38);
             this.Controls.Add(this.txtRelCostResult);
             this.Controls.Add(this.label39);
@@ -1419,5 +1432,6 @@
         private System.Windows.Forms.TextBox txtRelCostResult;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.TextBox txtPrecioMedioResult;
+        private System.Windows.Forms.Button btnSave;
     }
 }

@@ -16,11 +16,8 @@
 			padding: 5px;
 			border: 1px solid black;
 		}
-
-		html {
-			border: 4px solid black;
-			!important min-height: 100%;
-		}
+		
+		
 	</style>
 </head>
 <body>
@@ -29,9 +26,9 @@
 			<td></td>
 			<td style="width:60%" align="center">
 				<table>
-					<tr><td align="center">SISTEMA DE FACTURACI覰 UMBRALL</td></tr>
+					<tr><td align="center">SISTEMA DE FACTURACI脫N UMBRALL</td></tr>
 					<tr><td align="center">PIME</td></tr>
-					<tr><td align="center">Tel閒ono: 4776687438</td></tr>
+					<tr><td align="center">Tel茅fono: 4776687438</td></tr>
 				</table>
 			</td>
 			<td style="width:20%">
@@ -52,7 +49,7 @@
 						<td colspan="8">
 							<table style=width:100%>
 								<tr>
-									<td colspan="1">A駉</td>
+									<td colspan="1">A帽o</td>
 									<td colspan="3" style="width:36%;border-bottom:1px solid black">@YEAR</td>
 									<td colspan="1">Mes</td>
 									<td colspan="3" style="width:36%;border-bottom:1px solid black">@MES</td>
@@ -60,7 +57,7 @@
 								<tr>
 									<td colspan="1">Tarifa</td>
 									<td colspan="3" style="width:36%;border-bottom:1px solid black">@TARIFA</td>
-									<td colspan="1">Divisi髇</td>
+									<td colspan="1">Divisi贸n</td>
 									<td colspan="3" style="width:36%;border-bottom:1px solid black">@DIVISION</td>
 								</tr>
 							</table>
@@ -78,17 +75,14 @@
 
 	<table style=width:100%>
 		<tr>
-			<td colspan="7">
+			<td colspan="5">
 				<table class="border" style="width:100%">
 					<thead style="background-color:#D8D8D8">
 						<tr>
 							<th>Suministro</th>
-							<th>Distribuci髇</th>
-							<th>Transmis髇</th>
-							<th>Cenace</th>
-							<th>Energ韆</th>
-							<th>Capacidad</th>
-							<th>Sncnmem</th>
+							<th>Distribuci贸n</th>
+							<th>Transmis贸n</th>
+							<th>Cenace</th>							
 						</tr>
 					</thead>
 					<tbody>
@@ -97,13 +91,28 @@
 							<td>@DISTRIB</td>
 							<td>@TRANS</td>
 							<td>@CENACE</td>
-							<td>@ENERGIA</td>
+							
+						</tr>			
+						
+					</tbody>
+					<thead style="background-color:#D8D8D8">
+						<tr>
+							<th>Generaci贸n Base</th>
+							<th>Generaci贸n Inter</th>
+							<th>Generaci贸n Punta</th>
+							<th>Capacidad</th>
+							<th>SnCnMEM</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>@GENBASE</td>
+							<td>@GENINTER</td>
+							<td>@GENPUNTA</td>
 							<td>@CAPACIDAD</td>
 							<td>@SNCNMEM</td>
 						</tr>
 						<tr>
-							<td style="border : 0px !important"></td>
-							<td style="border : 0px !important"></td>
 							<td style="border : 0px !important"></td>
 							<td style="border : 0px !important"></td>
 							<td style="border : 0px !important"></td>
@@ -121,14 +130,15 @@
 
 	<table style=Width:100%>
 		<tr>
-			<td colspan="4">
+			<td colspan="5">
 				<table class="border" style="width:100%">
 					<thead style="background-color:#D8D8D8">
 						<tr>
 							<th>Cargo fijo</th>
-							<th>Energ韆</th>
+							<th>Energ铆a</th>
 							<th>2% Baja Tens</th>
 							<th>Derecho</th>
+							<th>Factor Pot</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -137,17 +147,29 @@
 							<td>@SUMENER</td>
 							<td>@BAJATENS</td>
 							<td>@DERECHO</td>
+							<td>@FACTORPOT</td>
 						</tr>
 						<tr>
 							<td style="border : 0px !important"></td>
 							<td style="border : 0px !important"></td>
+							<td style="border : 0px !important"></td>
 							<td align="right">Total</td>
 							<td>@TOTAL</td>
+						</tr>
+						<tr><td style="border:none" colspan="5" height="20"></td></tr>
+						<tr>
+							<td style="background-color:#D8D8D8">Precio Medio</td>
+							<td>@PREMED</td>
+						</tr>
+						<tr>
+							<td style="background-color:#D8D8D8">Relaci贸n de costos</td>
+							<td>@RELCOST</td>
 						</tr>
 					</tbody>
 				</table>
 			</td>
 		</tr>
 	</table>
+	
 </body>
 </html>

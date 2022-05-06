@@ -176,6 +176,11 @@
     <Compile Include="Monitor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="StartMonitor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,14 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="StartMonitor.resx">
       <DependentUpon>StartMonitor.cs</DependentUpon>
     </EmbeddedResource>
@@ -308,6 +308,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\plantilla.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plantillaOrdinaria.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plantillaHoraria.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_pime .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pimelogosize.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

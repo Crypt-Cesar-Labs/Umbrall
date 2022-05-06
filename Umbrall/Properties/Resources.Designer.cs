@@ -131,18 +131,138 @@ namespace Umbrall.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_pime {
+            get {
+                object obj = ResourceManager.GetObject("logo_pime", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pimelogosize {
+            get {
+                object obj = ResourceManager.GetObject("pimelogosize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
         ///&lt;html&gt;
         ///&lt;head&gt;
-        ///	&lt;tittle&gt;Web Page Design&lt;/tittle&gt;
+        ///	&lt;title&gt;Web Page Design&lt;/title&gt;
+        ///	&lt;style&gt;
+        ///		table.border {
+        ///			border-collapse: collapse;
+        ///		}
+        ///
+        ///		table.border th {
+        ///			padding: 5px;
+        ///			border: 1px solid black;
+        ///		}
+        ///
+        ///		table.border td {
+        ///			padding: 5px;
+        ///			border: 1px solid black;
+        ///		}
+        ///
+        ///		html {
+        ///			border: 4px solid black;
+        ///			!important min-height: 100%;
+        ///		}
+        ///	&lt;/style&gt;
         ///&lt;/head&gt;
         ///&lt;body&gt;
-        ///&lt;/body&gt;
-        ///&lt;/html&gt;.
+        ///	&lt;table style=&quot;width:100%&quot;&gt;
+        ///		&lt;tr&gt;
+        ///			&lt;td&gt;&lt;/td&gt;
+        ///			&lt;td style=&quot;width:60%&quot; align=&quot;center&quot;&gt;
+        ///				&lt;table&gt;
+        ///					&lt;tr&gt;&lt;td align= [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string plantilla {
             get {
                 return ResourceManager.GetString("plantilla", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
+        ///&lt;html&gt;
+        ///&lt;head&gt;
+        ///	&lt;title&gt;Web Page Design&lt;/title&gt;
+        ///	&lt;style&gt;
+        ///		table.border {
+        ///			border-collapse: collapse;
+        ///		}
+        ///
+        ///		table.border th {
+        ///			padding: 5px;
+        ///			border: 1px solid black;
+        ///		}
+        ///
+        ///		table.border td {
+        ///			padding: 5px;
+        ///			border: 1px solid black;
+        ///		}
+        ///		
+        ///		
+        ///	&lt;/style&gt;
+        ///&lt;/head&gt;
+        ///&lt;body&gt;
+        ///	&lt;table style=&quot;width:100%&quot;&gt;
+        ///		&lt;tr&gt;
+        ///			&lt;td&gt;&lt;/td&gt;
+        ///			&lt;td style=&quot;width:60%&quot; align=&quot;center&quot;&gt;
+        ///				&lt;table&gt;
+        ///					&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;SISTEMA DE FACTURACIÓN UMBRALL&lt;/td&gt;&lt;/tr&gt;
+        ///					&lt;tr&gt;&lt;td align=&quot; [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string plantillaHoraria {
+            get {
+                return ResourceManager.GetString("plantillaHoraria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
+        ///&lt;html&gt;
+        ///&lt;head&gt;
+        ///	&lt;title&gt;Web Page Design&lt;/title&gt;
+        ///	&lt;style&gt;
+        ///		table.border {
+        ///			border-collapse: collapse;
+        ///		}
+        ///
+        ///		table.border th {
+        ///			padding: 5px;
+        ///			border: 1px solid black;
+        ///		}
+        ///
+        ///		table.border td {
+        ///			padding: 5px;
+        ///			border: 1px solid black;
+        ///		}
+        ///
+        ///
+        ///	&lt;/style&gt;
+        ///&lt;/head&gt;
+        ///&lt;body&gt;
+        ///	&lt;table style=&quot;width:100%&quot;&gt;
+        ///		&lt;tr&gt;
+        ///			&lt;td&gt;&lt;/td&gt;
+        ///			&lt;td style=&quot;width:60%&quot; align=&quot;center&quot;&gt;
+        ///				&lt;table&gt;
+        ///					&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;SISTEMA DE FACTURACIÓN UMBRALL&lt;/td&gt;&lt;/tr&gt;
+        ///					&lt;tr&gt;&lt;td align=&quot;cent [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string plantillaOrdinaria {
+            get {
+                return ResourceManager.GetString("plantillaOrdinaria", resourceCulture);
             }
         }
         
