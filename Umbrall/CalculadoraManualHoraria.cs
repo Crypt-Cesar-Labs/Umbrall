@@ -323,88 +323,43 @@ namespace Umbrall
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFile = new SaveFileDialog();
-            saveFile.FileName = DateTime.Now.ToString("ddMMyyyyHHmmss") + "H" + ".pdf";
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            string nameFile = DateTime.Now.ToString("ddMMyyyyHHmmss") + "H" + ".pdf";
+
+            string facturaName = SaveFacturaFile.FacturaName(saveFileDialog, nameFile);
+
+            string paginahtml_texto = SaveFacturaFile.HtmlTemplateOrdin();
 
 
-            string paginahtml_texto = Properties.Resources.plantillaHoraria.ToString();    // Conviertiendo a String la plantilla html proveniente de Resources
-
-            const int MaxLength = 5;                                                // Truncando la candena String
-
-            paginahtml_texto = paginahtml_texto.Replace("@YEAR", año);
-            paginahtml_texto = paginahtml_texto.Replace("@MES", mes);
-            paginahtml_texto = paginahtml_texto.Replace("@TARIFA", tarifa);
-            paginahtml_texto = paginahtml_texto.Replace("@DIVISION", div);
-            paginahtml_texto = paginahtml_texto.Replace("@SUMINISTRO", txtSumResult.Text.Substring(0, MaxLength));
-            paginahtml_texto = paginahtml_texto.Replace("@DISTRIB", txtDistribResult.Text.Substring(0, MaxLength));
-            //paginahtml_texto = paginahtml_texto.Replace("@TRANS", txtTransResult.Text.Substring(0, MaxLength));
-            paginahtml_texto = setValue2Doc(paginahtml_texto, "@TRANS", txtTransResult);
-            paginahtml_texto = paginahtml_texto.Replace("@CENACE", txtCenaceResult.Text.Substring(0, MaxLength));
-            paginahtml_texto = paginahtml_texto.Replace("@GENBASE", txtGenBResult.Text.Substring(0, MaxLength));
-            paginahtml_texto = paginahtml_texto.Replace("@GENINTER", txtGenIResult.Text.Substring(0, MaxLength));
-            paginahtml_texto = paginahtml_texto.Replace("@GENPUNTA", txtGenPResult.Text.Substring(0, MaxLength));
-            paginahtml_texto = paginahtml_texto.Replace("@CAPACIDAD", txtCapResult.Text.Substring(0, MaxLength));
-            paginahtml_texto = paginahtml_texto.Replace("@SNCNMEM", txtSnResult.Text.Substring(0, MaxLength));
-            paginahtml_texto = paginahtml_texto.Replace("@SUBTOTAL", txtSubTotal.Text.Substring(0, MaxLength));
-            paginahtml_texto = paginahtml_texto.Replace("@CARGOFIJO", txtCargoFijoResult.Text.Substring(0, MaxLength));
-            paginahtml_texto = paginahtml_texto.Replace("@SUMENER", txtEnergyResult.Text.Substring(0, MaxLength));
-            paginahtml_texto = paginahtml_texto.Replace("@BAJATENS", txtDosPercentResult.Text.Substring(0, MaxLength));
-            paginahtml_texto = paginahtml_texto.Replace("@FACTORPOT", txtDosPercentResult.Text.Substring(0, MaxLength));
-            paginahtml_texto = paginahtml_texto.Replace("@TOTAL", txtTotal.Text.Substring(0, MaxLength));
-            paginahtml_texto = paginahtml_texto.Replace("@FECHA", DateTime.Now.ToString("dd/MM/yyyy"));
-            paginahtml_texto = paginahtml_texto.Replace("@PREMED", txtPrecioMedioResult.Text.Substring(0, MaxLength));
-            paginahtml_texto = paginahtml_texto.Replace("@RELCOST", txtRelCostResult.Text.Substring(0, MaxLength));
+            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@YEAR", año);
+            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@MES", mes);
+            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@TARIFA", tarifa);                        
+            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@DIVISION", div);            
+            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@SUMINISTRO", txtSumResult.Text);            
+            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@DISTRIB", txtDistribResult.Text);            
+            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@TRANS", txtTransResult.Text);
+            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@CENACE", txtCenaceResult.Text);           
+            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@GENBASE", txtGenBResult.Text);            
+            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@GENINTER", txtGenIResult.Text);            
+            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@GENPUNTA", txtGenPResult.Text);          
+            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@CAPACIDAD", txtCapResult.Text);
+            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@SNCNMEM", txtSnResult.Text);
+            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@SUBTOTAL", txtSubTotal.Text);     
+            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@CARGOFIJO", txtCargoFijoResult.Text);            
+            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@SUMENER", txtEnergyResult.Text);
+            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@BAJATENS", txtDosPercentResult.Text);
+            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@FACTORPOT", txtDosPercentResult.Text);            
+            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@TOTAL", txtTotal.Text);
+            paginahtml_texto = paginahtml_texto.Replace("@FECHA", DateTime.Now.ToString("dd/MM/yyyy"));            
+            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@PREMED", txtPrecioMedioResult.Text);            
+            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@RELCOST", txtRelCostResult.Text);
 
 
-            if (saveFile.ShowDialog() == DialogResult.OK)
-            {
-                using (FileStream stream = new FileStream(saveFile.FileName, FileMode.Create))
-                {
-                    // El stream nos ayuda a crear el archivo
-                    Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);        // Se define el tamaño y el margen del documento 
+            SaveFacturaFile.CreateFacturaFile(saveFileDialog, paginahtml_texto);
 
-                    PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+            MessageBox.Show("Factura guardada\n correctamente con el nombre:\n" + facturaName);
 
-                    pdfDoc.Open();
-
-                    pdfDoc.Add(new Phrase(""));
-
-                    iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.pimelogosize, System.Drawing.Imaging.ImageFormat.Png);
-
-                    img.ScaleToFit(80, 60);
-                    img.Alignment = iTextSharp.text.Image.UNDERLYING;
-                    img.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Top - 60);
-                    pdfDoc.Add(img);
-
-                    using (StringReader sr = new StringReader(paginahtml_texto))
-                    {
-                        XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
-                        PdfContentByte content = writer.DirectContent;
-                        Rectangle pageBorderRect = new Rectangle(pdfDoc.PageSize);
-                        pageBorderRect.Left += pdfDoc.LeftMargin;
-                        pageBorderRect.Right -= pdfDoc.RightMargin;
-                        pageBorderRect.Top -= pdfDoc.TopMargin;
-                        pageBorderRect.Bottom += pdfDoc.BottomMargin;
-
-                        content.SetColorStroke(BaseColor.BLACK);
-                        content.Rectangle(pageBorderRect.Left, pageBorderRect.Bottom, pageBorderRect.Width, pageBorderRect.Height);
-                        content.Stroke();
-                    }
-
-                    pdfDoc.Close();
-
-                    stream.Close();
-                }
-            }
         }
-        string setValue2Doc(string doc, string textPrint, TextBox textValue)
-        {
-            int maxLengthText = 5;
-            if (textValue.Text.Length > maxLengthText){
-                maxLengthText = textValue.Text.Length;
-            }
-            string replacedDoc = doc.Replace(textPrint, textValue.Text.Substring(0,maxLengthText));
-            return replacedDoc;
-        }
+        
     }
 }

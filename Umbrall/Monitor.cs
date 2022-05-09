@@ -287,6 +287,10 @@ namespace Umbrall
             
         }
 
+        public static void ModbusScreenshot()
+        {
+
+        }
 
     }
 }
