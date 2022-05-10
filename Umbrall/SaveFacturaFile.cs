@@ -20,10 +20,6 @@ namespace Umbrall
         {
             try
             {
-                /* SaveFileDialog saveFileObject = new SaveFileDialog
-                {
-                    FileName = name + ".pdf"
-                }; */
 
                 saveFileObject.FileName = name + ".pdf";
 

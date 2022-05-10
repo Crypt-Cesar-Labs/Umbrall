@@ -1310,6 +1310,7 @@
             this.Controls.Add(this.btnCalc);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CalculadoraManualHoraria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Umbrall - Calculadora Manual Horaria";
             this.ResumeLayout(false);
             this.PerformLayout();
