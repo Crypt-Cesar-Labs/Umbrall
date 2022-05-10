@@ -14,7 +14,7 @@ namespace Umbrall
         static ModbusClient modbusClient;
         public static string ipAddress;
         public static int port;
-        public static bool statusCom = false; 
+        
 
         #region ModbusVarSeneca
         //Modbus variables for SENECA
@@ -65,7 +65,7 @@ namespace Umbrall
                 Console.WriteLine("Concexion con ip: " + ipAddress.ToString() + " y puerto: " + port.ToString() + " exitosa.");
                 //int[] readVrmsA = modbusClient.ReadHoldingRegisters(134, 2);
 
-                statusCom = true; 
+                
 
                 Timer readModbusTimer = new Timer();
 
