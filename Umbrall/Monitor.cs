@@ -280,8 +280,7 @@ namespace Umbrall
         {
             try
             {
-                modbusClient.Disconnect();
-                statusCom = false; 
+                modbusClient.Disconnect();                
                 MessageBox.Show("Comunicación finalizada");
             }
             catch
