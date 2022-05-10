@@ -145,6 +145,9 @@
             this.label25 = new System.Windows.Forms.Label();
             this.txtStatusMonitor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnPlay = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -288,7 +291,7 @@
             this.panel1.Controls.Add(this.lbVrmsB);
             this.panel1.Controls.Add(this.txtVrmsA);
             this.panel1.Controls.Add(this.lbVrmsA);
-            this.panel1.Location = new System.Drawing.Point(12, 198);
+            this.panel1.Location = new System.Drawing.Point(16, 245);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(598, 335);
             this.panel1.TabIndex = 88;
@@ -1164,10 +1167,11 @@
             // 
             // txtStatusMonitor
             // 
+            this.txtStatusMonitor.BackColor = System.Drawing.SystemColors.Menu;
             this.txtStatusMonitor.Location = new System.Drawing.Point(392, 12);
             this.txtStatusMonitor.Name = "txtStatusMonitor";
             this.txtStatusMonitor.ReadOnly = true;
-            this.txtStatusMonitor.Size = new System.Drawing.Size(55, 20);
+            this.txtStatusMonitor.Size = new System.Drawing.Size(87, 20);
             this.txtStatusMonitor.TabIndex = 131;
             // 
             // label2
@@ -1180,11 +1184,47 @@
             this.label2.TabIndex = 130;
             this.label2.Text = "Status";
             // 
+            // btnPlay
+            // 
+            this.btnPlay.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnPlay.BackgroundImage = global::Umbrall.Properties.Resources.play;
+            this.btnPlay.Location = new System.Drawing.Point(15, 198);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(44, 41);
+            this.btnPlay.TabIndex = 132;
+            this.btnPlay.Text = "Play";
+            this.btnPlay.UseVisualStyleBackColor = false;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            // 
+            // btnStop
+            // 
+            this.btnStop.BackColor = System.Drawing.Color.Crimson;
+            this.btnStop.Location = new System.Drawing.Point(65, 198);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(44, 41);
+            this.btnStop.TabIndex = 133;
+            this.btnStop.Text = "Stop";
+            this.btnStop.UseVisualStyleBackColor = false;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSave.Location = new System.Drawing.Point(115, 198);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(44, 41);
+            this.btnSave.TabIndex = 134;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            // 
             // StartMonitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 545);
+            this.ClientSize = new System.Drawing.Size(631, 592);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnStop);
+            this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.txtStatusMonitor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label24);
@@ -1363,5 +1403,8 @@
         private System.Windows.Forms.TextBox txtListEnergy;
         private System.Windows.Forms.TextBox txtStatusMonitor;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnPlay;
+        private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.Button btnSave;
     }
 }

@@ -31,8 +31,8 @@ namespace Umbrall
             {
 
                 // Connect Parameters in txtBox
-                txtIpAddress.Text = ipAddress;
-                txtPort.Text = port.ToString();
+                txtIpAddress.Text = GlobalParameters.ipAddressGlobal;
+                txtPort.Text = GlobalParameters.portGlobal.ToString();
 
                 string year = GlobalParameters.globalYear;
                 string month = GlobalParameters.globalMonth;
@@ -65,6 +65,7 @@ namespace Umbrall
 
             //Monitor.StartMonitor();
 
+            
             Timer showParameters = new Timer();
             showParameters.Interval = 1000;
             showParameters.Enabled = true;
@@ -135,6 +136,17 @@ namespace Umbrall
             txtIrmsB.Text = Monitor.irmsB.ToString();
             txtIrmsC.Text = Monitor.irmsC.ToString();
             txtIrmsABC.Text = Monitor.irmsABC.ToString();
+
+            if (Monitor.statusMonitor == true)
+            {
+                txtStatusMonitor.BackColor = Color.Green;
+                txtStatusMonitor.Text = "Conect";
+            }
+            else if(Monitor.statusMonitor == false)
+            {
+                txtStatusMonitor.BackColor = Color.Crimson;
+                txtStatusMonitor.Text = "Desconect";
+            }
         }
 
 
@@ -362,6 +374,16 @@ namespace Umbrall
             // Guardar en fichero de texto
             bool resultado = historyRegisters.SaveRegistersFile(txtListEnergy.Text);
             */
+        }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            Monitor.StartMonitor();
+        }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            Monitor.StopMonitor();
         }
     }
 }

@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menúToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.iniciarMonitoreoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.detenerMonitoreoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.conectarDispositivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +50,7 @@
             this.modbusTCPTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientTCPTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientSocketTCPTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.monitorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,15 +66,14 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1203, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1266, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // menúToolStripMenuItem
             // 
             this.menúToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.iniciarMonitoreoToolStripMenuItem,
-            this.detenerMonitoreoToolStripMenuItem,
+            this.monitorToolStripMenuItem,
             this.toolStripSeparator1,
             this.configuraciónToolStripMenuItem,
             this.salirToolStripMenuItem});
@@ -83,28 +81,10 @@
             this.menúToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menúToolStripMenuItem.Text = "Menú";
             // 
-            // iniciarMonitoreoToolStripMenuItem
-            // 
-            this.iniciarMonitoreoToolStripMenuItem.Image = global::Umbrall.Properties.Resources.play;
-            this.iniciarMonitoreoToolStripMenuItem.Name = "iniciarMonitoreoToolStripMenuItem";
-            this.iniciarMonitoreoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.iniciarMonitoreoToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
-            this.iniciarMonitoreoToolStripMenuItem.Text = "Iniciar Monitoreo";
-            this.iniciarMonitoreoToolStripMenuItem.Click += new System.EventHandler(this.iniciarMonitoreoToolStripMenuItem_Click);
-            // 
-            // detenerMonitoreoToolStripMenuItem
-            // 
-            this.detenerMonitoreoToolStripMenuItem.Image = global::Umbrall.Properties.Resources.stop;
-            this.detenerMonitoreoToolStripMenuItem.Name = "detenerMonitoreoToolStripMenuItem";
-            this.detenerMonitoreoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.detenerMonitoreoToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
-            this.detenerMonitoreoToolStripMenuItem.Text = "Detener Monitoreo";
-            this.detenerMonitoreoToolStripMenuItem.Click += new System.EventHandler(this.detenerMonitoreoToolStripMenuItem_Click);
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(213, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // configuraciónToolStripMenuItem
             // 
@@ -113,7 +93,7 @@
             this.tarifasCFEToolStripMenuItem,
             this.alertasCorreoToolStripMenuItem});
             this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
-            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.configuraciónToolStripMenuItem.Text = "Configuración";
             // 
             // conectarDispositivoToolStripMenuItem
@@ -140,7 +120,7 @@
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -157,19 +137,19 @@
             // facturaciónToolStripMenuItem
             // 
             this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
-            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.facturaciónToolStripMenuItem.Text = "Facturación";
             // 
             // gráficasToolStripMenuItem
             // 
             this.gráficasToolStripMenuItem.Name = "gráficasToolStripMenuItem";
-            this.gráficasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gráficasToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.gráficasToolStripMenuItem.Text = "Gráficas";
             // 
             // calculadoraToolStripMenuItem
             // 
             this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
-            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.calculadoraToolStripMenuItem.Text = "Calculadora";
             this.calculadoraToolStripMenuItem.Click += new System.EventHandler(this.calculadoraToolStripMenuItem_Click);
             // 
@@ -242,12 +222,19 @@
             this.clientSocketTCPTestToolStripMenuItem.Text = "Client Socket TCP Test";
             this.clientSocketTCPTestToolStripMenuItem.Click += new System.EventHandler(this.clientSocketTCPTestToolStripMenuItem_Click);
             // 
+            // monitorToolStripMenuItem
+            // 
+            this.monitorToolStripMenuItem.Name = "monitorToolStripMenuItem";
+            this.monitorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.monitorToolStripMenuItem.Text = "Monitor";
+            this.monitorToolStripMenuItem.Click += new System.EventHandler(this.monitorToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(1203, 716);
+            this.ClientSize = new System.Drawing.Size(1266, 677);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -255,6 +242,8 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Umbrall - Monitor de Energía";
+            this.Activated += new System.EventHandler(this.Form1_Activated);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -266,8 +255,6 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menúToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem iniciarMonitoreoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem detenerMonitoreoToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem configuraciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem conectarDispositivoToolStripMenuItem;
@@ -287,6 +274,7 @@
         private System.Windows.Forms.ToolStripMenuItem facturaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gráficasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calculadoraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem monitorToolStripMenuItem;
     }
 }
 

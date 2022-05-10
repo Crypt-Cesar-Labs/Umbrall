@@ -150,5 +150,24 @@ namespace Umbrall
 
             selector.Show();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Form1_Activated(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void monitorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StartMonitor startMonitorWindow = new StartMonitor();
+
+            startMonitorWindow.MdiParent = this;
+
+            startMonitorWindow.Show();
+        }
     }
 }
