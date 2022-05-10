@@ -328,7 +328,7 @@ namespace Umbrall
 
             string facturaName = SaveFacturaFile.FacturaName(saveFileDialog, nameFile);
 
-            string paginahtml_texto = SaveFacturaFile.HtmlTemplateOrdin();
+            string paginahtml_texto = SaveFacturaFile.HtmlTemplateH();
 
 
             paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@YEAR", año);
@@ -338,7 +338,8 @@ namespace Umbrall
             paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@SUMINISTRO", txtSumResult.Text);            
             paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@DISTRIB", txtDistribResult.Text);            
             paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@TRANS", txtTransResult.Text);
-            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@CENACE", txtCenaceResult.Text);           
+            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@CENACE", txtCenaceResult.Text);
+            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@ENERGIA", txtEnergyResult.Text);
             paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@GENBASE", txtGenBResult.Text);            
             paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@GENINTER", txtGenIResult.Text);            
             paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@GENPUNTA", txtGenPResult.Text);          
@@ -348,7 +349,7 @@ namespace Umbrall
             paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@CARGOFIJO", txtCargoFijoResult.Text);            
             paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@SUMENER", txtEnergyResult.Text);
             paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@BAJATENS", txtDosPercentResult.Text);
-            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@FACTORPOT", txtDosPercentResult.Text);            
+            paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@FACTORPOT", txtFPResult.Text);            
             paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@TOTAL", txtTotal.Text);
             paginahtml_texto = paginahtml_texto.Replace("@FECHA", DateTime.Now.ToString("dd/MM/yyyy"));            
             paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@PREMED", txtPrecioMedioResult.Text);            

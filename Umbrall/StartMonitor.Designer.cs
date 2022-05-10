@@ -143,6 +143,8 @@
             this.label24 = new System.Windows.Forms.Label();
             this.txtSuminis = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
+            this.txtStatusMonitor = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1160,11 +1162,31 @@
             this.label25.TabIndex = 127;
             this.label25.Text = "Suministro";
             // 
+            // txtStatusMonitor
+            // 
+            this.txtStatusMonitor.Location = new System.Drawing.Point(392, 12);
+            this.txtStatusMonitor.Name = "txtStatusMonitor";
+            this.txtStatusMonitor.ReadOnly = true;
+            this.txtStatusMonitor.Size = new System.Drawing.Size(55, 20);
+            this.txtStatusMonitor.TabIndex = 131;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(341, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 17);
+            this.label2.TabIndex = 130;
+            this.label2.Text = "Status";
+            // 
             // StartMonitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(622, 545);
+            this.Controls.Add(this.txtStatusMonitor);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.txtSuminis);
             this.Controls.Add(this.label25);
@@ -1339,5 +1361,7 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button btnSaveEnergy;
         private System.Windows.Forms.TextBox txtListEnergy;
+        private System.Windows.Forms.TextBox txtStatusMonitor;
+        private System.Windows.Forms.Label label2;
     }
 }
