@@ -14,6 +14,7 @@ namespace Umbrall
         static ModbusClient modbusClient;
         public static string ipAddress;
         public static int port;
+        public static bool statusMonitor = false;
 
         #region ModbusVarSeneca
         //Modbus variables for SENECA
