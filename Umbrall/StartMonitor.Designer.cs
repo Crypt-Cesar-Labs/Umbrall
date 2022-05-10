@@ -38,6 +38,7 @@
             this.lbVrmsC = new System.Windows.Forms.Label();
             this.txtVrmsA = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtListEnergy = new System.Windows.Forms.TextBox();
             this.btnSaveEnergy = new System.Windows.Forms.Button();
             this.lbVrmsABC = new System.Windows.Forms.Label();
             this.txtVrmsABC = new System.Windows.Forms.TextBox();
@@ -142,7 +143,6 @@
             this.label24 = new System.Windows.Forms.Label();
             this.txtSuminis = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.txtListEnergy = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -290,6 +290,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(598, 335);
             this.panel1.TabIndex = 88;
+            // 
+            // txtListEnergy
+            // 
+            this.txtListEnergy.Location = new System.Drawing.Point(385, 283);
+            this.txtListEnergy.Name = "txtListEnergy";
+            this.txtListEnergy.Size = new System.Drawing.Size(209, 20);
+            this.txtListEnergy.TabIndex = 186;
             // 
             // btnSaveEnergy
             // 
@@ -1153,13 +1160,6 @@
             this.label25.TabIndex = 127;
             this.label25.Text = "Suministro";
             // 
-            // txtListEnergy
-            // 
-            this.txtListEnergy.Location = new System.Drawing.Point(385, 283);
-            this.txtListEnergy.Name = "txtListEnergy";
-            this.txtListEnergy.Size = new System.Drawing.Size(209, 20);
-            this.txtListEnergy.TabIndex = 186;
-            // 
             // StartMonitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1214,6 +1214,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StartMonitor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Umbrall - Monitoreo de los parámetros eléctricos";
             this.Load += new System.EventHandler(this.StartMonitor_Load);
             this.panel1.ResumeLayout(false);
