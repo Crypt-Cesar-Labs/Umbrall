@@ -155,70 +155,78 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(13, 12);
+            this.label8.Location = new System.Drawing.Point(17, 15);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(90, 17);
+            this.label8.Size = new System.Drawing.Size(109, 20);
             this.label8.TabIndex = 80;
             this.label8.Text = "Dirección ip: ";
             // 
             // txtIpAddress
             // 
-            this.txtIpAddress.Location = new System.Drawing.Point(101, 12);
+            this.txtIpAddress.Location = new System.Drawing.Point(135, 15);
+            this.txtIpAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIpAddress.Name = "txtIpAddress";
             this.txtIpAddress.ReadOnly = true;
-            this.txtIpAddress.Size = new System.Drawing.Size(100, 20);
+            this.txtIpAddress.Size = new System.Drawing.Size(132, 22);
             this.txtIpAddress.TabIndex = 81;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(207, 13);
+            this.label9.Location = new System.Drawing.Point(276, 16);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 17);
+            this.label9.Size = new System.Drawing.Size(63, 20);
             this.label9.TabIndex = 82;
             this.label9.Text = "Puerto:";
             // 
             // txtPort
             // 
-            this.txtPort.Location = new System.Drawing.Point(263, 12);
+            this.txtPort.Location = new System.Drawing.Point(351, 15);
+            this.txtPort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPort.Name = "txtPort";
             this.txtPort.ReadOnly = true;
-            this.txtPort.Size = new System.Drawing.Size(61, 20);
+            this.txtPort.Size = new System.Drawing.Size(80, 22);
             this.txtPort.TabIndex = 83;
             // 
             // lbVrmsA
             // 
             this.lbVrmsA.AutoSize = true;
-            this.lbVrmsA.Location = new System.Drawing.Point(1, 5);
+            this.lbVrmsA.Location = new System.Drawing.Point(1, 6);
+            this.lbVrmsA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbVrmsA.Name = "lbVrmsA";
-            this.lbVrmsA.Size = new System.Drawing.Size(48, 13);
+            this.lbVrmsA.Size = new System.Drawing.Size(58, 16);
             this.lbVrmsA.TabIndex = 84;
             this.lbVrmsA.Text = "VRMS A";
             // 
             // lbVrmsB
             // 
             this.lbVrmsB.AutoSize = true;
-            this.lbVrmsB.Location = new System.Drawing.Point(1, 31);
+            this.lbVrmsB.Location = new System.Drawing.Point(1, 38);
+            this.lbVrmsB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbVrmsB.Name = "lbVrmsB";
-            this.lbVrmsB.Size = new System.Drawing.Size(48, 13);
+            this.lbVrmsB.Size = new System.Drawing.Size(58, 16);
             this.lbVrmsB.TabIndex = 85;
             this.lbVrmsB.Text = "VRMS B";
             // 
             // lbVrmsC
             // 
             this.lbVrmsC.AutoSize = true;
-            this.lbVrmsC.Location = new System.Drawing.Point(1, 58);
+            this.lbVrmsC.Location = new System.Drawing.Point(1, 71);
+            this.lbVrmsC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbVrmsC.Name = "lbVrmsC";
-            this.lbVrmsC.Size = new System.Drawing.Size(48, 13);
+            this.lbVrmsC.Size = new System.Drawing.Size(58, 16);
             this.lbVrmsC.TabIndex = 86;
             this.lbVrmsC.Text = "VRMS C";
             // 
             // txtVrmsA
             // 
-            this.txtVrmsA.Location = new System.Drawing.Point(72, 2);
+            this.txtVrmsA.Location = new System.Drawing.Point(96, 2);
+            this.txtVrmsA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtVrmsA.Name = "txtVrmsA";
-            this.txtVrmsA.Size = new System.Drawing.Size(100, 20);
+            this.txtVrmsA.Size = new System.Drawing.Size(132, 22);
             this.txtVrmsA.TabIndex = 88;
             // 
             // panel1
@@ -291,23 +299,26 @@
             this.panel1.Controls.Add(this.lbVrmsB);
             this.panel1.Controls.Add(this.txtVrmsA);
             this.panel1.Controls.Add(this.lbVrmsA);
-            this.panel1.Location = new System.Drawing.Point(16, 245);
+            this.panel1.Location = new System.Drawing.Point(21, 302);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(598, 335);
+            this.panel1.Size = new System.Drawing.Size(797, 412);
             this.panel1.TabIndex = 88;
             // 
             // txtListEnergy
             // 
-            this.txtListEnergy.Location = new System.Drawing.Point(385, 283);
+            this.txtListEnergy.Location = new System.Drawing.Point(513, 348);
+            this.txtListEnergy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtListEnergy.Name = "txtListEnergy";
-            this.txtListEnergy.Size = new System.Drawing.Size(209, 20);
+            this.txtListEnergy.Size = new System.Drawing.Size(277, 22);
             this.txtListEnergy.TabIndex = 186;
             // 
             // btnSaveEnergy
             // 
-            this.btnSaveEnergy.Location = new System.Drawing.Point(488, 309);
+            this.btnSaveEnergy.Location = new System.Drawing.Point(651, 380);
+            this.btnSaveEnergy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSaveEnergy.Name = "btnSaveEnergy";
-            this.btnSaveEnergy.Size = new System.Drawing.Size(107, 23);
+            this.btnSaveEnergy.Size = new System.Drawing.Size(143, 28);
             this.btnSaveEnergy.TabIndex = 185;
             this.btnSaveEnergy.Text = "Guardar Energía";
             this.btnSaveEnergy.UseVisualStyleBackColor = true;
@@ -316,871 +327,976 @@
             // lbVrmsABC
             // 
             this.lbVrmsABC.AutoSize = true;
-            this.lbVrmsABC.Location = new System.Drawing.Point(2, 80);
+            this.lbVrmsABC.Location = new System.Drawing.Point(3, 98);
+            this.lbVrmsABC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbVrmsABC.Name = "lbVrmsABC";
-            this.lbVrmsABC.Size = new System.Drawing.Size(41, 26);
+            this.lbVrmsABC.Size = new System.Drawing.Size(49, 32);
             this.lbVrmsABC.TabIndex = 184;
             this.lbVrmsABC.Text = "VRMS \r\nABC";
             // 
             // txtVrmsABC
             // 
-            this.txtVrmsABC.Location = new System.Drawing.Point(72, 80);
+            this.txtVrmsABC.Location = new System.Drawing.Point(96, 98);
+            this.txtVrmsABC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtVrmsABC.Name = "txtVrmsABC";
-            this.txtVrmsABC.Size = new System.Drawing.Size(100, 20);
+            this.txtVrmsABC.Size = new System.Drawing.Size(132, 22);
             this.txtVrmsABC.TabIndex = 183;
             // 
             // txtIrmsABC
             // 
-            this.txtIrmsABC.Location = new System.Drawing.Point(495, 236);
+            this.txtIrmsABC.Location = new System.Drawing.Point(660, 290);
+            this.txtIrmsABC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIrmsABC.Name = "txtIrmsABC";
-            this.txtIrmsABC.Size = new System.Drawing.Size(100, 20);
+            this.txtIrmsABC.Size = new System.Drawing.Size(132, 22);
             this.txtIrmsABC.TabIndex = 164;
             // 
             // lbIrmsABC
             // 
             this.lbIrmsABC.AutoSize = true;
-            this.lbIrmsABC.Location = new System.Drawing.Point(406, 230);
+            this.lbIrmsABC.Location = new System.Drawing.Point(541, 283);
+            this.lbIrmsABC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbIrmsABC.Name = "lbIrmsABC";
-            this.lbIrmsABC.Size = new System.Drawing.Size(73, 26);
+            this.lbIrmsABC.Size = new System.Drawing.Size(91, 32);
             this.lbIrmsABC.TabIndex = 163;
             this.lbIrmsABC.Text = "IRMS Ampere\r\nABC";
             // 
             // txtIrmsC
             // 
-            this.txtIrmsC.Location = new System.Drawing.Point(495, 201);
+            this.txtIrmsC.Location = new System.Drawing.Point(660, 247);
+            this.txtIrmsC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIrmsC.Name = "txtIrmsC";
-            this.txtIrmsC.Size = new System.Drawing.Size(100, 20);
+            this.txtIrmsC.Size = new System.Drawing.Size(132, 22);
             this.txtIrmsC.TabIndex = 162;
             // 
             // txtIrmsB
             // 
-            this.txtIrmsB.Location = new System.Drawing.Point(495, 175);
+            this.txtIrmsB.Location = new System.Drawing.Point(660, 215);
+            this.txtIrmsB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIrmsB.Name = "txtIrmsB";
-            this.txtIrmsB.Size = new System.Drawing.Size(100, 20);
+            this.txtIrmsB.Size = new System.Drawing.Size(132, 22);
             this.txtIrmsB.TabIndex = 161;
             // 
             // txtIrmsA
             // 
-            this.txtIrmsA.Location = new System.Drawing.Point(495, 149);
+            this.txtIrmsA.Location = new System.Drawing.Point(660, 183);
+            this.txtIrmsA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIrmsA.Name = "txtIrmsA";
-            this.txtIrmsA.Size = new System.Drawing.Size(100, 20);
+            this.txtIrmsA.Size = new System.Drawing.Size(132, 22);
             this.txtIrmsA.TabIndex = 160;
             // 
             // lbIrmsC
             // 
             this.lbIrmsC.AutoSize = true;
-            this.lbIrmsC.Location = new System.Drawing.Point(406, 204);
+            this.lbIrmsC.Location = new System.Drawing.Point(541, 251);
+            this.lbIrmsC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbIrmsC.Name = "lbIrmsC";
-            this.lbIrmsC.Size = new System.Drawing.Size(83, 13);
+            this.lbIrmsC.Size = new System.Drawing.Size(103, 16);
             this.lbIrmsC.TabIndex = 159;
             this.lbIrmsC.Text = "IRMS Ampere C";
             // 
             // lbIrmsB
             // 
             this.lbIrmsB.AutoSize = true;
-            this.lbIrmsB.Location = new System.Drawing.Point(406, 178);
+            this.lbIrmsB.Location = new System.Drawing.Point(541, 219);
+            this.lbIrmsB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbIrmsB.Name = "lbIrmsB";
-            this.lbIrmsB.Size = new System.Drawing.Size(83, 13);
+            this.lbIrmsB.Size = new System.Drawing.Size(103, 16);
             this.lbIrmsB.TabIndex = 158;
             this.lbIrmsB.Text = "IRMS Ampere B";
             // 
             // lbIrmsA
             // 
             this.lbIrmsA.AutoSize = true;
-            this.lbIrmsA.Location = new System.Drawing.Point(406, 152);
+            this.lbIrmsA.Location = new System.Drawing.Point(541, 187);
+            this.lbIrmsA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbIrmsA.Name = "lbIrmsA";
-            this.lbIrmsA.Size = new System.Drawing.Size(83, 13);
+            this.lbIrmsA.Size = new System.Drawing.Size(103, 16);
             this.lbIrmsA.TabIndex = 157;
             this.lbIrmsA.Text = "IRMS Ampere A";
             // 
             // txtReactEnergyABC
             // 
-            this.txtReactEnergyABC.Location = new System.Drawing.Point(495, 117);
+            this.txtReactEnergyABC.Location = new System.Drawing.Point(660, 144);
+            this.txtReactEnergyABC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtReactEnergyABC.Name = "txtReactEnergyABC";
-            this.txtReactEnergyABC.Size = new System.Drawing.Size(100, 20);
+            this.txtReactEnergyABC.Size = new System.Drawing.Size(132, 22);
             this.txtReactEnergyABC.TabIndex = 140;
             // 
             // lbReactiveABC
             // 
             this.lbReactiveABC.AutoSize = true;
-            this.lbReactiveABC.Location = new System.Drawing.Point(425, 113);
+            this.lbReactiveABC.Location = new System.Drawing.Point(567, 139);
+            this.lbReactiveABC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbReactiveABC.Name = "lbReactiveABC";
-            this.lbReactiveABC.Size = new System.Drawing.Size(64, 26);
+            this.lbReactiveABC.Size = new System.Drawing.Size(80, 32);
             this.lbReactiveABC.TabIndex = 139;
             this.lbReactiveABC.Text = "Reactive\r\nEnergy ABC";
             // 
             // txtReactEnergyC
             // 
-            this.txtReactEnergyC.Location = new System.Drawing.Point(495, 83);
+            this.txtReactEnergyC.Location = new System.Drawing.Point(660, 102);
+            this.txtReactEnergyC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtReactEnergyC.Name = "txtReactEnergyC";
-            this.txtReactEnergyC.Size = new System.Drawing.Size(100, 20);
+            this.txtReactEnergyC.Size = new System.Drawing.Size(132, 22);
             this.txtReactEnergyC.TabIndex = 138;
             // 
             // lbReactEnergyC
             // 
             this.lbReactEnergyC.AutoSize = true;
-            this.lbReactEnergyC.Location = new System.Drawing.Point(425, 77);
+            this.lbReactEnergyC.Location = new System.Drawing.Point(567, 95);
+            this.lbReactEnergyC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbReactEnergyC.Name = "lbReactEnergyC";
-            this.lbReactEnergyC.Size = new System.Drawing.Size(50, 26);
+            this.lbReactEnergyC.Size = new System.Drawing.Size(62, 32);
             this.lbReactEnergyC.TabIndex = 137;
             this.lbReactEnergyC.Text = "Reactive\r\nEnergy C";
             // 
             // txtReactEnergyB
             // 
-            this.txtReactEnergyB.Location = new System.Drawing.Point(495, 45);
+            this.txtReactEnergyB.Location = new System.Drawing.Point(660, 55);
+            this.txtReactEnergyB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtReactEnergyB.Name = "txtReactEnergyB";
-            this.txtReactEnergyB.Size = new System.Drawing.Size(100, 20);
+            this.txtReactEnergyB.Size = new System.Drawing.Size(132, 22);
             this.txtReactEnergyB.TabIndex = 136;
             // 
             // lbReactEnergyB
             // 
             this.lbReactEnergyB.AutoSize = true;
-            this.lbReactEnergyB.Location = new System.Drawing.Point(425, 39);
+            this.lbReactEnergyB.Location = new System.Drawing.Point(567, 48);
+            this.lbReactEnergyB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbReactEnergyB.Name = "lbReactEnergyB";
-            this.lbReactEnergyB.Size = new System.Drawing.Size(50, 26);
+            this.lbReactEnergyB.Size = new System.Drawing.Size(62, 32);
             this.lbReactEnergyB.TabIndex = 135;
             this.lbReactEnergyB.Text = "Reactive\r\nEnergy B";
             // 
             // lbReactEnergyA
             // 
             this.lbReactEnergyA.AutoSize = true;
-            this.lbReactEnergyA.Location = new System.Drawing.Point(425, 3);
+            this.lbReactEnergyA.Location = new System.Drawing.Point(567, 4);
+            this.lbReactEnergyA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbReactEnergyA.Name = "lbReactEnergyA";
-            this.lbReactEnergyA.Size = new System.Drawing.Size(50, 26);
+            this.lbReactEnergyA.Size = new System.Drawing.Size(62, 32);
             this.lbReactEnergyA.TabIndex = 134;
             this.lbReactEnergyA.Text = "Reactive\r\nEnergy A";
             // 
             // txtReactEnergyA
             // 
-            this.txtReactEnergyA.Location = new System.Drawing.Point(495, 13);
+            this.txtReactEnergyA.Location = new System.Drawing.Point(660, 16);
+            this.txtReactEnergyA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtReactEnergyA.Name = "txtReactEnergyA";
-            this.txtReactEnergyA.Size = new System.Drawing.Size(100, 20);
+            this.txtReactEnergyA.Size = new System.Drawing.Size(132, 22);
             this.txtReactEnergyA.TabIndex = 133;
             // 
             // txtEnergyABC
             // 
-            this.txtEnergyABC.Location = new System.Drawing.Point(274, 314);
+            this.txtEnergyABC.Location = new System.Drawing.Point(365, 386);
+            this.txtEnergyABC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEnergyABC.Name = "txtEnergyABC";
-            this.txtEnergyABC.Size = new System.Drawing.Size(100, 20);
+            this.txtEnergyABC.Size = new System.Drawing.Size(132, 22);
             this.txtEnergyABC.TabIndex = 132;
             // 
             // lbEnergyABC
             // 
             this.lbEnergyABC.AutoSize = true;
-            this.lbEnergyABC.Location = new System.Drawing.Point(204, 317);
+            this.lbEnergyABC.Location = new System.Drawing.Point(272, 390);
+            this.lbEnergyABC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbEnergyABC.Name = "lbEnergyABC";
-            this.lbEnergyABC.Size = new System.Drawing.Size(64, 13);
+            this.lbEnergyABC.Size = new System.Drawing.Size(80, 16);
             this.lbEnergyABC.TabIndex = 131;
             this.lbEnergyABC.Text = "Energy ABC";
             // 
             // txtEnergyC
             // 
-            this.txtEnergyC.Location = new System.Drawing.Point(274, 288);
+            this.txtEnergyC.Location = new System.Drawing.Point(365, 354);
+            this.txtEnergyC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEnergyC.Name = "txtEnergyC";
-            this.txtEnergyC.Size = new System.Drawing.Size(100, 20);
+            this.txtEnergyC.Size = new System.Drawing.Size(132, 22);
             this.txtEnergyC.TabIndex = 130;
             // 
             // lbEnergyC
             // 
             this.lbEnergyC.AutoSize = true;
-            this.lbEnergyC.Location = new System.Drawing.Point(204, 291);
+            this.lbEnergyC.Location = new System.Drawing.Point(272, 358);
+            this.lbEnergyC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbEnergyC.Name = "lbEnergyC";
-            this.lbEnergyC.Size = new System.Drawing.Size(50, 13);
+            this.lbEnergyC.Size = new System.Drawing.Size(62, 16);
             this.lbEnergyC.TabIndex = 129;
             this.lbEnergyC.Text = "Energy C";
             // 
             // lbEnergyB
             // 
             this.lbEnergyB.AutoSize = true;
-            this.lbEnergyB.Location = new System.Drawing.Point(204, 265);
+            this.lbEnergyB.Location = new System.Drawing.Point(272, 326);
+            this.lbEnergyB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbEnergyB.Name = "lbEnergyB";
-            this.lbEnergyB.Size = new System.Drawing.Size(50, 13);
+            this.lbEnergyB.Size = new System.Drawing.Size(62, 16);
             this.lbEnergyB.TabIndex = 128;
             this.lbEnergyB.Text = "Energy B";
             // 
             // txtEnergyB
             // 
-            this.txtEnergyB.Location = new System.Drawing.Point(274, 262);
+            this.txtEnergyB.Location = new System.Drawing.Point(365, 322);
+            this.txtEnergyB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEnergyB.Name = "txtEnergyB";
-            this.txtEnergyB.Size = new System.Drawing.Size(100, 20);
+            this.txtEnergyB.Size = new System.Drawing.Size(132, 22);
             this.txtEnergyB.TabIndex = 127;
             // 
             // txtEnergyA
             // 
-            this.txtEnergyA.Location = new System.Drawing.Point(274, 236);
+            this.txtEnergyA.Location = new System.Drawing.Point(365, 290);
+            this.txtEnergyA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEnergyA.Name = "txtEnergyA";
-            this.txtEnergyA.Size = new System.Drawing.Size(100, 20);
+            this.txtEnergyA.Size = new System.Drawing.Size(132, 22);
             this.txtEnergyA.TabIndex = 126;
             // 
             // lbEnergyA
             // 
             this.lbEnergyA.AutoSize = true;
-            this.lbEnergyA.Location = new System.Drawing.Point(204, 239);
+            this.lbEnergyA.Location = new System.Drawing.Point(272, 294);
+            this.lbEnergyA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbEnergyA.Name = "lbEnergyA";
-            this.lbEnergyA.Size = new System.Drawing.Size(50, 13);
+            this.lbEnergyA.Size = new System.Drawing.Size(62, 16);
             this.lbEnergyA.TabIndex = 125;
             this.lbEnergyA.Text = "Energy A";
             // 
             // lbFreq
             // 
             this.lbFreq.AutoSize = true;
-            this.lbFreq.Location = new System.Drawing.Point(204, 213);
+            this.lbFreq.Location = new System.Drawing.Point(272, 262);
+            this.lbFreq.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbFreq.Name = "lbFreq";
-            this.lbFreq.Size = new System.Drawing.Size(57, 13);
+            this.lbFreq.Size = new System.Drawing.Size(71, 16);
             this.lbFreq.TabIndex = 124;
             this.lbFreq.Text = "Frequency";
             // 
             // txtFreq
             // 
-            this.txtFreq.Location = new System.Drawing.Point(274, 210);
+            this.txtFreq.Location = new System.Drawing.Point(365, 258);
+            this.txtFreq.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFreq.Name = "txtFreq";
-            this.txtFreq.Size = new System.Drawing.Size(100, 20);
+            this.txtFreq.Size = new System.Drawing.Size(132, 22);
             this.txtFreq.TabIndex = 123;
             // 
             // lbCosFiABC
             // 
             this.lbCosFiABC.AutoSize = true;
-            this.lbCosFiABC.Location = new System.Drawing.Point(204, 187);
+            this.lbCosFiABC.Location = new System.Drawing.Point(272, 230);
+            this.lbCosFiABC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCosFiABC.Name = "lbCosFiABC";
-            this.lbCosFiABC.Size = new System.Drawing.Size(57, 13);
+            this.lbCosFiABC.Size = new System.Drawing.Size(72, 16);
             this.lbCosFiABC.TabIndex = 122;
             this.lbCosFiABC.Text = "CosFi ABC";
             // 
             // txtCosFiABC
             // 
-            this.txtCosFiABC.Location = new System.Drawing.Point(274, 184);
+            this.txtCosFiABC.Location = new System.Drawing.Point(365, 226);
+            this.txtCosFiABC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCosFiABC.Name = "txtCosFiABC";
-            this.txtCosFiABC.Size = new System.Drawing.Size(100, 20);
+            this.txtCosFiABC.Size = new System.Drawing.Size(132, 22);
             this.txtCosFiABC.TabIndex = 121;
             // 
             // lbCosFiC
             // 
             this.lbCosFiC.AutoSize = true;
-            this.lbCosFiC.Location = new System.Drawing.Point(204, 161);
+            this.lbCosFiC.Location = new System.Drawing.Point(272, 198);
+            this.lbCosFiC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCosFiC.Name = "lbCosFiC";
-            this.lbCosFiC.Size = new System.Drawing.Size(43, 13);
+            this.lbCosFiC.Size = new System.Drawing.Size(54, 16);
             this.lbCosFiC.TabIndex = 120;
             this.lbCosFiC.Text = "CosFi C";
             // 
             // txtCosFiC
             // 
-            this.txtCosFiC.Location = new System.Drawing.Point(274, 158);
+            this.txtCosFiC.Location = new System.Drawing.Point(365, 194);
+            this.txtCosFiC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCosFiC.Name = "txtCosFiC";
-            this.txtCosFiC.Size = new System.Drawing.Size(100, 20);
+            this.txtCosFiC.Size = new System.Drawing.Size(132, 22);
             this.txtCosFiC.TabIndex = 119;
             // 
             // lbCosFiB
             // 
             this.lbCosFiB.AutoSize = true;
-            this.lbCosFiB.Location = new System.Drawing.Point(204, 135);
+            this.lbCosFiB.Location = new System.Drawing.Point(272, 166);
+            this.lbCosFiB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCosFiB.Name = "lbCosFiB";
-            this.lbCosFiB.Size = new System.Drawing.Size(43, 13);
+            this.lbCosFiB.Size = new System.Drawing.Size(54, 16);
             this.lbCosFiB.TabIndex = 118;
             this.lbCosFiB.Text = "CosFi B";
             // 
             // txtCosFiA
             // 
-            this.txtCosFiA.Location = new System.Drawing.Point(274, 106);
+            this.txtCosFiA.Location = new System.Drawing.Point(365, 130);
+            this.txtCosFiA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCosFiA.Name = "txtCosFiA";
-            this.txtCosFiA.Size = new System.Drawing.Size(100, 20);
+            this.txtCosFiA.Size = new System.Drawing.Size(132, 22);
             this.txtCosFiA.TabIndex = 117;
             // 
             // lbCosFiA
             // 
             this.lbCosFiA.AutoSize = true;
-            this.lbCosFiA.Location = new System.Drawing.Point(204, 109);
+            this.lbCosFiA.Location = new System.Drawing.Point(272, 134);
+            this.lbCosFiA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCosFiA.Name = "lbCosFiA";
-            this.lbCosFiA.Size = new System.Drawing.Size(43, 13);
+            this.lbCosFiA.Size = new System.Drawing.Size(54, 16);
             this.lbCosFiA.TabIndex = 116;
             this.lbCosFiA.Text = "CosFi A";
             // 
             // txtCosFiB
             // 
-            this.txtCosFiB.Location = new System.Drawing.Point(274, 132);
+            this.txtCosFiB.Location = new System.Drawing.Point(365, 162);
+            this.txtCosFiB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCosFiB.Name = "txtCosFiB";
-            this.txtCosFiB.Size = new System.Drawing.Size(100, 20);
+            this.txtCosFiB.Size = new System.Drawing.Size(132, 22);
             this.txtCosFiB.TabIndex = 115;
             // 
             // lbSABC
             // 
             this.lbSABC.AutoSize = true;
-            this.lbSABC.Location = new System.Drawing.Point(203, 82);
+            this.lbSABC.Location = new System.Drawing.Point(271, 101);
+            this.lbSABC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbSABC.Name = "lbSABC";
-            this.lbSABC.Size = new System.Drawing.Size(38, 13);
+            this.lbSABC.Size = new System.Drawing.Size(46, 16);
             this.lbSABC.TabIndex = 114;
             this.lbSABC.Text = "S ABC";
             // 
             // txtSAbc
             // 
-            this.txtSAbc.Location = new System.Drawing.Point(274, 79);
+            this.txtSAbc.Location = new System.Drawing.Point(365, 97);
+            this.txtSAbc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSAbc.Name = "txtSAbc";
-            this.txtSAbc.Size = new System.Drawing.Size(100, 20);
+            this.txtSAbc.Size = new System.Drawing.Size(132, 22);
             this.txtSAbc.TabIndex = 113;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(203, 56);
+            this.label1.Location = new System.Drawing.Point(271, 69);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(24, 13);
+            this.label1.Size = new System.Drawing.Size(28, 16);
             this.label1.TabIndex = 112;
             this.label1.Text = "S C";
             // 
             // txtSC
             // 
-            this.txtSC.Location = new System.Drawing.Point(274, 53);
+            this.txtSC.Location = new System.Drawing.Point(365, 65);
+            this.txtSC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSC.Name = "txtSC";
-            this.txtSC.Size = new System.Drawing.Size(100, 20);
+            this.txtSC.Size = new System.Drawing.Size(132, 22);
             this.txtSC.TabIndex = 111;
             // 
             // txtSB
             // 
-            this.txtSB.Location = new System.Drawing.Point(274, 27);
+            this.txtSB.Location = new System.Drawing.Point(365, 33);
+            this.txtSB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSB.Name = "txtSB";
-            this.txtSB.Size = new System.Drawing.Size(100, 20);
+            this.txtSB.Size = new System.Drawing.Size(132, 22);
             this.txtSB.TabIndex = 110;
             // 
             // lbSB
             // 
             this.lbSB.AutoSize = true;
-            this.lbSB.Location = new System.Drawing.Point(204, 30);
+            this.lbSB.Location = new System.Drawing.Point(272, 37);
+            this.lbSB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbSB.Name = "lbSB";
-            this.lbSB.Size = new System.Drawing.Size(24, 13);
+            this.lbSB.Size = new System.Drawing.Size(28, 16);
             this.lbSB.TabIndex = 109;
             this.lbSB.Text = "S B";
             // 
             // lbSA
             // 
             this.lbSA.AutoSize = true;
-            this.lbSA.Location = new System.Drawing.Point(204, 5);
+            this.lbSA.Location = new System.Drawing.Point(272, 6);
+            this.lbSA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbSA.Name = "lbSA";
-            this.lbSA.Size = new System.Drawing.Size(24, 13);
+            this.lbSA.Size = new System.Drawing.Size(28, 16);
             this.lbSA.TabIndex = 108;
             this.lbSA.Text = "S A";
             // 
             // txtSA
             // 
-            this.txtSA.Location = new System.Drawing.Point(274, 1);
+            this.txtSA.Location = new System.Drawing.Point(365, 1);
+            this.txtSA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSA.Name = "txtSA";
-            this.txtSA.Size = new System.Drawing.Size(100, 20);
+            this.txtSA.Size = new System.Drawing.Size(132, 22);
             this.txtSA.TabIndex = 107;
             // 
             // txtQAbc
             // 
-            this.txtQAbc.Location = new System.Drawing.Point(72, 298);
+            this.txtQAbc.Location = new System.Drawing.Point(96, 367);
+            this.txtQAbc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtQAbc.Name = "txtQAbc";
-            this.txtQAbc.Size = new System.Drawing.Size(100, 20);
+            this.txtQAbc.Size = new System.Drawing.Size(132, 22);
             this.txtQAbc.TabIndex = 106;
             // 
             // lbQABC
             // 
             this.lbQABC.AutoSize = true;
-            this.lbQABC.Location = new System.Drawing.Point(1, 301);
+            this.lbQABC.Location = new System.Drawing.Point(1, 370);
+            this.lbQABC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbQABC.Name = "lbQABC";
-            this.lbQABC.Size = new System.Drawing.Size(39, 13);
+            this.lbQABC.Size = new System.Drawing.Size(47, 16);
             this.lbQABC.TabIndex = 105;
             this.lbQABC.Text = "Q ABC";
             // 
             // lbQC
             // 
             this.lbQC.AutoSize = true;
-            this.lbQC.Location = new System.Drawing.Point(1, 275);
+            this.lbQC.Location = new System.Drawing.Point(1, 338);
+            this.lbQC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbQC.Name = "lbQC";
-            this.lbQC.Size = new System.Drawing.Size(25, 13);
+            this.lbQC.Size = new System.Drawing.Size(29, 16);
             this.lbQC.TabIndex = 104;
             this.lbQC.Text = "Q C";
             // 
             // lbQB
             // 
             this.lbQB.AutoSize = true;
-            this.lbQB.Location = new System.Drawing.Point(2, 249);
+            this.lbQB.Location = new System.Drawing.Point(3, 306);
+            this.lbQB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbQB.Name = "lbQB";
-            this.lbQB.Size = new System.Drawing.Size(25, 13);
+            this.lbQB.Size = new System.Drawing.Size(29, 16);
             this.lbQB.TabIndex = 103;
             this.lbQB.Text = "Q B";
             // 
             // txtQC
             // 
-            this.txtQC.Location = new System.Drawing.Point(72, 272);
+            this.txtQC.Location = new System.Drawing.Point(96, 335);
+            this.txtQC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtQC.Name = "txtQC";
-            this.txtQC.Size = new System.Drawing.Size(100, 20);
+            this.txtQC.Size = new System.Drawing.Size(132, 22);
             this.txtQC.TabIndex = 102;
             // 
             // txtQB
             // 
-            this.txtQB.Location = new System.Drawing.Point(72, 246);
+            this.txtQB.Location = new System.Drawing.Point(96, 303);
+            this.txtQB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtQB.Name = "txtQB";
-            this.txtQB.Size = new System.Drawing.Size(100, 20);
+            this.txtQB.Size = new System.Drawing.Size(132, 22);
             this.txtQB.TabIndex = 101;
             // 
             // txtQA
             // 
-            this.txtQA.Location = new System.Drawing.Point(72, 220);
+            this.txtQA.Location = new System.Drawing.Point(96, 271);
+            this.txtQA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtQA.Name = "txtQA";
-            this.txtQA.Size = new System.Drawing.Size(100, 20);
+            this.txtQA.Size = new System.Drawing.Size(132, 22);
             this.txtQA.TabIndex = 100;
             // 
             // lbQA
             // 
             this.lbQA.AutoSize = true;
-            this.lbQA.Location = new System.Drawing.Point(2, 223);
+            this.lbQA.Location = new System.Drawing.Point(3, 274);
+            this.lbQA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbQA.Name = "lbQA";
-            this.lbQA.Size = new System.Drawing.Size(25, 13);
+            this.lbQA.Size = new System.Drawing.Size(29, 16);
             this.lbQA.TabIndex = 99;
             this.lbQA.Text = "Q A";
             // 
             // txtPActiveAbc
             // 
-            this.txtPActiveAbc.Location = new System.Drawing.Point(72, 194);
+            this.txtPActiveAbc.Location = new System.Drawing.Point(96, 239);
+            this.txtPActiveAbc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPActiveAbc.Name = "txtPActiveAbc";
-            this.txtPActiveAbc.Size = new System.Drawing.Size(100, 20);
+            this.txtPActiveAbc.Size = new System.Drawing.Size(132, 22);
             this.txtPActiveAbc.TabIndex = 98;
             // 
             // lbPActiveAbc
             // 
             this.lbPActiveAbc.AutoSize = true;
-            this.lbPActiveAbc.Location = new System.Drawing.Point(2, 188);
+            this.lbPActiveAbc.Location = new System.Drawing.Point(3, 231);
+            this.lbPActiveAbc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPActiveAbc.Name = "lbPActiveAbc";
-            this.lbPActiveAbc.Size = new System.Drawing.Size(55, 26);
+            this.lbPActiveAbc.Size = new System.Drawing.Size(67, 32);
             this.lbPActiveAbc.TabIndex = 97;
             this.lbPActiveAbc.Text = "P ACTIVE\r\nABC";
             // 
             // txtPActiveC
             // 
-            this.txtPActiveC.Location = new System.Drawing.Point(72, 168);
+            this.txtPActiveC.Location = new System.Drawing.Point(96, 207);
+            this.txtPActiveC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPActiveC.Name = "txtPActiveC";
-            this.txtPActiveC.Size = new System.Drawing.Size(100, 20);
+            this.txtPActiveC.Size = new System.Drawing.Size(132, 22);
             this.txtPActiveC.TabIndex = 96;
             // 
             // txtPActiveB
             // 
-            this.txtPActiveB.Location = new System.Drawing.Point(72, 140);
+            this.txtPActiveB.Location = new System.Drawing.Point(96, 172);
+            this.txtPActiveB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPActiveB.Name = "txtPActiveB";
-            this.txtPActiveB.Size = new System.Drawing.Size(100, 20);
+            this.txtPActiveB.Size = new System.Drawing.Size(132, 22);
             this.txtPActiveB.TabIndex = 95;
             // 
             // lbPActiveC
             // 
             this.lbPActiveC.AutoSize = true;
-            this.lbPActiveC.Location = new System.Drawing.Point(1, 168);
+            this.lbPActiveC.Location = new System.Drawing.Point(1, 207);
+            this.lbPActiveC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPActiveC.Name = "lbPActiveC";
-            this.lbPActiveC.Size = new System.Drawing.Size(65, 13);
+            this.lbPActiveC.Size = new System.Drawing.Size(79, 16);
             this.lbPActiveC.TabIndex = 93;
             this.lbPActiveC.Text = "P ACTIVE C";
             // 
             // lbPActiveB
             // 
             this.lbPActiveB.AutoSize = true;
-            this.lbPActiveB.Location = new System.Drawing.Point(2, 143);
+            this.lbPActiveB.Location = new System.Drawing.Point(3, 176);
+            this.lbPActiveB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPActiveB.Name = "lbPActiveB";
-            this.lbPActiveB.Size = new System.Drawing.Size(65, 13);
+            this.lbPActiveB.Size = new System.Drawing.Size(79, 16);
             this.lbPActiveB.TabIndex = 92;
             this.lbPActiveB.Text = "P ACTIVE B";
             // 
             // txtPActiveA
             // 
-            this.txtPActiveA.Location = new System.Drawing.Point(72, 114);
+            this.txtPActiveA.Location = new System.Drawing.Point(96, 140);
+            this.txtPActiveA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPActiveA.Name = "txtPActiveA";
-            this.txtPActiveA.Size = new System.Drawing.Size(100, 20);
+            this.txtPActiveA.Size = new System.Drawing.Size(132, 22);
             this.txtPActiveA.TabIndex = 94;
             // 
             // lbPActiveA
             // 
             this.lbPActiveA.AutoSize = true;
-            this.lbPActiveA.Location = new System.Drawing.Point(1, 117);
+            this.lbPActiveA.Location = new System.Drawing.Point(1, 144);
+            this.lbPActiveA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPActiveA.Name = "lbPActiveA";
-            this.lbPActiveA.Size = new System.Drawing.Size(65, 13);
+            this.lbPActiveA.Size = new System.Drawing.Size(79, 16);
             this.lbPActiveA.TabIndex = 91;
             this.lbPActiveA.Text = "P ACTIVE A";
             // 
             // txtVrmsC
             // 
-            this.txtVrmsC.Location = new System.Drawing.Point(72, 54);
+            this.txtVrmsC.Location = new System.Drawing.Point(96, 66);
+            this.txtVrmsC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtVrmsC.Name = "txtVrmsC";
-            this.txtVrmsC.Size = new System.Drawing.Size(100, 20);
+            this.txtVrmsC.Size = new System.Drawing.Size(132, 22);
             this.txtVrmsC.TabIndex = 90;
             // 
             // txtVrmsB
             // 
-            this.txtVrmsB.Location = new System.Drawing.Point(72, 28);
+            this.txtVrmsB.Location = new System.Drawing.Point(96, 34);
+            this.txtVrmsB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtVrmsB.Name = "txtVrmsB";
-            this.txtVrmsB.Size = new System.Drawing.Size(100, 20);
+            this.txtVrmsB.Size = new System.Drawing.Size(132, 22);
             this.txtVrmsB.TabIndex = 89;
             // 
             // txtYear
             // 
-            this.txtYear.Location = new System.Drawing.Point(52, 38);
+            this.txtYear.Location = new System.Drawing.Point(69, 47);
+            this.txtYear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtYear.Name = "txtYear";
             this.txtYear.ReadOnly = true;
-            this.txtYear.Size = new System.Drawing.Size(51, 20);
+            this.txtYear.Size = new System.Drawing.Size(67, 22);
             this.txtYear.TabIndex = 90;
             // 
             // lbYearGlobal
             // 
             this.lbYearGlobal.AutoSize = true;
             this.lbYearGlobal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbYearGlobal.Location = new System.Drawing.Point(13, 38);
+            this.lbYearGlobal.Location = new System.Drawing.Point(17, 47);
+            this.lbYearGlobal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbYearGlobal.Name = "lbYearGlobal";
-            this.lbYearGlobal.Size = new System.Drawing.Size(33, 17);
+            this.lbYearGlobal.Size = new System.Drawing.Size(38, 20);
             this.lbYearGlobal.TabIndex = 89;
             this.lbYearGlobal.Text = "Año";
             // 
             // txtMonth
             // 
-            this.txtMonth.Location = new System.Drawing.Point(149, 38);
+            this.txtMonth.Location = new System.Drawing.Point(199, 47);
+            this.txtMonth.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMonth.Name = "txtMonth";
             this.txtMonth.ReadOnly = true;
-            this.txtMonth.Size = new System.Drawing.Size(65, 20);
+            this.txtMonth.Size = new System.Drawing.Size(85, 22);
             this.txtMonth.TabIndex = 92;
             // 
             // lbMonthGlobal
             // 
             this.lbMonthGlobal.AutoSize = true;
             this.lbMonthGlobal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMonthGlobal.Location = new System.Drawing.Point(109, 38);
+            this.lbMonthGlobal.Location = new System.Drawing.Point(145, 47);
+            this.lbMonthGlobal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbMonthGlobal.Name = "lbMonthGlobal";
-            this.lbMonthGlobal.Size = new System.Drawing.Size(34, 17);
+            this.lbMonthGlobal.Size = new System.Drawing.Size(41, 20);
             this.lbMonthGlobal.TabIndex = 91;
             this.lbMonthGlobal.Text = "Mes";
             // 
             // txtDiv
             // 
-            this.txtDiv.Location = new System.Drawing.Point(286, 37);
+            this.txtDiv.Location = new System.Drawing.Point(381, 46);
+            this.txtDiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDiv.Name = "txtDiv";
             this.txtDiv.ReadOnly = true;
-            this.txtDiv.Size = new System.Drawing.Size(100, 20);
+            this.txtDiv.Size = new System.Drawing.Size(132, 22);
             this.txtDiv.TabIndex = 94;
             // 
             // lbDivGlobal
             // 
             this.lbDivGlobal.AutoSize = true;
             this.lbDivGlobal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDivGlobal.Location = new System.Drawing.Point(223, 38);
+            this.lbDivGlobal.Location = new System.Drawing.Point(297, 47);
+            this.lbDivGlobal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbDivGlobal.Name = "lbDivGlobal";
-            this.lbDivGlobal.Size = new System.Drawing.Size(57, 17);
+            this.lbDivGlobal.Size = new System.Drawing.Size(69, 20);
             this.lbDivGlobal.TabIndex = 93;
             this.lbDivGlobal.Text = "División";
             // 
             // txtTarifa
             // 
-            this.txtTarifa.Location = new System.Drawing.Point(445, 36);
+            this.txtTarifa.Location = new System.Drawing.Point(593, 44);
+            this.txtTarifa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTarifa.Name = "txtTarifa";
             this.txtTarifa.ReadOnly = true;
-            this.txtTarifa.Size = new System.Drawing.Size(55, 20);
+            this.txtTarifa.Size = new System.Drawing.Size(72, 22);
             this.txtTarifa.TabIndex = 96;
             // 
             // lbTarifaGlobal
             // 
             this.lbTarifaGlobal.AutoSize = true;
             this.lbTarifaGlobal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTarifaGlobal.Location = new System.Drawing.Point(394, 37);
+            this.lbTarifaGlobal.Location = new System.Drawing.Point(525, 46);
+            this.lbTarifaGlobal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTarifaGlobal.Name = "lbTarifaGlobal";
-            this.lbTarifaGlobal.Size = new System.Drawing.Size(45, 17);
+            this.lbTarifaGlobal.Size = new System.Drawing.Size(52, 20);
             this.lbTarifaGlobal.TabIndex = 95;
             this.lbTarifaGlobal.Text = "Tarifa";
             // 
             // lbCapEne
             // 
             this.lbCapEne.AutoSize = true;
-            this.lbCapEne.Location = new System.Drawing.Point(13, 68);
+            this.lbCapEne.Location = new System.Drawing.Point(17, 84);
+            this.lbCapEne.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCapEne.Name = "lbCapEne";
-            this.lbCapEne.Size = new System.Drawing.Size(99, 13);
+            this.lbCapEne.Size = new System.Drawing.Size(124, 16);
             this.lbCapEne.TabIndex = 97;
             this.lbCapEne.Text = "Capacidad Energía";
             // 
             // txtCapEne
             // 
-            this.txtCapEne.Location = new System.Drawing.Point(16, 84);
+            this.txtCapEne.Location = new System.Drawing.Point(21, 103);
+            this.txtCapEne.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCapEne.Name = "txtCapEne";
             this.txtCapEne.ReadOnly = true;
-            this.txtCapEne.Size = new System.Drawing.Size(96, 20);
+            this.txtCapEne.Size = new System.Drawing.Size(127, 22);
             this.txtCapEne.TabIndex = 98;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(118, 87);
+            this.label3.Location = new System.Drawing.Point(157, 107);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 13);
+            this.label3.Size = new System.Drawing.Size(45, 16);
             this.label3.TabIndex = 99;
             this.label3.Text = "$/kWh";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(267, 87);
+            this.label4.Location = new System.Drawing.Point(356, 107);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(38, 16);
             this.label4.TabIndex = 102;
             this.label4.Text = "$/kW";
             // 
             // txtCapPot
             // 
-            this.txtCapPot.Location = new System.Drawing.Point(165, 84);
+            this.txtCapPot.Location = new System.Drawing.Point(220, 103);
+            this.txtCapPot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCapPot.Name = "txtCapPot";
             this.txtCapPot.ReadOnly = true;
-            this.txtCapPot.Size = new System.Drawing.Size(96, 20);
+            this.txtCapPot.Size = new System.Drawing.Size(127, 22);
             this.txtCapPot.TabIndex = 101;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(162, 68);
+            this.label5.Location = new System.Drawing.Point(216, 84);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 13);
+            this.label5.Size = new System.Drawing.Size(130, 16);
             this.label5.TabIndex = 100;
             this.label5.Text = "Capacidad Potencia";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(416, 87);
+            this.label6.Location = new System.Drawing.Point(555, 107);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 13);
+            this.label6.Size = new System.Drawing.Size(45, 16);
             this.label6.TabIndex = 105;
             this.label6.Text = "$/kWh";
             // 
             // txtDistribPot
             // 
-            this.txtDistribPot.Location = new System.Drawing.Point(314, 84);
+            this.txtDistribPot.Location = new System.Drawing.Point(419, 103);
+            this.txtDistribPot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDistribPot.Name = "txtDistribPot";
             this.txtDistribPot.ReadOnly = true;
-            this.txtDistribPot.Size = new System.Drawing.Size(96, 20);
+            this.txtDistribPot.Size = new System.Drawing.Size(127, 22);
             this.txtDistribPot.TabIndex = 104;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(311, 68);
+            this.label7.Location = new System.Drawing.Point(415, 84);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 13);
+            this.label7.Size = new System.Drawing.Size(133, 16);
             this.label7.TabIndex = 103;
             this.label7.Text = "Distribucion Potencia";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(565, 87);
+            this.label10.Location = new System.Drawing.Point(753, 107);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
+            this.label10.Size = new System.Drawing.Size(45, 16);
             this.label10.TabIndex = 108;
             this.label10.Text = "$/kWh";
             // 
             // txtScnmem
             // 
-            this.txtScnmem.Location = new System.Drawing.Point(463, 84);
+            this.txtScnmem.Location = new System.Drawing.Point(617, 103);
+            this.txtScnmem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtScnmem.Name = "txtScnmem";
             this.txtScnmem.ReadOnly = true;
-            this.txtScnmem.Size = new System.Drawing.Size(96, 20);
+            this.txtScnmem.Size = new System.Drawing.Size(127, 22);
             this.txtScnmem.TabIndex = 107;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(460, 68);
+            this.label11.Location = new System.Drawing.Point(613, 84);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 13);
+            this.label11.Size = new System.Drawing.Size(63, 16);
             this.label11.TabIndex = 106;
             this.label11.Text = "SCnMEM";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(118, 129);
+            this.label12.Location = new System.Drawing.Point(157, 159);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 13);
+            this.label12.Size = new System.Drawing.Size(45, 16);
             this.label12.TabIndex = 111;
             this.label12.Text = "$/kWh";
             // 
             // txtTransm
             // 
-            this.txtTransm.Location = new System.Drawing.Point(16, 126);
+            this.txtTransm.Location = new System.Drawing.Point(21, 155);
+            this.txtTransm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTransm.Name = "txtTransm";
             this.txtTransm.ReadOnly = true;
-            this.txtTransm.Size = new System.Drawing.Size(96, 20);
+            this.txtTransm.Size = new System.Drawing.Size(127, 22);
             this.txtTransm.TabIndex = 110;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(13, 110);
+            this.label13.Location = new System.Drawing.Point(17, 135);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 13);
+            this.label13.Size = new System.Drawing.Size(81, 16);
             this.label13.TabIndex = 109;
             this.label13.Text = "Transmisión";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(267, 129);
+            this.label14.Location = new System.Drawing.Point(356, 159);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(41, 13);
+            this.label14.Size = new System.Drawing.Size(45, 16);
             this.label14.TabIndex = 114;
             this.label14.Text = "$/kWh";
             // 
             // txtCenace
             // 
-            this.txtCenace.Location = new System.Drawing.Point(165, 126);
+            this.txtCenace.Location = new System.Drawing.Point(220, 155);
+            this.txtCenace.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCenace.Name = "txtCenace";
             this.txtCenace.ReadOnly = true;
-            this.txtCenace.Size = new System.Drawing.Size(96, 20);
+            this.txtCenace.Size = new System.Drawing.Size(127, 22);
             this.txtCenace.TabIndex = 113;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(162, 110);
+            this.label15.Location = new System.Drawing.Point(216, 135);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(50, 13);
+            this.label15.Size = new System.Drawing.Size(62, 16);
             this.label15.TabIndex = 112;
             this.label15.Text = "CENACE";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(416, 129);
+            this.label16.Location = new System.Drawing.Point(555, 159);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(41, 13);
+            this.label16.Size = new System.Drawing.Size(45, 16);
             this.label16.TabIndex = 117;
             this.label16.Text = "$/kWh";
             // 
             // txtGenB
             // 
-            this.txtGenB.Location = new System.Drawing.Point(314, 126);
+            this.txtGenB.Location = new System.Drawing.Point(419, 155);
+            this.txtGenB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtGenB.Name = "txtGenB";
             this.txtGenB.ReadOnly = true;
-            this.txtGenB.Size = new System.Drawing.Size(96, 20);
+            this.txtGenB.Size = new System.Drawing.Size(127, 22);
             this.txtGenB.TabIndex = 116;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(311, 110);
+            this.label17.Location = new System.Drawing.Point(415, 135);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(72, 13);
+            this.label17.Size = new System.Drawing.Size(89, 16);
             this.label17.TabIndex = 115;
             this.label17.Text = "Generación B";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(565, 129);
+            this.label18.Location = new System.Drawing.Point(753, 159);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(41, 13);
+            this.label18.Size = new System.Drawing.Size(45, 16);
             this.label18.TabIndex = 120;
             this.label18.Text = "$/kWh";
             // 
             // txtGenI
             // 
-            this.txtGenI.Location = new System.Drawing.Point(463, 126);
+            this.txtGenI.Location = new System.Drawing.Point(617, 155);
+            this.txtGenI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtGenI.Name = "txtGenI";
             this.txtGenI.ReadOnly = true;
-            this.txtGenI.Size = new System.Drawing.Size(96, 20);
+            this.txtGenI.Size = new System.Drawing.Size(127, 22);
             this.txtGenI.TabIndex = 119;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(460, 110);
+            this.label19.Location = new System.Drawing.Point(613, 135);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(68, 13);
+            this.label19.Size = new System.Drawing.Size(83, 16);
             this.label19.TabIndex = 118;
             this.label19.Text = "Generación I";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(118, 175);
+            this.label20.Location = new System.Drawing.Point(157, 215);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(35, 13);
+            this.label20.Size = new System.Drawing.Size(38, 16);
             this.label20.TabIndex = 123;
             this.label20.Text = "$/kW";
             // 
             // txtGenP
             // 
-            this.txtGenP.Location = new System.Drawing.Point(16, 172);
+            this.txtGenP.Location = new System.Drawing.Point(21, 212);
+            this.txtGenP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtGenP.Name = "txtGenP";
             this.txtGenP.ReadOnly = true;
-            this.txtGenP.Size = new System.Drawing.Size(96, 20);
+            this.txtGenP.Size = new System.Drawing.Size(127, 22);
             this.txtGenP.TabIndex = 122;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(13, 156);
+            this.label21.Location = new System.Drawing.Point(17, 192);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(72, 13);
+            this.label21.Size = new System.Drawing.Size(89, 16);
             this.label21.TabIndex = 121;
             this.label21.Text = "Generación P";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(267, 175);
+            this.label22.Location = new System.Drawing.Point(356, 215);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(41, 13);
+            this.label22.Size = new System.Drawing.Size(45, 16);
             this.label22.TabIndex = 126;
             this.label22.Text = "$/kWh";
             // 
             // txtGen
             // 
-            this.txtGen.Location = new System.Drawing.Point(165, 172);
+            this.txtGen.Location = new System.Drawing.Point(220, 212);
+            this.txtGen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtGen.Name = "txtGen";
             this.txtGen.ReadOnly = true;
-            this.txtGen.Size = new System.Drawing.Size(96, 20);
+            this.txtGen.Size = new System.Drawing.Size(127, 22);
             this.txtGen.TabIndex = 125;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(162, 156);
+            this.label23.Location = new System.Drawing.Point(216, 192);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(62, 13);
+            this.label23.Size = new System.Drawing.Size(77, 16);
             this.label23.TabIndex = 124;
             this.label23.Text = "Generación";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(416, 175);
+            this.label24.Location = new System.Drawing.Point(555, 215);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(50, 13);
+            this.label24.Size = new System.Drawing.Size(59, 16);
             this.label24.TabIndex = 129;
             this.label24.Text = "$/Cliente";
             // 
             // txtSuminis
             // 
-            this.txtSuminis.Location = new System.Drawing.Point(314, 172);
+            this.txtSuminis.Location = new System.Drawing.Point(419, 212);
+            this.txtSuminis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSuminis.Name = "txtSuminis";
             this.txtSuminis.ReadOnly = true;
-            this.txtSuminis.Size = new System.Drawing.Size(96, 20);
+            this.txtSuminis.Size = new System.Drawing.Size(127, 22);
             this.txtSuminis.TabIndex = 128;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(311, 156);
+            this.label25.Location = new System.Drawing.Point(415, 192);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(55, 13);
+            this.label25.Size = new System.Drawing.Size(69, 16);
             this.label25.TabIndex = 127;
             this.label25.Text = "Suministro";
             // 
             // txtStatusMonitor
             // 
             this.txtStatusMonitor.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtStatusMonitor.Location = new System.Drawing.Point(392, 12);
+            this.txtStatusMonitor.Location = new System.Drawing.Point(523, 15);
+            this.txtStatusMonitor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtStatusMonitor.Name = "txtStatusMonitor";
             this.txtStatusMonitor.ReadOnly = true;
-            this.txtStatusMonitor.Size = new System.Drawing.Size(87, 20);
+            this.txtStatusMonitor.Size = new System.Drawing.Size(115, 22);
             this.txtStatusMonitor.TabIndex = 131;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(341, 13);
+            this.label2.Location = new System.Drawing.Point(455, 16);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 17);
+            this.label2.Size = new System.Drawing.Size(57, 20);
             this.label2.TabIndex = 130;
             this.label2.Text = "Status";
             // 
@@ -1188,9 +1304,10 @@
             // 
             this.btnPlay.BackColor = System.Drawing.Color.ForestGreen;
             this.btnPlay.BackgroundImage = global::Umbrall.Properties.Resources.play;
-            this.btnPlay.Location = new System.Drawing.Point(15, 198);
+            this.btnPlay.Location = new System.Drawing.Point(20, 244);
+            this.btnPlay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(44, 41);
+            this.btnPlay.Size = new System.Drawing.Size(59, 50);
             this.btnPlay.TabIndex = 132;
             this.btnPlay.Text = "Play";
             this.btnPlay.UseVisualStyleBackColor = false;
@@ -1199,9 +1316,10 @@
             // btnStop
             // 
             this.btnStop.BackColor = System.Drawing.Color.Crimson;
-            this.btnStop.Location = new System.Drawing.Point(65, 198);
+            this.btnStop.Location = new System.Drawing.Point(87, 244);
+            this.btnStop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(44, 41);
+            this.btnStop.Size = new System.Drawing.Size(59, 50);
             this.btnStop.TabIndex = 133;
             this.btnStop.Text = "Stop";
             this.btnStop.UseVisualStyleBackColor = false;
@@ -1210,18 +1328,20 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSave.Location = new System.Drawing.Point(115, 198);
+            this.btnSave.Location = new System.Drawing.Point(153, 244);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(44, 41);
+            this.btnSave.Size = new System.Drawing.Size(59, 50);
             this.btnSave.TabIndex = 134;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // StartMonitor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(631, 592);
+            this.ClientSize = new System.Drawing.Size(841, 729);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnPlay);
@@ -1274,7 +1394,7 @@
             this.Controls.Add(this.txtIpAddress);
             this.Controls.Add(this.label8);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "StartMonitor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Umbrall - Monitoreo de los parámetros eléctricos";

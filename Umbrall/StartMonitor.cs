@@ -385,5 +385,26 @@ namespace Umbrall
         {
             Monitor.StopMonitor();
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            Muestra muestraObj = new Muestra(txtVrmsABC.Text, txtIrmsABC.Text, txtPActiveAbc.Text, txtCosFiABC.Text, txtEnergyABC.Text);
+
+            int res = muestraObj.Guardar();
+
+            switch (res)
+            {
+                case 0:
+                    MessageBox.Show("El archivo se guardo correctamente");
+                    break;
+                case 1:
+                    MessageBox.Show("Se cancelo la operación");
+                    break;
+                case 2:
+                    MessageBox.Show("Error.");
+                    break;
+
+            }
+        }
     }
 }
