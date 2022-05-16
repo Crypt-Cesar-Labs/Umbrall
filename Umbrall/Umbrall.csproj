@@ -175,11 +175,11 @@
     </Compile>
     <Compile Include="Monitor.cs" />
     <Compile Include="Muestra.cs" />
-    <Compile Include="NewGui.cs">
+    <Compile Include="MainGui.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewGui.Designer.cs">
-      <DependentUpon>NewGui.cs</DependentUpon>
+    <Compile Include="MainGui.Designer.cs">
+      <DependentUpon>MainGui.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -246,8 +246,8 @@
     <EmbeddedResource Include="mbTcpTest.resx">
       <DependentUpon>mbTcpTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewGui.resx">
-      <DependentUpon>NewGui.cs</DependentUpon>
+    <EmbeddedResource Include="MainGui.resx">
+      <DependentUpon>MainGui.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
