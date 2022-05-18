@@ -66,8 +66,11 @@ namespace Umbrall
             
         }
 
+        #region Sub-menus
         private void btnMonitor_Click(object sender, EventArgs e)
         {
+            openChildForm(new MonitorGui());
+
             hideSubMenu();
         }
 
@@ -88,12 +91,32 @@ namespace Umbrall
 
         private void btnCalcH_Click(object sender, EventArgs e)
         {
+            openChildForm(new CalculadoraHorariaGui());
+
             hideSubMenu();
         }
 
         private void btnCalcO_Click(object sender, EventArgs e)
         {
+            openChildForm(new CalculadoraOrdinariaGui());
+
             hideSubMenu();
+        }
+        #endregion
+
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);     // Agregamos el formulario a la lista de controles del panel del contenedor
+            panelChildForm.Tag = childForm;             // Asociamos el fomrulario con el panel del contenedor
+            childForm.BringToFront();                   // Traemos al frente el formulario
+            childForm.Show();
         }
     }
 }

@@ -92,6 +92,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculadora.cs" />
+    <Compile Include="CalculadoraHorariaGui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalculadoraHorariaGui.Designer.cs">
+      <DependentUpon>CalculadoraHorariaGui.cs</DependentUpon>
+    </Compile>
     <Compile Include="CalculadoraManualHoraria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,12 @@
     </Compile>
     <Compile Include="CalculadoraManualOrdinara.Designer.cs">
       <DependentUpon>CalculadoraManualOrdinara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalculadoraOrdinariaGui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalculadoraOrdinariaGui.Designer.cs">
+      <DependentUpon>CalculadoraOrdinariaGui.cs</DependentUpon>
     </Compile>
     <Compile Include="CalculadoraSelector.cs">
       <SubType>Form</SubType>
@@ -174,6 +186,12 @@
       <DependentUpon>mbTcpTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Monitor.cs" />
+    <Compile Include="MonitorGui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonitorGui.Designer.cs">
+      <DependentUpon>MonitorGui.cs</DependentUpon>
+    </Compile>
     <Compile Include="Muestra.cs" />
     <Compile Include="MainGui.cs">
       <SubType>Form</SubType>
@@ -207,11 +225,17 @@
     <Compile Include="tcpTest.Designer.cs">
       <DependentUpon>tcpTest.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CalculadoraHorariaGui.resx">
+      <DependentUpon>CalculadoraHorariaGui.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CalculadoraManualHoraria.resx">
       <DependentUpon>CalculadoraManualHoraria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CalculadoraManualOrdinara.resx">
       <DependentUpon>CalculadoraManualOrdinara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalculadoraOrdinariaGui.resx">
+      <DependentUpon>CalculadoraOrdinariaGui.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CalculadoraSelector.resx">
       <DependentUpon>CalculadoraSelector.cs</DependentUpon>
@@ -248,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainGui.resx">
       <DependentUpon>MainGui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonitorGui.resx">
+      <DependentUpon>MonitorGui.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -331,6 +358,66 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pimelogosize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play_mini.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGOTIPO PIME %28Fondo oscuro%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGOTIPO_PIME_%28Fondo_oscuro%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGOTIPO_PIME_%28Fondo_oscuro%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pime_scalado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGOTIPO PIME %28Fondo oscuro%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PIMEFondooscuro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PIMEFondooscuro1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PIMEFondoblanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\systempower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PIMEFondooscurorecortadayescalada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PIMEFondooscurorecortada2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playredimensionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stopredimensionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveredimensionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wheelredim.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
