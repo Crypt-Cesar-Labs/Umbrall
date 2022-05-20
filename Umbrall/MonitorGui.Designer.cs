@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMonitor = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dataGridViewMonitor = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelMonitor.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -56,38 +58,6 @@
             this.panelMonitor.Name = "panelMonitor";
             this.panelMonitor.Size = new System.Drawing.Size(868, 652);
             this.panelMonitor.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(115, 652);
-            this.panel1.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(753, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(115, 652);
-            this.panel2.TabIndex = 2;
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(115, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(638, 100);
-            this.panel3.TabIndex = 3;
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(115, 552);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(638, 100);
-            this.panel4.TabIndex = 4;
             // 
             // panel5
             // 
@@ -114,15 +84,68 @@
             // 
             // dataGridViewMonitor
             // 
+            this.dataGridViewMonitor.AllowUserToAddRows = false;
+            this.dataGridViewMonitor.AllowUserToDeleteRows = false;
+            this.dataGridViewMonitor.AllowUserToResizeRows = false;
             this.dataGridViewMonitor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewMonitor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewMonitor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewMonitor.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewMonitor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewMonitor.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewMonitor.Name = "dataGridViewMonitor";
+            this.dataGridViewMonitor.ReadOnly = true;
+            this.dataGridViewMonitor.RowHeadersVisible = false;
             this.dataGridViewMonitor.RowHeadersWidth = 51;
             this.dataGridViewMonitor.RowTemplate.Height = 24;
             this.dataGridViewMonitor.Size = new System.Drawing.Size(638, 163);
             this.dataGridViewMonitor.TabIndex = 3;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(115, 552);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(638, 100);
+            this.panel4.TabIndex = 4;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(115, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(638, 100);
+            this.panel3.TabIndex = 3;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(753, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(115, 652);
+            this.panel2.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(115, 652);
+            this.panel1.TabIndex = 1;
             // 
             // MonitorGui
             // 
@@ -150,10 +173,10 @@
         private System.Windows.Forms.Panel panelMonitor;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.DataGridView dataGridViewMonitor;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.DataGridView dataGridViewMonitor;
     }
 }
