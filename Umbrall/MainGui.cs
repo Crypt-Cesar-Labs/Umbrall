@@ -149,5 +149,20 @@ namespace Umbrall
 
             }
         }
+
+        private void btnConfig_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["ConfigGui"] != null)
+            {
+                Application.OpenForms["ConfigGui"].Activate();
+            }
+
+            else
+            {
+                ConfigGui configGui = new ConfigGui();
+                configGui.Show();
+            }
+                
+        }
     }
 }

@@ -372,6 +372,7 @@
             this.btnConfig.Size = new System.Drawing.Size(61, 55);
             this.btnConfig.TabIndex = 0;
             this.btnConfig.UseVisualStyleBackColor = true;
+            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
             // 
             // panelChildForm
             // 

@@ -140,6 +140,12 @@
     <Compile Include="ConfigDevice.Designer.cs">
       <DependentUpon>ConfigDevice.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConfigGui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigGui.Designer.cs">
+      <DependentUpon>ConfigGui.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultaTarifaDomestica.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConfigDevice.resx">
       <DependentUpon>ConfigDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigGui.resx">
+      <DependentUpon>ConfigGui.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaTarifaDomestica.resx">
       <DependentUpon>ConsultaTarifaDomestica.cs</DependentUpon>
