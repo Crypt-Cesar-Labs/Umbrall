@@ -118,5 +118,36 @@ namespace Umbrall
             childForm.BringToFront();                   // Traemos al frente el formulario
             childForm.Show();
         }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            Monitor.StartMonitor();
+        }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            Monitor.StopMonitor();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            Muestra muestraObj = new Muestra(Monitor.vrmsABC.ToString(), Monitor.irmsABC.ToString(), Monitor.pActiveABC.ToString(), Monitor.cosfiABC.ToString(), Monitor.energyABC.ToString());
+
+            int res = muestraObj.Guardar();
+
+            switch (res)
+            {
+                case 0:
+                    MessageBox.Show("El archivo se guardo correctamente");
+                    break;
+                case 1:
+                    MessageBox.Show("Se cancelo la operación");
+                    break;
+                case 2:
+                    MessageBox.Show("Error.");
+                    break;
+
+            }
+        }
     }
 }

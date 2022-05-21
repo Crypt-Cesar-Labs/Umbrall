@@ -65,5 +65,7 @@ namespace Umbrall
             row = new string[] { "ABC", Monitor.vrmsABC.ToString(), Monitor.irmsABC.ToString(), Monitor.pActiveABC.ToString(), Monitor.qABC.ToString(), Monitor.sABC.ToString(), Monitor.cosfiABC.ToString(), Monitor.energyABC.ToString(), Monitor.reactEnergyABC.ToString() };
             dataGridViewMonitor.Rows.Add(row);
         }
+
+        
     }
 }

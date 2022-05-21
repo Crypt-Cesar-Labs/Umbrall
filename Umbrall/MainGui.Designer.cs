@@ -108,6 +108,7 @@
             this.btnSave.Size = new System.Drawing.Size(69, 65);
             this.btnSave.TabIndex = 2;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnStop
             // 
@@ -120,6 +121,7 @@
             this.btnStop.Size = new System.Drawing.Size(69, 65);
             this.btnStop.TabIndex = 1;
             this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // btnPlay
             // 
@@ -133,6 +135,7 @@
             this.btnPlay.Size = new System.Drawing.Size(69, 65);
             this.btnPlay.TabIndex = 0;
             this.btnPlay.UseVisualStyleBackColor = false;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // btnHelp
             // 
