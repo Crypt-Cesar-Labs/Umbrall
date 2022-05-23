@@ -49,7 +49,6 @@
             this.btnMenu = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panelConfig = new System.Windows.Forms.Panel();
             this.btnConfig = new System.Windows.Forms.Button();
             this.panelChildForm = new System.Windows.Forms.Panel();
@@ -380,6 +379,7 @@
             this.panelChildForm.Controls.Add(this.logoPimeMain);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(207, 0);
+            this.panelChildForm.MinimumSize = new System.Drawing.Size(868, 652);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(868, 652);
             this.panelChildForm.TabIndex = 2;
@@ -397,7 +397,7 @@
             // 
             // MainGui
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1136, 652);
             this.Controls.Add(this.panelChildForm);
@@ -432,7 +432,6 @@
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Button btnReports;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel panelSubReports;
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Panel panelSubCalculator;

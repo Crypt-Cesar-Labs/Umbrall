@@ -10,10 +10,9 @@ namespace Umbrall
 {
     internal class dbQueryCargos
     {
-        // This class is for set a general Query to consult the database
+        /* This class is for set a general Query to consult the database */
+        
 
-        
-        
         // The query method
         public static string ConsultaCargoTarifa(string año, string mes, string tarifa, string segmento, string concepto, string horario, string div, string cadenaConnect)
         {
