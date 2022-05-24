@@ -81,7 +81,7 @@
             this.panelSlideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSlideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSlideMenu.Name = "panelSlideMenu";
-            this.panelSlideMenu.Size = new System.Drawing.Size(207, 652);
+            this.panelSlideMenu.Size = new System.Drawing.Size(207, 701);
             this.panelSlideMenu.TabIndex = 0;
             // 
             // panelControlMonitor
@@ -91,7 +91,7 @@
             this.panelControlMonitor.Controls.Add(this.btnStop);
             this.panelControlMonitor.Controls.Add(this.btnPlay);
             this.panelControlMonitor.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControlMonitor.Location = new System.Drawing.Point(0, 587);
+            this.panelControlMonitor.Location = new System.Drawing.Point(0, 636);
             this.panelControlMonitor.Name = "panelControlMonitor";
             this.panelControlMonitor.Size = new System.Drawing.Size(207, 65);
             this.panelControlMonitor.TabIndex = 7;
@@ -355,9 +355,9 @@
             this.panelConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(108)))));
             this.panelConfig.Controls.Add(this.btnConfig);
             this.panelConfig.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelConfig.Location = new System.Drawing.Point(1075, 0);
+            this.panelConfig.Location = new System.Drawing.Point(1114, 0);
             this.panelConfig.Name = "panelConfig";
-            this.panelConfig.Size = new System.Drawing.Size(61, 652);
+            this.panelConfig.Size = new System.Drawing.Size(61, 701);
             this.panelConfig.TabIndex = 1;
             // 
             // btnConfig
@@ -379,16 +379,16 @@
             this.panelChildForm.Controls.Add(this.logoPimeMain);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(207, 0);
-            this.panelChildForm.MinimumSize = new System.Drawing.Size(868, 652);
+            this.panelChildForm.MinimumSize = new System.Drawing.Size(884, 694);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(868, 652);
+            this.panelChildForm.Size = new System.Drawing.Size(907, 701);
             this.panelChildForm.TabIndex = 2;
             // 
             // logoPimeMain
             // 
             this.logoPimeMain.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.logoPimeMain.Image = ((System.Drawing.Image)(resources.GetObject("logoPimeMain.Image")));
-            this.logoPimeMain.Location = new System.Drawing.Point(118, 69);
+            this.logoPimeMain.Location = new System.Drawing.Point(137, 93);
             this.logoPimeMain.Name = "logoPimeMain";
             this.logoPimeMain.Size = new System.Drawing.Size(632, 505);
             this.logoPimeMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -399,14 +399,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1136, 652);
+            this.ClientSize = new System.Drawing.Size(1175, 701);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelConfig);
             this.Controls.Add(this.panelSlideMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(1136, 641);
+            this.MinimumSize = new System.Drawing.Size(1136, 694);
             this.Name = "MainGui";
             this.Text = "PIME";
             this.panelSlideMenu.ResumeLayout(false);
