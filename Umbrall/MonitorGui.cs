@@ -29,6 +29,8 @@ namespace Umbrall
         }
         private void MonitorGui_Load(object sender, EventArgs e)
         {
+            #region DataGrid
+            /*
             // Se modifican los estilos de el dataGridView
             AlternarColorenDataGridView(dataGridViewMonitor);
 
@@ -63,9 +65,11 @@ namespace Umbrall
             row = new string[] { "Linea C", Monitor.vrmsC.ToString(), Monitor.irmsC.ToString(), Monitor.pActiveC.ToString(), Monitor.qC.ToString(), Monitor.sC.ToString(), Monitor.cosfiC.ToString(), Monitor.energyC.ToString(), Monitor.reactEnergyC.ToString() };
             dataGridViewMonitor.Rows.Add(row);
             row = new string[] { "ABC", Monitor.vrmsABC.ToString(), Monitor.irmsABC.ToString(), Monitor.pActiveABC.ToString(), Monitor.qABC.ToString(), Monitor.sABC.ToString(), Monitor.cosfiABC.ToString(), Monitor.energyABC.ToString(), Monitor.reactEnergyABC.ToString() };
-            dataGridViewMonitor.Rows.Add(row);
+            dataGridViewMonitor.Rows.Add(row); */
+            #endregion
+
         }
 
-        
+
     }
 }
