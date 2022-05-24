@@ -388,9 +388,9 @@
             // 
             this.logoPimeMain.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.logoPimeMain.Image = ((System.Drawing.Image)(resources.GetObject("logoPimeMain.Image")));
-            this.logoPimeMain.Location = new System.Drawing.Point(137, 93);
+            this.logoPimeMain.Location = new System.Drawing.Point(182, 257);
             this.logoPimeMain.Name = "logoPimeMain";
-            this.logoPimeMain.Size = new System.Drawing.Size(632, 505);
+            this.logoPimeMain.Size = new System.Drawing.Size(590, 190);
             this.logoPimeMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.logoPimeMain.TabIndex = 0;
             this.logoPimeMain.TabStop = false;
