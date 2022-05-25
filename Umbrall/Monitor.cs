@@ -66,6 +66,7 @@ namespace Umbrall
                 //int[] readVrmsA = modbusClient.ReadHoldingRegisters(134, 2);
 
                 statusMonitor = true;
+                
 
                 Timer readModbusTimer = new Timer();
 
@@ -86,6 +87,7 @@ namespace Umbrall
         {
             try
             {
+                
                 //------------------------ VARIABLES FOR READING -------------------------------//
                 int[] readVrmsA = modbusClient.ReadHoldingRegisters(134, 2);
                 int[] readVrmsB = modbusClient.ReadHoldingRegisters(136, 2);
@@ -255,10 +257,21 @@ namespace Umbrall
                 //txtIrmsABC.Text = ConvertToFloat(irmsABC).ToString();
                 irmsABC = (ConvertToFloat(irmsABCString)/1000);
             }
-            catch
+            catch (Exception ex)
             {
-                //MessageBox.Show("Error en la conexión.");
-                Console.WriteLine("Error:");
+                // what
+                var msg = "Error:" + ex.Message;
+                
+                // info
+                if (ex.InnerException != null)
+                {
+                    msg = msg + "Inner exception: " + ex.InnerException.Message;
+                }
+
+                // where
+                msg = msg + " Stack trace " + ex.StackTrace;
+                Console.WriteLine(msg);
+                
                 statusMonitor = false;
             }
             

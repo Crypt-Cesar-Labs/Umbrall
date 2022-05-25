@@ -31,14 +31,14 @@ namespace Umbrall
             }
             else
             {
-                Monitor.ipAddress = txtAddress.Text;
-                Monitor.port = int.Parse(txtPort.Text);
-                ModbusClient modbusClient;
-                modbusClient = new ModbusClient(Monitor.ipAddress, Monitor.port);                 //Ip-Address and Port of Modbus-TCP-Server
+                GlobalParameters.ipAddressGlobal = txtAddress.Text;
+                GlobalParameters.portGlobal = int.Parse(txtPort.Text);
+                ModbusClient modbusClientConfig;
+                modbusClientConfig = new ModbusClient(GlobalParameters.ipAddressGlobal, GlobalParameters.portGlobal);                 //Ip-Address and Port of Modbus-TCP-Server
                 try
                 {
 
-                    modbusClient.Connect();
+                    modbusClientConfig.Connect();
 
                     MessageBox.Show("Conexión exitosa.");
 
@@ -49,7 +49,7 @@ namespace Umbrall
                 }
                 finally
                 {
-                    modbusClient.Disconnect();
+                    modbusClientConfig.Disconnect();
                 }
 
                 this.Close();

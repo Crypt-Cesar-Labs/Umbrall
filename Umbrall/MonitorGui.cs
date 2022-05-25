@@ -17,16 +17,8 @@ namespace Umbrall
             InitializeComponent();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
-        public void AlternarColorenDataGridView(DataGridView dgv)
-        {
-            dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
-            dgv.DefaultCellStyle.BackColor = Color.LightCyan;
-        }
+
         private void MonitorGui_Load(object sender, EventArgs e)
         {
             #region DataGrid
@@ -67,9 +59,57 @@ namespace Umbrall
             row = new string[] { "ABC", Monitor.vrmsABC.ToString(), Monitor.irmsABC.ToString(), Monitor.pActiveABC.ToString(), Monitor.qABC.ToString(), Monitor.sABC.ToString(), Monitor.cosfiABC.ToString(), Monitor.energyABC.ToString(), Monitor.reactEnergyABC.ToString() };
             dataGridViewMonitor.Rows.Add(row); */
             #endregion
+            Timer showParameters = new Timer();
+            showParameters.Interval = 1000;
+            showParameters.Enabled = true;
+            showParameters.Tick += ShowingParameters;
 
         }
 
-
+        private void ShowingParameters(object sender, EventArgs e)
+        {
+            // Showing monitor parameters
+            txtVrmsA.Text = Monitor.vrmsA.ToString();
+            txtVrmsB.Text = Monitor.vrmsB.ToString();
+            txtVrmsC.Text = Monitor.vrmsC.ToString();
+            txtVrmsABC.Text = Monitor.vrmsABC.ToString();
+            txtIrmsA.Text = Monitor.irmsA.ToString();
+            txtIrmsB.Text = Monitor.irmsB.ToString();
+            txtIrmsC.Text = Monitor.irmsC.ToString();
+            txtIrmsABC.Text = Monitor.irmsABC.ToString();
+            txtFreq.Text = Monitor.frequency.ToString();
+            txtPActiveA.Text = Monitor.pActiveA.ToString();
+            txtPActiveB.Text = Monitor.pActiveB.ToString();
+            txtPActiveC.Text = Monitor.pActiveC.ToString();
+            txtPActiveABC.Text = Monitor.pActiveABC.ToString();
+            txtQA.Text = Monitor.qA.ToString();
+            txtQB.Text = Monitor.qB.ToString();
+            txtQC.Text = Monitor.qC.ToString();
+            txtQABC.Text = Monitor.qABC.ToString();
+            txtSA.Text = Monitor.sA.ToString();
+            txtSB.Text = Monitor.sB.ToString();
+            txtSC.Text = Monitor.sC.ToString();
+            txtSABC.Text = Monitor.sABC.ToString();
+            txtCosfiA.Text = Monitor.cosfiA.ToString();
+            txtCosfiB.Text = Monitor.cosfiB.ToString();
+            txtCosfiC.Text = Monitor.cosfiC.ToString();
+            txtCosfiABC.Text = Monitor.cosfiABC.ToString();
+            txtEnergyA.Text = Monitor.energyA.ToString();
+            txtEnergyB.Text = Monitor.energyB.ToString();
+            txtEnergyC.Text = Monitor.energyC.ToString();
+            txtEnergyABC.Text = Monitor.energyABC.ToString();
+            txtReactiveA.Text = Monitor.reactEnergyA.ToString();
+            txtReactiveB.Text = Monitor.reactEnergyB.ToString();
+            txtReactiveC.Text = Monitor.reactEnergyC.ToString();
+            txtReactiveABC.Text = Monitor.reactEnergyABC.ToString();
+        }
+        #region DataGridColors
+        /*
+        public void AlternarColorenDataGridView(DataGridView dgv)
+        {
+            dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
+            dgv.DefaultCellStyle.BackColor = Color.LightCyan;
+        }*/
+        #endregion
     }
 }
