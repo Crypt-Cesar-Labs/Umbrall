@@ -1,5 +1,7 @@
-﻿using System;
+﻿using iTextSharp.text;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -7,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Umbrall
 {
@@ -21,48 +24,42 @@ namespace Umbrall
 
         private void MonitorGui_Load(object sender, EventArgs e)
         {
-            #region DataGrid
-            /*
-            // Se modifican los estilos de el dataGridView
-            AlternarColorenDataGridView(dataGridViewMonitor);
-
-            int sizeColumn1 = 123;
-            int sizeColumn2 = 114;
-            // Creating the dataGridViewMonitor Columns
-            dataGridViewMonitor.ColumnCount = 9;
-            dataGridViewMonitor.Columns[0].Name = "Linea";
-            dataGridViewMonitor.Columns[0].Width = sizeColumn1;     //
-            dataGridViewMonitor.Columns[1].Name = "Vrms";
-            dataGridViewMonitor.Columns[1].Width = sizeColumn2;     //
-            dataGridViewMonitor.Columns[2].Name = "Irms";
-            dataGridViewMonitor.Columns[2].Width = sizeColumn2;     //
-            dataGridViewMonitor.Columns[3].Name = "Potencia";
-            dataGridViewMonitor.Columns[3].Width = sizeColumn2;     //
-            dataGridViewMonitor.Columns[4].Name = "Q";
-            dataGridViewMonitor.Columns[4].Width = sizeColumn2;     //
-            dataGridViewMonitor.Columns[5].Name = "S";
-            dataGridViewMonitor.Columns[5].Width = sizeColumn2;     //
-            dataGridViewMonitor.Columns[6].Name = "Cosfi";
-            dataGridViewMonitor.Columns[6].Width = sizeColumn2;     //
-            dataGridViewMonitor.Columns[7].Name = "Energy";
-            dataGridViewMonitor.Columns[7].Width = sizeColumn2;     //
-            dataGridViewMonitor.Columns[8].Name = "Reactive";
-            dataGridViewMonitor.Columns[8].Width = sizeColumn2;     //
-
-            // Creating the dtaGridViewMonitor Rows from monitor object
-            string[] row = new string[] { "Linea A", Monitor.vrmsA.ToString(), Monitor.irmsA.ToString(), Monitor.pActiveA.ToString(), Monitor.qA.ToString(), Monitor.sA.ToString(), Monitor.cosfiA.ToString(), Monitor.energyA.ToString(), Monitor.reactEnergyA.ToString() };
-            dataGridViewMonitor.Rows.Add(row);
-            row = new string[] { "Linea B", Monitor.vrmsB.ToString(), Monitor.irmsB.ToString(), Monitor.pActiveB.ToString(), Monitor.qB.ToString(), Monitor.sB.ToString(), Monitor.cosfiB.ToString(), Monitor.energyB.ToString(), Monitor.reactEnergyB.ToString() };
-            dataGridViewMonitor.Rows.Add(row);
-            row = new string[] { "Linea C", Monitor.vrmsC.ToString(), Monitor.irmsC.ToString(), Monitor.pActiveC.ToString(), Monitor.qC.ToString(), Monitor.sC.ToString(), Monitor.cosfiC.ToString(), Monitor.energyC.ToString(), Monitor.reactEnergyC.ToString() };
-            dataGridViewMonitor.Rows.Add(row);
-            row = new string[] { "ABC", Monitor.vrmsABC.ToString(), Monitor.irmsABC.ToString(), Monitor.pActiveABC.ToString(), Monitor.qABC.ToString(), Monitor.sABC.ToString(), Monitor.cosfiABC.ToString(), Monitor.energyABC.ToString(), Monitor.reactEnergyABC.ToString() };
-            dataGridViewMonitor.Rows.Add(row); */
-            #endregion
+           
             Timer showParameters = new Timer();
             showParameters.Interval = 1000;
             showParameters.Enabled = true;
             showParameters.Tick += ShowingParameters;
+
+            SeriesCollection chart1Series = chart1.Series;          // Se hace una instancia para la manipulación de Series
+
+            ChartAreaCollection chartAreas = chart1.ChartAreas;      // Se hace una instancia para la manipulación de Areas
+
+            chart1Series.Add("Serie 1");                            // Se crea una serie ya que por defecto ho se generan
+
+            // Se cuentan las areas y las series
+            Console.WriteLine("Count: {0}", chartAreas.Count);
+            Console.WriteLine("Series: {0}", chart1Series.Count);
+
+            ChartArea chart1Area1 = chartAreas[0];                    // Se crea un objeto que representa ChartAreas[0]
+            Series chart1Serie1 = chart1Series[0];                  // Se crea un objeto que representa Series[0]
+
+
+
+            // Modificando el Area1
+            chart1Area1.BackColor = Color.Black;
+
+            // Modificando la Serie1
+            chart1Serie1.ChartType = SeriesChartType.FastLine;
+            chart1Serie1.Color = Color.Red;
+
+            // Puntos de la gráfica
+            chart1Serie1.Points.AddXY(0, 10);
+            chart1Serie1.Points.AddXY(1, 15);
+            chart1Serie1.Points.AddXY(2, 10);
+            chart1Serie1.Points.AddXY(3, 12);
+            chart1Serie1.Points.AddXY(4, 6);
+
+
 
         }
 
