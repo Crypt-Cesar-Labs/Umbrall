@@ -31,22 +31,24 @@ namespace Umbrall
             showParameters.Tick += ShowingParameters;
 
             SeriesCollection chart1Series = chart1.Series;          // Se hace una instancia para la manipulación de Series
+            SeriesCollection chart2Series = chart2.Series;          
 
-            ChartAreaCollection chartAreas = chart1.ChartAreas;      // Se hace una instancia para la manipulación de Areas
+            ChartAreaCollection chart1Areas = chart1.ChartAreas;      // Se hace una instancia para la manipulación de Areas
+            ChartAreaCollection chart2Areas = chart2.ChartAreas;      // Se hace una instancia para la manipulación de Areas
 
             chart1Series.Add("Serie 1");                            // Se crea una serie ya que por defecto ho se generan
+            chart2Series.Add("Serie 1");
 
-            // Se cuentan las areas y las series
-            Console.WriteLine("Count: {0}", chartAreas.Count);
-            Console.WriteLine("Series: {0}", chart1Series.Count);
-
-            ChartArea chart1Area1 = chartAreas[0];                    // Se crea un objeto que representa ChartAreas[0]
+            
+            ChartArea chart1Area1 = chart1Areas[0];                    // Se crea un objeto que representa ChartAreas[0]
             Series chart1Serie1 = chart1Series[0];                  // Se crea un objeto que representa Series[0]
-
+            ChartArea chart2Area1 = chart2Areas[0];                    // Se crea un objeto que representa ChartAreas[0]
+            Series chart2Serie1 = chart2Series[0];                  // Se crea un objeto que representa Series[0]
 
 
             // Modificando el Area1
             chart1Area1.BackColor = Color.Black;
+            chart2Area1.BackColor = Color.Black;
 
             // Modificando la Serie1
             chart1Serie1.ChartType = SeriesChartType.FastLine;
@@ -59,6 +61,15 @@ namespace Umbrall
             chart1Serie1.Points.AddXY(3, 12);
             chart1Serie1.Points.AddXY(4, 6);
 
+            // Modificando la Serie1
+            chart2Serie1.ChartType = SeriesChartType.FastLine;
+            chart2Serie1.Color = Color.Blue;
+
+            // Puntos de la gráfica
+            chart2Serie1.Points.AddXY(1, 11);
+            chart2Serie1.Points.AddXY(2, 13);
+            chart2Serie1.Points.AddXY(3, 18);
+            chart2Serie1.Points.AddXY(4, 6);
 
 
         }
