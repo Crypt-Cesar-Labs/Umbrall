@@ -429,5 +429,14 @@
   <ItemGroup>
     <None Include="Resources\wheelredim.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stopw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\savew.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -127,9 +127,6 @@
   <data name="PIMEFondooscuro1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PIMEFondooscuro1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PIMEFondooscuro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PIMEFondooscuro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="LOGOTIPO_PIME_(Fondo_oscuro)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGOTIPO_PIME_(Fondo_oscuro).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,14 +136,17 @@
   <data name="stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="play_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\play_mini.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="playredimensionado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\playredimensionado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="play1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\play.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="play" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wheelredim" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wheelredim.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pimelogosize" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pimelogosize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,17 +160,23 @@
   <data name="factory2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\factory2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="play_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\play_mini.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="plantilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plantilla.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
   <data name="logo_pime" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo_pime .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="play4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\play3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="stopredimensionado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stopredimensionado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="play2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\play1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="factory" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\factory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PIMEFondooscurorecortadayescalada" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PIMEFondooscurorecortadayescalada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,26 +184,26 @@
   <data name="play3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\play2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="factory11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\factory11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pime_scalado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pime_scalado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="playredimensionado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\playredimensionado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="factory1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\factory1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PIMEFondooscurorecortada2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PIMEFondooscurorecortada2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="factory" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\factory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="playw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\playw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="play4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\play3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="factory21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\factory21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="factory11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\factory11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PIMEFondooscuro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PIMEFondooscuro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="plantillaHoraria" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plantillaHoraria.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
@@ -205,8 +211,11 @@
   <data name="systempower" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\systempower.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stopredimensionado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stopredimensionado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="stopw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stopw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="factory1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\factory1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LOGOTIPO_PIME_(Fondo_oscuro)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGOTIPO_PIME_(Fondo_oscuro)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,7 +226,7 @@
   <data name="LOGOTIPO PIME (Fondo oscuro)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGOTIPO PIME (Fondo oscuro).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wheelredim" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wheelredim.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="savew" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\savew.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

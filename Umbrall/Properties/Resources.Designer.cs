@@ -399,9 +399,29 @@ namespace Umbrall.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap playw {
+            get {
+                object obj = ResourceManager.GetObject("playw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap saveredimensionado {
             get {
                 object obj = ResourceManager.GetObject("saveredimensionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap savew {
+            get {
+                object obj = ResourceManager.GetObject("savew", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -422,6 +442,16 @@ namespace Umbrall.Properties {
         internal static System.Drawing.Bitmap stopredimensionado {
             get {
                 object obj = ResourceManager.GetObject("stopredimensionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stopw {
+            get {
+                object obj = ResourceManager.GetObject("stopw", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

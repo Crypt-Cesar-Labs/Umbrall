@@ -101,7 +101,7 @@
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Image = global::Umbrall.Properties.Resources.saveredimensionado;
+            this.btnSave.Image = global::Umbrall.Properties.Resources.savew;
             this.btnSave.Location = new System.Drawing.Point(138, 0);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(69, 65);
@@ -114,7 +114,7 @@
             this.btnStop.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnStop.FlatAppearance.BorderSize = 0;
             this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStop.Image = global::Umbrall.Properties.Resources.stopredimensionado;
+            this.btnStop.Image = global::Umbrall.Properties.Resources.stopw;
             this.btnStop.Location = new System.Drawing.Point(69, 0);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(69, 65);
@@ -128,7 +128,7 @@
             this.btnPlay.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnPlay.FlatAppearance.BorderSize = 0;
             this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlay.Image = global::Umbrall.Properties.Resources.playredimensionado;
+            this.btnPlay.Image = global::Umbrall.Properties.Resources.playw;
             this.btnPlay.Location = new System.Drawing.Point(0, 0);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(69, 65);
