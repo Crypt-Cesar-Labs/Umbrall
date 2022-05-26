@@ -863,7 +863,7 @@
             this.label28.ForeColor = System.Drawing.Color.Gainsboro;
             this.label28.Location = new System.Drawing.Point(3, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(146, 23);
+            this.label28.Size = new System.Drawing.Size(147, 23);
             this.label28.TabIndex = 82;
             this.label28.Text = "Cálculo Q Mensual";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -874,9 +874,9 @@
             this.label50.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label50.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label50.Location = new System.Drawing.Point(155, 0);
+            this.label50.Location = new System.Drawing.Point(156, 0);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(146, 23);
+            this.label50.Size = new System.Drawing.Size(147, 23);
             this.label50.TabIndex = 83;
             this.label50.Text = "Costos Generales";
             this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
