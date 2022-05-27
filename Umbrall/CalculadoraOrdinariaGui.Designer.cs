@@ -60,6 +60,10 @@
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
             this.label72 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
             this.label74 = new System.Windows.Forms.Label();
             this.txtSumResult = new System.Windows.Forms.TextBox();
@@ -91,9 +95,6 @@
             this.label90 = new System.Windows.Forms.Label();
             this.txtPrecioMedio = new System.Windows.Forms.TextBox();
             this.txtRelCost = new System.Windows.Forms.TextBox();
-            this.label91 = new System.Windows.Forms.Label();
-            this.label92 = new System.Windows.Forms.Label();
-            this.txtSubTotal = new System.Windows.Forms.TextBox();
             this.txtDerecho = new System.Windows.Forms.TextBox();
             this.txt2BajaTens = new System.Windows.Forms.TextBox();
             this.txtEnergiaTotal = new System.Windows.Forms.TextBox();
@@ -106,7 +107,14 @@
             this.txtEnergiaResult = new System.Windows.Forms.TextBox();
             this.label96 = new System.Windows.Forms.Label();
             this.txtFPTotal = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label92 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
+            this.txtSubTotal = new System.Windows.Forms.TextBox();
+            this.label91 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtDays = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.dateEnd = new System.Windows.Forms.DateTimePicker();
             this.label53 = new System.Windows.Forms.Label();
@@ -129,21 +137,13 @@
             this.label62 = new System.Windows.Forms.Label();
             this.dateBegin = new System.Windows.Forms.DateTimePicker();
             this.label63 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtDemanda = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtDays = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtDemanda = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
             this.tableLayoutPanel16.SuspendLayout();
@@ -640,6 +640,48 @@
             this.label72.Text = "Cálculo Q Mensual";
             this.label72.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label4.Location = new System.Drawing.Point(161, 3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(131, 16);
+            this.label4.TabIndex = 88;
+            this.label4.Text = "Costos Generales";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label3.Location = new System.Drawing.Point(342, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(114, 23);
+            this.label3.TabIndex = 87;
+            this.label3.Text = "Desgloce Total";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Location = new System.Drawing.Point(145, 3);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(10, 15);
+            this.textBox2.TabIndex = 89;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Location = new System.Drawing.Point(298, 3);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(18, 15);
+            this.textBox3.TabIndex = 90;
+            // 
             // tableLayoutPanel19
             // 
             this.tableLayoutPanel19.ColumnCount = 6;
@@ -1070,41 +1112,6 @@
             this.txtRelCost.Size = new System.Drawing.Size(81, 20);
             this.txtRelCost.TabIndex = 123;
             // 
-            // label91
-            // 
-            this.label91.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label91.AutoSize = true;
-            this.label91.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label91.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label91.Location = new System.Drawing.Point(158, 182);
-            this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(74, 16);
-            this.label91.TabIndex = 124;
-            this.label91.Text = "Sub Total";
-            this.label91.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label92
-            // 
-            this.label92.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label92.AutoSize = true;
-            this.label92.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label92.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label92.Location = new System.Drawing.Point(351, 130);
-            this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(43, 16);
-            this.label92.TabIndex = 125;
-            this.label92.Text = "Total";
-            this.label92.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtSubTotal
-            // 
-            this.txtSubTotal.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtSubTotal.Location = new System.Drawing.Point(238, 185);
-            this.txtSubTotal.Name = "txtSubTotal";
-            this.txtSubTotal.ReadOnly = true;
-            this.txtSubTotal.Size = new System.Drawing.Size(80, 20);
-            this.txtSubTotal.TabIndex = 126;
-            // 
             // txtDerecho
             // 
             this.txtDerecho.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -1238,6 +1245,30 @@
             this.txtFPTotal.Size = new System.Drawing.Size(88, 20);
             this.txtFPTotal.TabIndex = 135;
             // 
+            // textBox5
+            // 
+            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Location = new System.Drawing.Point(324, 188);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(70, 13);
+            this.textBox5.TabIndex = 139;
+            // 
+            // label92
+            // 
+            this.label92.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label92.AutoSize = true;
+            this.label92.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label92.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label92.Location = new System.Drawing.Point(351, 130);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(43, 16);
+            this.label92.TabIndex = 125;
+            this.label92.Text = "Total";
+            this.label92.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // txtTotal
             // 
             this.txtTotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -1247,6 +1278,61 @@
             this.txtTotal.ReadOnly = true;
             this.txtTotal.Size = new System.Drawing.Size(88, 20);
             this.txtTotal.TabIndex = 127;
+            // 
+            // txtSubTotal
+            // 
+            this.txtSubTotal.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtSubTotal.Location = new System.Drawing.Point(238, 185);
+            this.txtSubTotal.Name = "txtSubTotal";
+            this.txtSubTotal.ReadOnly = true;
+            this.txtSubTotal.Size = new System.Drawing.Size(80, 20);
+            this.txtSubTotal.TabIndex = 126;
+            // 
+            // label91
+            // 
+            this.label91.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label91.AutoSize = true;
+            this.label91.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label91.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label91.Location = new System.Drawing.Point(158, 182);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(74, 16);
+            this.label91.TabIndex = 124;
+            this.label91.Text = "Sub Total";
+            this.label91.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label2.Location = new System.Drawing.Point(366, 214);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.TabIndex = 137;
+            this.label2.Text = "Dias";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txtDays
+            // 
+            this.txtDays.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtDays.Location = new System.Drawing.Point(407, 211);
+            this.txtDays.Name = "txtDays";
+            this.txtDays.ReadOnly = true;
+            this.txtDays.Size = new System.Drawing.Size(81, 20);
+            this.txtDays.TabIndex = 138;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(202, 269);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(90, 13);
+            this.textBox1.TabIndex = 108;
             // 
             // tableLayoutPanel7
             // 
@@ -1551,16 +1637,27 @@
             this.label63.TabIndex = 60;
             this.label63.Text = "ENERGÍA KWH";
             // 
-            // textBox1
+            // label5
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(202, 269);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(90, 13);
-            this.textBox1.TabIndex = 108;
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label5.Location = new System.Drawing.Point(4, 196);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(185, 31);
+            this.label5.TabIndex = 109;
+            this.label5.Text = "DEMANDA";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txtDemanda
+            // 
+            this.txtDemanda.Location = new System.Drawing.Point(196, 199);
+            this.txtDemanda.Name = "txtDemanda";
+            this.txtDemanda.Size = new System.Drawing.Size(100, 20);
+            this.txtDemanda.TabIndex = 110;
             // 
             // label1
             // 
@@ -1609,103 +1706,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(37, 639);
             this.panel4.TabIndex = 112;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label3.Location = new System.Drawing.Point(342, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 23);
-            this.label3.TabIndex = 87;
-            this.label3.Text = "Desgloce Total";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label4.Location = new System.Drawing.Point(161, 3);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 16);
-            this.label4.TabIndex = 88;
-            this.label4.Text = "Costos Generales";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(145, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(10, 15);
-            this.textBox2.TabIndex = 89;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(298, 3);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(18, 15);
-            this.textBox3.TabIndex = 90;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(366, 214);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 13);
-            this.label2.TabIndex = 137;
-            this.label2.Text = "Dias";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // txtDays
-            // 
-            this.txtDays.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtDays.Location = new System.Drawing.Point(407, 211);
-            this.txtDays.Name = "txtDays";
-            this.txtDays.ReadOnly = true;
-            this.txtDays.Size = new System.Drawing.Size(81, 20);
-            this.txtDays.TabIndex = 138;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label5.Location = new System.Drawing.Point(4, 196);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(185, 31);
-            this.label5.TabIndex = 109;
-            this.label5.Text = "DEMANDA";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // txtDemanda
-            // 
-            this.txtDemanda.Location = new System.Drawing.Point(196, 199);
-            this.txtDemanda.Name = "txtDemanda";
-            this.txtDemanda.Size = new System.Drawing.Size(100, 20);
-            this.txtDemanda.TabIndex = 110;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Location = new System.Drawing.Point(324, 185);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(70, 13);
-            this.textBox5.TabIndex = 139;
             // 
             // CalculadoraOrdinariaGui
             // 

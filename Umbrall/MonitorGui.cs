@@ -30,21 +30,24 @@ namespace Umbrall
             showParameters.Enabled = true;
             showParameters.Tick += ShowingParameters;
 
-            SeriesCollection chart1Series = chart1.Series;          // Se hace una instancia para la manipulación de Series
+            SeriesCollection chart1Series = chart1.Series;              // Se hace una instancia para la manipulación de Series
             SeriesCollection chart2Series = chart2.Series;          
 
-            ChartAreaCollection chart1Areas = chart1.ChartAreas;      // Se hace una instancia para la manipulación de Areas
-            ChartAreaCollection chart2Areas = chart2.ChartAreas;      // Se hace una instancia para la manipulación de Areas
+            ChartAreaCollection chart1Areas = chart1.ChartAreas;        // Se hace una instancia para la manipulación de Areas
+            ChartAreaCollection chart2Areas = chart2.ChartAreas;        // Se hace una instancia para la manipulación de Areas
 
-            chart1Series.Add("Serie 1");                            // Se crea una serie ya que por defecto ho se generan
-            chart2Series.Add("Serie 1");
+            chart1Series.Add("Serie1 Left");                                // Se crea una serie ya que por defecto ho se generan
+            chart2Series.Add("Serie2 Right");
 
             
-            ChartArea chart1Area1 = chart1Areas[0];                    // Se crea un objeto que representa ChartAreas[0]
-            Series chart1Serie1 = chart1Series[0];                  // Se crea un objeto que representa Series[0]
+            ChartArea chart1Area1 = chart1Areas[0];                     // Se crea un objeto que representa ChartAreas[0]
+            Series chart1Serie1 = chart1Series[0];                      // Se crea un objeto que representa Series[0]
             ChartArea chart2Area1 = chart2Areas[0];                    // Se crea un objeto que representa ChartAreas[0]
-            Series chart2Serie1 = chart2Series[0];                  // Se crea un objeto que representa Series[0]
+            Series chart2Serie1 = chart2Series[0];                      // Se crea un objeto que representa Series[0]
 
+            chart1Areas.Add("nueva area");
+            ChartArea chart1Area2 = chart1Areas[1];
+            chart1Area2.BackColor = Color.Yellow;
 
             // Modificando el Area1
             chart1Area1.BackColor = Color.Black;
