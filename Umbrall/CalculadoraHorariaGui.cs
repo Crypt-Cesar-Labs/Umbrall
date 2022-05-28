@@ -23,7 +23,7 @@ namespace Umbrall
 
         double capPot;          // Capacidad Potencia
         double distPot;         // Distribución Potencia
-        double sncnmem;          // SCnMEM
+        double sncnmem;         // SCnMEM
         double trans;           // Transmición
         double cenace;          // CENACE
         double generacionB;     // Generación B
@@ -148,7 +148,195 @@ namespace Umbrall
             div = comboBoxDiv.Items[indexDiv].ToString();
         }
 
-        
+        private void btnCalc_Click(object sender, EventArgs e)
+        {
+            // Getting the variables
+            double energiaB = Convert.ToDouble(txtEnergiaB.Text);
+            double energiaI = Convert.ToDouble(txtEnergiaI.Text);
+            double energiaP = Convert.ToDouble(txtEnergiaP.Text);
+            double demandaB = Convert.ToDouble(txtDemandaB.Text);
+            double demandaI = Convert.ToDouble(txtDemandaI.Text);
+            double demandaP = Convert.ToDouble(txtDemandaP.Text);
+
+            DateTime dateTimeBeg = dateBegin.Value.Date;
+            DateTime dateTimeEnd = dateEnd.Value.Date;
+
+            double eReactiva = Convert.ToDouble(txtEReactiva.Text);
+
+            double fcGdmth = 0.57;
+            /******************** CALCULUS **************************/
+
+            // Date difference
+            TimeSpan tSpan = dateTimeEnd - dateTimeBeg;
+            int dias = tSpan.Days;
+
+            // QMensual
+            double qMensual = energiaB + energiaI + energiaP;
+
+            // Factor de potencia
+            double factorPot = qMensual / Math.Sqrt(Math.Pow(qMensual, 2) + Math.Pow(eReactiva, 2)) * 100;
+
+            // F.P. Bono
+            double bonificacion = -((1 - 90 / factorPot) / 4);
+
+            // F.P. Penalización
+            double penalizacion = (3 * ((90 / factorPot) - 1) / 5);
+
+            double factorPotCargo;                  // Para evaluación del factor de potencia
+            if (factorPot >= 90)
+            {
+                factorPotCargo = bonificacion;
+
+            }
+            else
+            {
+                factorPotCargo = penalizacion;
+            }
+
+            ///// Potencia electrica tomando en cuenta F.C. 2017 /////
+            //
+            double kwMaxMovil = qMensual / (24 * dias * fcGdmth) + 0.5;
+
+
+            ///// Potencia eléctrica para distribución /////////
+            // Dmax
+            double dmax = demandMaxFound(demandaB, demandaI, demandaP);
+
+            // KWDistrib
+            double kwDistrib = Math.Min(dmax, kwMaxMovil);
+
+            //// Determinación de potencia eléctrica para la capacidad ////
+            double kwCap = Math.Min(demandaP, kwMaxMovil);
+
+            ///////////// COSTOS GENERALES /////////////////
+
+            // Suministro
+            double suminisResult = 1 * suministro;
+
+            // Distribución
+            double distribResult = kwDistrib * distPot;
+
+            // Transimición
+            double transResult = qMensual * trans;
+
+            // CENACE
+            double cenaceResult = qMensual * cenace;
+
+            // Generación base
+            double genBaseResult = energiaB * generacionB;
+
+            // Generación intermedia
+            double genInterResult = energiaI * generacionI;
+
+            // Generación base
+            double genPuntaResult = energiaP * generacionP;
+
+            // Capacidad
+            double capResult = kwCap * capPot;
+
+            // SnCnMeM
+            double sncnmemResult = qMensual * sncnmem;
+
+            // SubTotal
+            double subTotal = suminisResult + distribResult + transResult + cenaceResult + genBaseResult + genInterResult + genPuntaResult + capResult + sncnmemResult;
+
+            ////////////// DESGLOCE TOTAL //////////////
+            ///
+
+            // Cargo Fijo
+            double cargoFijoResult = suminisResult;
+
+            // Energia
+            double energyResult = distribResult + transResult + cenaceResult + genBaseResult + genInterResult + genPuntaResult + capResult + sncnmemResult;
+
+            // 2% de baja tensión
+            double dosPercentResult = 0.02 * subTotal;
+
+            // Cargo factor de potencia
+            double factorPotResult = factorPotCargo * subTotal;
+
+            // Total
+            double total = cargoFijoResult + energyResult + dosPercentResult + factorPotResult;
+
+            // Precio medio 
+            double precioMedio = total / qMensual;
+
+            // Relación de costo
+            double relacionCostos = ((capResult + distribResult) / (transResult + cenaceResult + genBaseResult + genInterResult + genPuntaResult)) * 100;
+
+            /******************** SHOW RESULTS **********************/
+            txtDays.Text = dias.ToString();
+            txtQMensual.Text = qMensual.ToString();
+            txtFP.Text = factorPot.ToString();
+            txtBono.Text = bonificacion.ToString();
+            txtPenal.Text = penalizacion.ToString();
+            txtDmax.Text = dmax.ToString();
+            txtKWDist.Text = kwDistrib.ToString();
+            txtKWCap.Text = kwCap.ToString();
+
+            // Coste General 
+            txtSumResult.Text = suminisResult.ToString();
+            txtDistResult.Text = distribResult.ToString();
+            txtTransResult.Text = transResult.ToString();
+            txtCenaceResult.Text = cenaceResult.ToString();
+            txtCapResult.Text = capResult.ToString();
+            txtGenBResult.Text = genBaseResult.ToString();
+            txtGenIResult.Text = genInterResult.ToString();
+            txtGenPResult.Text = genPuntaResult.ToString();
+            txtSncResult.Text = sncnmemResult.ToString();
+            txtSubTotal.Text = subTotal.ToString();
+
+            // Desgloce Total
+            txtCargoFijo.Text = cargoFijoResult.ToString();
+            txtEnergy.Text = energyResult.ToString();
+            txtDosPercent.Text = dosPercentResult.ToString();
+            txtFPTotal.Text = factorPotResult.ToString();
+            txtTotal.Text = total.ToString();
+            txtPrecioMedio.Text = precioMedio.ToString();
+            txtRelCost.Text = relacionCostos.ToString();
+        }
+
+        double demandMaxFound(double baseDemand, double interDemand, double puntaDemand)
+        {
+            // Resive tres valores para la demanda y devuelve el mayor
+
+            double demandaMaxima = 0;
+
+            if (baseDemand > interDemand)
+            {
+                if (baseDemand > puntaDemand)
+                {
+                    demandaMaxima = baseDemand;
+                }
+                else if (puntaDemand > baseDemand)
+                {
+                    demandaMaxima = puntaDemand;
+                }
+            }
+            else if (interDemand > baseDemand)
+            {
+                if (interDemand > puntaDemand)
+                {
+                    demandaMaxima = interDemand;
+                }
+                else if (puntaDemand > interDemand)
+                {
+                    demandaMaxima = puntaDemand;
+                }
+            }
+            else if (puntaDemand > baseDemand)
+            {
+                if (puntaDemand > interDemand)
+                {
+                    demandaMaxima = puntaDemand;
+                }
+                else if (interDemand > puntaDemand)
+                {
+                    demandaMaxima = interDemand;
+                }
+            }
+            return demandaMaxima;
+        }
     }
     
 }
