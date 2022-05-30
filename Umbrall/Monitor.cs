@@ -1,10 +1,12 @@
 ﻿using EasyModbus;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Umbrall
 {
@@ -306,8 +308,26 @@ namespace Umbrall
             
         }
 
-        public static void VrmsChart()
+        public static void VrmsChart(Chart chart)
         {
+            // Make the object for Series and Areas
+            SeriesCollection chartVrmsSeries = chart.Series;
+            ChartAreaCollection chartVrmsAreas = chart.ChartAreas;
+            chartVrmsSeries.Add("Vrms");                            // Se agrega serie de Vrms
+
+            ChartArea chartVrmsArea = chartVrmsAreas[0];            // Se selecciona la primera Area
+            Series chartVrmsSerie = chartVrmsSeries[0];             // Se selecciona la primera serie
+
+            chartVrmsArea.BackColor = Color.Black;                  // Setting black background for the Area
+
+            chartVrmsSerie.ChartType = SeriesChartType.FastLine;    // Setting FastLine style for the chart
+            chartVrmsSerie.Color = Color.Red;                       // Red color for the serie
+
+            // Points for the chart
+            chartVrmsSerie.Points.AddXY(1, 32);
+            chartVrmsSerie.Points.AddXY(2, 12);
+            chartVrmsSerie.Points.AddXY(3, 56);
+            chartVrmsSerie.Points.AddXY(4, 78);
 
         }
 
