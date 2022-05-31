@@ -143,6 +143,16 @@ namespace Umbrall.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pdfSaveRedW {
+            get {
+                object obj = ResourceManager.GetObject("pdfSaveRedW", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pime_scalado {
             get {
                 object obj = ResourceManager.GetObject("pime_scalado", resourceCulture);
@@ -472,6 +482,16 @@ namespace Umbrall.Properties {
         internal static System.Drawing.Bitmap wheelredim {
             get {
                 object obj = ResourceManager.GetObject("wheelredim", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wheelredimw {
+            get {
+                object obj = ResourceManager.GetObject("wheelredimw", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

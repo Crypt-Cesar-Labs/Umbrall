@@ -18,11 +18,13 @@ namespace Umbrall
             customizeDesing();
         }
 
+        public bool printHor = false;
         private void customizeDesing()
         {
             panelSubMenu.Visible = false;
             panelSubReports.Visible = false;
             panelSubCalculator.Visible = false;
+            btnPrint.Visible = false;
         }
 
         private void hideSubMenu()
@@ -72,16 +74,22 @@ namespace Umbrall
             openChildForm(new MonitorGui());
 
             hideSubMenu();
+
+            btnPrint.Visible = false;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+
+            this.Close();
         }
 
         private void btnBilling_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+
+            btnPrint.Visible = false;
         }
 
         private void btnCharts_Click(object sender, EventArgs e)
@@ -94,6 +102,11 @@ namespace Umbrall
             openChildForm(new CalculadoraHorariaGui());
 
             hideSubMenu();
+
+            btnPrint.Visible = true;
+
+            printHor = true;
+
         }
 
         private void btnCalcO_Click(object sender, EventArgs e)
@@ -101,6 +114,11 @@ namespace Umbrall
             openChildForm(new CalculadoraOrdinariaGui());
 
             hideSubMenu();
+
+            btnPrint.Visible = true;
+
+            printHor = false;
+
         }
         #endregion
 
@@ -163,6 +181,49 @@ namespace Umbrall
                 configGui.Show();
             }
                 
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if(printHor == true)
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                string nameFile = DateTime.Now.ToString("ddMMyyyyHHmmss") + "H" + ".pdf";
+
+                string facturaName = SaveFacturaFile.FacturaName(saveFileDialog, nameFile);
+
+                string paginahtml_texto = SaveFacturaFile.HtmlTemplateH();
+
+
+                paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@YEAR", CalculadoraHorariaGui.year);
+                paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@MES", CalculadoraHorariaGui.month);
+                paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@TARIFA", CalculadoraHorariaGui.tarifa);
+                paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@DIVISION", CalculadoraHorariaGui.div);
+                paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@SUMINISTRO", CalculadoraHorariaGui.suminisResult.ToString());
+                paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@DISTRIB", CalculadoraHorariaGui.distribResult.ToString());
+                paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@TRANS", CalculadoraHorariaGui.transResult.ToString());
+                paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@CENACE", CalculadoraHorariaGui.cenaceResult.ToString());
+                paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@ENERGIA", CalculadoraHorariaGui.energyResult.ToString());
+                paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@GENBASE", CalculadoraHorariaGui.genBaseResult.ToString());
+                paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@GENINTER", CalculadoraHorariaGui.genInterResult.ToString());
+                paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@GENPUNTA", CalculadoraHorariaGui.genPuntaResult.ToString());
+                paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@CAPACIDAD", CalculadoraHorariaGui.capResult.ToString());
+                paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@SNCNMEM", CalculadoraHorariaGui.sncnmemResult.ToString());
+                paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@SUBTOTAL", CalculadoraHorariaGui.subTotal.ToString());
+                paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@CARGOFIJO", CalculadoraHorariaGui.cargoFijoResult.ToString());
+                paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@SUMENER", CalculadoraHorariaGui.energyResult.ToString());
+                paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@BAJATENS", CalculadoraHorariaGui.dosPercentResult.ToString());
+                paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@FACTORPOT", CalculadoraHorariaGui.factorPotResult.ToString());
+                paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@TOTAL", CalculadoraHorariaGui.total.ToString());
+                paginahtml_texto = paginahtml_texto.Replace("@FECHA", DateTime.Now.ToString("dd/MM/yyyy"));
+                paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@PREMED", CalculadoraHorariaGui.precioMedio.ToString());
+                paginahtml_texto = SaveFacturaFile.PassAttribute2Doc(paginahtml_texto, "@RELCOST", CalculadoraHorariaGui.relacionCostos.ToString());
+
+
+                SaveFacturaFile.CreateFacturaFile(saveFileDialog, paginahtml_texto);
+
+                MessageBox.Show("Factura guardada\n correctamente con el nombre:\n" + facturaName);
+            }
         }
     }
 }

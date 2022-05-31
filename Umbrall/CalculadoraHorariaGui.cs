@@ -14,11 +14,12 @@ namespace Umbrall
     {
         // Variables for the database query
 
-        string year;
-        string month;
-        string tarifa;
-        string div;
+        public static string year;
+        public static string month;
+        public static string tarifa;
+        public static string div;
 
+        
         // Local Variables for Cargos
 
         double capPot;          // Capacidad Potencia
@@ -30,6 +31,27 @@ namespace Umbrall
         double generacionI;     // Generación I
         double generacionP;     // Generación P    
         double suministro;      // Suministro
+
+        
+        // Results
+
+        public static double suminisResult;
+        public static double distribResult;
+        public static double transResult;
+        public static double cenaceResult;
+        public static double genBaseResult;
+        public static double genInterResult;
+        public static double genPuntaResult;
+        public static double capResult;
+        public static double sncnmemResult;
+        public static double subTotal;
+        public static double cargoFijoResult;
+        public static double energyResult;
+        public static double dosPercentResult;
+        public static double factorPotResult;
+        public static double total;
+        public static double precioMedio;
+        public static double relacionCostos;
 
         public CalculadoraHorariaGui()
         {
@@ -120,6 +142,7 @@ namespace Umbrall
   
         }
 
+        #region ComboBoxes
         private void comboBoxYear_SelectedIndexChanged(object sender, EventArgs e)
         {
             int indexYear = comboBoxYear.SelectedIndex;       // Access to the corresponding index from the comboBox
@@ -147,6 +170,7 @@ namespace Umbrall
 
             div = comboBoxDiv.Items[indexDiv].ToString();
         }
+        #endregion
 
         private void btnCalc_Click(object sender, EventArgs e)
         {
@@ -211,58 +235,58 @@ namespace Umbrall
             ///////////// COSTOS GENERALES /////////////////
 
             // Suministro
-            double suminisResult = 1 * suministro;
+            suminisResult = 1 * suministro;
 
             // Distribución
-            double distribResult = kwDistrib * distPot;
+            distribResult = kwDistrib * distPot;
 
             // Transimición
-            double transResult = qMensual * trans;
+            transResult = qMensual * trans;
 
             // CENACE
-            double cenaceResult = qMensual * cenace;
+            cenaceResult = qMensual * cenace;
 
             // Generación base
-            double genBaseResult = energiaB * generacionB;
+            genBaseResult = energiaB * generacionB;
 
             // Generación intermedia
-            double genInterResult = energiaI * generacionI;
+            genInterResult = energiaI * generacionI;
 
             // Generación base
-            double genPuntaResult = energiaP * generacionP;
+            genPuntaResult = energiaP * generacionP;
 
             // Capacidad
-            double capResult = kwCap * capPot;
+            capResult = kwCap * capPot;
 
             // SnCnMeM
-            double sncnmemResult = qMensual * sncnmem;
+            sncnmemResult = qMensual * sncnmem;
 
             // SubTotal
-            double subTotal = suminisResult + distribResult + transResult + cenaceResult + genBaseResult + genInterResult + genPuntaResult + capResult + sncnmemResult;
+            subTotal = suminisResult + distribResult + transResult + cenaceResult + genBaseResult + genInterResult + genPuntaResult + capResult + sncnmemResult;
 
             ////////////// DESGLOCE TOTAL //////////////
             ///
 
             // Cargo Fijo
-            double cargoFijoResult = suminisResult;
+            cargoFijoResult = suminisResult;
 
             // Energia
-            double energyResult = distribResult + transResult + cenaceResult + genBaseResult + genInterResult + genPuntaResult + capResult + sncnmemResult;
+            energyResult = distribResult + transResult + cenaceResult + genBaseResult + genInterResult + genPuntaResult + capResult + sncnmemResult;
 
             // 2% de baja tensión
-            double dosPercentResult = 0.02 * subTotal;
+            dosPercentResult = 0.02 * subTotal;
 
             // Cargo factor de potencia
-            double factorPotResult = factorPotCargo * subTotal;
+            factorPotResult = factorPotCargo * subTotal;
 
             // Total
-            double total = cargoFijoResult + energyResult + dosPercentResult + factorPotResult;
+            total = cargoFijoResult + energyResult + dosPercentResult + factorPotResult;
 
             // Precio medio 
-            double precioMedio = total / qMensual;
+            precioMedio = total / qMensual;
 
             // Relación de costo
-            double relacionCostos = ((capResult + distribResult) / (transResult + cenaceResult + genBaseResult + genInterResult + genPuntaResult)) * 100;
+            relacionCostos = ((capResult + distribResult) / (transResult + cenaceResult + genBaseResult + genInterResult + genPuntaResult)) * 100;
 
             /******************** SHOW RESULTS **********************/
             txtDays.Text = dias.ToString();

@@ -50,6 +50,7 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelConfig = new System.Windows.Forms.Panel();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.btnConfig = new System.Windows.Forms.Button();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.logoPimeMain = new System.Windows.Forms.PictureBox();
@@ -353,6 +354,7 @@
             // panelConfig
             // 
             this.panelConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(108)))));
+            this.panelConfig.Controls.Add(this.btnPrint);
             this.panelConfig.Controls.Add(this.btnConfig);
             this.panelConfig.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelConfig.Location = new System.Drawing.Point(1114, 0);
@@ -360,12 +362,25 @@
             this.panelConfig.Size = new System.Drawing.Size(61, 701);
             this.panelConfig.TabIndex = 1;
             // 
+            // btnPrint
+            // 
+            this.btnPrint.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPrint.FlatAppearance.BorderSize = 0;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Image = global::Umbrall.Properties.Resources.pdfSaveRedW;
+            this.btnPrint.Location = new System.Drawing.Point(0, 55);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(61, 55);
+            this.btnPrint.TabIndex = 1;
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
             // btnConfig
             // 
             this.btnConfig.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnConfig.FlatAppearance.BorderSize = 0;
             this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfig.Image = global::Umbrall.Properties.Resources.wheelredim;
+            this.btnConfig.Image = global::Umbrall.Properties.Resources.wheelredimw;
             this.btnConfig.Location = new System.Drawing.Point(0, 0);
             this.btnConfig.Name = "btnConfig";
             this.btnConfig.Size = new System.Drawing.Size(61, 55);
@@ -397,7 +412,7 @@
             // 
             // MainGui
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1175, 701);
             this.Controls.Add(this.panelChildForm);
@@ -449,5 +464,6 @@
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.PictureBox logoPimeMain;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnPrint;
     }
 }
