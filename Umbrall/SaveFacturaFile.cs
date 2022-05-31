@@ -63,7 +63,7 @@ namespace Umbrall
 
                     pdfDoc.Add(new Phrase(""));
 
-                    iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.pimelogosize, System.Drawing.Imaging.ImageFormat.Png);
+                    iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.PIMEFondoblancoRedim, System.Drawing.Imaging.ImageFormat.Png);
 
                     img.ScaleToFit(80, 60);
                     img.Alignment = Image.UNDERLYING;

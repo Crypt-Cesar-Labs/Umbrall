@@ -19,10 +19,10 @@ namespace Umbrall
 
         // Variables for the database query
 
-        string year;
-        string month;
-        string tarifa;
-        string div;
+        public static string year;
+        public static string month;
+        public static string tarifa;
+        public static string div;
 
         // Local Variables for Cargos
 
@@ -33,6 +33,24 @@ namespace Umbrall
         double cenace;          // CENACE
         double generacion;      // Generación   
         double suministro;      // Suministro
+
+        // Results
+
+        public static double suministroResult;
+        public static double distribResult;
+        public static double transResult;
+        public static double cenaceResult;
+        public static double energiaResult;
+        public static double capacidadResult;
+        public static double sncnmemResult;
+        public static double subTotal;
+        public static double energia;
+        public static double dosPorcentBT;
+        public static double derecho;
+        public static double factorPotenciaCalc;
+        public static double total;
+        public static double precioMedio;
+        public static double relCostos;
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -103,6 +121,7 @@ namespace Umbrall
             suministro = Convert.ToDouble(suminisQ);
         }
 
+        #region ComboBoxes
         private void cbYear_SelectedIndexChanged(object sender, EventArgs e)
         {
             int indexYear = cbYear.SelectedIndex;       // Access to the corresponding index from the comboBox
@@ -129,6 +148,7 @@ namespace Umbrall
 
             div = cbDiv.Items[indexDiv].ToString();
         }
+        #endregion
 
         private void btnCalc_Click(object sender, EventArgs e)
         {
@@ -174,57 +194,58 @@ namespace Umbrall
             // Determinación de potencia eléctrica para capacidad
             double kwCap = kwDistrib;
 
+
             // Suministro
             //double suministroResult = cantidad * suministro;
-            double suministroResult = Calculadora.suministro(1, suministro);
+            suministroResult = Calculadora.suministro(1, suministro);
 
             // Distribución
-            double distribResult = Calculadora.distribucion(potenciaMovil, distPot);
+            distribResult = Calculadora.distribucion(potenciaMovil, distPot);
 
             // Transmición
-            double transResult = Calculadora.transmision(energiaDiff, trans);
+            transResult = Calculadora.transmision(energiaDiff, trans);
 
             // Cenace
             //double cenaceResult = energiaDiff * cenace;
-            double cenaceResult = Calculadora.cenace(energiaDiff, cenace);
+            cenaceResult = Calculadora.cenace(energiaDiff, cenace);
 
             // Energía 
             // double energiaResult = energiaDiff * generación;
-            double energiaResult = Calculadora.energia(energiaDiff, generacion);
+            energiaResult = Calculadora.energia(energiaDiff, generacion);
 
             // Capacidad
             //double capacidadResult = potenciaMovil * capacidad;
-            double capacidadResult = Calculadora.capacidad(potenciaMovil, capPot);
+            capacidadResult = Calculadora.capacidad(potenciaMovil, capPot);
 
             // SnCnMEM
             //double sncnmemResult = energiaDiff * scnmem;
-            double sncnmemResult = Calculadora.sncnmem(energiaDiff, scnmem);
+            sncnmemResult = Calculadora.sncnmem(energiaDiff, scnmem);
 
             // SubTotal
-            double subTotal = suministroResult + distribResult + transResult + cenaceResult + energiaResult + capacidadResult + sncnmemResult;
+            subTotal = suministroResult + distribResult + transResult + cenaceResult + energiaResult + capacidadResult + sncnmemResult;
 
             /************** Desgloce Total ********************/
             // Energia
-            double energia = distribResult + transResult + cenaceResult + energiaResult + capacidadResult + sncnmemResult;
+            energia = distribResult + transResult + cenaceResult + energiaResult + capacidadResult + sncnmemResult;
 
             // 2% de baja tensión
-            double dosPorcentBT = .02 * subTotal;
+            dosPorcentBT = .02 * subTotal;
 
             // Derecho de alumbrado 
-            double derecho = 266;
+            derecho = 266;
 
             // Factor de potencia calculo 
-            double factorPotenciaCalc = factorPotCargo * subTotal;
+            factorPotenciaCalc = factorPotCargo * subTotal;
 
             // Total
-            double total = suministro + energia + dosPorcentBT + derecho + factorPotenciaCalc;
+            total = suministro + energia + dosPorcentBT + derecho + factorPotenciaCalc;
 
             /**************** Relación de costos **************/
             // Precio medio
-            double precioMedio = total / energiaDiff;
+            precioMedio = total / energiaDiff;
 
             // Relación de costos
-            double relCostos = ((capacidadResult + distribResult) / (transResult + cenaceResult + energiaResult + sncnmemResult)) * 100;
+            relCostos = ((capacidadResult + distribResult) / (transResult + cenaceResult + energiaResult + sncnmemResult)) * 100;
 
             /***********************************************************************************/
             /***********************************************************************************/

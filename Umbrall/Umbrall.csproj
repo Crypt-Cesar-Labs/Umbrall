@@ -444,5 +444,8 @@
   <ItemGroup>
     <None Include="Resources\pdfSaveRedW.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PIMEFondoblancoRedim.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

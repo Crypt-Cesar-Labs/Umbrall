@@ -173,6 +173,16 @@ namespace Umbrall.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PIMEFondoblancoRedim {
+            get {
+                object obj = ResourceManager.GetObject("PIMEFondoblancoRedim", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PIMEFondooscuro {
             get {
                 object obj = ResourceManager.GetObject("PIMEFondooscuro", resourceCulture);
