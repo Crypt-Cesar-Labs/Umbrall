@@ -27,7 +27,7 @@ namespace Umbrall
 
         private void ShowingParams()
         {
-            MonitorGui.txtVrms
+           
         }
         public static void StopShow()
         {

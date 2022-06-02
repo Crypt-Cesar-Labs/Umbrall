@@ -21,13 +21,13 @@ namespace Umbrall
             InitializeComponent();
         }
 
-        
+        public static Timer showParameters;
 
         private void MonitorGui_Load(object sender, EventArgs e)
         {
             Monitor.VrmsChart(chart1);
 
-            Timer showParameters = new Timer();
+            showParameters = new Timer();
             showParameters.Interval = 1000;
             showParameters.Enabled = true;
             showParameters.Tick += ShowingParameters;
@@ -76,7 +76,8 @@ namespace Umbrall
 
         private void MonitorGui_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            showParameters.Stop();
+            showParameters.Enabled = false;
         }
     }
 }
