@@ -172,8 +172,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrequencyChart.cs" />
     <Compile Include="GlobalParameters.cs" />
     <Compile Include="HistoryRegisters.cs" />
+    <Compile Include="LineValuesChart.cs" />
     <Compile Include="mbRtuTcpTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +195,7 @@
       <DependentUpon>mbTcpTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Monitor.cs" />
+    <Compile Include="MonitorChart.cs" />
     <Compile Include="MonitorGui.cs">
       <SubType>Form</SubType>
     </Compile>

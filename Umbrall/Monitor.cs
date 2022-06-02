@@ -363,7 +363,7 @@ namespace Umbrall
             
         }
 
-        public static void VrmsChart(Chart chart)
+        public static void VrmsChartConfig(Chart chart)
         {
             // Make the object for Series and Areas
             SeriesCollection chartVrmsSeries = chart.Series;

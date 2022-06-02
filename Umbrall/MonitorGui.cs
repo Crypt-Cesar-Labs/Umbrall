@@ -25,7 +25,6 @@ namespace Umbrall
 
         private void MonitorGui_Load(object sender, EventArgs e)
         {
-            Monitor.VrmsChart(chart1);
 
             showParameters = new Timer();
             showParameters.Interval = 1000;
