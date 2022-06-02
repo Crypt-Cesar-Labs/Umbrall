@@ -288,36 +288,38 @@ namespace Umbrall
             // Relación de costo
             relacionCostos = ((capResult + distribResult) / (transResult + cenaceResult + genBaseResult + genInterResult + genPuntaResult)) * 100;
 
+
             /******************** SHOW RESULTS **********************/
-            txtDays.Text = dias.ToString();
-            txtQMensual.Text = qMensual.ToString();
-            txtFP.Text = factorPot.ToString();
-            txtBono.Text = bonificacion.ToString();
-            txtPenal.Text = penalizacion.ToString();
-            txtDmax.Text = dmax.ToString();
-            txtKWDist.Text = kwDistrib.ToString();
-            txtKWCap.Text = kwCap.ToString();
+            int lenghtResult = 7;
+            txtDays.Text = dias.ToString().Substring(0, lenghtResult);
+            txtQMensual.Text = qMensual.ToString().Substring(0, lenghtResult);
+            txtFP.Text = factorPot.ToString().Substring(0, lenghtResult);
+            txtBono.Text = bonificacion.ToString().Substring(0, lenghtResult);
+            txtPenal.Text = penalizacion.ToString().Substring(0, lenghtResult);
+            txtDmax.Text = dmax.ToString().Substring(0, lenghtResult);
+            txtKWDist.Text = kwDistrib.ToString().Substring(0, lenghtResult);
+            txtKWCap.Text = kwCap.ToString().Substring(0, lenghtResult);
 
             // Coste General 
-            txtSumResult.Text = suminisResult.ToString();
-            txtDistResult.Text = distribResult.ToString();
-            txtTransResult.Text = transResult.ToString();
-            txtCenaceResult.Text = cenaceResult.ToString();
-            txtCapResult.Text = capResult.ToString();
-            txtGenBResult.Text = genBaseResult.ToString();
-            txtGenIResult.Text = genInterResult.ToString();
-            txtGenPResult.Text = genPuntaResult.ToString();
-            txtSncResult.Text = sncnmemResult.ToString();
-            txtSubTotal.Text = subTotal.ToString();
+            txtSumResult.Text = suminisResult.ToString().Substring(0, lenghtResult);
+            txtDistResult.Text = distribResult.ToString().Substring(0, lenghtResult);
+            txtTransResult.Text = transResult.ToString().Substring(0, lenghtResult);
+            txtCenaceResult.Text = cenaceResult.ToString().Substring(0, lenghtResult);
+            txtCapResult.Text = capResult.ToString().Substring(0, lenghtResult);
+            txtGenBResult.Text = genBaseResult.ToString().Substring(0, lenghtResult);
+            txtGenIResult.Text = genInterResult.ToString().Substring(0, lenghtResult);
+            txtGenPResult.Text = genPuntaResult.ToString().Substring(0, lenghtResult);
+            txtSncResult.Text = sncnmemResult.ToString().Substring(0, lenghtResult);
+            txtSubTotal.Text = subTotal.ToString().Substring(0,lenghtResult);
 
             // Desgloce Total
-            txtCargoFijo.Text = cargoFijoResult.ToString();
-            txtEnergy.Text = energyResult.ToString();
-            txtDosPercent.Text = dosPercentResult.ToString();
-            txtFPTotal.Text = factorPotResult.ToString();
-            txtTotal.Text = total.ToString();
-            txtPrecioMedio.Text = precioMedio.ToString();
-            txtRelCost.Text = relacionCostos.ToString();
+            txtCargoFijo.Text = cargoFijoResult.ToString().Substring(0, lenghtResult);
+            txtEnergy.Text = energyResult.ToString().Substring(0, lenghtResult);
+            txtDosPercent.Text = dosPercentResult.ToString().Substring(0, lenghtResult);
+            txtFPTotal.Text = factorPotResult.ToString().Substring(0, lenghtResult);
+            txtTotal.Text = total.ToString().Substring(0, lenghtResult);
+            txtPrecioMedio.Text = precioMedio.ToString().Substring(0, lenghtResult);
+            txtRelCost.Text = relacionCostos.ToString().Substring(0, lenghtResult);
         }
 
         double demandMaxFound(double baseDemand, double interDemand, double puntaDemand)

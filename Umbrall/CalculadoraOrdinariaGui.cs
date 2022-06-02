@@ -250,37 +250,39 @@ namespace Umbrall
             /***********************************************************************************/
             /***********************************************************************************/
             // Showing results
-            txtEnergiaDiff.Text = energiaDiff.ToString();                   // Energy diff
-            txtReactDiff.Text = reactDiff.ToString();          // Energy React Diff
-            txtDays.Text = days.ToString();                                 // Date diff
-            txtQMensual.Text = energiaDiff.ToString();                      // QMensual
-            txtFp.Text = factorPot.ToString();                              // F.P.
-            txtBono.Text = bonificacion.ToString();                         // Bono
-            txtPenal.Text = penalizacion.ToString();                        // Penalizacion
-            txtMovil.Text = (Math.Ceiling(potenciaMovil)).ToString();        // Potencia Max
-            txtKWDistrib.Text = (Math.Ceiling(kwDistrib)).ToString();       // Potencia eléctrica para distribución
-            txtKWCap.Text = (Math.Ceiling(kwCap)).ToString();         // Potencia eléctrica para capacidad
-            txtPrecioMedio.Text = precioMedio.ToString();                   // Precio Medio
-            txtRelCost.Text = relCostos.ToString();                  // Relación de costos
+            int lenghtResult = 7;
+            txtEnergiaDiff.Text = energiaDiff.ToString().Substring(0, lenghtResult);                   // Energy diff
+            txtReactDiff.Text = reactDiff.ToString().Substring(0, lenghtResult);          // Energy React Diff
+            txtDays.Text = days.ToString().Substring(0, lenghtResult);                                 // Date diff
+            txtQMensual.Text = energiaDiff.ToString().Substring(0, lenghtResult);                      // QMensual
+            txtFp.Text = factorPot.ToString().Substring(0, lenghtResult);                              // F.P.
+            txtBono.Text = bonificacion.ToString().Substring(0, lenghtResult);                         // Bono
+            txtPenal.Text = penalizacion.ToString().Substring(0, lenghtResult);                        // Penalizacion
+            txtMovil.Text = (Math.Ceiling(potenciaMovil)).ToString().Substring(0, lenghtResult);        // Potencia Max
+            txtKWDistrib.Text = (Math.Ceiling(kwDistrib)).ToString().Substring(0, lenghtResult);       // Potencia eléctrica para distribución
+            txtKWCap.Text = (Math.Ceiling(kwCap)).ToString().Substring(0, lenghtResult);         // Potencia eléctrica para capacidad
+            txtPrecioMedio.Text = precioMedio.ToString().Substring(0, lenghtResult);                   // Precio Medio
+            txtRelCost.Text = relCostos.ToString().Substring(0, lenghtResult);                  // Relación de costos
 
             // Costo General
-            txtSumResult.Text = suministroResult.ToString();                // Suministro
-            txtDistResult.Text = distribResult.ToString();                  // Distribución
-            txtTransResult.Text = transResult.ToString();                   // Transmisión
-            txtCenaceResult.Text = cenaceResult.ToString();                 // Cenace
-            txtEnergiaResult.Text = energiaResult.ToString();               // Energía                         
-            txtCapResult.Text = capacidadResult.ToString();                 // Capacidad
-            txtScnmemResult.Text = sncnmemResult.ToString();                  // SnCnMEM
-            txtSubTotal.Text = subTotal.ToString();                         // subtotal
+            txtSumResult.Text = suministroResult.ToString().Substring(0, lenghtResult);                // Suministro
+            txtDistResult.Text = distribResult.ToString().Substring(0, lenghtResult);                  // Distribución
+            txtTransResult.Text = transResult.ToString().Substring(0, lenghtResult);                   // Transmisión
+            txtCenaceResult.Text = cenaceResult.ToString().Substring(0, lenghtResult);                 // Cenace
+            txtEnergiaResult.Text = energiaResult.ToString().Substring(0, lenghtResult);               // Energía                         
+            txtCapResult.Text = capacidadResult.ToString().Substring(0, lenghtResult);                 // Capacidad
+            txtScnmemResult.Text = sncnmemResult.ToString().Substring(0, lenghtResult);                  // SnCnMEM
+            txtSubTotal.Text = subTotal.ToString().Substring(0, lenghtResult);                         // subtotal
 
             // Desgloce Total
-            txtCargoFijo.Text = suministro.ToString();                      // Cargo fijo
-            txtEnergiaTotal.Text = energia.ToString();                  // Energía
-            txt2BajaTens.Text = dosPorcentBT.ToString();                  // 2% de baja tensión
-            txtDerecho.Text = derecho.ToString();                  // Derecho alumbrado
-            txtFPTotal.Text = factorPotenciaCalc.ToString();            // Cálculo factor de potencia
-            txtTotal.Text = total.ToString();                               // Total
+            txtCargoFijo.Text = suministro.ToString().Substring(0, lenghtResult);                      // Cargo fijo
+            txtEnergiaTotal.Text = energia.ToString().Substring(0, lenghtResult);                  // Energía
+            txt2BajaTens.Text = dosPorcentBT.ToString().Substring(0, lenghtResult);                  // 2% de baja tensión
+            txtDerecho.Text = derecho.ToString().Substring(0, lenghtResult);                  // Derecho alumbrado
+            txtFPTotal.Text = factorPotenciaCalc.ToString().Substring(0, lenghtResult);            // Cálculo factor de potencia
+            txtTotal.Text = total.ToString().Substring(0, lenghtResult);                               // Total
             
         }
     }
 }
+c
