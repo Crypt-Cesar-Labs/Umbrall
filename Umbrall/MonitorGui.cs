@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Diagnostics;
 
 namespace Umbrall
 {
@@ -24,13 +25,13 @@ namespace Umbrall
 
         private void MonitorGui_Load(object sender, EventArgs e)
         {
-           
+            Monitor.VrmsChart(chart1);
+
             Timer showParameters = new Timer();
             showParameters.Interval = 1000;
             showParameters.Enabled = true;
             showParameters.Tick += ShowingParameters;
-
-            Monitor.VrmsChart(chart1);
+            
 
         }
 
@@ -70,17 +71,11 @@ namespace Umbrall
             txtReactiveB.Text = Monitor.reactEnergyB.ToString();
             txtReactiveC.Text = Monitor.reactEnergyC.ToString();
             txtReactiveABC.Text = Monitor.reactEnergyABC.ToString();
+   
         }
-        
-        private void VrmsChart(Chart chart, float vrmsABC, float freq)
-        {
-            // Make the object for Series and Areas
-            SeriesCollection chartVrmsSeries = chart.Series;
-            ChartAreaCollection chartVrmsAreas = chart.ChartAreas;
-            chartVrmsSeries.Add("Vrms");                            // Se agrega serie de Vrms
 
-            ChartArea chartVrmsArea = chartVrmsAreas[0];
-            Series chartVrmsSerie = chartVrmsSeries[0];            // Se selecciona la primer serie 
+        private void MonitorGui_FormClosed(object sender, FormClosedEventArgs e)
+        {
 
         }
     }

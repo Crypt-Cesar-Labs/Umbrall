@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+//using System.Threading;
 
 namespace Umbrall
 {
@@ -17,7 +19,8 @@ namespace Umbrall
         public static string ipAddress;
         public static int port;
         public static bool statusMonitor = false;
-
+        public static Thread monitorThread;
+        
         #region ModbusVarSeneca
         //Modbus variables for SENECA
         public static float vrmsA;
@@ -68,13 +71,17 @@ namespace Umbrall
                 //int[] readVrmsA = modbusClient.ReadHoldingRegisters(134, 2);
 
                 statusMonitor = true;
-                
+                monitorThread = new Thread(new ThreadStart(MonitorProc));
+                monitorThread.Start();
+                Thread.Sleep(1000);
 
+
+                /*
                 Timer readModbusTimer = new Timer();
 
                 readModbusTimer.Interval = 5000;
                 readModbusTimer.Enabled = true;
-                readModbusTimer.Tick += ReadModbusTimer_Tick;
+                readModbusTimer.Tick += ReadModbusTimer_Tick;*/
 
             }
             catch
@@ -85,45 +92,90 @@ namespace Umbrall
             
         }
 
-        public static void ReadRegister()
+        private static void MonitorProc()
+        {
+            while (true)
+            {
+                ReadRegister();
+                Console.WriteLine("Reading registers from Thread {0}", Thread.CurrentThread.ManagedThreadId);
+                Thread.Sleep(500);
+            }
+            
+
+        }
+
+        private static void ReadRegister()
         {
             try
             {
                 
                 //------------------------ VARIABLES FOR READING -------------------------------//
                 int[] readVrmsA = modbusClient.ReadHoldingRegisters(134, 2);
+                Thread.Sleep(200);
                 int[] readVrmsB = modbusClient.ReadHoldingRegisters(136, 2);
+                Thread.Sleep(200);
                 int[] readVrmsC = modbusClient.ReadHoldingRegisters(138, 2);
+                Thread.Sleep(200);
                 int[] readVrmsABC = modbusClient.ReadHoldingRegisters(140, 2);
+                Thread.Sleep(200);
                 int[] readPActiveA = modbusClient.ReadHoldingRegisters(150, 2);
+                Thread.Sleep(200);
                 int[] readPActiveB = modbusClient.ReadHoldingRegisters(152, 2);
+                Thread.Sleep(200);
                 int[] readPActiveC = modbusClient.ReadHoldingRegisters(154, 2);
+                Thread.Sleep(200);
                 int[] readPActiveABC = modbusClient.ReadHoldingRegisters(156, 2);
+                Thread.Sleep(200);
                 int[] readQA = modbusClient.ReadHoldingRegisters(158, 2);
+                Thread.Sleep(200);
                 int[] readQB = modbusClient.ReadHoldingRegisters(160, 2);
+                Thread.Sleep(200);
                 int[] readQC = modbusClient.ReadHoldingRegisters(162, 2);
+                Thread.Sleep(200);
                 int[] readQABC = modbusClient.ReadHoldingRegisters(164, 2);
+                Thread.Sleep(200);
                 int[] readSA = modbusClient.ReadHoldingRegisters(166, 2);
+                Thread.Sleep(200);
                 int[] readSB = modbusClient.ReadHoldingRegisters(168, 2);
+                Thread.Sleep(200);
                 int[] readSC = modbusClient.ReadHoldingRegisters(170, 2);
+                Thread.Sleep(200);
                 int[] readSABC = modbusClient.ReadHoldingRegisters(172, 2);
+                Thread.Sleep(200);
                 int[] readCosfiA = modbusClient.ReadHoldingRegisters(174, 2);
+                Thread.Sleep(200);
                 int[] readCosfiB = modbusClient.ReadHoldingRegisters(176, 2);
+                Thread.Sleep(200);
                 int[] readCosfiC = modbusClient.ReadHoldingRegisters(178, 2);
+                Thread.Sleep(200);
                 int[] readCosfiABC = modbusClient.ReadHoldingRegisters(180, 2);
+                Thread.Sleep(200);
                 int[] readFrequency = modbusClient.ReadHoldingRegisters(182, 2);
+                Thread.Sleep(200);
                 int[] readEnergyA = modbusClient.ReadHoldingRegisters(184, 2);
+                Thread.Sleep(200);
                 int[] readEnergyB = modbusClient.ReadHoldingRegisters(186, 2);
+                Thread.Sleep(200);
                 int[] readEnergyC = modbusClient.ReadHoldingRegisters(188, 2);
+                Thread.Sleep(200);
                 int[] readEnergyABC = modbusClient.ReadHoldingRegisters(190, 2);
+                Thread.Sleep(200);
                 int[] readREnergyA = modbusClient.ReadHoldingRegisters(224, 2);
+                Thread.Sleep(200);
                 int[] readREnergyB = modbusClient.ReadHoldingRegisters(226, 2);
+                Thread.Sleep(200);
                 int[] readREnergyC = modbusClient.ReadHoldingRegisters(228, 2);
+                Thread.Sleep(200);
                 int[] readREnergyABC = modbusClient.ReadHoldingRegisters(230, 2);
+                Thread.Sleep(200);
                 int[] readIrmsA = modbusClient.ReadHoldingRegisters(142, 2);
+                Thread.Sleep(200);
                 int[] readIrmsB = modbusClient.ReadHoldingRegisters(144, 2);
+                Thread.Sleep(200);
                 int[] readIrmsC = modbusClient.ReadHoldingRegisters(146, 2);
+                Thread.Sleep(200);
                 int[] readIrmsABC = modbusClient.ReadHoldingRegisters(148, 2);
+                Thread.Sleep(200);
 
 
                 //------------------------ SHOWING PARAMETERS ----------------------------------//
@@ -258,6 +310,7 @@ namespace Umbrall
                 string irmsABCString = (readIrmsABC[1] + (readIrmsABC[0] * 65536)).ToString("X");
                 //txtIrmsABC.Text = ConvertToFloat(irmsABC).ToString();
                 irmsABC = (ConvertToFloat(irmsABCString)/1000);
+
             }
             catch (Exception ex)
             {
@@ -300,6 +353,8 @@ namespace Umbrall
                 modbusClient.Disconnect();                
                 MessageBox.Show("Comunicación finalizada");
                 statusMonitor = false;
+                monitorThread.Abort();
+                Console.WriteLine("Stop Reading registers & kill Thread {0}", monitorThread.ManagedThreadId);
             }
             catch
             {

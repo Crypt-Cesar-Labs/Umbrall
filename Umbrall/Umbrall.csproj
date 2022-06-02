@@ -214,6 +214,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SaveFacturaFile.cs" />
+    <Compile Include="ShowingParameters.cs" />
     <Compile Include="StartMonitor.cs">
       <SubType>Form</SubType>
     </Compile>
