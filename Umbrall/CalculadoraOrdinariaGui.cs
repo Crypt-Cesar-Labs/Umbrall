@@ -251,36 +251,36 @@ namespace Umbrall
             /***********************************************************************************/
             // Showing results
             int lenghtResult = 7;
-            txtEnergiaDiff.Text = energiaDiff.ToString().Substring(0, lenghtResult);                   // Energy diff
-            txtReactDiff.Text = reactDiff.ToString().Substring(0, lenghtResult);          // Energy React Diff
-            txtDays.Text = days.ToString().Substring(0, lenghtResult);                                 // Date diff
-            txtQMensual.Text = energiaDiff.ToString().Substring(0, lenghtResult);                      // QMensual
-            txtFp.Text = factorPot.ToString().Substring(0, lenghtResult);                              // F.P.
-            txtBono.Text = bonificacion.ToString().Substring(0, lenghtResult);                         // Bono
-            txtPenal.Text = penalizacion.ToString().Substring(0, lenghtResult);                        // Penalizacion
-            txtMovil.Text = (Math.Ceiling(potenciaMovil)).ToString().Substring(0, lenghtResult);        // Potencia Max
-            txtKWDistrib.Text = (Math.Ceiling(kwDistrib)).ToString().Substring(0, lenghtResult);       // Potencia eléctrica para distribución
-            txtKWCap.Text = (Math.Ceiling(kwCap)).ToString().Substring(0, lenghtResult);         // Potencia eléctrica para capacidad
-            txtPrecioMedio.Text = precioMedio.ToString().Substring(0, lenghtResult);                   // Precio Medio
-            txtRelCost.Text = relCostos.ToString().Substring(0, lenghtResult);                  // Relación de costos
+            txtEnergiaDiff.Text = TextFormater.TextFormatLenght(energiaDiff.ToString(), lenghtResult);                  // Energy diff
+            txtReactDiff.Text = TextFormater.TextFormatLenght(reactDiff.ToString(), lenghtResult);                                                                    // Energy React Diff
+            txtDays.Text = TextFormater.TextFormatLenght(days.ToString(), lenghtResult);                                                                          // Date diff
+            txtQMensual.Text = TextFormater.TextFormatLenght(energiaDiff.ToString(), lenghtResult);                                                                 // QMensual
+            txtFp.Text = TextFormater.TextFormatLenght(factorPot.ToString(), lenghtResult);                                                                        // F.P.
+            txtBono.Text = TextFormater.TextFormatLenght(bonificacion.ToString(), lenghtResult);                                                                    // Bono
+            txtPenal.Text = TextFormater.TextFormatLenght(penalizacion.ToString(), lenghtResult);                                                                   // Penalizacion
+            txtMovil.Text = TextFormater.TextFormatLenght((Math.Ceiling(potenciaMovil)).ToString(), lenghtResult);                                                 // Potencia Max
+            txtKWDistrib.Text = TextFormater.TextFormatLenght((Math.Ceiling(kwDistrib)).ToString(), lenghtResult);                                                    // Potencia eléctrica para distribución
+            txtKWCap.Text = TextFormater.TextFormatLenght((Math.Ceiling(kwCap)).ToString(), lenghtResult);                                                          // Potencia eléctrica para capacidad
+            txtPrecioMedio.Text = TextFormater.TextFormatLenght(precioMedio.ToString(), lenghtResult);                                                             // Precio Medio
+            txtRelCost.Text = TextFormater.TextFormatLenght(relCostos.ToString(), lenghtResult);                                                                     // Relación de costos
 
             // Costo General
-            txtSumResult.Text = suministroResult.ToString().Substring(0, lenghtResult);                // Suministro
-            txtDistResult.Text = distribResult.ToString().Substring(0, lenghtResult);                  // Distribución
-            txtTransResult.Text = transResult.ToString().Substring(0, lenghtResult);                   // Transmisión
-            txtCenaceResult.Text = cenaceResult.ToString().Substring(0, lenghtResult);                 // Cenace
-            txtEnergiaResult.Text = energiaResult.ToString().Substring(0, lenghtResult);               // Energía                         
-            txtCapResult.Text = capacidadResult.ToString().Substring(0, lenghtResult);                 // Capacidad
-            txtScnmemResult.Text = sncnmemResult.ToString().Substring(0, lenghtResult);                  // SnCnMEM
-            txtSubTotal.Text = subTotal.ToString().Substring(0, lenghtResult);                         // subtotal
+            txtSumResult.Text = TextFormater.TextFormatLenght(suministroResult.ToString(), lenghtResult);                // Suministro
+            txtDistResult.Text = TextFormater.TextFormatLenght(distribResult.ToString(), lenghtResult);                 // Distribución
+            txtTransResult.Text = TextFormater.TextFormatLenght(transResult.ToString(), lenghtResult);                   // Transmisión
+            txtCenaceResult.Text = TextFormater.TextFormatLenght(cenaceResult.ToString(), lenghtResult);                  // Cenace
+            txtEnergiaResult.Text = TextFormater.TextFormatLenght(energiaResult.ToString(), lenghtResult);               // Energía                         
+            txtCapResult.Text = TextFormater.TextFormatLenght(capacidadResult.ToString(), lenghtResult);                // Capacidad
+            txtScnmemResult.Text = TextFormater.TextFormatLenght(sncnmemResult.ToString(), lenghtResult);                 // SnCnMEM
+            txtSubTotal.Text = TextFormater.TextFormatLenght(subTotal.ToString(), lenghtResult);                         // subtotal
 
             // Desgloce Total
-            txtCargoFijo.Text = suministro.ToString().Substring(0, lenghtResult);                      // Cargo fijo
-            txtEnergiaTotal.Text = energia.ToString().Substring(0, lenghtResult);                  // Energía
-            txt2BajaTens.Text = dosPorcentBT.ToString().Substring(0, lenghtResult);                  // 2% de baja tensión
-            txtDerecho.Text = derecho.ToString().Substring(0, lenghtResult);                  // Derecho alumbrado
-            txtFPTotal.Text = factorPotenciaCalc.ToString().Substring(0, lenghtResult);            // Cálculo factor de potencia
-            txtTotal.Text = total.ToString().Substring(0, lenghtResult);                               // Total
+            txtCargoFijo.Text = TextFormater.TextFormatLenght(suministro.ToString(), lenghtResult);                       // Cargo fijo
+            txtEnergiaTotal.Text = TextFormater.TextFormatLenght(energia.ToString(), lenghtResult);                       // Energía
+            txt2BajaTens.Text = TextFormater.TextFormatLenght(dosPorcentBT.ToString(), lenghtResult);                    // 2% de baja tensión
+            txtDerecho.Text = TextFormater.TextFormatLenght(derecho.ToString(), lenghtResult);                            // Derecho alumbrado
+            txtFPTotal.Text = TextFormater.TextFormatLenght(factorPotenciaCalc.ToString(), lenghtResult);                // Cálculo factor de potencia
+            txtTotal.Text = TextFormater.TextFormatLenght(total.ToString(), lenghtResult);                               // Total
             
         }
     }

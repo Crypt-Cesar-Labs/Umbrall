@@ -236,6 +236,7 @@
     <Compile Include="tcpTest.Designer.cs">
       <DependentUpon>tcpTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="TextFormater.cs" />
     <EmbeddedResource Include="CalculadoraHorariaGui.resx">
       <DependentUpon>CalculadoraHorariaGui.cs</DependentUpon>
     </EmbeddedResource>

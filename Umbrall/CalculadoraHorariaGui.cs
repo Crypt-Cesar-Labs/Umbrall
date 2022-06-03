@@ -291,35 +291,35 @@ namespace Umbrall
 
             /******************** SHOW RESULTS **********************/
             int lenghtResult = 7;
-            txtDays.Text = dias.ToString().Substring(0, lenghtResult);
-            txtQMensual.Text = qMensual.ToString().Substring(0, lenghtResult);
-            txtFP.Text = factorPot.ToString().Substring(0, lenghtResult);
-            txtBono.Text = bonificacion.ToString().Substring(0, lenghtResult);
-            txtPenal.Text = penalizacion.ToString().Substring(0, lenghtResult);
-            txtDmax.Text = dmax.ToString().Substring(0, lenghtResult);
-            txtKWDist.Text = kwDistrib.ToString().Substring(0, lenghtResult);
-            txtKWCap.Text = kwCap.ToString().Substring(0, lenghtResult);
+            txtDays.Text = TextFormater.TextFormatLenght(dias.ToString(), lenghtResult);
+            txtQMensual.Text = TextFormater.TextFormatLenght(qMensual.ToString(), lenghtResult);
+            txtFP.Text = TextFormater.TextFormatLenght(factorPot.ToString(), lenghtResult); 
+            txtBono.Text = TextFormater.TextFormatLenght(bonificacion.ToString(), lenghtResult);
+            txtPenal.Text = TextFormater.TextFormatLenght(penalizacion.ToString(), lenghtResult);
+            txtDmax.Text = TextFormater.TextFormatLenght(dmax.ToString(), lenghtResult);
+            txtKWDist.Text = TextFormater.TextFormatLenght(kwDistrib.ToString(), lenghtResult);
+            txtKWCap.Text = TextFormater.TextFormatLenght(kwDistrib.ToString(), lenghtResult);
 
             // Coste General 
-            txtSumResult.Text = suminisResult.ToString().Substring(0, lenghtResult);
-            txtDistResult.Text = distribResult.ToString().Substring(0, lenghtResult);
-            txtTransResult.Text = transResult.ToString().Substring(0, lenghtResult);
-            txtCenaceResult.Text = cenaceResult.ToString().Substring(0, lenghtResult);
-            txtCapResult.Text = capResult.ToString().Substring(0, lenghtResult);
-            txtGenBResult.Text = genBaseResult.ToString().Substring(0, lenghtResult);
-            txtGenIResult.Text = genInterResult.ToString().Substring(0, lenghtResult);
-            txtGenPResult.Text = genPuntaResult.ToString().Substring(0, lenghtResult);
-            txtSncResult.Text = sncnmemResult.ToString().Substring(0, lenghtResult);
-            txtSubTotal.Text = subTotal.ToString().Substring(0,lenghtResult);
+            txtSumResult.Text = TextFormater.TextFormatLenght(suminisResult.ToString(), lenghtResult);
+            txtDistResult.Text = TextFormater.TextFormatLenght(distribResult.ToString(), lenghtResult);
+            txtTransResult.Text = TextFormater.TextFormatLenght(transResult.ToString(), lenghtResult); 
+            txtCenaceResult.Text = TextFormater.TextFormatLenght(cenaceResult.ToString(), lenghtResult); 
+            txtCapResult.Text = TextFormater.TextFormatLenght(capResult.ToString(), lenghtResult); 
+            txtGenBResult.Text = TextFormater.TextFormatLenght(genBaseResult.ToString(), lenghtResult); 
+            txtGenIResult.Text = TextFormater.TextFormatLenght(genInterResult.ToString(), lenghtResult); 
+            txtGenPResult.Text = TextFormater.TextFormatLenght(genPuntaResult.ToString(), lenghtResult); 
+            txtSncResult.Text = TextFormater.TextFormatLenght(sncnmemResult.ToString(), lenghtResult); 
+            txtSubTotal.Text = 
 
             // Desgloce Total
-            txtCargoFijo.Text = cargoFijoResult.ToString().Substring(0, lenghtResult);
-            txtEnergy.Text = energyResult.ToString().Substring(0, lenghtResult);
-            txtDosPercent.Text = dosPercentResult.ToString().Substring(0, lenghtResult);
-            txtFPTotal.Text = factorPotResult.ToString().Substring(0, lenghtResult);
-            txtTotal.Text = total.ToString().Substring(0, lenghtResult);
-            txtPrecioMedio.Text = precioMedio.ToString().Substring(0, lenghtResult);
-            txtRelCost.Text = relacionCostos.ToString().Substring(0, lenghtResult);
+            txtCargoFijo.Text = TextFormater.TextFormatLenght(cargoFijoResult.ToString(), lenghtResult);
+            txtEnergy.Text = TextFormater.TextFormatLenght(energyResult.ToString(), lenghtResult);
+            txtDosPercent.Text = TextFormater.TextFormatLenght(dosPercentResult.ToString(), lenghtResult); 
+            txtFPTotal.Text = TextFormater.TextFormatLenght(factorPotResult.ToString(), lenghtResult); 
+            txtTotal.Text = TextFormater.TextFormatLenght(total.ToString(), lenghtResult); 
+            txtPrecioMedio.Text = TextFormater.TextFormatLenght(precioMedio.ToString(), lenghtResult); 
+            txtRelCost.Text = TextFormater.TextFormatLenght(relacionCostos.ToString(), lenghtResult); 
         }
 
         double demandMaxFound(double baseDemand, double interDemand, double puntaDemand)
