@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Diagnostics;
+using System.Threading;
 
 namespace Umbrall
 {
@@ -21,17 +22,28 @@ namespace Umbrall
             InitializeComponent();
         }
 
-        public static Timer showParameters;
+        private Thread chart1Thread;
+        public static System.Windows.Forms.Timer showParameters;
 
         private void MonitorGui_Load(object sender, EventArgs e)
         {
 
-            showParameters = new Timer();
+            showParameters = new System.Windows.Forms.Timer();
             showParameters.Interval = 1000;
             showParameters.Enabled = true;
             showParameters.Tick += ShowingParameters;
             
 
+        }
+
+        private void getVrmsCounters()
+        {
+            var vrmsValue = Monitor.vrmsABC;
+
+            while (true)
+            {
+
+            }
         }
 
         private void ShowingParameters(object sender, EventArgs e)
