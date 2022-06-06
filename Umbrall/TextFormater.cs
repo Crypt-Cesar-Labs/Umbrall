@@ -34,6 +34,7 @@ namespace Umbrall
         /// Limit the lenght to show in the results
         /// </summary>
         /// <param name="text">text for limit</param>
+        /// <param name="lenght">
         /// <returns></returns>
         public static string TextFormatLenght(string text, int lenght)
         {

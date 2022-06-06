@@ -230,6 +230,7 @@
     <Compile Include="tarifaCFE.Designer.cs">
       <DependentUpon>tarifaCFE.cs</DependentUpon>
     </Compile>
+    <Compile Include="TarifaMensual.cs" />
     <Compile Include="tcpTest.cs">
       <SubType>Form</SubType>
     </Compile>
