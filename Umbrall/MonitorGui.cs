@@ -24,6 +24,7 @@ namespace Umbrall
 
         private Thread chart1Thread;
         public static System.Windows.Forms.Timer showParameters;
+        private double[] vrmsArray = new double[30];
 
         private void MonitorGui_Load(object sender, EventArgs e)
         {
@@ -33,6 +34,9 @@ namespace Umbrall
             showParameters.Enabled = true;
             showParameters.Tick += ShowingParameters;
             
+            chart1Thread = new Thread(new ThreadStart(this.getVrmsCounters));
+            chart1Thread.IsBackground = true;
+            chart1Thread.Start();
 
         }
 
@@ -42,7 +46,28 @@ namespace Umbrall
 
             while (true)
             {
+                vrmsArray[vrmsArray.Length - 1] = Math.Round(vrmsValue, 0);
 
+                Array.Copy(vrmsArray, 1, vrmsArray, 0, vrmsArray.Length - 1);
+
+                if (chart1.IsHandleCreated)
+                {
+                    this.Invoke((MethodInvoker)delegate { UpdateVrmsChart(); });
+                }
+                else
+                {
+                    //.....
+                }
+            }
+        }
+
+        private void UpdateVrmsChart()
+        {
+            chart1.Series["Series1"].Points.Clear();
+
+            for (int i = 0; i < vrmsArray.Length - 1; i++)
+            {
+                chart1.Series["Series"].Points.AddXY(vrmsArray[i]);
             }
         }
 
