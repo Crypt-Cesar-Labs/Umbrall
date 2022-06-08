@@ -67,7 +67,7 @@ namespace Umbrall
 
             for (int i = 0; i < vrmsArray.Length - 1; i++)
             {
-                chart1.Series["Series"].Points.AddXY(vrmsArray[i]);
+                chart1.Series["Series1"].Points.AddY(vrmsArray[i]);
             }
         }
 
