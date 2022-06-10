@@ -111,8 +111,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnTest1 = new System.Windows.Forms.Button();
             this.panelMonitor.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -128,7 +130,7 @@
             this.panelMonitor.Controls.Add(this.panel5);
             this.panelMonitor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMonitor.Location = new System.Drawing.Point(0, 0);
-            this.panelMonitor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMonitor.Margin = new System.Windows.Forms.Padding(2);
             this.panelMonitor.Name = "panelMonitor";
             this.panelMonitor.Size = new System.Drawing.Size(907, 689);
             this.panelMonitor.TabIndex = 0;
@@ -143,13 +145,14 @@
             this.panel5.Controls.Add(this.tableLayoutPanel1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(907, 689);
             this.panel5.TabIndex = 5;
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btnTest1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(100, 618);
             this.panel3.Name = "panel3";
@@ -188,7 +191,7 @@
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
+            series1.Name = "VrmsABC";
             this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(347, 260);
             this.chart1.TabIndex = 0;
@@ -1020,6 +1023,17 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "S A";
             // 
+            // btnTest1
+            // 
+            this.btnTest1.Location = new System.Drawing.Point(502, 38);
+            this.btnTest1.Name = "btnTest1";
+            this.btnTest1.Size = new System.Drawing.Size(75, 23);
+            this.btnTest1.TabIndex = 0;
+            this.btnTest1.Text = "button1";
+            this.btnTest1.UseVisualStyleBackColor = true;
+            this.btnTest1.Visible = false;
+            this.btnTest1.Click += new System.EventHandler(this.btnTest1_Click);
+            // 
             // MonitorGui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1028,13 +1042,14 @@
             this.ClientSize = new System.Drawing.Size(907, 689);
             this.Controls.Add(this.panelMonitor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MonitorGui";
             this.Text = "MonitorGui";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MonitorGui_FormClosed);
             this.Load += new System.EventHandler(this.MonitorGui_Load);
             this.panelMonitor.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -1129,5 +1144,6 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Button btnTest1;
     }
 }

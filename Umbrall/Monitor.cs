@@ -83,6 +83,7 @@ namespace Umbrall
                 readModbusTimer.Enabled = true;
                 readModbusTimer.Tick += ReadModbusTimer_Tick;*/
 
+                MessageBox.Show("Monitoreo Iniciado");
             }
             catch
             {
