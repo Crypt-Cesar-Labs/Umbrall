@@ -166,6 +166,7 @@
     <Compile Include="ConsultaTarifaForm1.Designer.cs">
       <DependentUpon>ConsultaTarifaForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataBaseHeader.cs" />
     <Compile Include="dbQueryCargos.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

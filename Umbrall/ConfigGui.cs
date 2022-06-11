@@ -52,6 +52,11 @@ namespace Umbrall
                     modbusClientConfig.Disconnect();
                 }
 
+                DataBaseHeader.host = txtHost.Text;
+                DataBaseHeader.user = txtUser.Text;
+                DataBaseHeader.password = txtPassword.Text;
+                DataBaseHeader.port = txtPort.Text;
+                DataBaseHeader.dataBase = txtDataBase.Text;
                 this.Close();
             }
             

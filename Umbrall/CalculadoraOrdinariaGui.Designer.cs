@@ -1727,7 +1727,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CalculadoraOrdinariaGui";
             this.Text = "CalculadoraOrdinariaGui";
             this.tableLayoutPanel6.ResumeLayout(false);

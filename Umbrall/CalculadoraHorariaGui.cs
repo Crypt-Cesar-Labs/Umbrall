@@ -65,13 +65,13 @@ namespace Umbrall
 
         async private void btnSearch_Click(object sender, EventArgs e)
         {
- 
+
             // Setting the database conection
-            string servidor = "bhrpbyquwphyhrkbbpv1-mysql.services.clever-cloud.com";
-            string puerto = "3306";
-            string usuario = "ubzmsd8brxkjye7t";
-            string password = "L9NNoTse1abuYH3NMsFe";
-            string bd = "bhrpbyquwphyhrkbbpv1";
+            string servidor = DataBaseHeader.host;
+            string puerto = DataBaseHeader.port;
+            string usuario = DataBaseHeader.user;
+            string password = DataBaseHeader.password;
+            string bd = DataBaseHeader.dataBase;
 
             string cadenaConexion = "Database=" + bd + "; Data Source=" + servidor + "; Port=" + puerto + "; User Id=" + usuario + "; Password=" + password;
             progBarSearch.Visible = true;

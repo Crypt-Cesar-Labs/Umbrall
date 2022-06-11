@@ -25,7 +25,7 @@ namespace Umbrall
             try
             {
                 // Query
-                string query = "SELECT cargo FROM tabla_tarifas WHERE año = ?año AND mes = ?mes AND tarifa = ?tarifa AND segmento = ?segmento AND concepto = ?concepto AND division = ?div AND horario = ?horario";
+                string query = "SELECT cargo FROM tabla_cargos WHERE año = ?año AND mes = ?mes AND tarifa = ?tarifa AND segmento = ?segmento AND concepto = ?concepto AND division = ?div AND horario = ?horario";
 
                 MySqlCommand comandoObject = new MySqlCommand(query);
 
