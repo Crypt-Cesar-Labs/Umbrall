@@ -23,8 +23,10 @@ namespace Umbrall
         }
 
         private Thread chart1Thread;
+        private Thread chart2Thread;
         public static System.Windows.Forms.Timer showParameters;
         private double[] vrmsArray = new double[30];
+        private double[] irmsArray = new double[30];
         private Thread showParamsThread;
         int vtest = 3;
         int delaySD = 20;                                         // Delay for showing data
@@ -36,10 +38,17 @@ namespace Umbrall
             showParameters.Enabled = true;
             showParameters.Tick += ShowingParameters;*/
             
+            /// Thread chart 1
             chart1Thread = new Thread(new ThreadStart(this.getVrmsCounters));
             chart1Thread.IsBackground = true;
             chart1Thread.Start();
 
+            /// Thread chart 2
+            chart2Thread = new Thread(new ThreadStart(this.getIrmsCounters));
+            chart2Thread.IsBackground = true;
+            chart2Thread.Start();
+
+            /// Thread show params
             showParamsThread = new Thread(new ThreadStart(this.showParamsLoop));
             showParamsThread.IsBackground = true;
             showParamsThread.Start();
@@ -48,6 +57,7 @@ namespace Umbrall
 
         }
 
+        ///////////////////////////////////////////////////////////////////////////////////////////////////
         #region ThreadMethods
         /// <summary>
         /// Thread Method for the chart1
@@ -83,6 +93,67 @@ namespace Umbrall
             }
         }
 
+        private void getIrmsCounters()
+        {
+
+
+            while (true)
+            {
+                Thread.Sleep(2000);
+                //var vrmsValue = vtest;
+                //vrmsArray[vrmsArray.Length - 1] = vrmsValue;
+
+                var irmsValue = Monitor.irmsABC;
+                irmsArray[irmsArray.Length - 1] = Math.Round(irmsValue, 0);
+
+
+
+                Array.Copy(irmsArray, 1, irmsArray, 0, irmsArray.Length - 1);
+
+
+
+                if (chart2.IsHandleCreated)
+                {
+                    this.Invoke((MethodInvoker)delegate { UpdateIrmsChart(); });
+                }
+                else
+                {
+                    //.....
+                }
+
+            }
+        }
+        ///////////////////////////////////////////////////////////////////////////////
+
+        /// <summary>
+        /// Update chart Method for the chart1. TODO: This method have to be more general 
+        /// </summary>
+        private void UpdateVrmsChart()
+        {
+            chart1.Series["VrmsABC"].Points.Clear();
+
+            for (int i = 0; i < vrmsArray.Length - 1; i++)
+            {
+                chart1.Series["VrmsABC"].Points.AddY(vrmsArray[i]);
+
+
+            }
+        }
+
+        private void UpdateIrmsChart()
+        {
+            chart2.Series["IrmsABC"].Points.Clear();
+
+            for (int i = 0; i < irmsArray.Length - 1; i++)
+            {
+                chart2.Series["IrmsABC"].Points.AddY(irmsArray[i]);
+
+
+            }
+        }
+
+        /////////////////////////////////////////////////////////////////////////////////
+
         /// <summary>
         /// Thread Method for print the Monitor's parameters
         /// </summary>
@@ -97,20 +168,7 @@ namespace Umbrall
         }
         #endregion
 
-        /// <summary>
-        /// Update chart Method for the chart1. TODO: This method have to be more general 
-        /// </summary>
-        private void UpdateVrmsChart()
-        {
-            chart1.Series["VrmsABC"].Points.Clear();
-
-            for (int i = 0; i < vrmsArray.Length - 1; i++)
-            {
-                chart1.Series["VrmsABC"].Points.AddY(vrmsArray[i]);
-                
-               
-            }
-        }
+        
 
         /// <summary>
         /// Method for showing parameters

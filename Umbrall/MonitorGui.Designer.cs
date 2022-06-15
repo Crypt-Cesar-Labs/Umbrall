@@ -33,9 +33,11 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelMonitor = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnTest1 = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -111,7 +113,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnTest1 = new System.Windows.Forms.Button();
             this.panelMonitor.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -158,6 +159,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(707, 71);
             this.panel3.TabIndex = 7;
+            // 
+            // btnTest1
+            // 
+            this.btnTest1.Location = new System.Drawing.Point(502, 38);
+            this.btnTest1.Name = "btnTest1";
+            this.btnTest1.Size = new System.Drawing.Size(75, 23);
+            this.btnTest1.TabIndex = 0;
+            this.btnTest1.Text = "button1";
+            this.btnTest1.UseVisualStyleBackColor = true;
+            this.btnTest1.Visible = false;
+            this.btnTest1.Click += new System.EventHandler(this.btnTest1_Click);
             // 
             // splitContainer1
             // 
@@ -207,6 +219,11 @@
             this.chart2.Legends.Add(legend2);
             this.chart2.Location = new System.Drawing.Point(0, 0);
             this.chart2.Name = "chart2";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Legend = "Legend1";
+            series2.Name = "IrmsABC";
+            this.chart2.Series.Add(series2);
             this.chart2.Size = new System.Drawing.Size(344, 260);
             this.chart2.TabIndex = 0;
             this.chart2.Text = "chart2";
@@ -1022,17 +1039,6 @@
             this.label5.Size = new System.Drawing.Size(28, 16);
             this.label5.TabIndex = 8;
             this.label5.Text = "S A";
-            // 
-            // btnTest1
-            // 
-            this.btnTest1.Location = new System.Drawing.Point(502, 38);
-            this.btnTest1.Name = "btnTest1";
-            this.btnTest1.Size = new System.Drawing.Size(75, 23);
-            this.btnTest1.TabIndex = 0;
-            this.btnTest1.Text = "button1";
-            this.btnTest1.UseVisualStyleBackColor = true;
-            this.btnTest1.Visible = false;
-            this.btnTest1.Click += new System.EventHandler(this.btnTest1_Click);
             // 
             // MonitorGui
             // 
