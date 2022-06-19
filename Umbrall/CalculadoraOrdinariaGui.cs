@@ -61,12 +61,12 @@ namespace Umbrall
         {
             // Setting the database conection
             string servidor = DataBaseHeader.host;
-            string puerto = DataBaseHeader.port;
+            int puerto = DataBaseHeader.port;
             string usuario = DataBaseHeader.user;
             string password = DataBaseHeader.password;
             string bd = DataBaseHeader.dataBase;
 
-            string cadenaConexion = "Database=" + bd + "; Data Source=" + servidor + "; Port=" + puerto + "; User Id=" + usuario + "; Password=" + password;
+            string cadenaConexion = "Database=" + bd + "; Data Source=" + servidor + "; Port=" + puerto.ToString() + "; User Id=" + usuario + "; Password=" + password;
             progBarSearch.Visible = true;
 
             // Capacidad

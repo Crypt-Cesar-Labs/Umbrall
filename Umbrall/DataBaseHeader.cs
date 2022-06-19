@@ -11,7 +11,7 @@ namespace Umbrall
         public static string host;
         public static string user;
         public static string password;
-        public static string port;
+        public static int port;
         public static string dataBase;
     }
 }
