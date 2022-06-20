@@ -1,10 +1,14 @@
 ﻿using EasyModbus;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
+//using System.Threading;
 
 namespace Umbrall
 {
@@ -15,7 +19,8 @@ namespace Umbrall
         public static string ipAddress;
         public static int port;
         public static bool statusMonitor = false;
-
+        public static Thread monitorThread;
+        
         #region ModbusVarSeneca
         //Modbus variables for SENECA
         public static float vrmsA;
@@ -66,13 +71,19 @@ namespace Umbrall
                 //int[] readVrmsA = modbusClient.ReadHoldingRegisters(134, 2);
 
                 statusMonitor = true;
+                monitorThread = new Thread(new ThreadStart(MonitorProc));
+                monitorThread.Start();
+                Thread.Sleep(1000);
 
+
+                /*
                 Timer readModbusTimer = new Timer();
 
                 readModbusTimer.Interval = 5000;
                 readModbusTimer.Enabled = true;
-                readModbusTimer.Tick += ReadModbusTimer_Tick;
+                readModbusTimer.Tick += ReadModbusTimer_Tick;*/
 
+                MessageBox.Show("Monitoreo Iniciado");
             }
             catch
             {
@@ -82,44 +93,90 @@ namespace Umbrall
             
         }
 
-        public static void ReadRegister()
+        private static void MonitorProc()
+        {
+            while (true)
+            {
+                ReadRegister();
+                Console.WriteLine("Reading registers from Thread {0}", Thread.CurrentThread.ManagedThreadId);
+                Thread.Sleep(500);
+            }
+            
+
+        }
+
+        private static void ReadRegister()
         {
             try
             {
+                int sleepRead = 200;
                 //------------------------ VARIABLES FOR READING -------------------------------//
                 int[] readVrmsA = modbusClient.ReadHoldingRegisters(134, 2);
+                Thread.Sleep(sleepRead);
                 int[] readVrmsB = modbusClient.ReadHoldingRegisters(136, 2);
+                Thread.Sleep(sleepRead);
                 int[] readVrmsC = modbusClient.ReadHoldingRegisters(138, 2);
+                Thread.Sleep(sleepRead);
                 int[] readVrmsABC = modbusClient.ReadHoldingRegisters(140, 2);
+                Thread.Sleep(sleepRead);
                 int[] readPActiveA = modbusClient.ReadHoldingRegisters(150, 2);
+                Thread.Sleep(sleepRead);
                 int[] readPActiveB = modbusClient.ReadHoldingRegisters(152, 2);
+                Thread.Sleep(sleepRead);
                 int[] readPActiveC = modbusClient.ReadHoldingRegisters(154, 2);
+                Thread.Sleep(sleepRead);
                 int[] readPActiveABC = modbusClient.ReadHoldingRegisters(156, 2);
+                Thread.Sleep(sleepRead);
                 int[] readQA = modbusClient.ReadHoldingRegisters(158, 2);
+                Thread.Sleep(sleepRead);
                 int[] readQB = modbusClient.ReadHoldingRegisters(160, 2);
+                Thread.Sleep(sleepRead);
                 int[] readQC = modbusClient.ReadHoldingRegisters(162, 2);
+                Thread.Sleep(sleepRead);
                 int[] readQABC = modbusClient.ReadHoldingRegisters(164, 2);
+                Thread.Sleep(sleepRead);
                 int[] readSA = modbusClient.ReadHoldingRegisters(166, 2);
+                Thread.Sleep(sleepRead);
                 int[] readSB = modbusClient.ReadHoldingRegisters(168, 2);
+                Thread.Sleep(sleepRead);
                 int[] readSC = modbusClient.ReadHoldingRegisters(170, 2);
+                Thread.Sleep(sleepRead);
                 int[] readSABC = modbusClient.ReadHoldingRegisters(172, 2);
+                Thread.Sleep(sleepRead);
                 int[] readCosfiA = modbusClient.ReadHoldingRegisters(174, 2);
+                Thread.Sleep(sleepRead);
                 int[] readCosfiB = modbusClient.ReadHoldingRegisters(176, 2);
+                Thread.Sleep(sleepRead);
                 int[] readCosfiC = modbusClient.ReadHoldingRegisters(178, 2);
+                Thread.Sleep(sleepRead);
                 int[] readCosfiABC = modbusClient.ReadHoldingRegisters(180, 2);
+                Thread.Sleep(sleepRead);
                 int[] readFrequency = modbusClient.ReadHoldingRegisters(182, 2);
+                Thread.Sleep(sleepRead);
                 int[] readEnergyA = modbusClient.ReadHoldingRegisters(184, 2);
+                Thread.Sleep(sleepRead);
                 int[] readEnergyB = modbusClient.ReadHoldingRegisters(186, 2);
+                Thread.Sleep(sleepRead);
                 int[] readEnergyC = modbusClient.ReadHoldingRegisters(188, 2);
+                Thread.Sleep(sleepRead);
                 int[] readEnergyABC = modbusClient.ReadHoldingRegisters(190, 2);
+                Thread.Sleep(sleepRead);
                 int[] readREnergyA = modbusClient.ReadHoldingRegisters(224, 2);
+                Thread.Sleep(sleepRead);
                 int[] readREnergyB = modbusClient.ReadHoldingRegisters(226, 2);
+                Thread.Sleep(sleepRead);
                 int[] readREnergyC = modbusClient.ReadHoldingRegisters(228, 2);
+                Thread.Sleep(sleepRead);
                 int[] readREnergyABC = modbusClient.ReadHoldingRegisters(230, 2);
+                Thread.Sleep(sleepRead);
                 int[] readIrmsA = modbusClient.ReadHoldingRegisters(142, 2);
+                Thread.Sleep(sleepRead);
                 int[] readIrmsB = modbusClient.ReadHoldingRegisters(144, 2);
+                Thread.Sleep(sleepRead);
                 int[] readIrmsC = modbusClient.ReadHoldingRegisters(146, 2);
+                Thread.Sleep(sleepRead);
                 int[] readIrmsABC = modbusClient.ReadHoldingRegisters(148, 2);
+                Thread.Sleep(sleepRead);
 
 
                 //------------------------ SHOWING PARAMETERS ----------------------------------//
@@ -254,11 +311,23 @@ namespace Umbrall
                 string irmsABCString = (readIrmsABC[1] + (readIrmsABC[0] * 65536)).ToString("X");
                 //txtIrmsABC.Text = ConvertToFloat(irmsABC).ToString();
                 irmsABC = (ConvertToFloat(irmsABCString)/1000);
+
             }
-            catch
+            catch (Exception ex)
             {
-                //MessageBox.Show("Error en la conexión.");
-                Console.WriteLine("Error:");
+                // what
+                var msg = "Error:" + ex.Message;
+                
+                // info
+                if (ex.InnerException != null)
+                {
+                    msg = msg + "Inner exception: " + ex.InnerException.Message;
+                }
+
+                // where
+                msg = msg + " Stack trace " + ex.StackTrace;
+                Console.WriteLine(msg);
+                
                 statusMonitor = false;
             }
             
@@ -285,6 +354,8 @@ namespace Umbrall
                 modbusClient.Disconnect();                
                 MessageBox.Show("Comunicación finalizada");
                 statusMonitor = false;
+                monitorThread.Abort();
+                Console.WriteLine("Stop Reading registers & kill Thread {0}", monitorThread.ManagedThreadId);
             }
             catch
             {
@@ -293,8 +364,26 @@ namespace Umbrall
             
         }
 
-        public static void ModbusScreenshot()
+        public static void VrmsChartConfig(Chart chart)
         {
+            // Make the object for Series and Areas
+            SeriesCollection chartVrmsSeries = chart.Series;
+            ChartAreaCollection chartVrmsAreas = chart.ChartAreas;
+            chartVrmsSeries.Add("Vrms");                            // Se agrega serie de Vrms
+
+            ChartArea chartVrmsArea = chartVrmsAreas[0];            // Se selecciona la primera Area
+            Series chartVrmsSerie = chartVrmsSeries[0];             // Se selecciona la primera serie
+
+            chartVrmsArea.BackColor = Color.Black;                  // Setting black background for the Area
+
+            chartVrmsSerie.ChartType = SeriesChartType.FastLine;    // Setting FastLine style for the chart
+            chartVrmsSerie.Color = Color.Red;                       // Red color for the serie
+
+            // Points for the chart
+            chartVrmsSerie.Points.AddXY(1, 32);
+            chartVrmsSerie.Points.AddXY(2, 12);
+            chartVrmsSerie.Points.AddXY(3, 56);
+            chartVrmsSerie.Points.AddXY(4, 78);
 
         }
 
