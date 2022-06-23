@@ -25,7 +25,7 @@ namespace Umbrall
         private Thread chart1Thread;
         private Thread chart2Thread;
         public static System.Windows.Forms.Timer showParameters;
-        private double[] vrmsArray = new double[30];
+        private double[] demandaMaxArray = new double[30];
         private double[] irmsArray = new double[30];
         private Thread showParamsThread;
         int vtest = 3;
@@ -39,7 +39,7 @@ namespace Umbrall
             showParameters.Tick += ShowingParameters;*/
             
             /// Thread chart 1
-            chart1Thread = new Thread(new ThreadStart(this.getVrmsCounters));
+            chart1Thread = new Thread(new ThreadStart(this.getDemandaMaxCounters));
             chart1Thread.IsBackground = true;
             chart1Thread.Start();
 
@@ -62,7 +62,7 @@ namespace Umbrall
         /// <summary>
         /// Thread Method for the chart1
         /// </summary>
-        private void getVrmsCounters()
+        private void getDemandaMaxCounters()
         {
             
 
@@ -72,18 +72,18 @@ namespace Umbrall
                 //var vrmsValue = vtest;
                 //vrmsArray[vrmsArray.Length - 1] = vrmsValue;
 
-                var vrmsValue = Monitor.vrmsABC;
-                vrmsArray[vrmsArray.Length - 1] = Math.Round(vrmsValue, 0);
+                var demandaMaxValue = Monitor.demandaMax;
+                demandaMaxArray[demandaMaxArray.Length - 1] = Math.Round(demandaMaxValue, 0);
 
                 
 
-                Array.Copy(vrmsArray, 1, vrmsArray, 0, vrmsArray.Length - 1);
+                Array.Copy(demandaMaxArray, 1, demandaMaxArray, 0, demandaMaxArray.Length - 1);
 
                
 
                 if (chart1.IsHandleCreated)
                 {
-                    this.Invoke((MethodInvoker)delegate { UpdateVrmsChart(); });
+                    this.Invoke((MethodInvoker)delegate { UpdateDemandaMaxChart(); });
                 }
                 else
                 {
@@ -128,13 +128,13 @@ namespace Umbrall
         /// <summary>
         /// Update chart Method for the chart1. TODO: This method have to be more general 
         /// </summary>
-        private void UpdateVrmsChart()
+        private void UpdateDemandaMaxChart()
         {
-            chart1.Series["VrmsABC"].Points.Clear();
+            chart1.Series["DemandaMax"].Points.Clear();
 
-            for (int i = 0; i < vrmsArray.Length - 1; i++)
+            for (int i = 0; i < demandaMaxArray.Length - 1; i++)
             {
-                chart1.Series["VrmsABC"].Points.AddY(vrmsArray[i]);
+                chart1.Series["DemandaMax"].Points.AddY(demandaMaxArray[i]);
 
 
             }

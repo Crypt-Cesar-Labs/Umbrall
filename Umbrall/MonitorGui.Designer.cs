@@ -203,7 +203,7 @@
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series1.Legend = "Legend1";
-            series1.Name = "VrmsABC";
+            series1.Name = "DemandaMax";
             this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(347, 260);
             this.chart1.TabIndex = 0;

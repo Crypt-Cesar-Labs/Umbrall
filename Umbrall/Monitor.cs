@@ -56,6 +56,7 @@ namespace Umbrall
         public static float irmsB;
         public static float irmsC;
         public static float irmsABC;
+        public static float demandaMax;
         #endregion
 
         public static void StartMonitor()
@@ -110,7 +111,7 @@ namespace Umbrall
             try
             {
                 int sleepRead = 200;
-                //------------------------ VARIABLES FOR READING -------------------------------//
+                //------------------------ VARIABLES FOR READING -------------------------------//                
                 int[] readVrmsA = modbusClient.ReadHoldingRegisters(134, 2);
                 Thread.Sleep(sleepRead);
                 int[] readVrmsB = modbusClient.ReadHoldingRegisters(136, 2);
@@ -118,6 +119,14 @@ namespace Umbrall
                 int[] readVrmsC = modbusClient.ReadHoldingRegisters(138, 2);
                 Thread.Sleep(sleepRead);
                 int[] readVrmsABC = modbusClient.ReadHoldingRegisters(140, 2);
+                Thread.Sleep(sleepRead);
+                int[] readIrmsA = modbusClient.ReadHoldingRegisters(142, 2);
+                Thread.Sleep(sleepRead);
+                int[] readIrmsB = modbusClient.ReadHoldingRegisters(144, 2);
+                Thread.Sleep(sleepRead);
+                int[] readIrmsC = modbusClient.ReadHoldingRegisters(146, 2);
+                Thread.Sleep(sleepRead);
+                int[] readIrmsABC = modbusClient.ReadHoldingRegisters(148, 2);
                 Thread.Sleep(sleepRead);
                 int[] readPActiveA = modbusClient.ReadHoldingRegisters(150, 2);
                 Thread.Sleep(sleepRead);
@@ -169,13 +178,7 @@ namespace Umbrall
                 Thread.Sleep(sleepRead);
                 int[] readREnergyABC = modbusClient.ReadHoldingRegisters(230, 2);
                 Thread.Sleep(sleepRead);
-                int[] readIrmsA = modbusClient.ReadHoldingRegisters(142, 2);
-                Thread.Sleep(sleepRead);
-                int[] readIrmsB = modbusClient.ReadHoldingRegisters(144, 2);
-                Thread.Sleep(sleepRead);
-                int[] readIrmsC = modbusClient.ReadHoldingRegisters(146, 2);
-                Thread.Sleep(sleepRead);
-                int[] readIrmsABC = modbusClient.ReadHoldingRegisters(148, 2);
+                int[] readDemandaMax = modbusClient.ReadHoldingRegisters(1021, 2);
                 Thread.Sleep(sleepRead);
 
 
@@ -311,6 +314,10 @@ namespace Umbrall
                 string irmsABCString = (readIrmsABC[1] + (readIrmsABC[0] * 65536)).ToString("X");
                 //txtIrmsABC.Text = ConvertToFloat(irmsABC).ToString();
                 irmsABC = (ConvertToFloat(irmsABCString)/1000);
+
+                string demandaMaxString = (readDemandaMax[1] + (readDemandaMax[0] * 65536)).ToString("X");
+                //txtIrmsABC.Text = ConvertToFloat(irmsABC).ToString();
+                demandaMax = (ConvertToFloat(demandaMaxString) / 1000);
 
             }
             catch (Exception ex)
