@@ -181,144 +181,144 @@ namespace Umbrall
                 int[] readDemandaMax = modbusClient.ReadHoldingRegisters(1021, 2);
                 Thread.Sleep(sleepRead);
 
+                int sleepConvert = 100;
 
                 //------------------------ SHOWING PARAMETERS ----------------------------------//
                 string vrmsAString = (readVrmsA[1] + (readVrmsA[0] * 65536)).ToString("X");
-                //txtVrmsA.Text = ConvertToFloat(vrmsAString).ToString();
                 vrmsA = ConvertToFloat(vrmsAString);
+                Thread.Sleep(sleepConvert);
 
                 string vrmsBString = (readVrmsB[1] + (readVrmsB[0] * 65536)).ToString("X");
-                //txtVrmsB.Text = ConvertToFloat(vrmsBString).ToString();
                 vrmsB = ConvertToFloat(vrmsBString);
+                Thread.Sleep(sleepConvert);
 
                 string vrmsCString = (readVrmsC[1] + (readVrmsC[0] * 65536)).ToString("X");
-                //txtVrmsC.Text = ConvertToFloat(vrmsCString).ToString();
                 vrmsC = ConvertToFloat(vrmsCString);
+                Thread.Sleep(sleepConvert);
 
                 string vrmsABCString = (readVrmsABC[1] + (readVrmsABC[0] * 65536)).ToString("X");
-                //txtVrmsABC.Text = ConvertToFloat(vrmsABCString).ToString();
                 vrmsABC = ConvertToFloat(vrmsABCString);
+                Thread.Sleep(sleepConvert);
 
                 string pActiveAString = (readPActiveA[1] + (readPActiveA[0] * 65536)).ToString("X");
-                //txtPActiveA.Text = ConvertToFloat(pActiveAString).ToString();
                 pActiveA = ConvertToFloat(pActiveAString);
+                Thread.Sleep(sleepConvert);
 
                 string pActiveBString = (readPActiveB[1] + (readPActiveB[0] * 65536)).ToString("X");
-                //txtPActiveB.Text = ConvertToFloat(pActiveBString).ToString();
                 pActiveB = ConvertToFloat(pActiveBString);
+                Thread.Sleep(sleepConvert);
 
                 string pActiveCString = (readPActiveC[1] + (readPActiveC[0] * 65536)).ToString("X");
-                //txtPActiveC.Text = ConvertToFloat(pActiveCString).ToString();
                 pActiveC = ConvertToFloat(pActiveCString);
+                Thread.Sleep(sleepConvert);
 
                 string pActiveABCString = (readPActiveABC[1] + (readPActiveABC[0] * 65536)).ToString("X");
-                //txtPActiveAbc.Text = ConvertToFloat(pActiveABCString).ToString();
                 pActiveABC = ConvertToFloat(pActiveABCString);
+                Thread.Sleep(sleepConvert);
 
                 string qAString = (readQA[1] + (readQA[0] * 65536)).ToString("X");
-                //txtQA.Text = ConvertToFloat(qAString).ToString();
                 qA = ConvertToFloat(qAString);
+                Thread.Sleep(sleepConvert);
 
                 string qBString = (readQB[1] + (readQB[0] * 65536)).ToString("X");
-                //txtQB.Text = ConvertToFloat(qBString).ToString();
                 qB = ConvertToFloat(qBString);
+                Thread.Sleep(sleepConvert);
 
                 string qCString = (readQC[1] + (readQC[0] * 65536)).ToString("X");
-                //txtQC.Text = ConvertToFloat(qCString).ToString();
                 qC = ConvertToFloat(qCString);
+                Thread.Sleep(sleepConvert);
 
                 string qABCString = (readQABC[1] + (readQABC[0] * 65536)).ToString("X");
-                //txtQAbc.Text = ConvertToFloat(qABCString).ToString();
                 qABC = ConvertToFloat(qABCString);
+                Thread.Sleep(sleepConvert);
 
                 string sAString = (readSA[1] + (readSA[0] * 65536)).ToString("X");
-                //txtSA.Text = ConvertToFloat(sAString).ToString();
                 sA = ConvertToFloat(sAString);
+                Thread.Sleep(sleepConvert);
 
                 string sBString = (readSB[1] + (readSB[0] * 65536)).ToString("X");
-                //txtSB.Text = ConvertToFloat(sBString).ToString();
                 sB = ConvertToFloat(sBString);
+                Thread.Sleep(sleepConvert);
 
                 string sCString = (readSC[1] + (readSC[0] * 65536)).ToString("X");
-                //txtSC.Text = ConvertToFloat(sCString).ToString();
                 sC = ConvertToFloat(sCString);
+                Thread.Sleep(sleepConvert);
 
                 string sABCString = (readSABC[1] + (readSABC[0] * 65536)).ToString("X");
-                //txtSAbc.Text = ConvertToFloat(sABCString).ToString();
                 sABC = ConvertToFloat(sABCString);
+                Thread.Sleep(sleepConvert);
 
                 string cosfiAString = (readCosfiA[1] + (readCosfiA[0] * 65536)).ToString("X");
-                //txtCosFiA.Text = ConvertToFloat(cosfiA).ToString();
                 cosfiA = ConvertToFloat(cosfiAString);
+                Thread.Sleep(sleepConvert);
 
                 string cosfiBString = (readCosfiB[1] + (readCosfiB[0] * 65536)).ToString("X");
-                //txtCosFiB.Text = ConvertToFloat(cosfiB).ToString();
                 cosfiB = ConvertToFloat(cosfiBString);
+                Thread.Sleep(sleepConvert);
 
                 string cosfiCString = (readCosfiC[1] + (readCosfiC[0] * 65536)).ToString("X");
-                //txtCosFiC.Text = ConvertToFloat(cosfiC).ToString();
                 cosfiC = ConvertToFloat(cosfiCString);
+                Thread.Sleep(sleepConvert);
 
                 string cosfiABCString = (readCosfiABC[1] + (readCosfiABC[0] * 65536)).ToString("X");
-                //txtCosFiABC.Text = ConvertToFloat(cosfiABC).ToString();
                 cosfiABC = ConvertToFloat(cosfiABCString);
+                Thread.Sleep(sleepConvert);
 
                 string frequencyString = (readFrequency[1] + (readFrequency[0] * 65536)).ToString("X");
-                //txtFreq.Text = ConvertToFloat(frequency).ToString();
                 frequency = ConvertToFloat(frequencyString);
+                Thread.Sleep(sleepConvert);
 
                 string energyAString = (readEnergyA[1] + (readEnergyA[0] * 65536)).ToString("X");
-                //txtEnergyA.Text = ConvertToFloat(energyA).ToString();
                 energyA = ConvertToFloat(energyAString);
+                Thread.Sleep(sleepConvert);
 
                 string energyBString = (readEnergyB[1] + (readEnergyB[0] * 65536)).ToString("X");
-                //txtEnergyB.Text = ConvertToFloat(energyB).ToString();
                 energyB = ConvertToFloat(energyBString);
+                Thread.Sleep(sleepConvert);
 
                 string energyCString = (readEnergyC[1] + (readEnergyC[0] * 65536)).ToString("X");
-                //txtEnergyC.Text = ConvertToFloat(energyC).ToString();
                 energyC = ConvertToFloat(energyCString);
+                Thread.Sleep(sleepConvert);
 
                 string energyABCString = (readEnergyABC[1] + (readEnergyABC[0] * 65536)).ToString("X");
-                //txtEnergyABC.Text = ConvertToFloat(energyABC).ToString();
                 energyABC = ConvertToFloat(energyABCString);
+                Thread.Sleep(sleepConvert);
 
                 string energyRAString = (readREnergyA[1] + (readREnergyA[0] * 65536)).ToString("X");
-                //txtReactEnergyA.Text = ConvertToFloat(energyRA).ToString();
                 reactEnergyA = ConvertToFloat(energyRAString);
+                Thread.Sleep(sleepConvert);
 
                 string energyRBString = (readREnergyB[1] + (readREnergyB[0] * 65536)).ToString("X");
-                //txtReactEnergyB.Text = ConvertToFloat(energyRB).ToString();
                 reactEnergyB = ConvertToFloat(energyRBString);
+                Thread.Sleep(sleepConvert);
 
                 string energyRCString = (readREnergyC[1] + (readREnergyC[0] * 655536)).ToString("X");
-                //txtReactEnergyC.Text = ConvertToFloat(energyRC).ToString();
                 reactEnergyC = ConvertToFloat(energyRCString);
+                Thread.Sleep(sleepConvert);
 
                 string energyRABCString = (readREnergyABC[1] + (readREnergyABC[0] * 65536)).ToString("X");
-                //txtReactEnergyABC.Text = ConvertToFloat(energyRABC).ToString();
                 reactEnergyABC = ConvertToFloat(energyRABCString);
+                Thread.Sleep(sleepConvert);
 
                 string irmsAString = (readIrmsA[1] + (readIrmsA[0] * 65536)).ToString("X");
-                //txtIrmsA.Text = ConvertToFloat(irmsA).ToString();
                 irmsA = (ConvertToFloat(irmsAString)/1000);
+                Thread.Sleep(sleepConvert);
 
                 string irmsBString = (readIrmsB[1] + (readIrmsB[0] * 65536)).ToString("X");
-                //txtIrmsB.Text = ConvertToFloat(irmsB).ToString();
                 irmsB = (ConvertToFloat(irmsBString)/1000);
+                Thread.Sleep(sleepConvert);
 
                 string irmsCString = (readIrmsC[1] + (readIrmsC[0] * 65536)).ToString("X");
-                //txtIrmsC.Text = ConvertToFloat(irmsC).ToString();
                 irmsC = (ConvertToFloat(irmsCString)/1000);
+                Thread.Sleep(sleepConvert);
 
                 string irmsABCString = (readIrmsABC[1] + (readIrmsABC[0] * 65536)).ToString("X");
-                //txtIrmsABC.Text = ConvertToFloat(irmsABC).ToString();
                 irmsABC = (ConvertToFloat(irmsABCString)/1000);
+                Thread.Sleep(sleepConvert);
 
                 string demandaMaxString = (readDemandaMax[1] + (readDemandaMax[0] * 65536)).ToString("X");
-                //txtIrmsABC.Text = ConvertToFloat(irmsABC).ToString();
                 demandaMax = (ConvertToFloat(demandaMaxString) / 1000);
-
+                Thread.Sleep(sleepConvert);
             }
             catch (Exception ex)
             {
