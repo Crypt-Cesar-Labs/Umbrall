@@ -117,6 +117,12 @@
     <Compile Include="CalculadoraOrdinariaGui.Designer.cs">
       <DependentUpon>CalculadoraOrdinariaGui.cs</DependentUpon>
     </Compile>
+    <Compile Include="CalcHorariaPro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalcHorariaPro.Designer.cs">
+      <DependentUpon>CalcHorariaPro.cs</DependentUpon>
+    </Compile>
     <Compile Include="CalculadoraSelector.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CalculadoraOrdinariaGui.resx">
       <DependentUpon>CalculadoraOrdinariaGui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalcHorariaPro.resx">
+      <DependentUpon>CalcHorariaPro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CalculadoraSelector.resx">
       <DependentUpon>CalculadoraSelector.cs</DependentUpon>
