@@ -1538,7 +1538,7 @@
             // txtDays
             // 
             this.txtDays.Location = new System.Drawing.Point(379, 288);
-            this.txtDays.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDays.Margin = new System.Windows.Forms.Padding(2);
             this.txtDays.Name = "txtDays";
             this.txtDays.Size = new System.Drawing.Size(76, 20);
             this.txtDays.TabIndex = 133;
@@ -1728,7 +1728,7 @@
             this.tableLayoutPanel6.Controls.Add(this.titleCalcHora, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1758,7 +1758,7 @@
             this.Controls.Add(this.tableLayoutPanel6);
             this.Controls.Add(this.tableLayoutPanel11);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CalculadoraHorariaGui";
             this.Text = "CalculadoraHorariaGui";
             this.tableLayoutPanel11.ResumeLayout(false);

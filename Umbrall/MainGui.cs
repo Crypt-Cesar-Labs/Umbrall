@@ -99,7 +99,15 @@ namespace Umbrall
 
         private void btnCalcH_Click(object sender, EventArgs e)
         {
-            openChildForm(new CalculadoraHorariaGui());
+            /*openChildForm(new CalculadoraHorariaGui());
+
+            hideSubMenu();
+
+            btnPrint.Visible = true;
+
+            printHor = true;*/
+
+            openChildForm(new CalculadoraHorariaPro());
 
             hideSubMenu();
 
